@@ -1,0 +1,87 @@
+.ConTent{
+    background: #e9ebee;
+    padding: 4rem 0;
+}
+.identify{
+    width:555px;
+    margin: auto;
+    background: #fff;
+}
+.identifyTitle{
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #aaa;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0 1rem;
+}
+.identifyCon{
+    padding:2rem 1rem ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.identifyCon>.rg{
+    padding:0 2rem;
+    border-left: 1px solid #eee;
+}
+.Contitle{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.identifyFoor{
+    background: #f2f2f2;
+    text-align: right;
+    padding:0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.identifyFoor>.rg>div{
+    line-height: 18px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+.Sumbnt{
+    background-color: #4267b2;
+    border-color: #29487d;
+    color: #fff;
+}
+
+.outbtn{
+    border: 1px solid #ccc;
+}
+
+.ConCell{
+    display: flex;
+    align-items: flex-start;
+}
+.Cong{
+    display: flex;
+    margin-left: 10px;
+}
+.Congi{
+    background-image: url(/rsrc.php/v3/yj/r/IXkHfWl9UJT.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-position: 0 -34px;
+}
+
+.identifytext{
+    font-size: 12px;
+    color: #ccc;
+}
+
+.identifyCon>.rg>img{
+    width: 50px;
+    height: 50px;
+}
+.identifytest{
+    font-size: 13px;
+}
+
+::placeholder, :-moz-placeholder {
+    color: #606770;
+}
