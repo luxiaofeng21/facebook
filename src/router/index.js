@@ -47,7 +47,35 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: Login,
+      children:[
+        {
+          path: 'login/identify',
+          name: 'identify',
+          component: Identify
+        },
+        {
+          path: '/login/recover',
+          name: 'recover',
+          component: Recover
+        },
+        {
+          path: 'login/code',
+          name: 'code',
+          component: Code
+        },
+        {
+          path: 'login/password',
+          name: 'password',
+          component: Password
+        }
+        ,
+        {
+          path: 'login/ineligible',
+          name: 'ineligible',
+          component: Ineligible
+        }
+    ]
     },
     {
       path: '/login2',
@@ -57,35 +85,7 @@ export default new Router({
     {
       path: '/newuser',
       name: 'newuser',
-      component: NewUser,
-      children:[
-          {
-            path: '/identify',
-            name: 'identify',
-            component: Identify
-          },
-          {
-            path: '/recover',
-            name: 'recover',
-            component: Recover
-          },
-          {
-            path: '/code',
-            name: 'code',
-            component: Code
-          },
-          {
-            path: '/password',
-            name: 'password',
-            component: Password
-          }
-          ,
-          {
-            path: '/ineligible',
-            name: 'ineligible',
-            component: Ineligible
-          }
-      ]
+      component: NewUser
     },
     {
       path: '/index',

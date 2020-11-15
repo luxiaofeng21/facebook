@@ -175,7 +175,7 @@
                                 </div>
                             </div>
                             <hr class="aov4n071 dhix69tm wkznzc2l bi6gxh9e pwoa4pd7">
-                            <cart-list :list="me_ul"></cart-list>
+                            <cart-list :list="me_ul" @getcart="getme"></cart-list>
                             <div class="dati1w0a ihqw7lf3 hv4rvrfc discj3wi">
                                 <footer aria-label="Facebook" role="contentinfo">
                                     <span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain" dir="auto">
@@ -1215,13 +1215,23 @@ export default {
             ],
             choose: 0,
             dialogVisible: false,
-            value: true
+            value: true,
+            path: "",
         }
     },
     craeted() {
 
     },
+
     methods: {
+        //个人中心
+        getme(i) {
+            if (i == 3) {
+                this.$router.push({
+                    name: "login"
+                })
+            }
+        },
         getshow(e) {
             if (e == 0) this.dialogTitle = "创建帖子"
             if (e == 5) this.dialogTitle = "新建小组"

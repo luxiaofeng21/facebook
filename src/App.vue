@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <Header></Header>
+    <Header v-if="path!='/login'"></Header>
     <router-view></router-view>
 </div>
 </template>
@@ -11,6 +11,15 @@ export default {
     name: 'App',
     components: {
         Header
+    },
+    data() {
+        return {
+            path: ''
+        }
+    },
+    created() {
+        this.path = this.$route.path;
+        console.log("craeted -> this.path", this.path)
     }
 }
 </script>
