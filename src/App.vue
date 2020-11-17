@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <Header v-if="path!='/login'"></Header>
+    <Header @getnav="getNav" :hactive="active" v-if="path"></Header>
     <router-view></router-view>
 </div>
 </template>
@@ -14,12 +14,45 @@ export default {
     },
     data() {
         return {
-            path: ''
+            path: true,
+            active: 0,
+        }
+    },
+    methods: {
+        getNav(i) {
+            this.active = i
+        },
+        getactive() {
+            var to = this.$route
+            var reg = /login/ //是否包含login
+            var test = reg.test(to.fullPath)
+            if (test) {
+                this.path = false
+            } else {
+                this.path = true
+            }
+
+            if (to.name == 'index') {
+                this.active = 0
+            } else if (to.name == 'friends') {
+                this.active = 1
+            } else if (to.name == 'watch') {
+                this.active = 2
+            } else if (to.name == 'groups') {
+                this.active = 3
+            } else if (to.name == 'gaming') {
+                this.active = 4
+            }
+        }
+    },
+    watch: {
+        $route(to, form) {
+            console.log("$route -> to", to)
+            this.getactive()
         }
     },
     created() {
-        this.path = this.$route.path;
-        console.log("craeted -> this.path", this.path)
+        this.getactive()
     }
 }
 </script>

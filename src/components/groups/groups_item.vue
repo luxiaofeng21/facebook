@@ -1041,7 +1041,5 @@ export default {
 </script>
 
 <style scoped>
-.dati1w0a>.ipjc6fyt {
-    width: 100%;
-}
+
 </style>

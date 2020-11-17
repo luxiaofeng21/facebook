@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/login/Login'
-import Login2 from '@/components/login/login2'
 import NewUser from '@/components/login/NewUser'
 import Identify from '@/components/login/identify'
 import Recover from '@/components/login/recover'
@@ -35,6 +34,13 @@ import Pay from "@/components/pay/index"
 import  Memories from "@/components/memories/memories"
 import  Onemi from "@/components/index/onemi"
 import Goal from '@/components/ad_center/goal'
+import Privacy from '@/components/privacy/index'
+import Checkup from '@/components/privacy/checkup'
+import dynamic from '@/components/dynamic/index'
+import live from '@/components/live/index'
+import messenger from '@/components/messenger/index'
+import categories from '@/components/groups/categories'
+import publicHomePage from '@/components/publicHomePage/index'
 Vue.use(Router)
 
 export default new Router({
@@ -47,43 +53,71 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: Login,
-      children:[
-        {
-          path: 'login/identify',
-          name: 'identify',
-          component: Identify
-        },
-        {
-          path: '/login/recover',
-          name: 'recover',
-          component: Recover
-        },
-        {
-          path: 'login/code',
-          name: 'code',
-          component: Code
-        },
-        {
-          path: 'login/password',
-          name: 'password',
-          component: Password
-        }
-        ,
-        {
-          path: 'login/ineligible',
-          name: 'ineligible',
-          component: Ineligible
-        }
-    ]
+      component: Login
     },
     {
-      path: '/login2',
-      name: 'login2',
-      component: Login2
+      path:"/publicpage",
+      name:"publicpage",
+      component:publicHomePage
     },
     {
-      path: '/newuser',
+      path:"/live",
+      name:"live",
+      component:live
+    },
+    {
+      path:"/categories",
+      name:"categories",
+      component:categories
+    },
+    {
+      path:"/messenger",
+      name:"messenger",
+      component:messenger
+    },
+    {
+      path:"/dynamic",
+      name:"dynamic",
+      component:dynamic
+    },
+    {
+      path:"/privacy",
+      name:"privacy",
+      component:Privacy
+    },
+    {
+      path:"/privacy/checkup",
+      name:"checkup",
+      component:Checkup
+    },
+    {
+      path: '/login/identify',
+      name: 'identify',
+      component: Identify
+    },
+    {
+      path: '/login/recover',
+      name: 'recover',
+      component: Recover
+    },
+    {
+      path: '/login/code',
+      name: 'code',
+      component: Code
+    },
+    {
+      path: '/login/password',
+      name: 'password',
+      component: Password
+    }
+    ,
+    {
+      path: '/login/ineligible',
+      name: 'ineligible',
+      component: Ineligible
+    },
+    {
+      path: '/login/newuser',
       name: 'newuser',
       component: NewUser
     },

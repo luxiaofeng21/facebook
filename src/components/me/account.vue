@@ -687,8 +687,16 @@ export default {
             value: false
         }
     },
-    created() {
+    mounted() {
+        var state = this.$route.params.state;
 
+        if (state) {
+            this.state = state
+            this.findex = state
+        } else {
+            this.state = 0
+            this.findex = 0
+        }
     },
     methods: {
         getshow(i) {

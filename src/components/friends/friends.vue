@@ -69,7 +69,7 @@
                                                                 <span class="friend-text-img" v-for="(items,indexs) in item.common" :key="indexs"> <img :src="items.img" alt=""></span>
                                                                 <span>{{item.common.length}}位共同好友</span>
                                                             </div>
-                                                            <div class="friend-button">
+                                                            <div class="friend-button" v-if="item">
                                                                 <el-button size="medium" type="primary">加为好友</el-button>
                                                                 <el-button size="medium">移除</el-button>
                                                             </div>
@@ -268,12 +268,25 @@
                                                                         <div class="book-icon2">
                                                                             <i class="friend-icon msg-icon"></i>
                                                                         </div>
-                                                                        <div class="book-icon2">
+                                                                        <div class="book-icon2" @click="dialogVisible=true">
                                                                             <i class="friend-icon search-icon"></i>
                                                                         </div>
-                                                                        <div class="book-icon2">
-                                                                            <i class="friend-icon arrow-icon"></i>
-                                                                        </div>
+                                                                        <el-popover placement="bottom" width="200" trigger="click">
+                                                                            <ul class="popver-ul">
+                                                                                <li>
+                                                                                    <i class="el-icon-warning-outline"></i>
+                                                                                    <span>寻求帮助或举报个人主页</span>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <i class="el-icon-s-check"></i>
+                                                                                    <span>拉黑</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="book-icon2" slot="reference">
+                                                                                <i class="friend-icon arrow-icon"></i>
+                                                                            </div>
+                                                                        </el-popover>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -4574,6 +4587,8 @@
                                             </div>
                                             <About v-else-if="activeName==1"></About>
                                             <Following v-else-if="activeName==2"></Following>
+                                            <imgs v-else-if="activeName==3"></imgs>
+                                            <qiandao v-else-if="activeName==5"> </qiandao>
                                         </div>
                                     </div>
                                 </div>
@@ -4592,21 +4607,49 @@
             </div>
         </div>
     </div>
-
+    <el-dialog :visible.sync="dialogVisible" width="500px">
+        <div class="dialog-title2" style="width:80%">
+            <el-input prefix-icon="el-icon-search" class="search" placeholder="搜索枫果果的个人主页" v-model="search"></el-input>
+        </div>
+        <div class="search_con" v-if="search==''">
+            <img src="../../assets/me.jpg" alt="">
+            <div class="search_title">想找啥？搜搜吧！</div>
+            <div class="search_text">搜索DA Cellphone Cases的个人主页，查找帖子、照片和其他可见动态。</div>
+        </div>
+        <div v-else>
+            <div class="search-li">
+                <div class="book-icon"> <i class="el-icon-search"></i> </div>
+                <span>{{search}}</span>
+            </div>
+        </div>
+        <span v-if="search!=''" slot="footer">
+            <div class="search-li">
+                <div class="book-icon icon-checked"> <i class="el-icon-search"></i> </div>
+                <span>在这个个人主页里搜索{{search}}</span>
+            </div>
+        </span>
+    </el-dialog>
 </div>
 </template>
 
 <script>
 import About from './about.vue'
 import Following from './following.vue'
+import imgs from './imgs.vue'
+import qiandao from './qiandao.vue'
 export default {
     components: {
+        qiandao,
+        imgs,
         About,
         Following
     },
     data() {
         return {
+            dialogVisible: false,
+            search: "",
             me_ul: {
+
                 highlight: [],
                 user: [{
                         label: "目前就职：",
@@ -4671,6 +4714,23 @@ export default {
 </script>
 
 <style>
+/*搜索 */
+.search_con {
+    text-align: center;
+}
+
+.search_con img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.search_con>.search_title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
 /*个人资料 */
 .me-ul li {
     display: flex;
@@ -4799,5 +4859,20 @@ export default {
 .icon-success {
     background: #E7F3FF;
     color: #056FE7;
+}
+
+.search-li {
+    display: flex;
+    align-items: center;
+}
+
+.search-li:hover {
+    background-color: #eee;
+}
+
+.search-li>span {
+    width: 70%;
+    word-break: break-all;
+    text-align: left;
 }
 </style>

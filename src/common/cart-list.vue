@@ -1,5 +1,5 @@
 <template>
-<div :class="type">
+<div :class="[type,size]">
     <label v-for="(item,index) in list" :key="index" :class="item.active>-1?'ni-checked':''">
         <!--一级-->
         <div class="cart-item" :class="active==index?'ischecked':''" @click="getcart(index,item)">
@@ -22,6 +22,8 @@
                     <span v-if="type=='msg'" class="cart-msg"></span>
                     <!--单选-->
                     <span v-if="type=='radio'" class="el-radio__inner"></span>
+                    <!--开关-->
+                    <el-switch v-if="type=='switch'" v-model="item.switch"></el-switch>
                     <!--跳转-->
                     <i v-if="type=='arrow' || item.arrow" slot="right" class="el-icon-arrow-right"></i>
                     <!--下拉-->
@@ -80,7 +82,7 @@
 
 <script>
 export default {
-    props: ["list", "type", "active"],
+    props: ["list", "type", "active", "size"],
     methods: {
         //切换
         getcart(i, item, indexs) {
@@ -129,7 +131,7 @@ export default {
     flex-wrap: wrap;
 }
 
-.cart-list>.cart-item {
+.cart-list>* {
     width: 44%;
 }
 
@@ -204,6 +206,7 @@ export default {
     color: var(--secondary-text);
     font-size: .9375rem;
     line-height: 1.3333;
+    font-weight: normal;
 }
 
 .cart-arrow {
@@ -276,9 +279,26 @@ export default {
     background-position: 0 -87px;
 }
 
-.msg .cart-img {
+.msg .cart-img,
+.big .cart-img {
     width: 56px;
     height: 56px;
+}
+
+.big .cart-img>i {
+    font-size: 28px;
+    width: 28px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.small .cart-item:hover {
+    background-color: #E4E6E9;
+}
+
+.small .cart-img {
+    width: 30px;
+    height: 30px;
 }
 
 .cart-item:hover .msg-all {
@@ -389,6 +409,18 @@ export default {
     width: 20px;
     background-image: url(../assets/exE9Cc-p8hP.png);
     background-position: 0 -25px;
+}
+
+.menu .cart-img>.good {
+    width: 20px;
+    background-image: url(../assets/xVr-bSpqpnp.png);
+    background-position: -21px -208px;
+}
+
+.menu .cart-img>.yao {
+    width: 20px;
+    background-image: url(../assets/exE9Cc-p8hP.png);
+    background-position: 0 -45px;
 }
 
 /*游戏 */

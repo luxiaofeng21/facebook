@@ -78,7 +78,7 @@
                 <!--$-->
                 <div aria-label="Facebook" class="taijpn5t cb02d2ww j83agx80" role="navigation">
                     <ul class="thodolrn ojvp67qx taijpn5t buofh1pr j83agx80 aovydwv3 bqdfd6uv">
-                        <li class="buofh1pr to382e16 o5zgeu5y jrc8bbd0 dawyy4b1 hw7htvoc" v-for="(item,index) in tabNav" :key="index" v-on:click="hactive=index">
+                        <li class="buofh1pr to382e16 o5zgeu5y jrc8bbd0 dawyy4b1 hw7htvoc" v-for="(item,index) in tabNav" :key="index" v-on:click="getNav(index)">
                             <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
                                 <div class="bp9cbjyn j83agx80 cb02d2ww l9j0dhe7">
                                     <div :class="hactive==index?'ooq845xs s44p3ltw b2mspmbn akjuzmll bub6lnnc i09qtzwb lthxh50u pmk7jnqg tkxwya3v jav28p83 tt24zdws ms05siws flx89l3n b7h9ocf4':''">
@@ -109,7 +109,7 @@
             <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
                 <div class="j83agx80 l9j0dhe7">
                     <el-popover placement="bottom" width="300" trigger="click">
-                        <div class="aov4n071">
+                        <div v-if="mactive==-1" class="aov4n071">
                             <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
                                 <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="/profile.php?id=100004644524593" role="link" tabindex="0">
                                     <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
@@ -151,7 +151,7 @@
                                                 </i>
                                             </div>
                                         </div>
-                                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                                        <div @click="dialogVisible3=true" class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
                                             <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
                                                 <div class="">
                                                     <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
@@ -267,6 +267,27 @@
                                     </span>
                                 </footer>
                             </div>
+                        </div>
+                        <div v-else-if="mactive==0">
+                            <div class="book-flex book-items">
+                                <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
+                                <div class="visible-title">设置与隐私</div>
+                            </div>
+                            <cart-list :list="setAll" @getcart="getset"></cart-list>
+                        </div>
+                        <div v-else-if="mactive==1">
+                            <div class="book-flex book-items">
+                                <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
+                                <div class="visible-title">帮助与支持</div>
+                            </div>
+                            <cart-list :list="setAll2" @getcart="getset"></cart-list>
+                        </div>
+                        <div v-else-if="mactive==2">
+                            <div class="book-flex book-items">
+                                <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
+                                <div class="visible-title">显示偏好设置</div>
+                            </div>
+                            <cart-list :list="setAll3" :type="'switch'"></cart-list>
                         </div>
                         <el-tooltip class="item" effect="dark" content="账户" placement="top-start" slot="reference">
                             <div aria-label="帐户" class="oajrlxb2 tdjehn4e qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t qypqp5cg q676j6op" role="button" tabindex="0">
@@ -1095,17 +1116,204 @@
             </el-button>
         </span>
     </el-dialog>
+    <el-dialog title="动态消息偏好设置" :visible.sync="dialogVisible2" width="550px">
+        <div style="margin-bottom:10px">管理和定制你的动态消息内容。</div>
+        <cart-list :list="dynamicAll" type="arrow" size="big"></cart-list>
+    </el-dialog>
+    <el-dialog title="向 Facebook 提供反馈" :visible.sync="dialogVisible3" width="500px">
+        <cart-list :list="feedback" type="arrow" @getcart="getfeed" size="big"></cart-list>
+    </el-dialog>
+    <el-dialog :title="feed_title" :visible.sync="dialogVisible4" width="500px">
+        <div class="visible-item">
+            <div class="visible-title">我们应该如何改进？</div>
+            <el-select v-model="feed.title" placeholder="选择产品" style="width:100%">
+                <el-option v-for="(item,index) in feedProduct" :key="index" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+        <div class="visible-item">
+            <div class="visible-text">详细信息</div>
+            <el-input type="textarea" v-model="feed.text" placeholder="请提供尽可能更多的信息....."></el-input>
+        </div>
+        <div class="visible-item">
+            <div class="book-icon2">
+                <i class="el-icon-paperclip"> </i>
+                <span>添加截图或视频（推荐）</span>
+            </div>
+        </div>
+        <div class="visible-item">
+            <div class="book-icon2">
+                <span>
+                    如果想提供建议帮助我们改善产品，请联系我们。如果遇到具体问题并需要帮助，请访问
+                    <a href="">帮助中心</a>
+                </span>
+            </div>
+        </div>
+
+    </el-dialog>
 </div>
 </template>
 
 <script>
 import cartList from './cart-list'
 export default {
+    props: ["hactive"],
     components: {
         "cart-list": cartList
     },
     data() {
         return {
+            dialogVisible4: false,
+            feed: {
+                title: "",
+
+            },
+            feedProduct: [{
+                    label: "编辑工具/发布功能",
+                    value: 1
+                },
+                {
+                    label: "表现",
+                    value: 2
+                }, {
+                    label: "大学社区/微校园",
+                    value: 3
+                }, {
+                    label: "登录",
+                    value: 5
+                }, {
+                    label: "动态消息",
+                    value: 6
+                }, {
+                    label: "个人主页",
+                    value: 7
+                }, {
+                    label: "公共主页",
+                    value: 8
+                }, {
+                    label: "广告",
+                    value: 9
+                }, {
+                    label: "国际化",
+                    value: 10
+                }, {
+                    label: "活动",
+                    value: 11
+                }, {
+                    label: "健康",
+                    value: 12
+                }, {
+                    label: "交友",
+                    value: 13
+                }, {
+                    label: "快拍",
+                    value: 14
+                }, {
+                    label: "媒体文件查看器",
+                    value: 15
+                }, {
+                    label: "评论/点赞/心情/分享",
+                    value: 16
+                }, {
+                    label: "气候科学信息中心",
+                    value: 17
+                }, {
+                    label: "设置",
+                    value: 18
+                }, {
+                    label: "视频",
+                    value: 19
+                }, {
+                    label: "视频聊天室",
+                    value: 20
+                },
+                {
+                    label: "首页",
+                    value: 21
+                }, {
+                    label: "搜索",
+                    value: 22
+                }, {
+                    label: "通知",
+                    value: 23
+                }, {
+                    label: "新冠疫情信息中心",
+                    value: 24
+                }, {
+                    label: "新用户体验",
+                    value: 25
+                }, {
+                    label: "选民信息中心",
+                    value: 26
+                }, {
+                    label: "隐私设置",
+                    value: 27
+                }, {
+                    label: "游戏",
+                    value: 28
+                },
+                {
+                    label: "直播",
+                    value: 29
+                }, {
+                    label: "职位发布工具",
+                    value: 30
+                }, {
+                    label: "众包",
+                    value: 31
+                }, {
+                    label: "Facebook Pay",
+                    value: 32
+                }, {
+                    label: "Goodwill/那年今天",
+                    value: 33
+                }, {
+                    label: "Markeplace",
+                    value: 34
+                }, {
+                    label: "Messenger",
+                    value: 35
+                }, {
+                    label: "Watch",
+                    value: 36
+                }, {
+                    label: "其他",
+                    value: 37
+                },
+            ],
+            feed_title: '',
+            feedback: [{
+                    icon: "el-icon-s-help",
+                    title: "帮助我们改进新版 Facebook",
+                    text: "对新版 Facebook 的使用体验提出反馈。"
+                },
+                {
+                    icon: "el-icon-info",
+                    title: "报告漏洞",
+                    text: "告诉我们出现故障的功能。"
+                },
+            ],
+            dialogVisible3: false,
+            dynamicAll: [{
+                    icon: "el-icon-star-on",
+                    title: "管理特别关注对象",
+                    text: "添加用户和公共主页即可在动态消息中优先显示其帖子"
+                },
+                {
+                    icon: "el-icon-s-release",
+                    title: "停止关注",
+                    text: "停止关注用户、主页和小组，隐藏他们的帖子"
+                },
+                {
+                    icon: "el-icon-s-claim",
+                    title: "重新关注用户",
+                    text: "重新关注用户、主页和小组。"
+                },
+                {
+                    icon: "el-icon-time",
+                    title: "暂不关注",
+                    text: "管理你的“暂不关注”设置"
+                },
+            ],
             me_ul: [{
                     icon: "el-icon-s-tools",
                     title: "设置与隐私",
@@ -1186,7 +1394,6 @@ export default {
                     text: "发布公开或私人活动，吸引大家参与。"
                 },
             ],
-            hactive: 0,
             tabNav: [{
                     name: "index",
                     icon: "M17.5 23.979 21.25 23.979C21.386 23.979 21.5 23.864 21.5 23.729L21.5 13.979C21.5 13.427 21.949 12.979 22.5 12.979L24.33 12.979 14.017 4.046 3.672 12.979 5.5 12.979C6.052 12.979 6.5 13.427 6.5 13.979L6.5 23.729C6.5 23.864 6.615 23.979 6.75 23.979L10.5 23.979 10.5 17.729C10.5 17.04 11.061 16.479 11.75 16.479L16.25 16.479C16.939 16.479 17.5 17.04 17.5 17.729L17.5 23.979ZM21.25 25.479 17 25.479C16.448 25.479 16 25.031 16 24.479L16 18.327C16 18.135 15.844 17.979 15.652 17.979L12.348 17.979C12.156 17.979 12 18.135 12 18.327L12 24.479C12 25.031 11.552 25.479 11 25.479L6.75 25.479C5.784 25.479 5 24.695 5 23.729L5 14.479 3.069 14.479C2.567 14.479 2.079 14.215 1.868 13.759 1.63 13.245 1.757 12.658 2.175 12.29L13.001 2.912C13.248 2.675 13.608 2.527 13.989 2.521 14.392 2.527 14.753 2.675 15.027 2.937L25.821 12.286C25.823 12.288 25.824 12.289 25.825 12.29 26.244 12.658 26.371 13.245 26.133 13.759 25.921 14.215 25.434 14.479 24.931 14.479L23 14.479 23 23.729C23 24.695 22.217 25.479 21.25 25.479Z",
@@ -1215,21 +1422,116 @@ export default {
             ],
             choose: 0,
             dialogVisible: false,
+            dialogVisible2: false,
             value: true,
             path: "",
+            mactive: -1,
+            setAll3: [{
+                    icon: "el-icon-moon",
+                    title: "夜间模式",
+                    switch: false
+                },
+                {
+                    icon: "el-icon-sunny",
+                    title: "精简模式",
+                    switch: false
+                },
+            ],
+            setAll2: [{
+                    icon: "el-icon-question",
+                    title: "帮助中心"
+                },
+                {
+                    icon: "el-icon-s-comment",
+                    title: "帮助论坛"
+                }, {
+                    icon: "el-icon-message",
+                    title: "帮助中心信箱"
+                }, {
+                    icon: "el-icon-info",
+                    title: "报告问题"
+                }
+            ],
+            setAll: [{
+                    icon: "el-icon-s-tools",
+                    title: "设置"
+                },
+                {
+                    icon: "el-icon-s-tools",
+                    title: "隐私设置检查"
+                },
+                {
+                    icon: "el-icon-s-tools",
+                    title: "快捷隐私设置"
+                }, {
+                    icon: "el-icon-s-unfold",
+                    title: "动态记录"
+                }, {
+                    icon: "el-icon-s-marketing",
+                    title: "动态消息偏好设置"
+                }, {
+                    icon: "el-icon-s-tools",
+                    title: "语言"
+                },
+            ],
         }
-    },
-    craeted() {
-
     },
 
     methods: {
+        getNav(i) {
+            this.$emit("getnav", i)
+        },
+        //反馈
+        getfeed(i) {
+            if (i == 0) {
+                this.feed_title = "帮助我们改进新版 Facebook"
+            } else {
+                this.feed_title = "报告漏洞"
+            }
+            this.dialogVisible4 = true
+
+        },
+        //设置
+        getset(i) {
+            if (i == 0) {
+                this.$router.push({
+                    name: "account"
+                })
+            } else if (i == 1) {
+                this.$router.push({
+                    name: "checkup"
+                })
+
+            } else if (i == 2) {
+                this.$router.push({
+                    name: "privacy"
+                })
+
+            } else if (i == 3) {
+                this.$router.push({
+                    name: "dynamic"
+                })
+
+            } else if (i == 4) {
+                this.dialogVisible2 = true;
+            } else if (i == 5) {
+                this.$router.push({
+                    name: "account",
+                    params: {
+                        state: 9
+                    }
+                })
+            }
+        },
         //个人中心
         getme(i) {
+
             if (i == 3) {
                 this.$router.push({
                     name: "login"
                 })
+            } else {
+                this.mactive = i;
             }
         },
         getshow(e) {

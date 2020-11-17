@@ -11,6 +11,7 @@ import 'swiper/swiper-bundle.css'
 import '@/css/app.css'
 import axios from 'axios'
 Vue.prototype.$axios = axios
+Vue.prototype.$url = "http://127.0.0.1:8080"
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 window.Swiper=Swiper

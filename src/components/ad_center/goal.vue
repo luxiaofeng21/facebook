@@ -45,7 +45,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <Menu :menu="menu"></Menu>
+                                        <cart-list :list="menu" :active="mactive" @getcart="getmenu"></cart-list>
                                     </div>
                                     <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: none; right: 0px; height: 425px;"></div>
                                     <div class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 0px;">
@@ -56,8 +56,8 @@
                             </div>
                         </div>
                         <div aria-label="推广" role="main" class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr dp1hu0rb">
-                            <Point v-if="state==0"></Point>
-                            <About v-else-if="state==2"></About>
+                            <Point v-if="mactive==0"></Point>
+                            <About v-else-if="mactive==1"></About>
                             <div v-else class="j83agx80 cbu4d94t buofh1pr dp1hu0rb hpfvmrgz l9j0dhe7 du4w35lb">
                                 <div class="dp1hu0rb d2edcug0 taijpn5t j83agx80 gs1a9yip">
                                     <div class="k4urcfbm dp1hu0rb d2edcug0 cbu4d94t j83agx80 bp9cbjyn" role="main">
@@ -135,38 +135,195 @@
             <div></div>
         </div>
     </div>
+    <el-dialog :visible.sync="dialogVisible" width="740px" v-if="mactive==1">
+        <div class="lt9micmv qt6c0cv9 gl4o1x5y aodizinl"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh oo9gr5id" dir="auto">Facebook 广告发布政策禁止广告主在使用我们的广告产品时采取歧视个人或人群的做法。<span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">拒绝为个人或人群提供机会的广告，即为歧视性广告。</span>我们的政策不允许因如下所例的特定个人特征采取歧视做法：种族、民族、原籍地、宗教、年龄、性别、性取向、性别认同、家庭/婚姻状况、残疾、医疗或遗传状况，以及联邦、州和当地公平住房法及公民权利法提及的其他所有受保护的个人特征。<div class="cxgpxx05 sj5x9vvc"></div>我们的无歧视政策没有改变，但为广告主新增了解释政策的示例。虽然我们禁止歧视行为，但你可以根据想要推广的商品或服务，把广告展示给对这项商品或服务感兴趣的特定受众。</span>
+            <div class="ib6112jz mj7xtnbm bq3qbged">
+                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t gs1a9yip owycx6da btwxx1t3 d1544ag0 tw6a2znq discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
+                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw d2edcug0 hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
+                        <div class="a2n8s7i9 oqcyycmt"><img alt="" src="/images/business_integrity/non_discrimination/Acceptable_Ads.png" width="80" height="80">
+                            <div class="discj3wi">
+                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                    <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id oqcyycmt" dir="auto">正确的广告定位示例</span></div>
+                                    <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain oqcyycmt" dir="auto">面向所有符合工作年龄的个人投放服装店招聘广告，不论性别</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw d2edcug0 hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
+                        <div class="a2n8s7i9 oqcyycmt"><img alt="" src="/images/business_integrity/non_discrimination/Discriminatory_Ads.png" width="80" height="80">
+                            <div class="discj3wi">
+                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                    <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id oqcyycmt" dir="auto">广告歧视示例</span></div>
+                                    <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain oqcyycmt" dir="auto">面向符合工作年龄的所有人投放超市招聘广告</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
+                <div class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" role="button" tabindex="0">
+                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
+                        <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7"><i class="hu5pjgll cwsop09l sp_ai6GzRFIO7k_1_5x sx_1c6741"></i></div>
+                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                            <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
+                                <div class="">
+                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                        <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh pipptul6 hzawbc8m" dir="auto">详细了解我们的</span></div>
+                                        <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr ekzkrbhg oo9gr5id hzawbc8m" dir="auto">无歧视政策</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bi6gxh9e ozuftl9m aov4n071 l9j0dhe7 o8rfisnq">
+                                <div class="bp9cbjyn j83agx80 btwxx1t3">
+                                    <div class="oi9244e8"><i class="hu5pjgll m6k467ps sp_6vYwcjvw5IC_1_5x sx_a8bbe4"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore"></div>
+                </div>
+            </div>
+            <div class="aodizinl"></div>
+            <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
+                <div class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" role="button" tabindex="0">
+                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
+                        <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7"><i class="hu5pjgll cwsop09l sp_ai6GzRFIO7k_1_5x sx_fe448a"></i></div>
+                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                            <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
+                                <div class="">
+                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                        <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh pipptul6 hzawbc8m" dir="auto">以下广告主须知</span></div>
+                                        <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr ekzkrbhg oo9gr5id hzawbc8m" dir="auto">投放住房、招聘和信贷广告的美国广告主</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bi6gxh9e ozuftl9m aov4n071 l9j0dhe7 o8rfisnq">
+                                <div class="bp9cbjyn j83agx80 btwxx1t3">
+                                    <div class="oi9244e8"><i class="hu5pjgll m6k467ps sp_6vYwcjvw5IC_1_5x sx_a8bbe4"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore"></div>
+                </div>
+            </div>
+            <div class="aodizinl"></div>
+            <div class="jgm1skzn etykmlbu">
+                <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
+                    <div class="ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi a8c37x1j">
+                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
+                            <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7"><i class="hu5pjgll cwsop09l sp_qECMrzmxjXt_1_5x sx_71d16e"></i></div>
+                            <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                                <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
+                                    <div class="">
+                                        <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                            <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain hzawbc8m" dir="auto">虽然部分示例仅针对美国广告主，但 Facebook 无歧视政策属于全球性政策。由于各地的反歧视法律不同，因此，请务必遵守我们的政策、你所在地区和广告定位地区的相关法律。</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aodizinl ofv0k9yr"></div><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh oo9gr5id" dir="auto">点击<span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">我同意</span>，即表示你保证：</span>
+            <div class="discj3wi">
+                <div class="muag1w35 b20td4e0">
+                    <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
+                        <div class="ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi a8c37x1j">
+                            <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
+                                <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7"><i class="hu5pjgll cwsop09l sp_qECMrzmxjXt_1_5x sx_71d16e"></i></div>
+                                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                                    <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
+                                        <div class="">
+                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                                <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain hzawbc8m" dir="auto">已仔细阅读并同意遵守我们的广告发布政策和所有适用法律</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
+                        <div class="ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi a8c37x1j">
+                            <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
+                                <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7"><i class="hu5pjgll cwsop09l sp_qECMrzmxjXt_1_5x sx_71d16e"></i></div>
+                                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                                    <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
+                                        <div class="">
+                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                                <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain hzawbc8m" dir="auto">使用 Facebook 广告发布功能时不会进行任何不正当的歧视行为</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
+                        <div class="ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi a8c37x1j">
+                            <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
+                                <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7"><i class="hu5pjgll cwsop09l sp_qECMrzmxjXt_1_5x sx_71d16e"></i></div>
+                                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                                    <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
+                                        <div class="">
+                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+                                                <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain hzawbc8m" dir="auto">会把这项无歧视政策告知所有使用此帐户发布广告的人员</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span slot="footer" class="dialog-footer">
+            <el-button type="primary" @click="dialogVisible = false">我同意</el-button>
+        </span>
+    </el-dialog>
+
 </div>
 </template>
 
 <script>
-import Menu from '@/common/menu'
+import cartList from '@/common/cart-list'
 import Point from './point'
 import About from './about'
 export default {
     components: {
         Point,
-        Menu,
+        cartList,
         About
     },
     data() {
         return {
-            state: 0,
+            dialogVisible: true,
+            mactive: 0,
             menu: [{
                     title: "获得建议",
                     text: "从回答几个问题开始",
                     icon: "el-icon-cherry",
                 },
                 {
-                    title: "选择建议",
-                    text: "从头开始创建新广告",
+                    title: "投放自动广告",
+                    text: "根据个人需求，随时间不断调整广告策略，争取更优成效",
                     icon: "el-icon-edit-outline",
                 },
                 {
-                    title: "自动广告",
+                    title: "选择目标",
                     text: "根据个人需求，随时间不断调整广告策略，争取更优成效",
                     icon: "el-icon-magic-stick",
                 }
             ]
+        }
+    },
+    methods: {
+        getmenu(i) {
+            this.mactive = i
         }
     }
 }
