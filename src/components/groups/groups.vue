@@ -90,15 +90,19 @@
                                                 </span>
                                             </div>
                                         </div>
+                                         <div class="me-group">
+                                            <div class="me-group-item" v-for='(item,index) in groups' :key="index">
+                                                    <div class="lf">
+                                                        <img :src="item.img" alt="">
+                                                    </div>
+                                                    <div class="rg">
+                                                            <div class="me-group-title">{{item.title}}</div>
+                                                            <div class="me-group-date">上次发帖：{{getTimeDistance(item.date)}}</div>
+                                                    </div>
+                                            </div>
+                                         </div>
                                     </div>
-                                    <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: none; right: 0px; height: 437px;">
-                                    </div>
-                                    <div class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 0px;">
-                                        <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="kd0sc8dh sl8jk4me ie5zihkj i09qtzwb rm3jng1j hzruof5a pmk7jnqg kr520xx4 c0wkt4kp">
+                                        
                                 </div>
                             </div>
                         </div>
@@ -143,8 +147,16 @@ export default {
                     title: "发现",
                 },
             ],
-            state: "feed"
+            state: "feed",
+            groups:[]
         }
+    },
+    created(){
+        var that=this;
+        this.$axios(this.$url+"/getGroups").then(res=>{
+            res.data.data.map(x=>x.img=require("@/assets/group.jpg"))
+           that.groups=res.data.data
+        })
     },
     methods: {
         getmenu(i) {
@@ -153,3 +165,38 @@ export default {
     }
 }
 </script>
+
+<style>
+    .me-group-item{
+        display: flex;
+        padding: 10px 16px;
+        cursor: pointer;
+        align-items: center;
+    }
+    .me-group-item>.lf{
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        margin-right: 10px;
+    }
+    .me-group-item>.lf>img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .me-group-item:hover{
+        background-color: #eee;
+    }
+    .me-group-title{
+      font-weight: 600;
+      font-size: .9375rem;
+      margin-bottom: 5px;
+    }
+    .me-group-date{
+        color: var(--secondary-text);
+        line-height: 1.2308;
+        font-size: .8125rem;
+
+    }
+</style>

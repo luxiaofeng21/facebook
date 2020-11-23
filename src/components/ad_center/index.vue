@@ -7,7 +7,7 @@
 			<div data-pagelet="page" class="j83agx80 cbu4d94t d6urw2fd dp1hu0rb l9j0dhe7 du4w35lb">
 				<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw jifvfom9 gs1a9yip owycx6da btwxx1t3 buofh1pr dp1hu0rb ka73uehy">
 					<div aria-label="主页封面" role="navigation" class="rq0escxv l9j0dhe7 tkr6xdv7 j83agx80 cbu4d94t pfnyh3mw d2edcug0 hpfvmrgz dp1hu0rb rek2kq2y o36gj0jk"
-					_mstaria-label="13675194" style="text-align: left;">
+					 style="text-align: left;">
 						<div class="hybvsw6c cjfnh4rs j83agx80 cbu4d94t dp1hu0rb l9j0dhe7 be9z9djy iyyx5f41 jyyn76af aip8ia32 so2p5rfc hxa2dpaq">
 							<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd bp9cbjyn owycx6da btwxx1t3 jei6r52m wkznzc2l n851cfcs dhix69tm">
 								<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr">

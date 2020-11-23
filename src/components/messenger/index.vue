@@ -12,7 +12,7 @@
                     <div class="book-search">
                         <el-input prefix-icon="el-icon-search" placeholder="搜索Messenger"></el-input>
                     </div>
-                    <cart-list :list="menu" type="msg"></cart-list>
+                    <cart-list style="margin-top:10px" :list="menu" type="menu" :active="mactive"></cart-list>
             </div>
             <div class="rg">
                     <div class="list-haed msg-flex">
@@ -35,6 +35,49 @@
                                         <div class="msg-text">你们是facebook好友</div>
                                         <div class="msg-date">香港</div>
                                         <div class="msg-date">所在地：香港</div>
+                                </div>
+                                <div class="what">
+                                        <div class="what-list">
+                                                 <div class="what-user">
+                                                    <div class="what-date">2017/10/09 19:19</div>
+                                                    <div class="what-user-img">
+                                                            <img src="../../assets/bg.jpg" alt="">
+                                                            <img src="../../assets/me.jpg" alt="">
+                                                    </div>
+                                                    <div class="what-user-text">你们现在是Message联系人了</div>
+                                                </div>
+                                                <div class="what-item" v-for="(item,index) in msgAll" :key="index">
+                                                        <div class="what-date">{{item.date}}</div>
+                                                        <div class="what-msg">
+                                                                <div class="lf">
+                                                                        <div class="hover-icon"> <i class="el-icon-s-promotion"></i> </div>
+                                                                        <div class="hover-icon"> <i class="el-icon-more"></i> </div>
+                                                                        <div class="hover-icon"><img src="../../assets/face.png" alt=""> </div>
+                                                                </div>
+                                                                <div class="what-title">{{item.title}}</div>
+                                                                <i class="el-icon-success"> </i>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="what-input">
+                                                <div class="lf">
+                                                    <i class="el-icon-circle-plus"></i>
+                                                    <i class="el-icon-data-line"></i>
+                                                    <i class="el-icon-picture"></i>
+                                                    <i class="el-icon-camera-solid"></i>
+                                                </div>
+                                                <div class="rg">
+                                                    <el-input v-model="what" class="book-search" @keyup.13.native="getsub">
+                                                        <span slot="suffix">
+                                                            <el-popover>
+                                                                    <VEmojiPicker @select="selectEmoji"   />
+                                                                    <img  slot="reference" src="../../assets/face.png" alt="">
+                                                            </el-popover>
+                                                        </span>
+                                                    </el-input>
+                                                    <img src="../../assets/good.png" alt="">
+                                                </div>
+                                        </div>
                                 </div>
                             </div>
                             <div class="rg">
@@ -74,6 +117,9 @@ export default {
     },
     data(){
         return {
+            mobj:{},
+            mactive:0,
+            msgAll:[],
             collapse:[
                 {
                     title:"在对话内搜索",
@@ -99,11 +145,31 @@ export default {
                     title:"杨小邪",
                     text:"你们现在已经是Message联系人了"
                 }
-            ]
+            ],
+            what:""
         }
     },
     created(){
-
+        var that=this;
+        this.$axios.get(this.$url+"/friends").then(res=>{
+        console.log("created -> res", res)
+            that.menu=res.data
+        })
+    },
+    methods:{
+        //表情
+        selectEmoji(data){
+            this.what+=data.data
+        },
+        //发送消息
+        getsub(){
+            if(this.what=='') return 
+            var now=new Date();
+            var date=now.toLocaleString()
+            console.log(date)
+            this.msgAll.push({title:this.what,date})
+            this.what="";
+        }
     }
 }
 </script>
@@ -169,8 +235,16 @@ export default {
             padding: 0 16px;
             border-bottom: 1px solid #eee;
         }
-        .msg-list{
-            padding: 0 16px;
+        .list-haed>.rg{
+            font-size: 28px;
+        }
+        .list-haed>.rg>i{
+            margin: 0  5px;
+            color: #52B9F3;
+            cursor: pointer;
+        }
+        .msg-list .user-msg{
+            margin:  16px;
         }
         .msg-name{
                 font-size: 16px;
@@ -224,4 +298,111 @@ export default {
             margin-bottom: 10px ;
         }
         
+
+        /*聊天*/
+        .what{
+            text-align: center;
+            position: relative;
+            
+          
+        }
+        .what-list{
+            overflow: auto;
+            height: 620px;
+            border-top: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+        .what-user-img{
+            margin-top: 20px;
+        }
+        .what-user-img img{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin:0 -5px;
+            border: 1px solid #fff;
+        }
+        .what-user-text{
+            color: rgba(0, 0, 0, .40);
+            font-size: 13px;
+            text-align: center;
+        }
+        .what-date{
+            display: block;
+            font-weight: 500;
+            margin: 12px 0 12px 20px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, .40);
+            font-size: 13px;
+        }
+
+        .what-msg{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+        .what-msg>i{
+            color: #1877F2;
+            margin:0 5px;
+           
+        }
+        .what-msg>.lf>*{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 15px;
+        }
+        .what-msg:hover >.lf{
+            display: flex;
+        }
+        .what-msg>.lf{
+            display: none;
+            padding-right: 10px;
+        }
+        .what-title{
+            background-attachment: fixed;
+            background-color: rgb(0, 153, 255);
+            border-radius: 1.3rem;
+            padding: 6px 12px 6px;
+            max-width: 60%;
+            font-size: 16px;
+            word-break: break-all;
+            color: #fff;
+              text-align: left;
+        }
+
+        /*输入框 */
+        .what-input{
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+        }
+        .what-input>.lf{
+            width: 20%;
+            font-size: 25px;
+            color: #1877F2;
+        }
+        .what-input>.lf>i{
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .what-input>.rg{
+            width: 80%;
+            display: flex;
+            align-items: center;
+        }
+        .book-search{
+            width: 100%;
+        }
+        .book-search img{
+            width: 20px;
+            height: 20px;
+            margin:10px 2px;
+            cursor: pointer;
+        }
+        .what-input>.rg>img{
+            width: 25px;
+            height: 25px;
+            margin: 0 5px;
+        }
 </style>

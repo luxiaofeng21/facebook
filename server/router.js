@@ -11,5 +11,7 @@ router.post("/createUser",services.createUser)
 router.post("/login",services.getlogin)
 router.post("/createPage",services.createPage)
 router.get("/publicPage",services.publicPage)
+router.post("/createGroups",services.createGroups)
+router.get("/getGroups",services.getGroups)
 // 注册功能
 module.exports = router

@@ -80,24 +80,13 @@
                                         </div>
                                       </div>
                                       <el-input placeholder="小组名称（必填）" v-model="page.title"></el-input>
-                                      <div class="cxgpxx05">
-                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
-                                        dir="auto">
-                                          使用公司、品牌或组织的名称，或者可说明小组用途的名称。
-                                          <a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl q66pz984 gpro0wi8"
-                                          href="/help/519912414718764" role="link" tabindex="0"
-                                          target="_blank">
-                                            详细了解
-                                          </a>
-                                        </span>
-                                      </div>
                                     </div>
                                   </div>
 								  <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
                                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
                                     
 									 <el-select placeholder="选择隐私设置" v-model="page.type"  class="book-width">
-										<el-option :key="index" v-for="(item,index) in settings" :label="item.name" :value="item.id">
+										<el-option :key="index" v-for="(item,index) in settings" :label="item.title" :value="index+1">
 												<div class="friend-left">
 													<div class="friend-img"> <img :src="item.img" alt=""> </div>
 													<div class="friend-content">
@@ -116,7 +105,7 @@
                                   </div>
                                   <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
                                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                     <el-select placeholder="邀请好友（可选）" v-model="page.friend" :filterable="true" :multiple="true" class="book-width">
+                                     <el-select placeholder="邀请好友（可选）" v-model="page.friends" :filterable="true" :multiple="true" class="book-width">
 										<el-option :key="index" v-for="(item,index) in friends" :label="item.name" :value="item.id">
 											<div class="friend-item">
 												<div class="friend-left">
@@ -131,7 +120,7 @@
                                       <div class="cxgpxx05">
                                         <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
                                         dir="auto">
-                                            推荐
+                                            推荐  <span class="link" v-for="(item,index) in friends " :key="index">{{index>0?',':' '}}{{item.name}}</span>
                                         </span>
                                       </div>
                                     </div>
@@ -296,11 +285,11 @@
                                                           <div class="bi6gxh9e aov4n071">
                                                             <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr knj5qynh m9osqain hzawbc8m"
                                                             dir="auto">
-                                                              <span v-if="page.type==''">
+                                                              <span v-if="page.type=='' || page.type==1">
                                                                   公开
                                                                 </span>
                                                                 <span v-else>
-                                                                  {{page.type.join(",")}}
+                                                                  非公开
                                                                 </span>
                                                             </span>
                                                           </div>
@@ -498,62 +487,7 @@
                                           <div class="bp9cbjyn j83agx80 cbu4d94t d2edcug0">
                                             <div class="rq0escxv d2edcug0 ecyo15nh hv4rvrfc dati1w0a discj3wi">
                                               <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t gs1a9yip lhclo0ds btwxx1t3 sv5sfqaa o22cckgh obtkqiv7 fop5sh7t">
-                                                <div class="rq0escxv l9j0dhe7 du4w35lb qmfd67dx o387gat7 buofh1pr g5gj957u hpfvmrgz aov4n071 oi9244e8 bi6gxh9e h676nmdw aghb5jc5">
-                                                  <div class="j83agx80 l9j0dhe7 k4urcfbm">
-                                                    <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;"
-                                                    class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm sbcfpzgs">
-                                                      <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t ofv0k9yr cwj9ozl2">
-                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo muag1w35 enqfppq2">
-                                                          <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 aahdfvyu tvmbv18p">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t e5nlhep0 aodizinl">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo">
-                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 hv4rvrfc dati1w0a">
-                                                                  <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                    <div class="qzhwtbm6 knvmm38d">
-                                                                      <h2 class="gmql0nx0 l94mrbxd p1ri9a11 lzcic4wl" dir="auto">
-                                                                        <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m"
-                                                                        dir="auto" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                          关于
-                                                                        </span>
-                                                                      </h2>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 aahdfvyu tvmbv18p">
-                                                            <div class="dwo3fsh8 g5ia77u1 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv q9uorilb kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h k4urcfbm">
-                                                              <div class="j83agx80 cbu4d94t sj5x9vvc cxgpxx05">
-                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw jifvfom9 ll8tlv6m owycx6da btwxx1t3 hv4rvrfc dati1w0a jb3vyjys b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                                                                  <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                                                    <i class="hu5pjgll cwsop09l sp_-69RjdrrvoB sx_464b45">
-                                                                    </i>
-                                                                  </div>
-                                                                  <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz o8rfisnq p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                      <div class="qzhwtbm6 knvmm38d">
-                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh oo9gr5id hzawbc8m"
-                                                                        dir="auto">
-                                                                          <span v-if="page.text==''" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql jq4qci2q a3bd9o3v knj5qynh oo9gr5id">
-                                                                            描述
-                                                                          </span>
-                                                                          <span v-else>
-                                                                            {{page.text}}
-                                                                          </span>
-                                                                        </span>
-                                                                      </div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                                                
                                                 <div class="rq0escxv l9j0dhe7 du4w35lb qmfd67dx gile2uim buofh1pr g5gj957u hpfvmrgz aov4n071 oi9244e8 bi6gxh9e h676nmdw aghb5jc5">
                                                   <div class="j83agx80 l9j0dhe7 k4urcfbm">
                                                     <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;"
@@ -563,20 +497,9 @@
                                                           <div aria-label="公共小组" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l oo9gr5id"
                                                           role="button" tabindex="0">
                                                             <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                                                              <svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none"
-                                                              style="height: 40px; width: 40px;">
-                                                                <mask id="jsc_c_t">
-                                                                  <circle cx="20" cy="20" fill="white" r="20">
-                                                                  </circle>
-                                                                </mask>
-                                                                <g mask="url(#jsc_c_t)">
-                                                                  <image style="height: 40px; width: 40px;" x="0" y="0" height="100%" preserveAspectRatio="xMidYMid slice"
-                                                                  width="100%" xlink:href="/images/pages/page_creation/pages-profile-img.png">
-                                                                  </image>
-                                                                  <circle class="mlqo0dh0 georvekb s6kb5r3f" cx="20" cy="20" r="20">
-                                                                  </circle>
-                                                                </g>
-                                                              </svg>
+																	<div class="me-img">
+																			<img src="../../assets/tou.png" alt="">
+																	</div>
                                                             </div>
                                                           </div>
                                                         </div>
@@ -650,6 +573,52 @@
                                                     </div>
                                                   </div>
                                                 </div>
+												<div class="rq0escxv l9j0dhe7 du4w35lb qmfd67dx hpfvmrgz o387gat7 buofh1pr g5gj957u aov4n071 oi9244e8 bi6gxh9e h676nmdw aghb5jc5">
+													<div class="lpgh02oy" style="top: 16px;">
+														<div class="">
+															<div class="sjgh65i0 bexiecsf">
+																<div class="j83agx80 l9j0dhe7 k4urcfbm">
+																	<div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;"
+																	class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm sbcfpzgs">
+																		<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw ihqw7lf3 cwj9ozl2">
+																			<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo muag1w35 enqfppq2">
+																				<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw d2edcug0 aahdfvyu tvmbv18p">
+																					<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw e5nlhep0 aodizinl">
+																						<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo">
+																							<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw d2edcug0 hv4rvrfc dati1w0a">
+																								<div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
+																									<div class="qzhwtbm6 knvmm38d">
+																										<h2 class="gmql0nx0 l94mrbxd p1ri9a11 lzcic4wl d2edcug0 hpfvmrgz" dir="auto">
+																											<span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m"
+																											dir="auto">
+																												<span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ojkyduve" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
+																													简介
+																												</span>
+																											</span>
+																										</h2>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				<div style="padding:0 15px">
+																					<div class="friend-left" v-for="(item,index) in seletAll" :key="index">
+																								<div class="friend-img"> <img :src="item.img" alt=""> </div>
+																								<div class="friend-content">
+																									<div class="friend-title">{{item.title}}</div>
+																									<div class="friend-text">{{item.text}}</div>
+																								</div>
+																						</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
                                               </div>
                                             </div>
                                           </div>
@@ -785,11 +754,23 @@ export default {
 			  text:"只有成员才能查看成员名单和小组帖"
 		  },
 	  ],
+	  seletAll:[
+		  {
+			  img:require("@/assets/n8s2iDL-sOI.png"),
+			  title:"公开",
+			  text:"任何人都能查看成员名单和小组帖"
+		  },
+		  {
+			  img:require("@/assets/find.png"),
+			  title:"可发现",
+			  text:"任何人都能找到这个小组"
+		  },
+	  ],
       page:{
         title:"",
-        friend:[],
+        friends:[],
         type:""
-      }
+      },
     }
   },
   created(){
@@ -801,20 +782,20 @@ export default {
   },
   methods:{
     getcreate(){
-		
         var that=this;
         var info=JSON.parse(JSON.stringify(this.page));
         if(info.title==''){
             this.$message.error("小组名称不能为空哦~")
             return false
         }
-        if(info.type.length<=0){
-           this.$message.error("类别不能为空哦~")
+        if(info.type==''){
+           this.$message.error("隐私设置不能为空哦~")
             return false
         }
-        info.type=info.type.join(",")
-        this.$axios.post(this.$url+"/createPage",info).then(res=>{
-      
+		var date=new Date();
+		info.date=date.getTime();
+        info.friends=info.friends.join(",")
+        this.$axios.post(this.$url+"/createGroups",info).then(res=>{
             if(res.data.code==1){
                 that.$message.success(res.data.msg)
                 setTimeout(()=>{

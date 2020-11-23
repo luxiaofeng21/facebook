@@ -11,7 +11,6 @@ import Index from '@/components/index/index'
 import Watch from '@/components/watch/watch'
 import Groups from '@/components/groups/groups'
 import GroupsItem from '@/components/groups/groups_item'
-import Categories from '@/components/groups/categories'
 import Create from '@/components/groups/create'
 import Gaming from '@/components/gaming/gaming'
 import About from '@/components/friends/about'
@@ -40,14 +39,12 @@ import settings from '@/components/ad_center/settings'
 import insights from '@/components/ad_center/insights'
 import weather from '@/components/weather/index'
 import pages from '@/components/ad_center/index'
-
 import adCreate from '@/components/ad_center/create'
 import potential from '@/components/ad_center/potential'
 import Privacy from '@/components/privacy/index'
 import Checkup from '@/components/privacy/checkup'
 import dynamic from '@/components/dynamic/index'
 import live from '@/components/live/index'
-import messenger from '@/components/messenger/index'
 import categories from '@/components/groups/categories'
 import publicHomePage from '@/components/publicHomePage/index'
 import jobs from '@/components/jobs/index'
@@ -62,7 +59,7 @@ export default new Router({
       component: Index
     },
     {
-      paht:"/pages",
+      path:"/pages",
       name:"pages",
       component:pages
     },
@@ -121,11 +118,7 @@ export default new Router({
       name:"categories",
       component:categories
     },
-    {
-      path:"/messenger",
-      name:"messenger",
-      component:messenger
-    },
+    
     {
       path:"/dynamic",
       name:"dynamic",
@@ -206,11 +199,6 @@ export default new Router({
       path: '/groups/groups_item',
       name: 'groups_item',
       component: GroupsItem
-    },
-    {
-      path: '/groups/categories',
-      name: 'categories',
-      component: Categories
     },
     {
       path: '/friends/about',

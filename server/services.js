@@ -146,3 +146,20 @@ exports.publicPage=function(req,res){
     })
     
 }
+
+
+//创建小组
+exports.createGroups=function(req,res){
+    let sql="insert into groups set ?"
+    db.base(sql,[req.body],(err,result)=>{
+        res.send({code:1,msg:"创建成功"})
+    })
+}
+
+//获取小组列表
+exports.getGroups=function(req,res){
+    let sql="select * from groups"
+    db.base(sql,(err,result)=>{
+        res.send({code:1,data:result})
+    })
+}
