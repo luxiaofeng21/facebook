@@ -13,7 +13,7 @@ import axios from 'axios'
 import VEmojiPicker from 'v-emoji-picker';
 Vue.use(VEmojiPicker);
 Vue.prototype.$axios = axios
-Vue.prototype.$url = "http://127.0.0.1:8080"
+Vue.prototype.$url = "http://127.0.0.1:1212"
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 window.Swiper=Swiper

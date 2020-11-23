@@ -139,9 +139,10 @@ exports.createPage=function(req,res){
 }
 
 //获取公共主页
-exports.publicPage=function(){
-    let sql="select * from publicPage";
-    db.base(sql,[data],(err,result)=>{
+exports.publicPage=function(req,res){
+    let sql="select * from publicpage";
+    db.base(sql,(err,result)=>{
             res.send({code:1,data:result})
     })
+    
 }

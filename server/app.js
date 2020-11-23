@@ -33,6 +33,6 @@ app.use(bodyParser.json())
 // 配置路由
 app.use(router)
 // 服务器已经启动
-app.listen('8080',function(){
+app.listen('1212',function(){
     console.log('running...')
 })

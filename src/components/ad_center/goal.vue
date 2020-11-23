@@ -56,72 +56,35 @@
                             </div>
                         </div>
                         <div aria-label="推广" role="main" class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr dp1hu0rb">
-                            <Point v-if="mactive==0"></Point>
-                            <About v-else-if="mactive==1"></About>
-                            <div v-else class="j83agx80 cbu4d94t buofh1pr dp1hu0rb hpfvmrgz l9j0dhe7 du4w35lb">
-                                <div class="dp1hu0rb d2edcug0 taijpn5t j83agx80 gs1a9yip">
-                                    <div class="k4urcfbm dp1hu0rb d2edcug0 cbu4d94t j83agx80 bp9cbjyn" role="main">
-                                        <div class="fsy3e5b7 j83agx80 cbu4d94t dhix69tm pb8wu8ze k4urcfbm">
-                                            <div class="jei6r52m cxmmr5t8 c9zspvje hcukyx3x">
-                                                <div class="j83agx80 cbu4d94t q9se6cdp p984guvr">
-                                                    <div class="px9k8yfb hk9dxy2p"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j irj2b8pg mysgfdmx o0t2es00 f530mmz5 hnhda86s oo9gr5id hzawbc8m" dir="auto">Choose A Goal</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="bq4bzpyk j83agx80 btwxx1t3 lhclo0ds jifvfom9 muag1w35 dlv3wnog enqfppq2 rl04r1d5">
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus n1dktuyu e5nlhep0 ecm0bbzt" style="max-width: 193px; min-width: 193px;">
-                                                    <div class="j83agx80 l9j0dhe7 k4urcfbm">
-                                                        <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c qbxu24ho bxzzcbxg lxuwth05 h2mp5456 goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm kmp5kqmu"><a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l k4urcfbm" href="/ad_center/create/leadgenad/?entry_point=www_pages_product_picker&amp;page_id=101423668362353" role="link" tabindex="0">
-                                                                <div class="hjkfelp1 k4urcfbm f0zqjlou r54jmrld">
-                                                                    <div class="j83agx80 taijpn5t jei6r52m">
-                                                                        <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e e5d9fub0 oeao4gh3"><i class="hu5pjgll m6k467ps sp_qECMrzmxjXt_1_5x sx_1c835a"></i></div>
-                                                                    </div>
-                                                                    <div class="tvfksri0 ozuftl9m n1l5q3vz"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id oqcyycmt" dir="auto">挖掘更多潜在客户</span></div>
-                                                                    <div class="aov4n071"><em><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain oqcyycmt" dir="auto">推荐</span></em></div>
-                                                                </div>
-                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore"></div>
-                                                            </a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus n1dktuyu e5nlhep0 ecm0bbzt" style="max-width: 193px; min-width: 193px;">
-                                                    <div class="j83agx80 l9j0dhe7 k4urcfbm">
-                                                        <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c qbxu24ho bxzzcbxg lxuwth05 h2mp5456 goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm kmp5kqmu"><a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l k4urcfbm" href="/ad_center/create/pagead/?entry_point=www_pages_product_picker&amp;page_id=101423668362353" role="link" tabindex="0">
-                                                                <div class="hjkfelp1 k4urcfbm f0zqjlou r54jmrld">
-                                                                    <div class="j83agx80 taijpn5t jei6r52m">
-                                                                        <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e e5d9fub0 oeao4gh3"><i class="hu5pjgll m6k467ps sp_qECMrzmxjXt_1_5x sx_52beb8"></i></div>
-                                                                    </div>
-                                                                    <div class="tvfksri0 ozuftl9m n1l5q3vz"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id oqcyycmt" dir="auto">推广公共主页</span></div>
-                                                                </div>
-                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore"></div>
-                                                            </a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus n1dktuyu e5nlhep0 ecm0bbzt" style="max-width: 193px; min-width: 193px;">
-                                                    <div class="j83agx80 l9j0dhe7 k4urcfbm">
-                                                        <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c qbxu24ho bxzzcbxg lxuwth05 h2mp5456 goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm kmp5kqmu"><a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l k4urcfbm" href="/ad_center/create/websitead/?entry_point=www_pages_product_picker&amp;page_id=101423668362353" role="link" tabindex="0">
-                                                                <div class="hjkfelp1 k4urcfbm f0zqjlou r54jmrld">
-                                                                    <div class="j83agx80 taijpn5t jei6r52m">
-                                                                        <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e e5d9fub0 oeao4gh3"><i class="hu5pjgll m6k467ps sp_qECMrzmxjXt_1_5x sx_c0351f"></i></div>
-                                                                    </div>
-                                                                    <div class="tvfksri0 ozuftl9m n1l5q3vz"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id oqcyycmt" dir="auto">吸引更多网站访客</span></div>
-                                                                </div>
-                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore"></div>
-                                                            </a></div>
-                                                    </div>
-                                                </div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus n1dktuyu e5nlhep0 ecm0bbzt" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                                <div class="rq0escxv j83agx80 rj1gh0hx cbu4d94t buofh1pr g5gj957u ph5uu5jm b3onmgus kr9hpln1" style="max-width: 193px; min-width: 193px;"></div>
-                                            </div>
-                                        </div>
+                            <div v-if="mactive==0" class="fsy3e5b7 j83agx80 cbu4d94t dhix69tm pb8wu8ze k4urcfbm">
+                                    <div class="book-card">
+                                            <div class="book-img"><img src="../../assets/ftae_landing.png" alt=""></div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 ns63r2gh fe6kdd0r mau55g9w c8b282yb iv3no6db o3w64lxj b2s5l15y hnhda86s oo9gr5id hzawbc8m"> 关于 Facebook 广告 </div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a5q79mjw g1cxx5fr knj5qynh m9osqain"> 设置合适的预算 </div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a5q79mjw g1cxx5fr knj5qynh m9osqain">找准目标受众 </div>
+                                            <div @click="dailogVisible=true" style="text-align:center" class="oajrlxb2 s1i5eluu gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329" >继续</div>
                                     </div>
-                                </div>
+                            </div>
+                            <div v-else-if="mactive==1" class="fsy3e5b7 j83agx80 cbu4d94t dhix69tm pb8wu8ze k4urcfbm">
+                                    <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j irj2b8pg mysgfdmx o0t2es00 f530mmz5 hnhda86s oo9gr5id hzawbc8m">自动广告</span>
+                                    <div class="book-card">
+                                            <div class="book-img"><img src="../../assets/goal2.png" alt=""></div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 ns63r2gh fe6kdd0r mau55g9w c8b282yb iv3no6db o3w64lxj b2s5l15y hnhda86s oo9gr5id hzawbc8m">创建你的个性化方案</div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a5q79mjw g1cxx5fr knj5qynh m9osqain">审核并启动方案</div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a5q79mjw g1cxx5fr knj5qynh m9osqain">我们会为广告测试多达 6 个不同的版本，看看哪版表现最佳</div>
+                                            <div class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a5q79mjw g1cxx5fr knj5qynh m9osqain">审核并启动方案</div>
+                                            <div @click="dailogVisible=true" style="text-align:center" class="oajrlxb2 s1i5eluu gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329" >开始</div>
+                                    </div>
+                            </div>
+                            <div v-else class="fsy3e5b7 j83agx80 cbu4d94t dhix69tm pb8wu8ze k4urcfbm">
+                                    <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j irj2b8pg mysgfdmx o0t2es00 f530mmz5 hnhda86s oo9gr5id hzawbc8m">自动广告</span>
+                                    <ul class="flag-ul">
+                                        <li v-for="(item,index) in flags" :key="index" @click="getflag(index)">
+                                            <div class="book-icon"> <i :class="item.icon"></i> </div>
+                                            <div class="book-title">{{item.title}}</div>
+                                            <div class="book-text">{{item.text}}</div>
+                                        </li>
+                                    </ul>
                             </div>
                         </div>
                     </div>
@@ -135,7 +98,126 @@
             <div></div>
         </div>
     </div>
-    <el-dialog :visible.sync="dialogVisible" width="740px" v-if="mactive==1">
+    <el-dialog :visible.sync="dailogVisible" :append-to-body="true" width="500px" :show-close="false">
+        <div v-if="sep==0">
+            <img src="../../assets/goal1.png" alt="">
+            <div class="visible-title">你是否希望用户到访你的业务网点</div>
+            <el-radio-group v-model="need.outlets">
+                <el-radio label="1">是</el-radio>
+                <el-radio label="2">否</el-radio>
+                <el-radio label="3">这不适用于我的情况</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==1">
+            <img src="../../assets/goal2.png" alt="">
+            <div class="visible-title">你有网站吗？</div>
+            <el-radio-group v-model="need.website">
+                <el-radio label="1">是</el-radio>
+                <el-radio label="2">否</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==2">
+            <img src="../../assets/goal3.png" alt="">
+            <div class="visible-title">客户可以在你的网站购物吗？</div>
+            <el-radio-group v-model="need.shopping">
+                <el-radio label="1">是</el-radio>
+                <el-radio label="2">否</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==3">
+            <img src="../../assets/goal3.png" alt="">
+            <div class="visible-title">客户可以在你的网站上预约吗？</div>
+            <el-radio-group v-model="need.appointment">
+                <el-radio label="1">是</el-radio>
+                <el-radio label="2">否</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==4">
+            <img src="../../assets/goal4.png" alt="">
+            <div class="visible-title">你是否通过自己的网站收集潜在客户信息？</div>
+            <el-radio-group v-model="need.collect">
+                <el-radio label="1">是</el-radio>
+                <el-radio label="2">否</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==5">
+            <img src="../../assets/goal5.png" alt="">
+            <div class="visible-title">你是否希望客户联系你</div>
+            <el-radio-group v-model="need.relation">
+                <el-radio label="1">是</el-radio>
+                <el-radio label="2">否</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==6">
+            <img src="../../assets/goal6.png" alt="">
+            <div class="visible-title">你希望客户以哪种方式联系你？请选择所有适用项。</div>
+            <el-checkbox v-model="item.checked" v-for="(item,index) in relation" :label="item.label" :key="index"></el-checkbox>
+        </div>
+        <div v-else-if="sep==7">
+            <img src="../../assets/goal7.png" alt="">
+            <div class="visible-title">你的受众可能会喜欢哪些主题？</div>
+             <el-select v-model="need.like" placeholder="添加兴趣"> 
+                <el-option label="看书" value="1"></el-option>
+                <el-option label="阅读" value="2"></el-option>
+                <el-option label="写字" value="3"></el-option>
+                <el-option label="跑步" value="4"></el-option>
+                <el-option label="游泳" value="5"></el-option>
+             </el-select>
+        </div>
+        <div v-else-if="sep==8">
+            <img src="../../assets/goal8.png" alt="">
+            <div class="visible-title">你希望每天花费多少金额？</div>
+            <el-radio-group v-model="need.moeny" class="book-radio">
+                <el-radio label="1">￥ 7.00 - ￥ 19.99</el-radio>
+                <el-radio label="2">￥ 20.00 - ￥ 39.99</el-radio>
+                <el-radio label="3">￥ 40.00 - ￥ 74.99</el-radio>
+                <el-radio label="4">￥ 75.00 - ￥ 139.99</el-radio>
+                <el-radio label="5">￥ 140.00 - ￥ 329.99</el-radio>
+                <el-radio label="6">不低于 ￥ 330.00</el-radio>
+            </el-radio-group>
+        </div>
+        <div v-else-if="sep==9">
+            <img src="../../assets/goal9.png" alt="">
+            <div class="visible-title">建议</div>
+            <div class="visible-text">我们建议你使用这些设置，以取得最佳成效。定制广告时，你可以编辑这些设置。</div>
+            <div class="visible-item">
+                    <div class="visible-text">预估单日成效</div>
+                    <ul class="sep-ul">
+                        <li>
+                            <div class="sep-text">覆盖人数</div>
+                            <div class="sep-title">426 - 1,232</div>
+                            <div class="hover-icon"> <i class="el-icon-info"></i> </div>
+                        </li>
+                        <li>
+                            <div class="sep-text">覆盖人数</div>
+                            <div class="sep-title">426 - 1,232</div>
+                            <div class="hover-icon"> <i class="el-icon-info"></i> </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="visible-item">
+                    <div class="visible-text">目标</div>
+                    <div class="visible-title">吸引更多网站访客</div>
+            </div>
+            <div class="visible-item">
+                    <div class="visible-text">受众</div>
+                    <div class="visible-title">通过目标定位功能选择的用户</div>
+            </div>
+            <div class="visible-item">
+                    <div class="visible-text">单日预算</div>
+                    <div class="visible-title">￥ 30.00</div>
+            </div>
+            <div class="visible-item">
+                    <div class="visible-text">投放期</div>
+                    <div class="visible-title">7天</div>
+            </div>
+        </div>
+        <span slot="footer" class="dialog-footer">
+            <el-button type="info" @click="sep-=1" v-if="sep>0">返回</el-button>
+            <el-button type="primary" @click="getnext">继续</el-button>
+        </span>
+    </el-dialog>
+    <el-dialog :visible.sync="dialogVisible2" width="740px" v-if="mactive==1">
         <div class="lt9micmv qt6c0cv9 gl4o1x5y aodizinl"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh oo9gr5id" dir="auto">Facebook 广告发布政策禁止广告主在使用我们的广告产品时采取歧视个人或人群的做法。<span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">拒绝为个人或人群提供机会的广告，即为歧视性广告。</span>我们的政策不允许因如下所例的特定个人特征采取歧视做法：种族、民族、原籍地、宗教、年龄、性别、性取向、性别认同、家庭/婚姻状况、残疾、医疗或遗传状况，以及联邦、州和当地公平住房法及公民权利法提及的其他所有受保护的个人特征。<div class="cxgpxx05 sj5x9vvc"></div>我们的无歧视政策没有改变，但为广告主新增了解释政策的示例。虽然我们禁止歧视行为，但你可以根据想要推广的商品或服务，把广告展示给对这项商品或服务感兴趣的特定受众。</span>
             <div class="ib6112jz mj7xtnbm bq3qbged">
                 <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t gs1a9yip owycx6da btwxx1t3 d1544ag0 tw6a2znq discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
@@ -282,7 +364,7 @@
             </div>
         </div>
         <span slot="footer" class="dialog-footer">
-            <el-button type="primary" @click="dialogVisible = false">我同意</el-button>
+            <el-button type="primary" @click="dialogVisible2 = false">我同意</el-button>
         </span>
     </el-dialog>
 
@@ -291,17 +373,44 @@
 
 <script>
 import cartList from '@/common/cart-list'
-import Point from './point'
-import About from './about'
 export default {
     components: {
-        Point,
         cartList,
-        About
     },
     data() {
         return {
-            dialogVisible: true,
+             relation:[//联系方式列表
+                {
+                    label:"客户打电话联系我",
+                    checked:false
+                },
+                {
+                    label:"客户提供联系方式，然后我联系他们",
+                    checked:false
+                },
+                {
+                    label:"客户通过 Facebook 发消息给我",
+                    checked:false
+                },
+                {
+                    label:"They message me on WhatsApp",
+                    checked:false
+                },
+            ],
+            sep:0,
+            need:{
+                moeny:"1",  //花费
+                like:"1",   //兴趣
+                relation2:"1",//联系方式
+                relation:"1",//联系
+                collect:"1",//收集
+                appointment:"1",//预约
+                shopping:"1",  //购物
+                website:"1",   //网站
+                outlets:"1"    //业务
+            },
+            dailogVisible:false,
+            dialogVisible2: true,
             mactive: 0,
             menu: [{
                     title: "获得建议",
@@ -318,10 +427,59 @@ export default {
                     text: "根据个人需求，随时间不断调整广告策略，争取更优成效",
                     icon: "el-icon-magic-stick",
                 }
+            ],
+            flags:[
+                 {
+                    icon:"el-icon-s-promotion",
+                    title:"吸引更多网站访客",
+                    text:"推荐"
+                },
+                {
+                    icon:"el-icon-picture",
+                    title:"挖掘更多潜在的客户",
+                    text:"推荐"
+                },
+                 {
+                    icon:"el-icon-s-comment",
+                    title:"吸引更多用户发消息",
+                },
+                {
+                    icon:"el-icon-s-flag",
+                    title:"推广公共主页",
+                },
+               
             ]
         }
     },
     methods: {
+        //选择目标
+        getflag(i){
+            if(i==0){
+                this.$router.push({
+                    path:"ad_center/create"
+                })
+            }else{
+                this.$router.push({
+                    path:"ad_center/potential"
+                })
+            }
+        },
+        //下一步
+        getnext(){
+            if(this.sep==6){
+                 var list=this.relation.filter(x=>x.checked)
+                 if(list.length<=0){
+                     this.$message.error("请选择联系方式")
+                     return false 
+                 }
+            }
+            if(this.sep==9){
+                this.$router.push({name:"adCreate"})
+            }else{
+                 this.sep+=1
+            }
+           
+        },
         getmenu(i) {
             this.mactive = i
         }
@@ -333,4 +491,71 @@ export default {
 .l9j0dhe7 {
     position: static;
 }
+
+.book-card>*{
+    margin-bottom: 10px;
+    width: 600px;
+}
+.book-card>.book-img{
+     margin: -10px -10px 10px -10px;
+}
+.book-card>.book-img>img{
+    width: 103.5%;
+}
+
+ img{
+        width: 100%;
+    }
+    .el-checkbox,.book-radio .el-radio{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .sep-ul{
+          display: flex;
+          justify-content: space-between;
+      }
+    .sep-ul>li{
+        width: 40%;
+        padding: 16px;
+        background-color: #f8f8f8f8;
+        border-radius: 10px;
+        position: relative;
+    }
+    .sep-ul>li>.hover-icon{
+        position: absolute;
+        right: 5%;
+        top: 10%; 
+    }
+    .sep-title{
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+    }
+    .flag-ul{
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+    }
+    .flag-ul .book-icon{
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 35px;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    .flag-ul>li{
+        text-align: center;
+        height: 200px;
+        margin-bottom: 10px;
+        width: 25%;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 10px 10px 10px #eee;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+     .flag-ul>li:hover{
+         background-color: #f5f5f5;
+     }
 </style>

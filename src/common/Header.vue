@@ -577,37 +577,18 @@
                 <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 l56l04vs r57mb794 kh7kg01d c3g1iek1 buofh1pr">
                     <el-input :autosize="{minRows:6}" type="textarea" placeholder="枫果果分享你的新鲜事吧" v-model="topic">
                     </el-input>
-                    <div class="i09qtzwb rq0escxv d1544ag0 dati1w0a pmk7jnqg j9ispegn mq6i96l2">
-                        <div class="k4urcfbm j83agx80 rq0escxv gs1a9yip">
-                            <div aria-label="显示背景选项" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l">
-                                <span class="hop8lmos rl04r1d5">
-                                    <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="i09qtzwb e5ffyxfx kgtf8isp pmk7jnqg b73ngqbp">
-                        <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                            <div aria-label="表情" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                <div>
-                                    <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                        <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                            <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_b6020a" style="height: 24px; width: 24px;">
-                                                </i>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="flex" style="margin-top:20px;padding:0 10px">
+                        <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
+                        <el-popover
+                            placement="bottom"
+                            trigger="click">
+                             <VEmojiPicker @select="selectEmoji"   /> 
+                                <div class="hover-icon " slot="reference" >
+                                    <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_b6020a" style="height: 24px; width: 24px;"> </i>
                                 </div>
-                            </div>
-                        </span>
+                        </el-popover>
                     </div>
-                    <div data-visualcompletion="ignore" data-thumb="1" class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" style="display: none; right: 0px; height: 215px;">
-                    </div>
-                    <div data-visualcompletion="ignore" data-thumb="1" class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" style="display: block; right: 0px; height: 0px;">
-                        <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm">
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="ihqw7lf3 discj3wi l9j0dhe7">
                     <div class="scb9dxdr sj5x9vvc dflh9lhu cxgpxx05 dhix69tm wkznzc2l i1fnvgqd j83agx80 rq0escxv ibutc8p7 l82x9zwi uo3d90p7 pw54ja7n ue3kfks5 tr4kgdav eip75gnj ccnbzhu1 dwg5866k cwj9ozl2 bp9cbjyn">
@@ -620,114 +601,23 @@
                         </div>
                         <div aria-labelledby="toolbarLabel">
                             <div class="j83agx80">
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="创建视频聊天室" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                    <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;"> </i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <input accept="image/*,image/heif,image/heic,video/*,video/mp4,video/x-m4v,video/x-matroska" multiple="multiple" type="file" class="mkhogb32">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="照片/视频" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_ee8eae" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                     <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_ee8eae" style="height: 24px; width: 24px;"></i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="标记好友" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_c48911" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                     <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_c48911" style="height: 24px; width: 24px;"></i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="感受/活动" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_3bba41" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                        <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_3bba41" style="height: 24px; width: 24px;"></i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="签到" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_346c20" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                        <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_346c20" style="height: 24px; width: 24px;"> </i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="更多" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_19f068" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                        <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_19f068" style="height: 24px; width: 24px;"></i>
                                 </div>
                             </div>
                         </div>
@@ -1335,6 +1225,9 @@ export default {
     },
 
     methods: {
+        selectEmoji(data){
+            this.topic+=data.data
+        },
         getNav(i) {
             this.$emit("getnav", i)
         },

@@ -454,71 +454,19 @@
                                                       <div class="dflh9lhu">
                                                       </div>
                                                       <div class="j83agx80">
-                                                        <div aria-label="赞" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys tkv8g59h qt6c0cv9 fl8dtwsd i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                        role="button" tabindex="0">
-                                                          <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                            <div class="el-icon-thumb">
-                                                              <i class="">
-                                                              </i>
-                                                            </div>
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                              <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id"
-                                                              dir="auto">
-                                                                赞
-                                                              </span>
-                                                            </div>
-                                                          </div>
-                                                          <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                          data-visualcompletion="ignore">
-                                                          </div>
+                                                        <div class="book-icon2">
+                                                            <i class="el-icon-thumb"></i>
+                                                            <span>赞</span>
                                                         </div>
-                                                        <div class="h676nmdw j83agx80 bp9cbjyn">
-                                                          <div aria-label="发消息" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                          role="button" tabindex="0">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <i class="el-icon-message-solid">
-                                                                </i>
-                                                              </div>
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id"
-                                                                dir="auto">
-                                                                  发消息
-                                                                </span>
-                                                              </div>
-                                                            </div>
-                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                            data-visualcompletion="ignore">
-                                                            </div>
-                                                          </div>
+                                                         <div class="book-icon2">
+                                                            <i class="el-icon-bell"></i>
+                                                            <span>发消息</span>
                                                         </div>
-                                                        <div class="h676nmdw j83agx80 bp9cbjyn">
-                                                          <div aria-label="搜索" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys hv4rvrfc qt6c0cv9 dati1w0a i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                          role="button" tabindex="0">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <i class="hu5pjgll lzf7d6o1 sp_-69RjdrrvoB sx_ac44b3">
-                                                                </i>
-                                                              </div>
-                                                            </div>
-                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                            data-visualcompletion="ignore">
-                                                            </div>
-                                                          </div>
+                                                        <div class="book-icon2">
+                                                            <i class="el-icon-search"></i>
                                                         </div>
-                                                        <div class="eim337gk h676nmdw j83agx80 bp9cbjyn">
-                                                          <div aria-label="更多操作" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys hv4rvrfc qt6c0cv9 dati1w0a i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                          role="button" tabindex="0">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <i class="hu5pjgll lzf7d6o1 sp_-69RjdrrvoB sx_c15d61">
-                                                                </i>
-                                                              </div>
-                                                            </div>
-                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                            data-visualcompletion="ignore">
-                                                            </div>
-                                                          </div>
+                                                        <div class="book-icon2">
+                                                            <i class="el-icon-more-outline"></i>
                                                         </div>
                                                       </div>
                                                     </div>
@@ -839,3 +787,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .book-icon2{
+      margin-left: 10px;
+  }
+</style>

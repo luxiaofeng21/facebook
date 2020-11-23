@@ -35,6 +35,7 @@ import  Memories from "@/components/memories/memories"
 import  Onemi from "@/components/index/onemi"
 import Goal from '@/components/ad_center/goal'
 import adCreate from '@/components/ad_center/create'
+import potential from '@/components/ad_center/potential'
 import Privacy from '@/components/privacy/index'
 import Checkup from '@/components/privacy/checkup'
 import dynamic from '@/components/dynamic/index'
@@ -269,6 +270,11 @@ export default new Router({
       path:"/goal",
       name:"goal",
       component:Goal
+    },
+    {
+      path:"/ad_center/potential",
+      name:"potential",
+      component:potential
     },
     {
       path:"/ad_center/create",

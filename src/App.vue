@@ -150,10 +150,23 @@ a {
     padding: 10px;
     margin: 16px 0;
 }
+.book-text{
+    color:  var(--secondary-text);
+}
 .book-null{
     text-align: center;
     display: block;
     font-size: 1.25rem;
     color: var(--placeholder-text);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.el-title{
+    font-size:1.0625rem ;
+    font-weight: 600;
+    color: var(--secondary-text);
 }
 </style>

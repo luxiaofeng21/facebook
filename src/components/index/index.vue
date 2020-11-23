@@ -597,87 +597,33 @@
                                                     <span id="ssrb_rhc_start" style="display: none;">
                                                     </span>
                                                     <div class="cxgpxx05" data-pagelet="RightRail">
-                                                        <div>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore-dynamic">
+                                                         <div class="ignore-dynamic">
                                                             <div class="l9j0dhe7">
-                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t e5nlhep0 aodizinl">
-                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo">
-                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 hv4rvrfc dati1w0a">
-                                                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                <div class="qzhwtbm6 knvmm38d">
-                                                                                    <h3 class="oo9gr5id a5q79mjw lrazzd5p lzcic4wl oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b g1cxx5fr" dir="auto">
-                                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3 jeutjz8y">
-                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz">
-                                                                                                <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a5q79mjw g1cxx5fr lrazzd5p m9osqain">
-                                                                                                    <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                                                        联系人
-                                                                                                    </div>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 nqmvxvec taijpn5t h676nmdw">
-                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3">
-                                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 kr9hpln1 ttbfdpzt">
-                                                                                                        &nbsp;
-                                                                                                    </div>
-                                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0">
-                                                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd gs1a9yip owycx6da btwxx1t3">
-                                                                                                            <div class="b0kwm4yp gcieejh5 bn081pho humdl8nn izx4hr6d jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc q9uorilb kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 pzggbiyp">
-                                                                                                                <div class="j83agx80">
-                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                        <div class="ozuftl9m tvfksri0">
-                                                                                                                            <div aria-label="按姓名或群聊搜索" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="0">
-                                                                                                                                <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_5e891b">
-                                                                                                                                </i>
-                                                                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="inset: -8px;">
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </span>
-                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                        <div class="ozuftl9m">
-                                                                                                                            <div aria-label="选项" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="0">
-                                                                                                                                <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_9a39b6">
-                                                                                                                                </i>
-                                                                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="inset: -8px;">
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                <div class="flex">
+                                                                    <span class="el-title">你的公共主页</span>
+                                                                    <div class="hover-icon">
+                                                                            <i class="el-icon-more"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <cart-list :list="pages" :size="'small'">
+                                                                </cart-list>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ignore-dynamic">
+                                                            <div class="l9j0dhe7">
+                                                                <div class="flex">
+                                                                    <span class="el-title">联系人</span>
+                                                                    <div class="hover-icon">
+                                                                            <i class="el-icon-more"></i>
                                                                     </div>
                                                                 </div>
                                                                 <cart-list :list="friends" :size="'small'">
                                                                 </cart-list>
                                                             </div>
                                                         </div>
-                                                        <div data-visualcompletion="ignore-dynamic">
+                                                        <div class="ignore-dynamic">
                                                             <div class="l9j0dhe7">
-                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t e5nlhep0 aodizinl">
-                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo">
-                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 hv4rvrfc dati1w0a">
-                                                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                <div class="qzhwtbm6 knvmm38d">
-                                                                                    <h3 class="m9osqain a5q79mjw lrazzd5p lzcic4wl oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b g1cxx5fr hzawbc8m" dir="auto">
-                                                                                        <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                                            群聊
-                                                                                        </div>
-                                                                                    </h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                <span class="el-title">群聊</span>
                                                                 <cart-list :list="chatAll" :size="'small'"></cart-list>
                                                                 <div class="cxgpxx05 sj5x9vvc" @click="dialogVisible2=true">
 
@@ -712,40 +658,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <span id="ssrb_rhc_end" style="display: none;">
-                                                    </span>
-                                                </div>
-                                                <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: none; right: 0px; height: 538px;">
-                                                </div>
-                                                <div class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 0px;">
-                                                    <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm">
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div data-pagelet="lightweightSurvey">
-                            </div>
-                            <div>
-                                <div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                </div>
-            </div>
-            <!--$-->
-            <!--$-->
             <div class="poy2od1o i09qtzwb n7fi1qx3">
                 <div class="l9j0dhe7 fh5enmmv">
                     <div class="l9j0dhe7 tkr6xdv7">
@@ -774,24 +696,6 @@
                     </div>
                 </div>
             </div>
-            <!--/$-->
-            <!--/$-->
-            <!--$-->
-            <!--$-->
-            <!--/$-->
-            <!--/$-->
-            <!--$-->
-            <!--/$-->
-            <!--$-->
-            <!--$-->
-            <!--$-->
-            <!--/$-->
-            <!--/$-->
-            <!--$-->
-            <!--/$-->
-            <!--/$-->
-        </div>
-        <div>
         </div>
     </div>
     
@@ -989,6 +893,15 @@ export default {
                     img: require("@/assets/cT5nPnO8Wsc.png"),
                     name: "onemi"
                 },
+            ],
+            pages:[{
+                icon:"el-icon-bell",
+                text:"通知",
+            },
+            {
+                icon:"el-icon-phone-outline",
+                text:"创建推广"
+            }
             ]
         }
     },
@@ -1003,8 +916,10 @@ export default {
             that.friends = res.data
         })
         //公共主页
-        this.$axios.get(this.$url+"/result").then(res=>{
-            console.log(res)
+        this.$axios.get(this.$url+"/publicPage").then(res=>{
+            var data=res.data.data
+            data.map(x=>x.img=require("@/assets/flag.png"))
+            that.pages.unshift(data[data.length-1])
         })
     },
     mounted() {
