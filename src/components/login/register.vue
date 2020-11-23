@@ -4,8 +4,8 @@
     <div class="register_text">快速又简便。</div>
     <div class="registerCon">
         <div class="regName">
-            <el-input :validate-event="true" v-model="me.xing" type="text" name="xing" placeholder="姓"></el-input>
-            <el-input v-model="me.ming" type="text" name="ming" placeholder="名"></el-input>
+            <el-input :validate-event="true" v-model="me.surname" type="text" name="surname" placeholder="姓"></el-input>
+            <el-input v-model="me.name" type="text" name="name" placeholder="名"></el-input>
         </div>
         <div class="regCell">
             <el-input ttype="text" v-model="me.email" placeholder="手机号或邮箱"></el-input>
@@ -219,8 +219,8 @@ export default {
             custom: 0,
             customAll: ["他：“祝他生日快乐！”", "她：“祝她生日快乐！”", "TA:“祝TA生日快乐！”"],
             me: {
-                xing: "lu",
-                ming: "feng",
+                surname: "lu",
+                name: "feng",
                 email: "2584278167@qq.com",
                 password: "123456",
                 year: "2020",

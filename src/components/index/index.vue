@@ -923,6 +923,11 @@ export default {
             data.map(x=>x.img=require("@/assets/flag.png"))
             that.pages.unshift(data[data.length-1])
         })
+
+        //用户信息
+         this.$axios.get(this.$url+"/getuserInfo").then(res => {
+            console.log("🚀 ~ file: index.vue ~ line 929 ~ this.$axios.get ~ res", res)
+        })
     },
     mounted() {
         var mySwiper = new Swiper('#swiper', {

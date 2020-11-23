@@ -1,10 +1,19 @@
 // 创建express服务器
 const express = require('express')
 const app = express()
+const session=require("express-session")
 // 注册解析 表单数据的 body-parser
 const bodyParser = require('body-parser')
 // 将请求响应设置content-type设置为application/json
 const router = require('./router.js')
+app.use(session({
+    secret :  'secret', // 对session id 相关的cookie 进行签名
+    resave : true,
+    saveUninitialized: false, // 是否保存未初始化的会话
+    cookie : {
+      maxAge : 1000 * 60 * 3, // 设置 session 的有效时间，单位毫秒
+    },
+  }));
 app.use('/*', function (req, res, next) {
 	// 设置请求头为允许跨域
     res.header("Access-Control-Allow-Origin", "*");

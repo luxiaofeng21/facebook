@@ -54,11 +54,14 @@ export default {
                 return false
             }
             this.$axios.post(this.$url+"/createUser",{code:this.code}).then(res=>{
-                this.$message.error(res.data.msg);
+                
                 if(res.data.code==1){
+                    this.$message.success(res.data.msg);
                     setTimeout(()=>{
                         this.$router.push({name:"login"})
                     },1000)
+                }else{
+                    this.$message.error(res.data.msg);
                 }
             })
             
