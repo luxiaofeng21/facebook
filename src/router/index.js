@@ -34,7 +34,14 @@ import Ads from "@/components/index/Ads"
 import Pay from "@/components/pay/index"
 import  Memories from "@/components/memories/memories"
 import  Onemi from "@/components/index/onemi"
+import messenger from '@/components/messenger/index'
 import Goal from '@/components/ad_center/goal'
+import manageHome from '@/components/ad_center/manageHome'
+import settings from '@/components/ad_center/settings'
+import insights from '@/components/ad_center/insights'
+import weather from '@/components/weather/index'
+import pages from '@/components/ad_center/index'
+
 Vue.use(Router)
 
 export default new Router({
@@ -43,6 +50,36 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
+    },
+    {
+      paht:"/pages",
+      name:"pages",
+      component:pages
+    },
+    {
+      path:"/weather",
+      name:"weather",
+      component:weather
+    },
+    {
+      path:"/messenger",
+      name:"messenger",
+      component:messenger
+    },
+    {
+      path:"/ad_center/insights",
+      name:"insights",
+      component:insights
+    },
+    {
+      path:"/ad_center/settings",
+      name:"settings",
+      component:settings
+    },
+    {
+      path:"/manageHome",
+      name:"manageHome",
+      component:manageHome
     },
     {
       path: '/login',

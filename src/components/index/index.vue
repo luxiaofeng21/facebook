@@ -1261,7 +1261,8 @@ export default {
                 },
                 {
                     title: "直播视频",
-                    img: require("@/assets/Nl9CPY6q_n-.png")
+                    img: require("@/assets/Nl9CPY6q_n-.png"),
+                    name:"watch"
                 },
                 {
                     title: "近期广告动态",
@@ -1275,7 +1276,8 @@ export default {
                 },
                 {
                     title: "天气",
-                    img: require("@/assets/bo0Zt72NIra.png")
+                    img: require("@/assets/bo0Zt72NIra.png"),
+                    name:"weather"
                 },
                 {
                     title: "优惠",

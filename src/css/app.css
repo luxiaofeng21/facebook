@@ -14355,7 +14355,8 @@ to {
 	width:calc(100% - 96px)
 }
 .thodolrn {
-	padding-left:110px
+	padding-left:110px;
+	box-shadow:  10px 10px 10px #eee;
 }
 .thwo4zme {
 	width:36px
@@ -24282,4 +24283,13 @@ body{
 	height: 100%;
 	border-radius: 50%;
 	
+}
+
+.dialog-img {
+	height: 400px;
+	overflow: hidden;
+	margin: -60px  -20px 20px -20px;
+}
+.dialog-img img{
+	width: 100%;
 }
