@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/login/Login'
-import Login2 from '@/components/login/login2'
-import NewUser from '@/components/login/NewUser'
+import Login from '@/components/login/index'
+import NewUser from '@/components/login/newUser'
 import Identify from '@/components/login/identify'
 import Recover from '@/components/login/recover'
 import Code from '@/components/login/code'
@@ -42,6 +41,17 @@ import insights from '@/components/ad_center/insights'
 import weather from '@/components/weather/index'
 import pages from '@/components/ad_center/index'
 
+import adCreate from '@/components/ad_center/create'
+import potential from '@/components/ad_center/potential'
+import Privacy from '@/components/privacy/index'
+import Checkup from '@/components/privacy/checkup'
+import dynamic from '@/components/dynamic/index'
+import live from '@/components/live/index'
+import messenger from '@/components/messenger/index'
+import categories from '@/components/groups/categories'
+import publicHomePage from '@/components/publicHomePage/index'
+import jobs from '@/components/jobs/index'
+import managementGroup from '@/components/groups/management_group'
 Vue.use(Router)
 
 export default new Router({
@@ -84,43 +94,81 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: Login,
-      children:[
-        {
-          path: 'login/identify',
-          name: 'identify',
-          component: Identify
-        },
-        {
-          path: '/login/recover',
-          name: 'recover',
-          component: Recover
-        },
-        {
-          path: 'login/code',
-          name: 'code',
-          component: Code
-        },
-        {
-          path: 'login/password',
-          name: 'password',
-          component: Password
-        }
-        ,
-        {
-          path: 'login/ineligible',
-          name: 'ineligible',
-          component: Ineligible
-        }
-    ]
+      component: Login
     },
     {
-      path: '/login2',
-      name: 'login2',
-      component: Login2
+      path:"/management_group",
+      name:"management_group",
+      component:managementGroup
     },
     {
-      path: '/newuser',
+      path:"/publicpage",
+      name:"publicpage",
+      component:publicHomePage
+    },
+    {
+      path:"/jobs",
+      name:"jobs",
+      component:jobs
+    },
+    {
+      path:"/live",
+      name:"live",
+      component:live
+    },
+    {
+      path:"/categories",
+      name:"categories",
+      component:categories
+    },
+    {
+      path:"/messenger",
+      name:"messenger",
+      component:messenger
+    },
+    {
+      path:"/dynamic",
+      name:"dynamic",
+      component:dynamic
+    },
+    {
+      path:"/privacy",
+      name:"privacy",
+      component:Privacy
+    },
+    {
+      path:"/privacy/checkup",
+      name:"checkup",
+      component:Checkup
+    },
+    {
+      path: '/login/identify',
+      name: 'identify',
+      component: Identify
+    },
+    {
+      path: '/login/recover',
+      name: 'recover',
+      component: Recover
+    },
+    {
+      path: '/login/code',
+      name: 'code',
+      component: Code
+    },
+    {
+      path: '/login/password',
+      name: 'password',
+      component: Password
+    }
+    ,
+    {
+      path: '/login/ineligible',
+      name: 'ineligible',
+      component: Ineligible
+    },
+    {
+      path: '/login/newuser',
       name: 'newuser',
       component: NewUser
     },
@@ -259,6 +307,17 @@ export default new Router({
       path:"/goal",
       name:"goal",
       component:Goal
+    },
+    {
+      path:"/ad_center/potential",
+      name:"potential",
+      component:potential
+    },
+    {
+      path:"/ad_center/create",
+      name:"adCreate",
+      component:adCreate
     }
+    
   ]
 })

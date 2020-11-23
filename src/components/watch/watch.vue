@@ -435,7 +435,7 @@ export default {
     },
     created() {
         var that = this;
-        this.$axios.get("http://127.0.0.1:8080/user").then(res => {
+        this.$axios.get(this.$url+"/user").then(res => {
             that.friends = that.friends.concat(res.data)
         })
     },

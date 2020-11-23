@@ -29,56 +29,22 @@
                 </path>
             </svg>
         </router-link>
+       <div class="book-search">
+            <el-input prefix-icon="el-icon-search" placeholder="搜索facebook"></el-input>
+       </div>
         <div>
             <div>
             </div>
         </div>
     </div>
-    <div aria-hidden="false" class="rq0escxv byvelhso q10oee1b poy2od1o j9ispegn kr520xx4 ooia0uwo kavbgo14 mhnrfdw6">
-        <!--$-->
-        <div>
-            <div class="rq0escxv a8c37x1j cbu4d94t k4urcfbm l9j0dhe7 p9906w3d rp3cc1xn keod5gw0 rpedc2ei bjz44bnn kf6kxqaw ex9rxw2n owhxnkwg">
-                <div class="bp9cbjyn rq0escxv j83agx80 byvelhso hv4rvrfc dati1w0a">
-                    <div class="k4urcfbm j83agx80 bp9cbjyn">
-                        <div class="thwo4zme pfnyh3mw j83agx80 bp9cbjyn">
-                            <div class="ijkhr0an pnx7fd3z sgqwj88q b5wmifdl hzruof5a iuq35hgr">
-                                <div class="thwo4zme" data-visualcompletion="ignore">
-                                    <div class="ciadx1gn">
-                                        <div aria-hidden="true" aria-label="退出联想输入" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="-1">
-                                            <i class="hu5pjgll m6k467ps sp_Osp8PMBw1xR sx_8f758f">
-                                            </i>
-                                            <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="bottom:-8px;left:-8px;right:-8px;top:-8px">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="j83agx80 pfnyh3mw byvelhso fwizqjfa l3d94uoy">
-                            &nbsp;
-                        </div>
-                        <div class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41 a8s20v7p" data-testid="Keycommand_wrapper">
-                            <label class="rq0escxv a8c37x1j a5nuqjux l9j0dhe7 k4urcfbm">
-                                <div class="ijkhr0an pnx7fd3z sgqwj88q b3i9ofy5 hzruof5a pmk7jnqg rnx8an3s fcg2cn6m">
-                                    <i class="hu5pjgll m6k467ps sp_Osp8PMBw1xR sx_5e891b">
-                                    </i>
-                                </div>
-                                <input type="search" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-label="搜索 Facebook" role="combobox" placeholder="搜索 Facebook" autocomplete="off" spellcheck="false" value="" class="oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl ijkhr0an nlq1og4t sgqwj88q b3i9ofy5 oo9gr5id b1f16np4 hdh3q7d8 dwo3fsh8 qu0x051f esr5mh6w e9989ue4 r7d6kgcz br7hx15l h2jyy9rg n3ddgdk9 owxd89k7 ihxqhq3m jq4qci2q k4urcfbm iu8raji3 qypqp5cg l60d2q6s hv4rvrfc hwnh5xvq dati1w0a o1lsuvei o6r2urh6 rmlgq0sb aj8hi1zk r4fl40cc kd8v7px7 m07ooulj mzan44vs">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/$-->
-    </div>
+
     <div class="kr520xx4 j9ispegn poy2od1o n7fi1qx3 tkr6xdv7">
         <div class="rq0escxv l9j0dhe7 du4w35lb cddn0xzi j83agx80 cbu4d94t byvelhso">
             <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t bkfpd7mw">
                 <!--$-->
                 <div aria-label="Facebook" class="taijpn5t cb02d2ww j83agx80" role="navigation">
                     <ul class="thodolrn ojvp67qx taijpn5t buofh1pr j83agx80 aovydwv3 bqdfd6uv">
-                        <li class="buofh1pr to382e16 o5zgeu5y jrc8bbd0 dawyy4b1 hw7htvoc" v-for="(item,index) in tabNav" :key="index" v-on:click="hactive=index">
+                        <li class="buofh1pr to382e16 o5zgeu5y jrc8bbd0 dawyy4b1 hw7htvoc" v-for="(item,index) in tabNav" :key="index" v-on:click="getNav(index)">
                             <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
                                 <div class="bp9cbjyn j83agx80 cb02d2ww l9j0dhe7">
                                     <div :class="hactive==index?'ooq845xs s44p3ltw b2mspmbn akjuzmll bub6lnnc i09qtzwb lthxh50u pmk7jnqg tkxwya3v jav28p83 tt24zdws ms05siws flx89l3n b7h9ocf4':''">
@@ -109,9 +75,9 @@
             <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
                 <div class="j83agx80 l9j0dhe7">
                     <el-popover placement="bottom" width="300" trigger="click">
-                        <div class="aov4n071">
+                        <div v-if="mactive==-1" class="aov4n071">
                             <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="/profile.php?id=100004644524593" role="link" tabindex="0">
+                                <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="#/mePage" role="link" tabindex="0">
                                     <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
                                         <div class="o8rfisnq j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7">
                                             <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
@@ -151,7 +117,7 @@
                                                 </i>
                                             </div>
                                         </div>
-                                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
+                                        <div @click="dialogVisible3=true" class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
                                             <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
                                                 <div class="">
                                                     <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
@@ -267,6 +233,27 @@
                                     </span>
                                 </footer>
                             </div>
+                        </div>
+                        <div v-else-if="mactive==0">
+                            <div class="book-flex book-items">
+                                <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
+                                <div class="visible-title">设置与隐私</div>
+                            </div>
+                            <cart-list :list="setAll" @getcart="getset"></cart-list>
+                        </div>
+                        <div v-else-if="mactive==1">
+                            <div class="book-flex book-items">
+                                <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
+                                <div class="visible-title">帮助与支持</div>
+                            </div>
+                            <cart-list :list="setAll2" @getcart="getset"></cart-list>
+                        </div>
+                        <div v-else-if="mactive==2">
+                            <div class="book-flex book-items">
+                                <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
+                                <div class="visible-title">显示偏好设置</div>
+                            </div>
+                            <cart-list :list="setAll3" :type="'switch'"></cart-list>
                         </div>
                         <el-tooltip class="item" effect="dark" content="账户" placement="top-start" slot="reference">
                             <div aria-label="帐户" class="oajrlxb2 tdjehn4e qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t qypqp5cg q676j6op" role="button" tabindex="0">
@@ -522,19 +509,8 @@
                 <!--$-->
                 <a aria-label="枫果果" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn e72ty7fz qlfml3jp inkptoze qmr60zad btwxx1t3 tv7at329 taijpn5t" href="/profile.php?id=100004644524593" role="link" tabindex="0">
                     <div class="j83agx80 fv0vnmcu fop5sh7t">
-                        <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                            <svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none" style="height:28px;width:28px">
-                                <mask id="jsc_c_1a">
-                                    <circle cx="14" cy="14" fill="white" r="14">
-                                    </circle>
-                                </mask>
-                                <g mask="url(#jsc_c_1a)">
-                                    <image style="height:28px;width:28px" x="0" y="0" height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xlink:href="/v/t1.0-1/cp0/p50x50/116346741_1700768033421331_6792692860000257665_n.jpg?_nc_cat=107&amp;_nc_sid=7206a8&amp;_nc_ohc=SPJdL2v3LPwAX-dPU3n&amp;_nc_ht=scontent-hkt1-1.xx&amp;oh=b648e82bce19589321db6b28c7b683e1&amp;oe=5F4BCDD4">
-                                    </image>
-                                    <circle class="mlqo0dh0 georvekb s6kb5r3f" cx="14" cy="14" r="14">
-                                    </circle>
-                                </g>
-                            </svg>
+                        <div class="me-img">
+                            <img src="../assets/me.jpg" alt="">
                         </div>
                     </div>
                     <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
@@ -601,37 +577,18 @@
                 <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 l56l04vs r57mb794 kh7kg01d c3g1iek1 buofh1pr">
                     <el-input :autosize="{minRows:6}" type="textarea" placeholder="枫果果分享你的新鲜事吧" v-model="topic">
                     </el-input>
-                    <div class="i09qtzwb rq0escxv d1544ag0 dati1w0a pmk7jnqg j9ispegn mq6i96l2">
-                        <div class="k4urcfbm j83agx80 rq0escxv gs1a9yip">
-                            <div aria-label="显示背景选项" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l">
-                                <span class="hop8lmos rl04r1d5">
-                                    <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="i09qtzwb e5ffyxfx kgtf8isp pmk7jnqg b73ngqbp">
-                        <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                            <div aria-label="表情" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                <div>
-                                    <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                        <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                            <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_b6020a" style="height: 24px; width: 24px;">
-                                                </i>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="flex" style="margin-top:20px;padding:0 10px">
+                        <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
+                        <el-popover
+                            placement="bottom"
+                            trigger="click">
+                             <VEmojiPicker @select="selectEmoji"   /> 
+                                <div class="hover-icon " slot="reference" >
+                                    <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_b6020a" style="height: 24px; width: 24px;"> </i>
                                 </div>
-                            </div>
-                        </span>
+                        </el-popover>
                     </div>
-                    <div data-visualcompletion="ignore" data-thumb="1" class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" style="display: none; right: 0px; height: 215px;">
-                    </div>
-                    <div data-visualcompletion="ignore" data-thumb="1" class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" style="display: block; right: 0px; height: 0px;">
-                        <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm">
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="ihqw7lf3 discj3wi l9j0dhe7">
                     <div class="scb9dxdr sj5x9vvc dflh9lhu cxgpxx05 dhix69tm wkznzc2l i1fnvgqd j83agx80 rq0escxv ibutc8p7 l82x9zwi uo3d90p7 pw54ja7n ue3kfks5 tr4kgdav eip75gnj ccnbzhu1 dwg5866k cwj9ozl2 bp9cbjyn">
@@ -644,114 +601,23 @@
                         </div>
                         <div aria-labelledby="toolbarLabel">
                             <div class="j83agx80">
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="创建视频聊天室" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                    <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;"> </i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <input accept="image/*,image/heif,image/heic,video/*,video/mp4,video/x-m4v,video/x-matroska" multiple="multiple" type="file" class="mkhogb32">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="照片/视频" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_ee8eae" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                     <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_ee8eae" style="height: 24px; width: 24px;"></i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="标记好友" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_c48911" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                     <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_c48911" style="height: 24px; width: 24px;"></i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="感受/活动" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_3bba41" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                        <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_3bba41" style="height: 24px; width: 24px;"></i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="签到" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_346c20" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                        <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_346c20" style="height: 24px; width: 24px;"> </i>
                                 </div>
-                                <div class="dwxx2s2f dicw6rsg kady6ibp rs0gx3tq">
-                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                        <div aria-label="更多" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 ow4ym5g4 auili1gw">
-                                            <div>
-                                                <div class="tv7at329 l9j0dhe7 thwo4zme s45kfl79 emlxlaya bkmhp75w spb7xbtv ni8dbmo4 stjgntxs">
-                                                    <div class="iyyx5f41 l9j0dhe7 cebpdrjk bipmatt0 k5wvi7nf a8s20v7p k77z8yql qs9ysxi8 arfg74bv n00je7tq a6sixzi8 tojvnm2t">
-                                                        <div class="bp9cbjyn j83agx80 datstx6m taijpn5t l9j0dhe7 k4urcfbm">
-                                                            <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_19f068" style="height: 24px; width: 24px;">
-                                                            </i>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </span>
+                                <div class="hover-icon">
+                                        <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_19f068" style="height: 24px; width: 24px;"></i>
                                 </div>
                             </div>
                         </div>
@@ -988,104 +854,6 @@
                 </div>
             </div>
         </div>
-        <div v-if="choose==5" class="ihqw7lf3">
-            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 jb3vyjys b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                    <div>
-                        <label aria-label="小组名称" class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl" for="jsc_c_3g">
-                            <div class="j83agx80 k4urcfbm">
-                                <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                    <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                        小组名称
-                                    </span>
-                                    <input dir="auto" aria-invalid="false" autocomplete="off" id="jsc_c_3g" maxlength="75" class="oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d oo9gr5id qc3s4z1d knj5qynh fo6rh5oj osnr6wyh hv4rvrfc dati1w0a p0x8y401 k4urcfbm iu8raji3" type="text" value="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                    <div>
-                        <div class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41 a8s20v7p" data-testid="Keycommand_wrapper">
-                            <div>
-                                <label aria-label="选择隐私设置" class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy nhd2j8a9 lzcic4wl" for="jsc_c_3i" role="button" tabindex="0">
-                                    <div class="j83agx80 k4urcfbm">
-                                        <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                            <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                选择隐私设置
-                                            </span>
-                                            <div aria-invalid="false" class="k4urcfbm" id="jsc_c_3i">
-                                                <div class="dwo3fsh8 g5ia77u1 ow4ym5g4 auili1gw nhd2j8a9 oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 l9j0dhe7 i1ao9s8h du4w35lb rq0escxv oo9gr5id j83agx80 jagab5yi knj5qynh fo6rh5oj lzcic4wl osnr6wyh hv4rvrfc dati1w0a p0x8y401 k4urcfbm">
-                                                    <span>
-                                                        &nbsp;
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="j83agx80">
-                                            <div class="hv4rvrfc o8rfisnq">
-                                                <i class="hu5pjgll lzf7d6o1 sp_6vYwcjvw5IC sx_8609e6">
-                                                </i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-            </div>
-            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                    <div class="o9f14d3k">
-                        <div class="rq0escxv j83agx80 cbu4d94t k4urcfbm">
-                            <div class="" role="presentation">
-                                <div>
-                                    <label aria-label="选择好友" class="cwj9ozl2 np24d88i p9mcbvme krxe8813 ph5sz0o6 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl" for="jsc_c_3m">
-                                        <div class="j83agx80 k4urcfbm">
-                                            <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                                <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                    选择好友
-                                                </span>
-                                                <div class="g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv oo9gr5id o6r2urh6 jagab5yi knj5qynh fo6rh5oj d2edcug0 lzcic4wl ni8dbmo4 stjgntxs qt6c0cv9 dflh9lhu scb9dxdr aodizinl k4urcfbm">
-                                                    <span class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41" data-testid="Keycommand_wrapper">
-                                                        <span aria-hidden="true" class="g0qnabr5 kr9hpln1 kr520xx4 j9ispegn pmk7jnqg r0usavy5 n5sx5to1 jagab5yi">
-                                                        </span>
-                                                        <input aria-autocomplete="list" aria-expanded="false" aria-label="选择好友" role="combobox" autocomplete="off" class="g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv oo9gr5id nc684nl6 jagab5yi knj5qynh fo6rh5oj fv0vnmcu ggphbty4 aov4n071 bi6gxh9e d2edcug0 lzcic4wl ieid39z1" id="jsc_c_3m" placeholder="" spellcheck="false" style="width: 80px;" type="text" value="">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="aov4n071">
-                            <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain" dir="auto">
-                                推荐：
-                                <div class="oajrlxb2 g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                    <span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql e9vueds3 j5wam9gi knj5qynh py34i1dx">
-                                        杨千秋
-                                    </span>
-                                </div>
-                                ,
-                                <div class="oajrlxb2 g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                    <span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql e9vueds3 j5wam9gi knj5qynh py34i1dx">
-                                        林莉
-                                    </span>
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <span slot="footer" class="dialog-footer" v-if="choose==5">
             <el-button v-on:click="dialogVisible = false">
                 取 消
@@ -1095,17 +863,204 @@
             </el-button>
         </span>
     </el-dialog>
+    <el-dialog title="动态消息偏好设置" :visible.sync="dialogVisible2" width="550px">
+        <div style="margin-bottom:10px">管理和定制你的动态消息内容。</div>
+        <cart-list :list="dynamicAll" type="arrow" size="big"></cart-list>
+    </el-dialog>
+    <el-dialog title="向 Facebook 提供反馈" :visible.sync="dialogVisible3" width="500px">
+        <cart-list :list="feedback" type="arrow" @getcart="getfeed" size="big"></cart-list>
+    </el-dialog>
+    <el-dialog :title="feed_title" :visible.sync="dialogVisible4" width="500px">
+        <div class="visible-item">
+            <div class="visible-title">我们应该如何改进？</div>
+            <el-select v-model="feed.title" placeholder="选择产品" style="width:100%">
+                <el-option v-for="(item,index) in feedProduct" :key="index" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+        <div class="visible-item">
+            <div class="visible-text">详细信息</div>
+            <el-input type="textarea" v-model="feed.text" placeholder="请提供尽可能更多的信息....."></el-input>
+        </div>
+        <div class="visible-item">
+            <div class="book-icon2">
+                <i class="el-icon-paperclip"> </i>
+                <span>添加截图或视频（推荐）</span>
+            </div>
+        </div>
+        <div class="visible-item">
+            <div class="book-icon2">
+                <span>
+                    如果想提供建议帮助我们改善产品，请联系我们。如果遇到具体问题并需要帮助，请访问
+                    <a href="">帮助中心</a>
+                </span>
+            </div>
+        </div>
+
+    </el-dialog>
 </div>
 </template>
 
 <script>
 import cartList from './cart-list'
 export default {
+    props: ["hactive"],
     components: {
         "cart-list": cartList
     },
     data() {
         return {
+            dialogVisible4: false,
+            feed: {
+                title: "",
+
+            },
+            feedProduct: [{
+                    label: "编辑工具/发布功能",
+                    value: 1
+                },
+                {
+                    label: "表现",
+                    value: 2
+                }, {
+                    label: "大学社区/微校园",
+                    value: 3
+                }, {
+                    label: "登录",
+                    value: 5
+                }, {
+                    label: "动态消息",
+                    value: 6
+                }, {
+                    label: "个人主页",
+                    value: 7
+                }, {
+                    label: "公共主页",
+                    value: 8
+                }, {
+                    label: "广告",
+                    value: 9
+                }, {
+                    label: "国际化",
+                    value: 10
+                }, {
+                    label: "活动",
+                    value: 11
+                }, {
+                    label: "健康",
+                    value: 12
+                }, {
+                    label: "交友",
+                    value: 13
+                }, {
+                    label: "快拍",
+                    value: 14
+                }, {
+                    label: "媒体文件查看器",
+                    value: 15
+                }, {
+                    label: "评论/点赞/心情/分享",
+                    value: 16
+                }, {
+                    label: "气候科学信息中心",
+                    value: 17
+                }, {
+                    label: "设置",
+                    value: 18
+                }, {
+                    label: "视频",
+                    value: 19
+                }, {
+                    label: "视频聊天室",
+                    value: 20
+                },
+                {
+                    label: "首页",
+                    value: 21
+                }, {
+                    label: "搜索",
+                    value: 22
+                }, {
+                    label: "通知",
+                    value: 23
+                }, {
+                    label: "新冠疫情信息中心",
+                    value: 24
+                }, {
+                    label: "新用户体验",
+                    value: 25
+                }, {
+                    label: "选民信息中心",
+                    value: 26
+                }, {
+                    label: "隐私设置",
+                    value: 27
+                }, {
+                    label: "游戏",
+                    value: 28
+                },
+                {
+                    label: "直播",
+                    value: 29
+                }, {
+                    label: "职位发布工具",
+                    value: 30
+                }, {
+                    label: "众包",
+                    value: 31
+                }, {
+                    label: "Facebook Pay",
+                    value: 32
+                }, {
+                    label: "Goodwill/那年今天",
+                    value: 33
+                }, {
+                    label: "Markeplace",
+                    value: 34
+                }, {
+                    label: "Messenger",
+                    value: 35
+                }, {
+                    label: "Watch",
+                    value: 36
+                }, {
+                    label: "其他",
+                    value: 37
+                },
+            ],
+            feed_title: '',
+            feedback: [{
+                    icon: "el-icon-s-help",
+                    title: "帮助我们改进新版 Facebook",
+                    text: "对新版 Facebook 的使用体验提出反馈。"
+                },
+                {
+                    icon: "el-icon-info",
+                    title: "报告漏洞",
+                    text: "告诉我们出现故障的功能。"
+                },
+            ],
+            dialogVisible3: false,
+            dynamicAll: [{
+                    icon: "el-icon-star-on",
+                    title: "管理特别关注对象",
+                    text: "添加用户和公共主页即可在动态消息中优先显示其帖子"
+                },
+                {
+                    icon: "el-icon-s-release",
+                    title: "停止关注",
+                    text: "停止关注用户、主页和小组，隐藏他们的帖子"
+                },
+                {
+                    icon: "el-icon-s-claim",
+                    title: "重新关注用户",
+                    text: "重新关注用户、主页和小组。"
+                },
+                {
+                    icon: "el-icon-time",
+                    title: "暂不关注",
+                    text: "管理你的“暂不关注”设置"
+                },
+            ],
             me_ul: [{
                     icon: "el-icon-s-tools",
                     title: "设置与隐私",
@@ -1186,7 +1141,6 @@ export default {
                     text: "发布公开或私人活动，吸引大家参与。"
                 },
             ],
-            hactive: 0,
             tabNav: [{
                     name: "index",
                     icon: "M17.5 23.979 21.25 23.979C21.386 23.979 21.5 23.864 21.5 23.729L21.5 13.979C21.5 13.427 21.949 12.979 22.5 12.979L24.33 12.979 14.017 4.046 3.672 12.979 5.5 12.979C6.052 12.979 6.5 13.427 6.5 13.979L6.5 23.729C6.5 23.864 6.615 23.979 6.75 23.979L10.5 23.979 10.5 17.729C10.5 17.04 11.061 16.479 11.75 16.479L16.25 16.479C16.939 16.479 17.5 17.04 17.5 17.729L17.5 23.979ZM21.25 25.479 17 25.479C16.448 25.479 16 25.031 16 24.479L16 18.327C16 18.135 15.844 17.979 15.652 17.979L12.348 17.979C12.156 17.979 12 18.135 12 18.327L12 24.479C12 25.031 11.552 25.479 11 25.479L6.75 25.479C5.784 25.479 5 24.695 5 23.729L5 14.479 3.069 14.479C2.567 14.479 2.079 14.215 1.868 13.759 1.63 13.245 1.757 12.658 2.175 12.29L13.001 2.912C13.248 2.675 13.608 2.527 13.989 2.521 14.392 2.527 14.753 2.675 15.027 2.937L25.821 12.286C25.823 12.288 25.824 12.289 25.825 12.29 26.244 12.658 26.371 13.245 26.133 13.759 25.921 14.215 25.434 14.479 24.931 14.479L23 14.479 23 23.729C23 24.695 22.217 25.479 21.25 25.479Z",
@@ -1215,26 +1169,123 @@ export default {
             ],
             choose: 0,
             dialogVisible: false,
+            dialogVisible2: false,
             value: true,
             path: "",
+            mactive: -1,
+            setAll3: [{
+                    icon: "el-icon-moon",
+                    title: "夜间模式",
+                    switch: false
+                },
+                {
+                    icon: "el-icon-sunny",
+                    title: "精简模式",
+                    switch: false
+                },
+            ],
+            setAll2: [{
+                    icon: "el-icon-question",
+                    title: "帮助中心"
+                },
+                {
+                    icon: "el-icon-s-comment",
+                    title: "帮助论坛"
+                }, {
+                    icon: "el-icon-message",
+                    title: "帮助中心信箱"
+                }, {
+                    icon: "el-icon-info",
+                    title: "报告问题"
+                }
+            ],
+            setAll: [{
+                    icon: "el-icon-s-tools",
+                    title: "设置"
+                },
+                {
+                    icon: "el-icon-s-tools",
+                    title: "隐私设置检查"
+                },
+                {
+                    icon: "el-icon-s-tools",
+                    title: "快捷隐私设置"
+                }, {
+                    icon: "el-icon-s-unfold",
+                    title: "动态记录"
+                }, {
+                    icon: "el-icon-s-marketing",
+                    title: "动态消息偏好设置"
+                }, {
+                    icon: "el-icon-s-tools",
+                    title: "语言"
+                },
+            ],
         }
-    },
-    craeted() {
-
     },
 
     methods: {
+        selectEmoji(data){
+            this.topic+=data.data
+        },
+        getNav(i) {
+            this.$emit("getnav", i)
+        },
+        //反馈
+        getfeed(i) {
+            if (i == 0) {
+                this.feed_title = "帮助我们改进新版 Facebook"
+            } else {
+                this.feed_title = "报告漏洞"
+            }
+            this.dialogVisible4 = true
+
+        },
+        //设置
+        getset(i) {
+            if (i == 0) {
+                this.$router.push({
+                    name: "account"
+                })
+            } else if (i == 1) {
+                this.$router.push({
+                    name: "checkup"
+                })
+
+            } else if (i == 2) {
+                this.$router.push({
+                    name: "privacy"
+                })
+
+            } else if (i == 3) {
+                this.$router.push({
+                    name: "dynamic"
+                })
+
+            } else if (i == 4) {
+                this.dialogVisible2 = true;
+            } else if (i == 5) {
+                this.$router.push({
+                    name: "account",
+                    params: {
+                        state: 9
+                    }
+                })
+            }
+        },
         //个人中心
         getme(i) {
+
             if (i == 3) {
                 this.$router.push({
                     name: "login"
                 })
+            } else {
+                this.mactive = i;
             }
         },
         getshow(e) {
             if (e == 0) this.dialogTitle = "创建帖子"
-            if (e == 5) this.dialogTitle = "新建小组"
             if (e == 2) this.dialogTitle = ""
             if (e == 1) {
                 this.$router.push({
@@ -1248,7 +1299,11 @@ export default {
                 this.$router.push({
                     name: "goal"
                 })
-            } else if (e == 6) {
+            }else if (e == 5) {
+                this.$router.push({
+                    name: "create"
+                })
+            }  else if (e == 6) {
                 this.$router.push({
                     name: "events"
                 })

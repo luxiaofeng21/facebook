@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <Header v-if="path!='/login'"></Header>
+    <Header @getnav="getNav" :hactive="active" v-if="path"></Header>
     <router-view></router-view>
 </div>
 </template>
@@ -14,12 +14,45 @@ export default {
     },
     data() {
         return {
-            path: ''
+            path: true,
+            active: 0,
+        }
+    },
+    methods: {
+        getNav(i) {
+            this.active = i
+        },
+        getactive() {
+            var to = this.$route
+            var reg = /login/ //是否包含login
+            var test = reg.test(to.fullPath)
+            if (test) {
+                this.path = false
+            } else {
+                this.path = true
+            }
+
+            if (to.name == 'index') {
+                this.active = 0
+            } else if (to.name == 'friends') {
+                this.active = 1
+            } else if (to.name == 'watch') {
+                this.active = 2
+            } else if (to.name == 'groups') {
+                this.active = 3
+            } else if (to.name == 'gaming') {
+                this.active = 4
+            }
+        }
+    },
+    watch: {
+        $route(to, form) {
+            console.log("$route -> to", to)
+            this.getactive()
         }
     },
     created() {
-        this.path = this.$route.path;
-        console.log("craeted -> this.path", this.path)
+        this.getactive()
     }
 }
 </script>
@@ -68,6 +101,7 @@ a {
 .book-icon,
 .el-dialog__headerbtn,
 .book-icon2 {
+    cursor: pointer;
     width: 40px;
     height: 40px;
     display: flex;
@@ -77,7 +111,10 @@ a {
     border-radius: 50%;
 
 }
-
+.book-icon.small{
+    width: 25px;
+    height: 25px;
+}
 .book-icon {
     margin-right: 15px;
 }
@@ -90,5 +127,46 @@ a {
 
 .book-icon2>i {
     font-size: 20px;
+}
+.icon-primary{
+    color: #fff;
+    background-color: #1877F2;
+}
+
+.book-title{
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.book-title2{
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.book-card{
+    background-color: #fff;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 16px 0;
+}
+.book-text{
+    color:  var(--secondary-text);
+}
+.book-null{
+    text-align: center;
+    display: block;
+    font-size: 1.25rem;
+    color: var(--placeholder-text);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.el-title{
+    font-size:1.0625rem ;
+    font-weight: 600;
+    color: var(--secondary-text);
 }
 </style>

@@ -98,7 +98,7 @@
                                                                             <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
                                                                                 <div class="o8rfisnq j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7 m6uieof3 icc0peqn hx8drtub j13r6fgp nddp3pr2">
                                                                                     <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e tv7at329 thwo4zme">
-                                                                                        <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_4b9929">
+                                                                                        <i class="el-icon-arrow-down">
                                                                                         </i>
                                                                                     </div>
                                                                                 </div>
@@ -249,7 +249,7 @@
                                                                             <el-input class="search" placeholder="枫果果，分享你的新鲜事吧"></el-input>
                                                                         </div>
                                                                         <div class="k4urcfbm cxgpxx05 stjgntxs ni8dbmo4 n1l5q3vz kwzhilbh qypqp5cg lhclo0ds j83agx80 bo76ibdq">
-                                                                            <div class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 g5gj957u p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo idt9hxom cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi buofh1pr taijpn5t" role="button" tabindex="0">
+                                                                            <a href="#/live" class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 g5gj957u p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo idt9hxom cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi buofh1pr taijpn5t" role="button" tabindex="0">
                                                                                 <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
                                                                                     <span class="pq6dq46d kb5gq1qc pfnyh3mw oi9244e8">
                                                                                         <i class="sp_5kM2vwYmVrv sx_ec1e45" role="img">
@@ -261,7 +261,7 @@
                                                                                 </div>
                                                                                 <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
                                                                                 </div>
-                                                                            </div>
+                                                                            </a>
                                                                             <input accept="image/*,image/heif,image/heic,video/*,video/mp4,video/x-m4v,video/x-matroska" class="mkhogb32" multiple="" type="file">
                                                                             <div class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 g5gj957u p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo idt9hxom cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi buofh1pr taijpn5t" role="button" tabindex="0">
                                                                                 <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
@@ -551,7 +551,7 @@
                                                                                                                             </div>
                                                                                                                         </div>
                                                                                                                         <div class="dati1w0a a5h7je3r hv4rvrfc ecm0bbzt taijpn5t jnigpg78 j83agx80 bp9cbjyn">
-                                                                                                                            <a aria-label="显示全部" class="oajrlxb2 g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329" href="/friends/" role="link" tabindex="0">
+                                                                                                                            <a class="oajrlxb2 g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329" href="#/friends" role="link" tabindex="0">
                                                                                                                                 <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
                                                                                                                                     <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
                                                                                                                                         <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p q66pz984 ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
@@ -579,305 +579,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div v-for="(item,index) in list" :key="index">
-                                                                    <div class="du4w35lb k4urcfbm l9j0dhe7 sjgh65i0">
-                                                                        <div class="du4w35lb l9j0dhe7">
-                                                                            <div class="" data-testid="Keycommand_wrapper_feed_story">
-                                                                                <div class="" data-testid="Keycommand_wrapper">
-                                                                                    <div class="lzcic4wl" role="article">
-                                                                                        <div class="j83agx80 cbu4d94t">
-                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb">
-                                                                                                <div class="j83agx80 l9j0dhe7 k4urcfbm">
-                                                                                                    <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm sbcfpzgs">
-                                                                                                        <div>
-                                                                                                            <div>
-                                                                                                            </div>
-                                                                                                            <div>
-                                                                                                                <div>
-                                                                                                                    <div>
-                                                                                                                        <div class="dati1w0a hv4rvrfc">
-                                                                                                                            <div class="l9j0dhe7 discj3wi ihqw7lf3 j1vyfwqu">
-                                                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3">
-                                                                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz">
-                                                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh m9osqain" dir="auto">
-                                                                                                                                            为你推荐
-                                                                                                                                        </span>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div>
-                                                                                                                        <div class="pybr56ya dati1w0a hv4rvrfc n851cfcs btwxx1t3 j83agx80 ll8tlv6m">
-                                                                                                                            <div class="oi9244e8 do00u71z j83agx80">
-                                                                                                                                <div class="nc684nl6">
-                                                                                                                                    <a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl oo9gr5id gpro0wi8" href="/worldscreen1966/?__cft__[0]=AZV06S9x6qn4LcUuUBe4QXLAT4S8zyw_3AMdoXaNqHmXULf9hPi7LQ-eG5dhKs_ZX_IptGuAOB7U4XfsWjyoEBVJuKzs12Gl_APweCd9af7SiUzVVWrYsZUUDtD--pntsDWzFOJhXUAzAkO22ttYObO8RmPLSvqPfCXU1aAkLFF_2nzOncDjRFQvzsJEoPIlFqc&amp;__tn__=%3C%2CP-R" role="link" tabindex="-1">
-                                                                                                                                        <img :src="item.img" style="height: 40px; width: 40px;border-radius:50%" alt="">
-                                                                                                                                    </a>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                            <div class="buofh1pr">
-                                                                                                                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                                                    <div class="qzhwtbm6 knvmm38d">
-                                                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m" dir="auto">
-                                                                                                                                            <h4 id="jsc_c_gp" class="gmql0nx0 l94mrbxd p1ri9a11 lzcic4wl aahdfvyu hzawbc8m" dir="auto">
-                                                                                                                                                <div class="nc684nl6">
-                                                                                                                                                    <a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl oo9gr5id gpro0wi8 lrazzd5p">
-                                                                                                                                                        <strong>
-                                                                                                                                                            <span>
-                                                                                                                                                                {{item.name}}
-                                                                                                                                                            </span>
-                                                                                                                                                        </strong>
-                                                                                                                                                    </a>
-                                                                                                                                                </div>
-                                                                                                                                            </h4>
-                                                                                                                                        </span>
-                                                                                                                                    </div>
-                                                                                                                                    <div class="qzhwtbm6 knvmm38d">
-                                                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain hzawbc8m" dir="auto">
-                                                                                                                                            <span id="jsc_c_gq">
-                                                                                                                                                <span class="jpp8pzdo">
-                                                                                                                                                    <span aria-hidden="true">
-                                                                                                                                                        ·
-                                                                                                                                                    </span>
-                                                                                                                                                </span>
-                                                                                                                                                <span>
-                                                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                        <a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8 b1v8xokw" href="/worldscreen1966/posts/10157778787762060?__cft__[0]=AZV06S9x6qn4LcUuUBe4QXLAT4S8zyw_3AMdoXaNqHmXULf9hPi7LQ-eG5dhKs_ZX_IptGuAOB7U4XfsWjyoEBVJuKzs12Gl_APweCd9af7SiUzVVWrYsZUUDtD--pntsDWzFOJhXUAzAkO22ttYObO8RmPLSvqPfCXU1aAkLFF_2nzOncDjRFQvzsJEoPIlFqc&amp;__tn__=%2CO%2CP-R" role="link" tabindex="0">
-                                                                                                                                                            <span>
-                                                                                                                                                                {{item.date}}
-                                                                                                                                                            </span>
-                                                                                                                                                        </a>
-                                                                                                                                                    </span>
-                                                                                                                                                </span>
-                                                                                                                                                <span class="jpp8pzdo">
-                                                                                                                                                    <span aria-hidden="true">
-                                                                                                                                                        ·
-                                                                                                                                                    </span>
-                                                                                                                                                </span>
-                                                                                                                                                <span class="ormqv51v l9j0dhe7 q9uorilb">
-                                                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                        <i class="hu5pjgll m6k467ps sp_LGojA4ldSxW sx_0385ef" aria-label="分享对象： 公开" role="img">
-                                                                                                                                                        </i>
-                                                                                                                                                    </span>
-                                                                                                                                                </span>
-                                                                                                                                            </span>
-                                                                                                                                        </span>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                            <div class="nqmvxvec j83agx80 jnigpg78 cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr odw8uiq3">
-                                                                                                                                <div aria-expanded="false" aria-haspopup="menu" aria-label="可对这篇帖子采取的操作" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="0">
-                                                                                                                                    <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_d50424">
-                                                                                                                                    </i>
-                                                                                                                                    <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="inset: -8px;">
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div>
-                                                                                                                        <div class="" dir="auto">
-                                                                                                                            <div class="ecm0bbzt hv4rvrfc ihqw7lf3 dati1w0a" id="jsc_c_gr">
-                                                                                                                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                                                    {{item.title}}
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="l9j0dhe7">
-                                                                                                                            <div class="l9j0dhe7">
-                                                                                                                                <div>
-                                                                                                                                    <div class="b3i9ofy5 l9j0dhe7">
-                                                                                                                                        <div class="j83agx80 soycq5t1 ni8dbmo4 stjgntxs l9j0dhe7">
-                                                                                                                                            <a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8 datstx6m k4urcfbm" href="l.facebook.com/l.php?u=https%3A%2F%2Fwww.worldscreen.com.tw%2Fgoods.php%3Fgoods_id%3D23521%26fbclid%3DIwAR3a3GWjK3cIyXZG1vJ3ZJnXAQvA2LuuUnDdv1sJB1gFcFKzPiQw4FCjJq8%23tops&amp;h=AT2uZf77XQFlbAibiE09H6-NlywrbyrfghqYGGLJjuAkOlzHqV1am0z0Uh90q-dLzZLah126VXtl0mA5oKoCGBNWlWBn-TXKjCYC-Ks_lBl1yILouYiRldf8NcTjhUy-T0bb&amp;__tn__=H-R&amp;c[0]=AT0-n1lLX4od_TukTUQvMmR2yiTVBA8agoaK0TS7hQcGruAaWguHkl97PEfRyPBcCpPBYWR3hqjRIQXHW60d2VvQlSLaL9VAcTR7-1gXmVypurYZsAqDMUkq3JiQNly-VcVS0nsvwsTcTtmy04azQFG6K_C9Wf-731B5CbAtryD0CVIg8no4STXy3quHk7musinUgApihOykZZOguukhAAE" rel="nofollow noopener" role="link" tabindex="0" target="_blank">
-                                                                                                                                                <div class="bp9cbjyn tqsryivl j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 k4urcfbm">
-                                                                                                                                                    <div style="max-width: 100%; min-width: 500px; width: calc(-622.605px + 191.571vh);">
-                                                                                                                                                        <div class="do00u71z ni8dbmo4 stjgntxs l9j0dhe7" style="padding-top: 52.2%;">
-                                                                                                                                                            <div class="pmk7jnqg kr520xx4" style="height: 100%; left: 0%; width: calc(100%);">
-                                                                                                                                                                <img class="i09qtzwb n7fi1qx3 datstx6m pmk7jnqg j9ispegn kr520xx4 k4urcfbm bixrwtb6" :src="item.img" width="500" height="261">
-                                                                                                                                                            </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                                <div class="i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4 linmgsc8 opwvks06 hzruof5a">
-                                                                                                                                                </div>
-                                                                                                                                            </a>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                                <div class="o0s42vec pmk7jnqg ehxjyohh b4oskaiq">
-                                                                                                                                    <div aria-label="更多" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8" role="button" tabindex="0">
-                                                                                                                                        <div class="bp9cbjyn cwj9ozl2 opwvks06 hop1g133 linmgsc8 t63ysoy8 cmek9o9a p7f4f6cj c8oo3d72 r15kkdkt oo9gr5id j83agx80 mudddibn taijpn5t ciadx1gn">
-                                                                                                                                            <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                <i class="hu5pjgll lzf7d6o1 sp_LGojA4ldSxW sx_434bcc">
-                                                                                                                                                </i>
-                                                                                                                                            </span>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                            <div class="stjgntxs ni8dbmo4">
-                                                                                                                                <div class="l9j0dhe7">
-                                                                                                                                    <a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 p8dawk7l" href="l.facebook.com/l.php?u=https%3A%2F%2Fwww.worldscreen.com.tw%2Fgoods.php%3Fgoods_id%3D23521%26fbclid%3DIwAR0nfKbC_ioDZP8nyo8qw3U7OZqoEAUqHjS3BUur-sHN8vfJhyZtdemPhFE%23tops&amp;h=AT2uZf77XQFlbAibiE09H6-NlywrbyrfghqYGGLJjuAkOlzHqV1am0z0Uh90q-dLzZLah126VXtl0mA5oKoCGBNWlWBn-TXKjCYC-Ks_lBl1yILouYiRldf8NcTjhUy-T0bb&amp;__tn__=%2CmH-R&amp;c[0]=AT0-n1lLX4od_TukTUQvMmR2yiTVBA8agoaK0TS7hQcGruAaWguHkl97PEfRyPBcCpPBYWR3hqjRIQXHW60d2VvQlSLaL9VAcTR7-1gXmVypurYZsAqDMUkq3JiQNly-VcVS0nsvwsTcTtmy04azQFG6K_C9Wf-731B5CbAtryD0CVIg8no4STXy3quHk7musinUgApihOykZZOguukhAAE" rel="nofollow noopener" role="link" tabindex="0" target="_blank">
-                                                                                                                                        <div class="b3i9ofy5 s1tcr66n l9j0dhe7 p8dawk7l">
-                                                                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3 b5q2rw42 lq239pai f10w8fjw hv4rvrfc dati1w0a pybr56ya">
-                                                                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn">
-                                                                                                                                                    <div class="bi6gxh9e sqxagodl">
-                                                                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
-                                                                                                                                                            worldscreen.com.tw
-                                                                                                                                                        </span>
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="enqfppq2 muag1w35 ni8dbmo4 stjgntxs e5nlhep0 ecm0bbzt rq0escxv a5q79mjw r9c01rrb">
-                                                                                                                                                        <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                                                                            <div class="qzhwtbm6 knvmm38d">
-                                                                                                                                                                <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m" dir="auto">
-                                                                                                                                                                    <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                                                                                                                        <span dir="auto">
-                                                                                                                                                                            {{item.title}}
-                                                                                                                                                                        </span>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </span>
-                                                                                                                                                            </div>
-
-                                                                                                                                                        </div>
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 p8fzw8mz pcp91wgn">
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                    </a>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div>
-                                                                                                                        <div class="stjgntxs ni8dbmo4 l82x9zwi uo3d90p7 h905i5nu monazrh9" data-visualcompletion="ignore-dynamic">
-                                                                                                                            <div>
-                                                                                                                                <div>
-                                                                                                                                    <div class="l9j0dhe7">
-                                                                                                                                        <div class="bp9cbjyn m9osqain j83agx80 jq4qci2q bkfpd7mw a3bd9o3v kvgmc6g5 wkznzc2l oygrvhab dhix69tm jktsbyx5 rz4wbd8a osnr6wyh a8nywdso s1tcr66n">
-                                                                                                                                            <div class="bp9cbjyn j83agx80 buofh1pr ni8dbmo4 stjgntxs">
-                                                                                                                                                <span aria-label="查看留下心情的用户" role="toolbar">
-                                                                                                                                                    <span id="jsc_c_gt" class="bp9cbjyn j83agx80 b3onmgus">
-                                                                                                                                                        <span class="np69z8it et4y5ytx j7g94pet b74d5cxt qw6c0r16 kb8x4rkr ed597pkb omcyoz59 goun2846 ccm00jje s44p3ltw mk2mc5f4 qxh1up0x qtyiw8t4 tpcyxxvw k0bpgpbk hm271qws rl04r1d5 l9j0dhe7 ov9facns kavbgo14">
-                                                                                                                                                            <span class="t0qjyqq4 jos75b7i j6sty90h kv0toi1t q9uorilb hm271qws ov9facns">
-                                                                                                                                                                <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                                    <div aria-label="赞：459位用户" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                                                                                                                                                        <div class="j1lvzwm4"></div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </span>
-                                                                                                                                                            </span>
-                                                                                                                                                        </span>
-                                                                                                                                                        <span class="np69z8it et4y5ytx j7g94pet b74d5cxt qw6c0r16 kb8x4rkr ed597pkb omcyoz59 goun2846 ccm00jje s44p3ltw mk2mc5f4 qxh1up0x qtyiw8t4 tpcyxxvw k0bpgpbk hm271qws rl04r1d5 l9j0dhe7 ov9facns tkr6xdv7">
-                                                                                                                                                            <span class="t0qjyqq4 jos75b7i j6sty90h kv0toi1t q9uorilb hm271qws ov9facns">
-                                                                                                                                                                <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                                    <div aria-label="大爱：5位用户" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                                                                                                                                                        <div class="j1lvzwm4"></div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </span>
-                                                                                                                                                            </span>
-                                                                                                                                                        </span>
-                                                                                                                                                        <span class="np69z8it et4y5ytx j7g94pet b74d5cxt qw6c0r16 kb8x4rkr ed597pkb omcyoz59 goun2846 ccm00jje s44p3ltw mk2mc5f4 qxh1up0x qtyiw8t4 tpcyxxvw k0bpgpbk hm271qws rl04r1d5 l9j0dhe7 ov9facns du4w35lb">
-                                                                                                                                                            <span class="t0qjyqq4 jos75b7i j6sty90h kv0toi1t q9uorilb hm271qws ov9facns">
-                                                                                                                                                                <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                                    <div aria-label="哇：5位用户" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                                                                                                                                                        <div class="j1lvzwm4"></div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                </span>
-                                                                                                                                                            </span>
-                                                                                                                                                        </span>
-                                                                                                                                                    </span>
-                                                                                                                                                </span>
-                                                                                                                                                <div class="">
-                                                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                        <div class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l gmql0nx0 ce9h75a5 ni8dbmo4 stjgntxs" role="button" tabindex="0">
-                                                                                                                                                            <span aria-hidden="true" class="bzsjyuwj ni8dbmo4 stjgntxs ltmttdrg gjzvkazv">
-                                                                                                                                                                <span>
-                                                                                                                                                                    <span class="gpro0wi8 pcp91wgn">
-                                                                                                                                                                        <span v-if="item.checked">你和其他{{item.goodsNum}}位用户</span>
-                                                                                                                                                                        <span v-else>{{item.goodsNum}}</span>
-                                                                                                                                                                    </span>
-                                                                                                                                                                </span>
-                                                                                                                                                            </span>
-                                                                                                                                                        </div>
-                                                                                                                                                    </span>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                            <div class="bp9cbjyn j83agx80 pfnyh3mw p1ueia1e">
-                                                                                                                                                <div class="gtad4xkn">
-                                                                                                                                                    <div class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh gpro0wi8 dwo3fsh8 ow4ym5g4 auili1gw du4w35lb gmql0nx0" id="jsc_c_gs" role="button" tabindex="0">
-                                                                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh m9osqain" dir="auto">
-                                                                                                                                                            {{item.remark}}条评论
-                                                                                                                                                        </span>
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                                <div class="gtad4xkn">
-                                                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                                                        <div class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh gpro0wi8 dwo3fsh8 ow4ym5g4 auili1gw du4w35lb gmql0nx0" role="button" tabindex="0">
-                                                                                                                                                            <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh m9osqain" dir="auto">
-                                                                                                                                                                {{item.share}}次分享
-                                                                                                                                                            </span>
-                                                                                                                                                        </div>
-                                                                                                                                                    </span>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                    <div class="a8nywdso e5nlhep0 rz4wbd8a ecm0bbzt dhix69tm oygrvhab wkznzc2l kvgmc6g5 k7cz35w2 jq4qci2q j83agx80">
-                                                                                                                                        <span @click="gethandle(1,item)" class=" _18vi" :class="item.checked==true?'checked':''">
-                                                                                                                                            <div class="l9j0dhe7 k4urcfbm">
-                                                                                                                                                <div class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr gokke00a du4w35lb lzcic4wl abiwlrkh p8dawk7l buofh1pr taijpn5t" role="button" tabindex="0">
-                                                                                                                                                    <div class="e71nayrh  _18vj">
-                                                                                                                                                        <i class="sp_LGojA4ldSxW sx_fbe68a" role="img">
-                                                                                                                                                        </i>
-                                                                                                                                                        赞
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </span>
-                                                                                                                                        <span @click="gethandle(2,item)" class=" _18vi">
-                                                                                                                                            <div class="l9j0dhe7 k4urcfbm">
-                                                                                                                                                <div class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr gokke00a du4w35lb lzcic4wl abiwlrkh p8dawk7l buofh1pr taijpn5t" role="button" tabindex="0">
-                                                                                                                                                    <div class="e71nayrh  _18vj">
-                                                                                                                                                        <i class="sp_LGojA4ldSxW ping" role="img">
-                                                                                                                                                        </i>
-                                                                                                                                                        评论
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </span>
-                                                                                                                                        <div @click="gethandle(3,item)" class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l buofh1pr k7cz35w2 taijpn5t ms05siws flx89l3n ogy3fsii" role="button" tabindex="0">
-                                                                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 taijpn5t bp9cbjyn owycx6da btwxx1t3">
-                                                                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 p8fzw8mz">
-                                                                                                                                                    <i class="hu5pjgll m6k467ps sp_LGojA4ldSxW sx_f54c33">
-                                                                                                                                                    </i>
-                                                                                                                                                </div>
-                                                                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0">
-                                                                                                                                                    <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p m9osqain ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
-                                                                                                                                                        分享
-                                                                                                                                                    </span>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                <post-list :list="list"></post-list>
 
                                                             </div>
                                                             <span id="ssrb_feed_end" style="display: none;">
@@ -895,122 +597,36 @@
                                                     <span id="ssrb_rhc_start" style="display: none;">
                                                     </span>
                                                     <div class="cxgpxx05" data-pagelet="RightRail">
-                                                        <div>
-                                                        </div>
-                                                        <div data-visualcompletion="ignore-dynamic">
+                                                         <div class="ignore-dynamic">
                                                             <div class="l9j0dhe7">
-                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t e5nlhep0 aodizinl">
-                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo">
-                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 hv4rvrfc dati1w0a">
-                                                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                <div class="qzhwtbm6 knvmm38d">
-                                                                                    <h3 class="oo9gr5id a5q79mjw lrazzd5p lzcic4wl oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b g1cxx5fr" dir="auto">
-                                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3 jeutjz8y">
-                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz">
-                                                                                                <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a5q79mjw g1cxx5fr lrazzd5p m9osqain">
-                                                                                                    <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                                                        联系人
-                                                                                                    </div>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 nqmvxvec taijpn5t h676nmdw">
-                                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3">
-                                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 kr9hpln1 ttbfdpzt">
-                                                                                                        &nbsp;
-                                                                                                    </div>
-                                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0">
-                                                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd gs1a9yip owycx6da btwxx1t3">
-                                                                                                            <div class="b0kwm4yp gcieejh5 bn081pho humdl8nn izx4hr6d jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc q9uorilb kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 pzggbiyp">
-                                                                                                                <div class="j83agx80">
-                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                        <div class="ozuftl9m tvfksri0">
-                                                                                                                            <div aria-label="按姓名或群聊搜索" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="0">
-                                                                                                                                <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_5e891b">
-                                                                                                                                </i>
-                                                                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="inset: -8px;">
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </span>
-                                                                                                                    <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                                                                                                        <div class="ozuftl9m">
-                                                                                                                            <div aria-label="选项" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="0">
-                                                                                                                                <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_9a39b6">
-                                                                                                                                </i>
-                                                                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="inset: -8px;">
-                                                                                                                                </div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                <div class="flex">
+                                                                    <span class="el-title">你的公共主页</span>
+                                                                    <div class="hover-icon">
+                                                                            <i class="el-icon-more"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div class="cxgpxx05 sj5x9vvc">
-                                                                    <div>
-                                                                        <ul class="pedkr2u6">
-                                                                            <li v-for="(item,index) in  linkman" :key="index">
-                                                                                <div class="">
-                                                                                    <div>
-                                                                                        <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                                                                            <div class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" role="button" tabindex="0">
-                                                                                                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                                                                    <div class="nqmvxvec j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7 m6uieof3 icc0peqn hx8drtub j13r6fgp nddp3pr2">
-                                                                                                        <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                                                                                                            <img :src="item.img" class="pzggbiyp" style="height: 36px; width: 36px;" />
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                                                                        <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
-                                                                                                            <div class="">
-                                                                                                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                                    <div class="qzhwtbm6 knvmm38d">
-                                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m" dir="auto">
-                                                                                                                            {{item.name}}
-                                                                                                                        </span>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
+                                                                <cart-list :list="pages" :size="'small'">
+                                                                </cart-list>
                                                             </div>
                                                         </div>
-                                                        <div data-visualcompletion="ignore-dynamic">
+                                                        <div class="ignore-dynamic">
                                                             <div class="l9j0dhe7">
-                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t e5nlhep0 aodizinl">
-                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t buofh1pr tgvbjcpo">
-                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 hv4rvrfc dati1w0a">
-                                                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                <div class="qzhwtbm6 knvmm38d">
-                                                                                    <h3 class="m9osqain a5q79mjw lrazzd5p lzcic4wl oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b g1cxx5fr hzawbc8m" dir="auto">
-                                                                                        <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                                            群聊
-                                                                                        </div>
-                                                                                    </h3>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                <div class="flex">
+                                                                    <span class="el-title">联系人</span>
+                                                                    <div class="hover-icon">
+                                                                            <i class="el-icon-more"></i>
                                                                     </div>
                                                                 </div>
-                                                                <div class="cxgpxx05 sj5x9vvc">
+                                                                <cart-list :list="friends" :size="'small'">
+                                                                </cart-list>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ignore-dynamic">
+                                                            <div class="l9j0dhe7">
+                                                                <span class="el-title">群聊</span>
+                                                                <cart-list :list="chatAll" :size="'small'"></cart-list>
+                                                                <div class="cxgpxx05 sj5x9vvc" @click="dialogVisible2=true">
+
                                                                     <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
                                                                         <div class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" role="button" tabindex="0">
                                                                             <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
@@ -1042,40 +658,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <span id="ssrb_rhc_end" style="display: none;">
-                                                    </span>
-                                                </div>
-                                                <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: none; right: 0px; height: 538px;">
-                                                </div>
-                                                <div class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 0px;">
-                                                    <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm">
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div data-pagelet="lightweightSurvey">
-                            </div>
-                            <div>
-                                <div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                </div>
-            </div>
-            <!--$-->
-            <!--$-->
             <div class="poy2od1o i09qtzwb n7fi1qx3">
                 <div class="l9j0dhe7 fh5enmmv">
                     <div class="l9j0dhe7 tkr6xdv7">
@@ -1104,40 +696,48 @@
                     </div>
                 </div>
             </div>
-            <!--/$-->
-            <!--/$-->
-            <!--$-->
-            <!--$-->
-            <!--/$-->
-            <!--/$-->
-            <!--$-->
-            <!--/$-->
-            <!--$-->
-            <!--$-->
-            <!--$-->
-            <!--/$-->
-            <!--/$-->
-            <!--$-->
-            <!--/$-->
-            <!--/$-->
-        </div>
-        <div>
         </div>
     </div>
-    <video-chat @getclose="getclose" :dialogVisible="dialogVisible"></video-chat>
+    
+    <video-chat @getclose="getclose" :dialogVisible="dialogVisible" @getnewVideo="getnewVideo"></video-chat>
+    <el-dialog title="创建群聊" :visible.sync="dialogVisible2" width="500px">
+        <el-select placeholder="添加成员" v-model="chat" :filterable="true" :multiple="true" class="book-width">
+            <el-option :key="index" v-for="(item,index) in friends" :label="item.name" :value="item.id">
+                <div class="friend-item">
+                    <div class="friend-left">
+                        <div class="friend-img"> <img :src="item.img" alt=""> </div>
+                        <div class="friend-content">
+                            <div class="friend-title">{{item.name}}</div>
+                        </div>
+                    </div>
+                </div>
+            </el-option>
+        </el-select>
+        <span slot="footer">
+            <el-button type="primary" @click="cearteChat">创建</el-button>
+        </span>
+    </el-dialog>
 </div>
 </template>
 
 <script scoped>
-import "@/css/index.css"
+import '../../css/index.css';
 import videoChat from '@/common/video-chat'
+import cartList from '@/common/cart-list'
+import postList from '@/common/post-list'
 export default {
     components: {
-        'video-chat': videoChat
+        cartList,
+        postList,
+        videoChat
     },
     data() {
         return {
-
+            videoAll: [],
+            chatAll: [],
+            friends: [],
+            dialogVisible2: false,
+            chat: "",
             dialogVisible: false,
             linkman: [{
                     img: require("@/assets/me.jpg"),
@@ -1149,20 +749,26 @@ export default {
                 }
             ],
             list: [{
-                    goodsNum: 100,
+                    showEmoji:false,
+                    me_img: require("@/assets/me.jpg"),
+                    collection:[],
+                    collect_title:"",
+                    goodsNum: 0,
                     date: "9月18日20:44",
                     title: "",
-                    remark: 2,
                     share: 12,
                     name: "陈某某",
                     title: "二珂《這裡有埋伏》，聽完感覺戀愛了，大長腿的小仙女兒",
                     img: require("@/assets/me.jpg")
                 },
                 {
-                    goodsNum: 100,
+                    showEmoji:false,
+                    me_img: require("@/assets/me.jpg"),
+                    collection:[],
+                    collect_title:"",
+                    goodsNum: 0,
                     date: "9月18日20:44",
                     title: "",
-                    remark: 2,
                     share: 12,
                     name: "陈某某",
                     title: "二珂《這裡有埋伏》，聽完感覺戀愛了，大長腿的小仙女兒",
@@ -1201,7 +807,7 @@ export default {
                 {
                     title: "Messenger",
                     img: require("@/assets/SeXJIAlf_z-.png"),
-
+                    name: "messenger"
                 },
                 {
                     title: "筹款活动",
@@ -1210,7 +816,8 @@ export default {
                 },
                 {
                     title: "公共主页",
-                    img: require("@/assets/kyCAf2jbZvF.png")
+                    img: require("@/assets/kyCAf2jbZvF.png"),
+                    name: "publicpage"
                 },
                 {
                     title: "视频",
@@ -1288,13 +895,33 @@ export default {
                     img: require("@/assets/cT5nPnO8Wsc.png"),
                     name: "onemi"
                 },
+            ],
+            pages:[{
+                icon:"el-icon-bell",
+                text:"通知",
+            },
+            {
+                icon:"el-icon-phone-outline",
+                text:"创建推广"
+            }
             ]
         }
     },
     created() {
         var that = this;
-        this.$axios.get("http://127.0.0.1:8080/recommended").then(res => {
-            that.list = res.data
+        //推荐
+        this.$axios.get(this.$url+"/recommended").then(res => {
+            // that.list = res.data
+        })
+        //朋友
+        this.$axios.get(this.$url+"/friends").then(res => {
+            that.friends = res.data
+        })
+        //公共主页
+        this.$axios.get(this.$url+"/publicPage").then(res=>{
+            var data=res.data.data
+            data.map(x=>x.img=require("@/assets/flag.png"))
+            that.pages.unshift(data[data.length-1])
         })
     },
     mounted() {
@@ -1303,12 +930,24 @@ export default {
         })
     },
     methods: {
-        gethandle(state, item) {
-            console.log(item)
-            if (state == 1) {
-                item.checked = !item.checked
-            }
+        //创建聊天室
+        getnewVideo(item) {
+            this.videoAll.push(item)
         },
+        //创建群聊
+        cearteChat() {
+            var chat = this.chat;
+            var list = this.friends.filter(x => chat.indexOf(x.id) > -1)
+            var title = list.map(x => x.name).join(",")
+            this.dialogVisible2 = false;
+            this.$message.success("创建成功")
+            this.chatAll.push({
+                text: title,
+                img: list[0].img
+            })
+            this.chat = ""
+        },
+        
         getclose() {
             this.dialogVisible = false
         },
@@ -1326,6 +965,9 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 a>.scb9dxdr:hover {
     background-color: #eee;
 }

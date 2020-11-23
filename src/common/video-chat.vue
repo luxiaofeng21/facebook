@@ -368,7 +368,13 @@ export default {
     methods: {
         //创建聊天室
         getnewVideo() {
-
+            var chat = this.chat;
+            let info = {
+                img: chat[0].img,
+                name: chat[0].text,
+                date: chat[2].text
+            }
+            this.$emit("getnewVideo", info)
         },
         //选择时间
         getSavedate() {
@@ -430,6 +436,7 @@ export default {
             this.dialogVisible4 = false;
             this.dialogVisible5 = false;
             this.chat[0] = Object.assign({}, this.bookObj);
+            this.chat=JSON.parse(JSON.stringify(this.chat))
             this.$message.success("保存成功")
         },
         //选择标记符号
@@ -559,8 +566,8 @@ export default {
 }
 
 .friend-ul li img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     margin-right: 10px;
 }

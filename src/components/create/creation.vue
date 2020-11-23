@@ -79,21 +79,7 @@
                                           </span>
                                         </div>
                                       </div>
-                                      <div>
-                                        <label class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl"
-                                        for="jsc_c_e">
-                                          <div class="j83agx80 k4urcfbm">
-                                            <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                              <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                主页名称（必填）
-                                              </span>
-                                              <input dir="auto" aria-invalid="false" autocomplete="off" id="jsc_c_e"
-                                              class="oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d oo9gr5id qc3s4z1d knj5qynh fo6rh5oj osnr6wyh hv4rvrfc dati1w0a p0x8y401 k4urcfbm iu8raji3"
-                                              type="text" value="">
-                                            </div>
-                                          </div>
-                                        </label>
-                                      </div>
+                                      <el-input placeholder="主页名称（必填）" v-model="page.title"></el-input>
                                       <div class="cxgpxx05">
                                         <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
                                         dir="auto">
@@ -109,57 +95,29 @@
                                   </div>
                                   <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
                                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                      <div>
-                                        <label class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl"
-                                        for="jsc_c_g">
-                                          <div class="j83agx80 k4urcfbm">
-                                            <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                              <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                类别（必填）
-                                              </span>
-                                              <div class="g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv oo9gr5id jagab5yi knj5qynh fo6rh5oj lzcic4wl qt6c0cv9 aodizinl k4urcfbm">
-                                                <div class="rq0escxv j83agx80 cbu4d94t k4urcfbm">
-                                                  <div class="rv4hoivh h4z51re5" role="presentation">
-                                                    <div class="o6r2urh6 d2edcug0 ni8dbmo4 stjgntxs">
-                                                      <span class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41"
-                                                      data-testid="Keycommand_wrapper">
-                                                        <span aria-hidden="true" class="g0qnabr5 kr9hpln1 kr520xx4 j9ispegn pmk7jnqg r0usavy5 n5sx5to1 jagab5yi">
-                                                        </span>
-                                                        <input aria-autocomplete="list" aria-expanded="false" aria-label="类别（必填）"
-                                                        role="combobox" autocomplete="off" class="g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv oo9gr5id nc684nl6 jagab5yi knj5qynh fo6rh5oj aov4n071 oi9244e8 bi6gxh9e h676nmdw d2edcug0 lzcic4wl ieid39z1"
-                                                        id="jsc_c_g" placeholder="" spellcheck="false" style="width: 80px;" type="text"
-                                                        value="">
-                                                      </span>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </label>
+                                     <el-select placeholder="类别（必填）" v-model="page.type" :multiple="true">
+                                        <el-option v-for="(item,index) in typeAll" :key="index" :label="item.label" :value="item.value"></el-option>
+                                     </el-select>
+                                      <div class="cxgpxx05">
+                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
+                                        dir="auto">
+                                            选择的类别要能反映主页所代表的公司、组织或主题类型。你最多可添加 3 个类别。
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
                                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                      <div>
-                                        <label class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl"
-                                        for="jsc_c_k">
-                                          <div class="j83agx80 k4urcfbm">
-                                            <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                              <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                说明
-                                              </span>
-                                              <textarea dir="auto" aria-invalid="false" id="jsc_c_k" maxlength="255"
-                                              class="oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d oo9gr5id j83agx80 jagab5yi knj5qynh fo6rh5oj oud54xpy l9qdfxac ni8dbmo4 stjgntxs hv4rvrfc dati1w0a ieid39z1 k4urcfbm"
-                                              rows="4" style="overflow-y: hidden;">
-                                              </textarea>
-                                            </div>
-                                          </div>
-                                        </label>
+                                      <el-input placeholder="说明" v-model="page.text" type="textarea"></el-input>
+                                      <div class="cxgpxx05">
+                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
+                                        dir="auto">
+                                            介绍你的业务内容、你提供的服务或主页用途。
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
+                                
                                   <div>
                                   </div>
                                 </div>
@@ -185,22 +143,7 @@
                             </div>
                           </div>
                           <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                              <div aria-disabled="true" aria-label="创建主页" class="oajrlxb2 c98fg2ug gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv rj84mg9z j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                              role="button" tabindex="-1">
-                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                  <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                    <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p erlsw9ld"
-                                    dir="auto">
-                                      创建主页
-                                    </span>
-                                  </div>
-                                </div>
-                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                data-visualcompletion="ignore">
-                                </div>
-                              </div>
-                            </div>
+                            <el-button type="primary" @click="getcreate" style="width:100%" :disabled="page.title!='' && page.type!=''?false:true">创建主页</el-button>
                           </div>
                         </div>
                         <div class="kd0sc8dh sl8jk4me ie5zihkj i09qtzwb rm3jng1j hzruof5a pmk7jnqg kr520xx4 c0wkt4kp hlyrhctz">
@@ -281,8 +224,7 @@
                                                   <div class="rq0escxv l9j0dhe7 du4w35lb o4feeg3o rj1gh0hx buofh1pr g5gj957u hpfvmrgz j83agx80 taijpn5t">
                                                     <div class="ni8dbmo4 stjgntxs l9j0dhe7 k4urcfbm uo3d90p7 l82x9zwi kipmrytf bti8j40k"
                                                     style="border-radius: 0px 0px max(0px, min(8px, -999900% - 39996px + 999900vw)) max(0px, min(8px, -999900% - 39996px + 999900vw)) / 0px 0px 8px 8px;">
-                                                      <a aria-label="Link to open page cover photo" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l"
-                                                      href="/images/pages/page_creation/page-default-cover-photo-4x.png" role="link"
+                                                      <a aria-label="Link to open page cover photo" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="link"
                                                       tabindex="0">
                                                         <div class="do00u71z l9j0dhe7 k4urcfbm ni8dbmo4 stjgntxs" style="padding-top: 37.037%;">
                                                           <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
@@ -290,7 +232,7 @@
                                                               <div class="do00u71z l9j0dhe7 k4urcfbm ni8dbmo4 stjgntxs" style="padding-top: 37.037%;">
                                                                 <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
                                                                   <img data-imgperflogname="profileCoverPhoto" alt="" class="i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4 datstx6m k4urcfbm"
-                                                                  src="/images/pages/page_creation/page-default-cover-photo-4x.png">
+                                                                  src="../../assets/page.png">
                                                                 </div>
                                                               </div>
                                                             </div>
@@ -310,20 +252,7 @@
                                                       <div class="aovydwv3 j83agx80 wkznzc2l dlu2gh78">
                                                         <div class="b3onmgus e5nlhep0 ph5uu5jm ecm0bbzt spb7xbtv bkmhp75w emlxlaya s45kfl79 cwj9ozl2">
                                                           <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                                                            <svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none"
-                                                            style="height: 132px; width: 132px;">
-                                                              <mask id="jsc_c_s">
-                                                                <circle cx="66" cy="66" fill="white" r="66">
-                                                                </circle>
-                                                              </mask>
-                                                              <g mask="url(#jsc_c_s)">
-                                                                <image style="height: 132px; width: 132px;" x="0" y="0" height="100%"
-                                                                preserveAspectRatio="xMidYMid slice" width="100%" xlink:href="/images/pages/page_creation/pages-profile-img.png">
-                                                                </image>
-                                                                <circle class="mlqo0dh0 georvekb s6kb5r3f" cx="66" cy="66" r="66">
-                                                                </circle>
-                                                              </g>
-                                                            </svg>
+                                                            <img style="height: 132px; width: 132px;border-radius:50%" class="pzggbiyp" alt="" src="../../assets/page.png">
                                                           </div>
                                                         </div>
                                                       </div>
@@ -335,8 +264,11 @@
                                                             <h2 class="gmql0nx0 l94mrbxd p1ri9a11 lzcic4wl" dir="auto">
                                                               <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j irj2b8pg q9se6cdp m6dqt4wy h7mekvxk hnhda86s oo9gr5id hzawbc8m"
                                                               dir="auto">
-                                                                <span>
+                                                                <span v-if="page.title==''">
                                                                   主页名称
+                                                                </span>
+                                                                <span v-else>
+                                                                  {{page.title}}
                                                                 </span>
                                                               </span>
                                                             </h2>
@@ -344,9 +276,12 @@
                                                           <div class="bi6gxh9e aov4n071">
                                                             <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr knj5qynh m9osqain hzawbc8m"
                                                             dir="auto">
-                                                              <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a5q79mjw g1cxx5fr knj5qynh m9osqain">
-                                                                类别
-                                                              </span>
+                                                              <span v-if="page.type==''">
+                                                                  类别
+                                                                </span>
+                                                                <span v-else>
+                                                                  {{page.type.join(",")}}
+                                                                </span>
                                                             </span>
                                                           </div>
                                                         </div>
@@ -519,71 +454,19 @@
                                                       <div class="dflh9lhu">
                                                       </div>
                                                       <div class="j83agx80">
-                                                        <div aria-label="赞" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys tkv8g59h qt6c0cv9 fl8dtwsd i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                        role="button" tabindex="0">
-                                                          <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                              <i class="hu5pjgll lzf7d6o1 sp_Iul-suA8MQL sx_29aa13">
-                                                              </i>
-                                                            </div>
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                              <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id"
-                                                              dir="auto">
-                                                                赞
-                                                              </span>
-                                                            </div>
-                                                          </div>
-                                                          <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                          data-visualcompletion="ignore">
-                                                          </div>
+                                                        <div class="book-icon2">
+                                                            <i class="el-icon-thumb"></i>
+                                                            <span>赞</span>
                                                         </div>
-                                                        <div class="h676nmdw j83agx80 bp9cbjyn">
-                                                          <div aria-label="发消息" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                          role="button" tabindex="0">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <i class="hu5pjgll lzf7d6o1 sp_-69RjdrrvoB sx_60d2a0">
-                                                                </i>
-                                                              </div>
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id"
-                                                                dir="auto">
-                                                                  发消息
-                                                                </span>
-                                                              </div>
-                                                            </div>
-                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                            data-visualcompletion="ignore">
-                                                            </div>
-                                                          </div>
+                                                         <div class="book-icon2">
+                                                            <i class="el-icon-bell"></i>
+                                                            <span>发消息</span>
                                                         </div>
-                                                        <div class="h676nmdw j83agx80 bp9cbjyn">
-                                                          <div aria-label="搜索" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys hv4rvrfc qt6c0cv9 dati1w0a i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                          role="button" tabindex="0">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <i class="hu5pjgll lzf7d6o1 sp_-69RjdrrvoB sx_ac44b3">
-                                                                </i>
-                                                              </div>
-                                                            </div>
-                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                            data-visualcompletion="ignore">
-                                                            </div>
-                                                          </div>
+                                                        <div class="book-icon2">
+                                                            <i class="el-icon-search"></i>
                                                         </div>
-                                                        <div class="eim337gk h676nmdw j83agx80 bp9cbjyn">
-                                                          <div aria-label="更多操作" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys hv4rvrfc qt6c0cv9 dati1w0a i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-                                                          role="button" tabindex="0">
-                                                            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
-                                                              <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 j83agx80 j5wkysh0 hytbnt81">
-                                                                <i class="hu5pjgll lzf7d6o1 sp_-69RjdrrvoB sx_c15d61">
-                                                                </i>
-                                                              </div>
-                                                            </div>
-                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-                                                            data-visualcompletion="ignore">
-                                                            </div>
-                                                          </div>
+                                                        <div class="book-icon2">
+                                                            <i class="el-icon-more-outline"></i>
                                                         </div>
                                                       </div>
                                                     </div>
@@ -632,8 +515,11 @@
                                                                       <div class="qzhwtbm6 knvmm38d">
                                                                         <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh oo9gr5id hzawbc8m"
                                                                         dir="auto">
-                                                                          <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql jq4qci2q a3bd9o3v knj5qynh oo9gr5id">
+                                                                          <span v-if="page.text==''" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql jq4qci2q a3bd9o3v knj5qynh oo9gr5id">
                                                                             描述
+                                                                          </span>
+                                                                          <span v-else>
+                                                                            {{page.text}}
                                                                           </span>
                                                                         </span>
                                                                       </div>
@@ -696,7 +582,7 @@
                                                         role="button" tabindex="0">
                                                           <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
                                                             <span class="pq6dq46d kb5gq1qc pfnyh3mw oi9244e8">
-                                                              <i class="sp_Gb1Y38Iykxg sx_20f600" role="img">
+                                                              <i class="sp_5kM2vwYmVrv sx_ec1e45" role="img">
                                                               </i>
                                                             </span>
                                                             <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p m9osqain"
@@ -712,7 +598,7 @@
                                                         role="button" tabindex="0">
                                                           <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
                                                             <span class="pq6dq46d kb5gq1qc pfnyh3mw oi9244e8">
-                                                              <i class="sp_Gb1Y38Iykxg sx_b9dca9" role="img">
+                                                              <i class="sp_5kM2vwYmVrv sx_99956b" role="img">
                                                               </i>
                                                             </span>
                                                             <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p m9osqain"
@@ -728,7 +614,7 @@
                                                         role="button" tabindex="0">
                                                           <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
                                                             <span class="pq6dq46d kb5gq1qc pfnyh3mw oi9244e8">
-                                                              <i class="sp_dKFsknFAwkX sx_cb0290" role="img">
+                                                              <i class="sp_5kM2vwYmVrv sx_649950" role="img">
                                                               </i>
                                                             </span>
                                                             <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p m9osqain"
@@ -825,5 +711,85 @@
   </div>
 </template>
 <script>
-
+export default {
+  data(){
+    return{
+      typeAll:[
+        {
+          value:"电视节目",
+          label:"电视节目"
+        },
+        {
+          value:"电子商务网站",
+          label:"电子商务网站"
+        },
+        {
+          value:"电视频道",
+          label:"电视频道"
+        },
+        {
+          value:"非商业帐户",
+          label:"非商业帐户"
+        },
+        {
+          value:"女装店",
+          label:"女装店"
+        },
+        {
+          value:"DJ",
+          label:"DJ"
+        },
+        {
+          value:"家庭护理",
+          label:"家庭护理"
+        },
+        {
+          value:"电视网络",
+          label:"电视网络"
+        },
+        {
+          value:"影视剧奖",
+          label:"影视剧奖"
+        }
+      ],
+      page:{
+        title:"",
+        text:"",
+        type:""
+      }
+    }
+  },
+  methods:{
+    getcreate(){
+        var that=this;
+        var info=JSON.parse(JSON.stringify(this.page));
+        if(info.title==''){
+            this.$message.error("主页名称不能为空哦~")
+            return false
+        }
+        if(info.type.length<=0){
+           this.$message.error("类别不能为空哦~")
+            return false
+        }
+        info.type=info.type.join(",")
+        this.$axios.post(this.$url+"/createPage",info).then(res=>{
+      
+            if(res.data.code==1){
+                that.$message.success(res.data.msg)
+                setTimeout(()=>{
+                    that.$router.go(-1)
+                },1000)
+            }else{
+               that.$message.error(res.data.msg)
+            }
+        })
+    }
+  }
+}
 </script>
+
+<style scoped>
+  .book-icon2{
+      margin-left: 10px;
+  }
+</style>

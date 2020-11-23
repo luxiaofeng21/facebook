@@ -1852,7 +1852,7 @@
 .sx_ee8eae{
     background-position: 0 -350px;
 }
-
+/* 
 .buofh1pr .el-textarea__inner{
     border: 0;
     outline: none;
@@ -1862,9 +1862,20 @@
     color:#999;
     font-weight: 400;
     line-height: 1.1667;
-}
+} */
 
 .s1i5eluu {
-    background-color: var(--primary-button-background);
+    background-color: var(--primary-button-background) !important;
     color: #fff;
+}
+
+
+
+.book-search{
+    margin-left: 10px;
+    width: 250px;
+}
+.book-search input{
+    border-radius: 100px;
+    outline: none;
 }

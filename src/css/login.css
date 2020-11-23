@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.identifyFoor>.rg>div{
+.identifyFoor>.rg>*{
     line-height: 18px;
     padding: 5px 10px;
     display: inline-block;
@@ -52,12 +52,15 @@
 }
 
 .ConCell{
+    padding: 0.5rem ;
     display: flex;
     align-items: flex-start;
 }
+.ConCell:hover{
+    background-color: lightblue;
+}
 .Cong{
     display: flex;
-    margin-left: 10px;
 }
 .Congi{
     background-image: url(/rsrc.php/v3/yj/r/IXkHfWl9UJT.png);
