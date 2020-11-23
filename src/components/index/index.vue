@@ -817,6 +817,7 @@
 </template>
 
 <script scoped>
+import '../../css/index.css';
 import videoChat from '@/common/video-chat'
 import cartList from '@/common/cart-list'
 import postList from '@/common/post-list'
@@ -844,10 +845,11 @@ export default {
                 }
             ],
             list: [{
+                    showEmoji:false,
                     me_img: require("@/assets/me.jpg"),
                     collection:[],
                     collect_title:"",
-                    goodsNum: 100,
+                    goodsNum: 0,
                     date: "9月18日20:44",
                     title: "",
                     share: 12,
@@ -856,10 +858,11 @@ export default {
                     img: require("@/assets/me.jpg")
                 },
                 {
+                    showEmoji:false,
                     me_img: require("@/assets/me.jpg"),
                     collection:[],
                     collect_title:"",
-                    goodsNum: 100,
+                    goodsNum: 0,
                     date: "9月18日20:44",
                     title: "",
                     share: 12,
@@ -991,11 +994,17 @@ export default {
     },
     created() {
         var that = this;
-        this.$axios.get(this.$url+"recommended").then(res => {
-            that.list = res.data
+        //推荐
+        this.$axios.get(this.$url+"/recommended").then(res => {
+            // that.list = res.data
         })
-        this.$axios.get(this.$url+"friends").then(res => {
+        //朋友
+        this.$axios.get(this.$url+"/friends").then(res => {
             that.friends = res.data
+        })
+        //公共主页
+        this.$axios.get(this.$url+"/result").then(res=>{
+            console.log(res)
         })
     },
     mounted() {
@@ -1039,25 +1048,8 @@ export default {
 </script>
 
 <style scoped>
-@import '../../css/index.css';
-.friend-img {
-    width: 25px;
-    height: 25px;
-    background-color: #eee;
-    margin-right: 10px;
-    border-radius: 50%;
-}
 
-.friend-img>img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
 
-.friend-left {
-    display: flex;
-    align-items: center;
-}
 
 a>.scb9dxdr:hover {
     background-color: #eee;

@@ -10,6 +10,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'swiper/swiper-bundle.css'
 import '@/css/app.css'
 import axios from 'axios'
+import VEmojiPicker from 'v-emoji-picker';
+Vue.use(VEmojiPicker);
 Vue.prototype.$axios = axios
 Vue.prototype.$url = "http://127.0.0.1:8080"
 Vue.use(ElementUI)

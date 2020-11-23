@@ -29,49 +29,15 @@
                 </path>
             </svg>
         </router-link>
+       <div class="book-search">
+            <el-input prefix-icon="el-icon-search" placeholder="搜索facebook"></el-input>
+       </div>
         <div>
             <div>
             </div>
         </div>
     </div>
-    <div aria-hidden="false" class="rq0escxv byvelhso q10oee1b poy2od1o j9ispegn kr520xx4 ooia0uwo kavbgo14 mhnrfdw6">
-        <!--$-->
-        <div>
-            <div class="rq0escxv a8c37x1j cbu4d94t k4urcfbm l9j0dhe7 p9906w3d rp3cc1xn keod5gw0 rpedc2ei bjz44bnn kf6kxqaw ex9rxw2n owhxnkwg">
-                <div class="bp9cbjyn rq0escxv j83agx80 byvelhso hv4rvrfc dati1w0a">
-                    <div class="k4urcfbm j83agx80 bp9cbjyn">
-                        <div class="thwo4zme pfnyh3mw j83agx80 bp9cbjyn">
-                            <div class="ijkhr0an pnx7fd3z sgqwj88q b5wmifdl hzruof5a iuq35hgr">
-                                <div class="thwo4zme" data-visualcompletion="ignore">
-                                    <div class="ciadx1gn">
-                                        <div aria-hidden="true" aria-label="退出联想输入" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l dwo3fsh8 pzggbiyp pkj7ub1o bqnlxs5p kkg9azqs c24pa1uk ln9iyx3p fe6kdd0r ar1oviwq l10q8mi9 sq40qgkc s8quxz6p pdjglbur" role="button" tabindex="-1">
-                                            <i class="hu5pjgll m6k467ps sp_Osp8PMBw1xR sx_8f758f">
-                                            </i>
-                                            <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="bottom:-8px;left:-8px;right:-8px;top:-8px">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="j83agx80 pfnyh3mw byvelhso fwizqjfa l3d94uoy">
-                            &nbsp;
-                        </div>
-                        <div class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41 a8s20v7p" data-testid="Keycommand_wrapper">
-                            <label class="rq0escxv a8c37x1j a5nuqjux l9j0dhe7 k4urcfbm">
-                                <div class="ijkhr0an pnx7fd3z sgqwj88q b3i9ofy5 hzruof5a pmk7jnqg rnx8an3s fcg2cn6m">
-                                    <i class="hu5pjgll m6k467ps sp_Osp8PMBw1xR sx_5e891b">
-                                    </i>
-                                </div>
-                                <input type="search" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-label="搜索 Facebook" role="combobox" placeholder="搜索 Facebook" autocomplete="off" spellcheck="false" value="" class="oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl ijkhr0an nlq1og4t sgqwj88q b3i9ofy5 oo9gr5id b1f16np4 hdh3q7d8 dwo3fsh8 qu0x051f esr5mh6w e9989ue4 r7d6kgcz br7hx15l h2jyy9rg n3ddgdk9 owxd89k7 ihxqhq3m jq4qci2q k4urcfbm iu8raji3 qypqp5cg l60d2q6s hv4rvrfc hwnh5xvq dati1w0a o1lsuvei o6r2urh6 rmlgq0sb aj8hi1zk r4fl40cc kd8v7px7 m07ooulj mzan44vs">
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/$-->
-    </div>
+
     <div class="kr520xx4 j9ispegn poy2od1o n7fi1qx3 tkr6xdv7">
         <div class="rq0escxv l9j0dhe7 du4w35lb cddn0xzi j83agx80 cbu4d94t byvelhso">
             <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t bkfpd7mw">
@@ -111,7 +77,7 @@
                     <el-popover placement="bottom" width="300" trigger="click">
                         <div v-if="mactive==-1" class="aov4n071">
                             <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="/profile.php?id=100004644524593" role="link" tabindex="0">
+                                <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="#/mePage" role="link" tabindex="0">
                                     <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
                                         <div class="o8rfisnq j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7">
                                             <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
@@ -543,19 +509,8 @@
                 <!--$-->
                 <a aria-label="枫果果" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn e72ty7fz qlfml3jp inkptoze qmr60zad btwxx1t3 tv7at329 taijpn5t" href="/profile.php?id=100004644524593" role="link" tabindex="0">
                     <div class="j83agx80 fv0vnmcu fop5sh7t">
-                        <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                            <svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none" style="height:28px;width:28px">
-                                <mask id="jsc_c_1a">
-                                    <circle cx="14" cy="14" fill="white" r="14">
-                                    </circle>
-                                </mask>
-                                <g mask="url(#jsc_c_1a)">
-                                    <image style="height:28px;width:28px" x="0" y="0" height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xlink:href="/v/t1.0-1/cp0/p50x50/116346741_1700768033421331_6792692860000257665_n.jpg?_nc_cat=107&amp;_nc_sid=7206a8&amp;_nc_ohc=SPJdL2v3LPwAX-dPU3n&amp;_nc_ht=scontent-hkt1-1.xx&amp;oh=b648e82bce19589321db6b28c7b683e1&amp;oe=5F4BCDD4">
-                                    </image>
-                                    <circle class="mlqo0dh0 georvekb s6kb5r3f" cx="14" cy="14" r="14">
-                                    </circle>
-                                </g>
-                            </svg>
+                        <div class="me-img">
+                            <img src="../assets/me.jpg" alt="">
                         </div>
                     </div>
                     <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
@@ -1009,104 +964,6 @@
                 </div>
             </div>
         </div>
-        <div v-if="choose==5" class="ihqw7lf3">
-            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 jb3vyjys b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                    <div>
-                        <label aria-label="小组名称" class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl" for="jsc_c_3g">
-                            <div class="j83agx80 k4urcfbm">
-                                <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                    <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                        小组名称
-                                    </span>
-                                    <input dir="auto" aria-invalid="false" autocomplete="off" id="jsc_c_3g" maxlength="75" class="oajrlxb2 rq0escxv f1sip0of hidtqoto lzcic4wl g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d oo9gr5id qc3s4z1d knj5qynh fo6rh5oj osnr6wyh hv4rvrfc dati1w0a p0x8y401 k4urcfbm iu8raji3" type="text" value="">
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                    <div>
-                        <div class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41 a8s20v7p" data-testid="Keycommand_wrapper">
-                            <div>
-                                <label aria-label="选择隐私设置" class="cwj9ozl2 qbxu24ho bxzzcbxg lxuwth05 h2mp5456 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy nhd2j8a9 lzcic4wl" for="jsc_c_3i" role="button" tabindex="0">
-                                    <div class="j83agx80 k4urcfbm">
-                                        <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                            <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                选择隐私设置
-                                            </span>
-                                            <div aria-invalid="false" class="k4urcfbm" id="jsc_c_3i">
-                                                <div class="dwo3fsh8 g5ia77u1 ow4ym5g4 auili1gw nhd2j8a9 oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 l9j0dhe7 i1ao9s8h du4w35lb rq0escxv oo9gr5id j83agx80 jagab5yi knj5qynh fo6rh5oj lzcic4wl osnr6wyh hv4rvrfc dati1w0a p0x8y401 k4urcfbm">
-                                                    <span>
-                                                        &nbsp;
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="j83agx80">
-                                            <div class="hv4rvrfc o8rfisnq">
-                                                <i class="hu5pjgll lzf7d6o1 sp_6vYwcjvw5IC sx_8609e6">
-                                                </i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-            </div>
-            <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                    <div class="o9f14d3k">
-                        <div class="rq0escxv j83agx80 cbu4d94t k4urcfbm">
-                            <div class="" role="presentation">
-                                <div>
-                                    <label aria-label="选择好友" class="cwj9ozl2 np24d88i p9mcbvme krxe8813 ph5sz0o6 beltcj47 p86d2i9g aot14ch1 kzx2olss goun2846 ccm00jje s44p3ltw mk2mc5f4 frvqaej8 ed0hlay0 afxsp9o4 jcgfde61 j83agx80 cbu4d94t ni8dbmo4 stjgntxs l9j0dhe7 du4w35lb hw4tbnyy o6r2urh6 lzcic4wl" for="jsc_c_3m">
-                                        <div class="j83agx80 k4urcfbm">
-                                            <div class="g5ia77u1 buofh1pr d2edcug0 l9j0dhe7">
-                                                <span class="m9osqain t5a262vz a8c37x1j b5fwa0m2 jagab5yi knj5qynh fo6rh5oj d2edcug0 ni8dbmo4 stjgntxs hzruof5a pmk7jnqg re5koujm ltmttdrg fgv6swy9 dd2scrzq ms05siws flx89l3n b7h9ocf4 g0qnabr5">
-                                                    选择好友
-                                                </span>
-                                                <div class="g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv oo9gr5id o6r2urh6 jagab5yi knj5qynh fo6rh5oj d2edcug0 lzcic4wl ni8dbmo4 stjgntxs qt6c0cv9 dflh9lhu scb9dxdr aodizinl k4urcfbm">
-                                                    <span class="tojvnm2t a6sixzi8 k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y l9j0dhe7 iyyx5f41" data-testid="Keycommand_wrapper">
-                                                        <span aria-hidden="true" class="g0qnabr5 kr9hpln1 kr520xx4 j9ispegn pmk7jnqg r0usavy5 n5sx5to1 jagab5yi">
-                                                        </span>
-                                                        <input aria-autocomplete="list" aria-expanded="false" aria-label="选择好友" role="combobox" autocomplete="off" class="g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv oo9gr5id nc684nl6 jagab5yi knj5qynh fo6rh5oj fv0vnmcu ggphbty4 aov4n071 bi6gxh9e d2edcug0 lzcic4wl ieid39z1" id="jsc_c_3m" placeholder="" spellcheck="false" style="width: 80px;" type="text" value="">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="aov4n071">
-                            <span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain" dir="auto">
-                                推荐：
-                                <div class="oajrlxb2 g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                    <span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql e9vueds3 j5wam9gi knj5qynh py34i1dx">
-                                        杨千秋
-                                    </span>
-                                </div>
-                                ,
-                                <div class="oajrlxb2 g5ia77u1 gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                    <span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql e9vueds3 j5wam9gi knj5qynh py34i1dx">
-                                        林莉
-                                    </span>
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <span slot="footer" class="dialog-footer" v-if="choose==5">
             <el-button v-on:click="dialogVisible = false">
                 取 消
@@ -1536,7 +1393,6 @@ export default {
         },
         getshow(e) {
             if (e == 0) this.dialogTitle = "创建帖子"
-            if (e == 5) this.dialogTitle = "新建小组"
             if (e == 2) this.dialogTitle = ""
             if (e == 1) {
                 this.$router.push({
@@ -1550,7 +1406,11 @@ export default {
                 this.$router.push({
                     name: "goal"
                 })
-            } else if (e == 6) {
+            }else if (e == 5) {
+                this.$router.push({
+                    name: "create"
+                })
+            }  else if (e == 6) {
                 this.$router.push({
                     name: "events"
                 })

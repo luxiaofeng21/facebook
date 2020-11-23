@@ -101,6 +101,7 @@ a {
 .book-icon,
 .el-dialog__headerbtn,
 .book-icon2 {
+    cursor: pointer;
     width: 40px;
     height: 40px;
     display: flex;
@@ -110,7 +111,10 @@ a {
     border-radius: 50%;
 
 }
-
+.book-icon.small{
+    width: 25px;
+    height: 25px;
+}
 .book-icon {
     margin-right: 15px;
 }
@@ -123,5 +127,33 @@ a {
 
 .book-icon2>i {
     font-size: 20px;
+}
+.icon-primary{
+    color: #fff;
+    background-color: #1877F2;
+}
+
+.book-title{
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.book-title2{
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.book-card{
+    background-color: #fff;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 16px 0;
+}
+.book-null{
+    text-align: center;
+    display: block;
+    font-size: 1.25rem;
+    color: var(--placeholder-text);
 }
 </style>

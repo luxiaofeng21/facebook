@@ -11,7 +11,7 @@
             <el-input ttype="text" v-model="me.email" placeholder="手机号或邮箱"></el-input>
         </div>
         <div class="regCell">
-            <el-input type="text" v-model="me.parssword" placeholder="创建密码"></el-input>
+            <el-input type="text" v-model="me.password" placeholder="创建密码"></el-input>
         </div>
     </div>
     <div class="registerDate">
@@ -222,7 +222,7 @@ export default {
                 xing: "lu",
                 ming: "feng",
                 email: "2584278167@qq.com",
-                parssword: "123456",
+                password: "123456",
                 year: "2020",
                 month: "10",
                 day: "01",
@@ -248,7 +248,12 @@ export default {
                 this.$message.error("邮箱格式不正确，请重新输入！！");
             }
             this.$axios.post(this.$url+"/email",data).then(res=>{
-                that.$router.push({path:"/login/code",query:{title:data.email,state:"email"}})
+                if(res.data.code==-1){
+                    this.$message.error(res.data.msg)
+                }else{
+                     that.$router.push({path:"/login/code",query:{title:data.email,state:"email"}})
+                }
+               
             })
         }
     },
@@ -415,5 +420,8 @@ export default {
 .userTitle {
     padding: 0.5rem 0;
     background: #fff;
+}
+.el-input{
+    font-size: 20px;
 }
 </style>

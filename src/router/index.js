@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/login/Login'
-import NewUser from '@/components/login/NewUser'
+import Login from '@/components/login/index'
+import NewUser from '@/components/login/newUser'
 import Identify from '@/components/login/identify'
 import Recover from '@/components/login/recover'
 import Code from '@/components/login/code'
@@ -34,6 +34,7 @@ import Pay from "@/components/pay/index"
 import  Memories from "@/components/memories/memories"
 import  Onemi from "@/components/index/onemi"
 import Goal from '@/components/ad_center/goal'
+import adCreate from '@/components/ad_center/create'
 import Privacy from '@/components/privacy/index'
 import Checkup from '@/components/privacy/checkup'
 import dynamic from '@/components/dynamic/index'
@@ -41,6 +42,8 @@ import live from '@/components/live/index'
 import messenger from '@/components/messenger/index'
 import categories from '@/components/groups/categories'
 import publicHomePage from '@/components/publicHomePage/index'
+import jobs from '@/components/jobs/index'
+import managementGroup from '@/components/groups/management_group'
 Vue.use(Router)
 
 export default new Router({
@@ -56,9 +59,19 @@ export default new Router({
       component: Login
     },
     {
+      path:"/management_group",
+      name:"management_group",
+      component:managementGroup
+    },
+    {
       path:"/publicpage",
       name:"publicpage",
       component:publicHomePage
+    },
+    {
+      path:"/jobs",
+      name:"jobs",
+      component:jobs
     },
     {
       path:"/live",
@@ -256,6 +269,12 @@ export default new Router({
       path:"/goal",
       name:"goal",
       component:Goal
+    },
+    {
+      path:"/ad_center/create",
+      name:"adCreate",
+      component:adCreate
     }
+    
   ]
 })

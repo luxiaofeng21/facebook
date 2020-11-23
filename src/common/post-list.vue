@@ -1,6 +1,6 @@
 <template>
     <div>
-         <div v-for="(item,index) in list" :key="index" class="card-item">
+         <div v-for="(item,index) in list" :key="index" class="card-item" @click="eindex=index">
                 <!--用户头部信息-->
                 <div class="card-head">
                         <div class="lf">
@@ -45,17 +45,17 @@
                                 <span>{{item.goodsNum}}</span>
                         </div>
                         <div class="rg">
-                                <span>{{item.collection.length}}条评论</span>
+                                <span @click="item.showEmoji=!item.showEmoji">{{item.collection.length}}条评论</span>
                                 <span>{{item.share}}条分享</span>
                         </div>
                 </div>
                 <!--操作-->
                 <div class="card-handle">
-                        <div class="handle-li" @click="gethandle(1,item)">
-                                <i class="icon-handle icon1"></i>
+                        <div class="handle-li" @click="gethandle(1,item)" :class="item.checked?'checked':''">
+                                <i class="icon-handle icon1" ></i>
                                 <span>点赞</span>
                         </div> 
-                        <div class="handle-li" @click="gethandle(2,item)">
+                        <div class="handle-li" @click="gethandle(2,item,$event)">
                                 <i class="icon-handle icon2"></i>
                                 <span>评论</span>
                         </div> 
@@ -64,42 +64,71 @@
                                 <span>转发</span>
                         </div> 
                 </div>
-                <!--评论列表-->
-                <ul class="collect-list">
-                        <li v-for="(items,indexs) in item.collection" :key="indexs">
-                                <div class="me-img">
-                                        <img :src="item.img" alt="">
-                                </div>
-                                <div class="rg">
-                                        <div class="collent-msg">
-                                                <div class="me-name">{{item.name}}</div>
-                                                <div class="collect-text" v-html="items.title"></div>
-                                                <div class="hover-icon"> <i class="el-icon-more"></i> </div>
+                <div  v-if="item.showEmoji">
+                        <!--评论列表-->
+                        <ul class="collect-list" v-if="item.collection.length>0">
+                                <li v-for="(items,indexs) in item.collection" :key="indexs" @click="eindex2=indexs">
+                                        <div class="me-img">
+                                                <img :src="item.img" alt="">
                                         </div>
-                                        <div class="collect-img" v-if="items.img">
-                                                <img :src="items.img" alt="">
+                                        <div class="rg">
+                                                <div class="collent-msg">
+                                                        <div class="me-name">{{item.name}}</div>
+                                                        <div class="collect-text" v-html="items.title"></div>
+                                                        <div class="hover-icon">
+                                                                <el-popover>
+                                                                        <ul class="popver-ul">
+                                                                                <li>编辑</li>
+                                                                                <li>删除</li>
+                                                                        </ul>
+                                                                        <i slot="reference" class="el-icon-more"></i>
+                                                                </el-popover>
+                                                        </div>
+                                                </div>
+                                                <div class="collect-img" v-if="items.img">
+                                                        <img :src="items.img" alt="">
+                                                </div>
+                                                <div  class="collect-handle">
+                                                        <span>赞</span>·<span @click="items.showEmoji=!items.showEmoji">回复</span>
+                                                        <span>{{items.date | showDate}}</span>
+                                                </div>
+                                        
+                                                <li   v-for="(detail,i) in items.collection" :key="i">
+                                                        <div class="me-img">
+                                                                <img :src="detail.me_img" alt="">
+                                                        </div>
+                                                        <div class="rg">
+                                                                <div class="collent-msg">
+                                                                        <div class="me-name">{{detail.name}}</div>
+                                                                        <div class="collect-text" v-html="detail.title"></div>
+                                                                        <div class="hover-icon">
+                                                                                <el-popover>
+                                                                                        <ul class="popver-ul">
+                                                                                                <li>编辑</li>
+                                                                                                <li>删除</li>
+                                                                                        </ul>
+                                                                                        <i slot="reference" class="el-icon-more"></i>
+                                                                                </el-popover>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="collect-img" v-if="detail.img">
+                                                                        <img :src="detail.img" alt="">
+                                                                </div>
+                                                                <div  class="collect-handle">
+                                                                        <span>赞</span>·<span @click="items.showEmoji=!items.showEmoji">回复</span>
+                                                                        <span>{{detail.date | showDate}}</span>
+                                                                </div>
+                                                        </div>
+                                                        
+                                                </li>
+                                                <post-button v-if="items.showEmoji" :item="items" @getemoji="getemoji2"></post-button>
                                         </div>
-                                        <div class="collect-handle">
-                                                <span>赞</span>·<span>回复</span>
-                                                <span>{{items.date | showDate}}</span>
-                                        </div>
-                                </div>
-                        </li>
-                </ul>
-                <!--发布评论-->
-                <div class="card-collect"> 
-                        <div class="me-img">
-                                <img :src="item.me_img" alt="">
-                        </div>
-                        <div class="collect-input">
-                                <input type="text" @keyup.13="getup(item)" v-model="item.collect_title" placeholder="写评论....">
-                                <div class="ect-icon"> <i class="icon-handle ect1"></i></div>
-                                <div class="ect-icon"> <i class="icon-handle ect2"></i></div>
-                                <div class="ect-icon"> <i class="icon-handle ect3"></i></div>
-                                <div class="ect-icon"> <i class="icon-handle ect4"></i></div>
-                        </div>
+                                </li>
+                        </ul>
+                        <!--发布评论-->
+                        <post-button :item="item" @getemoji="getemoji"></post-button>
+                        <div class="cart-ti">按Enter键发布。</div>
                 </div>
-                <div class="cart-ti">按Enter键发布。</div>
          </div>   
     </div>
 </template>
@@ -166,19 +195,21 @@ function getTimeDistance(time) {
                 
                 return "刚刚";
 };
+import postButton from './post-button'
 export default {
+    components:{
+            postButton
+    },
     props:["list"],
     data() {
         return {
+                eindex2:0,
+                eindex:0,
                 popver:[
                         {
                                 icon:"el-icon-document-checked",
                                 title:"收藏帖子",
                                 text:"加入收藏",
-                        },
-                        {
-                                icon:"el-icon-edit",
-                                title:"编辑帖子",
                         },
                         {
                                 icon:"el-icon-edit",
@@ -209,6 +240,12 @@ export default {
     mounted() {
 
     },
+    watch:{
+         list(newValue,oldValue){
+                console.log("list -> newValue", newValue)
+                this.list=newValue
+         }   
+    },
     filters:{
             showDate(value){
                 var date=getTimeDistance(value)
@@ -216,21 +253,30 @@ export default {
             }
     },
     methods: {
-        //发表评论
-        getup(item){
-              var nowDate=new Date();
-              var date=nowDate.getTime();
-              item.remark+=1;
-              item.collection.push({title:item.collect_title,img:"",date});
-              item.collect_title="";
+        getemoji2(item){
+            this.list[this.eindex].collection[this.eindex2]=item;  
         },
-        gethandle(state, item) {
+        getemoji(item){
+             this.list[this.eindex]=item;   
+        },
+        gethandle(state, item,e) {
             //点赞
             if (state == 1) {
                 item.checked = !item.checked
+                if(item.checked){
+                        item.goodsNum+=1;
+                }else{
+                        item.goodsNum-=1;
+                }
             //评论
             }else if(state==2){
-                item.checked = !item.checked
+                var dom=$(e.currentTarget).parents(".card-item").children().children(".card-collect");
+                if(dom.length>0){
+                        $("body,html").animate({"scrollTop":dom.offset().top - 800})
+                        $(dom).find("input").focus()
+                }
+                item.showEmoji = true
+                
             //转发
             }else{
 
@@ -267,11 +313,14 @@ export default {
             display: flex;
             align-items: center;
     }
-    .card-count>div>*{
+    .card-count>div>*,.collect-handle>*{
             cursor: pointer;
     }
-    .card-count>div>*:hover{
+    .card-count>div>*:hover,.collect-handle>*:hover{
              text-decoration: underline;
+    }
+    .collect-handle{
+            margin: 5px 0;
     }
     .icon-count.icon1{
           background-position: 0px -1514px;
@@ -288,11 +337,24 @@ export default {
     .icon-count.icon5{
            background-position:0px -1489px;
     }
+    .icon-count.icon6{
+          background-position:-50px -1516px;
+    }
+    .icon-count.icon7{
+           background-position:-50px -1489px;
+    }
     .icon-handle{
         display: inline-block;
         width: 18px;
         height: 18px; 
         background-image: url(../assets/xVr-bSpqpnp.png);
+    }
+
+    .handle-li.checked{
+            color: #1877F2;
+    }
+    .handle-li.checked .icon-handle.icon1{
+            background-position: 0 -229px;
     }
     .icon-handle.icon1{
           background-position: 0 -267px;
@@ -368,28 +430,28 @@ export default {
             padding:  16px;
             border-top: 1px solid #eee;
     }
-    .collect-list>li{
+    .collect-list li{
             display: flex;
             margin-bottom: 15px;
     }
+   
     .collect-list>li>.rg{
             max-width: 85%;
             word-break: break-all;
     }
-    .card-collect{
-            border-top: 1px solid #eee;
-            display: flex;
-            padding: 16px;
-    }
-    .collent-msg{
+  
+   
+   .collent-msg{
             background-color: #F0F2F5;
             padding: 10px;
             border-radius: 5px;
             position: relative;
+            display: inline-block;
     }
     .collent-msg>.hover-icon{
+           display:none;
            position: absolute;
-           right: -32px;
+           right: -35px;
            top: 50%;
            margin-top: -15px;
            width: 30px;
@@ -397,58 +459,16 @@ export default {
            line-height: 30px;
            color: #999;
     }
-    .me-img{
-            margin-right: 10px;
-    }
-   
-    /*输入框 */
-    .collect-input{
-            width: 80%;
-            border-radius: 20px;
-            background-color: #eee;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-    }
-    .collect-input>input{
-            border: 0;
-            outline:none;
-            background-color: transparent;
-            width: 100%;
-    }
-    .collect-input .icon-handle{
-            width: 16px;
-            height: 16px;
-    }
-     .ect-icon{
-        height: 30px;
-        width: 40px;
-        line-height: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-    .ect-icon:hover{
-            background-color: #ddd;
-    }
-    .icon-handle.ect1{
-            background-position: 0 -464px;
-    }
-     .icon-handle.ect2{
-           background-position: 0 -413px;
-    }
-     .icon-handle.ect3{
-            background-position: 0 -481px;
-    }
-     .icon-handle.ect4{
-            background-position: 0 -532px;
+     .collect-list>li:hover .hover-icon{
+            display: block;
     }
 
-    .me-img{
+   .me-img{
             width: 30px;
             height: 30px;
+    }
+    .me-img{
+            margin-right: 10px;
     }
     .cart-ti{
             margin-top: -5px;

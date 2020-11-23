@@ -8,5 +8,8 @@ router.get('/recommended',services.recommended)
 router.get('/friends',services.friends)
 router.post("/email",services.email)
 router.post("/createUser",services.createUser)
+router.post("/login",services.getlogin)
+router.post("/createPage",services.createPage)
+router.get("/publicPage",services.publicPage)
 // 注册功能
 module.exports = router

@@ -1,7 +1,7 @@
 <template>
 <div class="Head">
     <div class="HeadNav">
-        <a href="#/">
+        <a href="#/login">
             <div class="lf">facebook </div>
         </a>
         <div class="rg">

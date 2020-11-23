@@ -54,7 +54,12 @@ export default {
                 return false
             }
             this.$axios.post(this.$url+"/createUser",{code:this.code}).then(res=>{
-                console.log("getbtn -> res", res)
+                this.$message.error(res.data.msg);
+                if(res.data.code==1){
+                    setTimeout(()=>{
+                        this.$router.push({name:"login"})
+                    },1000)
+                }
             })
             
         }

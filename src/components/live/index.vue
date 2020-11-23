@@ -33,91 +33,7 @@
                                     </div>
                                     <div class="aov4n071 j83agx80 cbu4d94t buofh1pr">
                                         <div class="">
-                                            <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                                <div class="ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi a8c37x1j i224opu6">
-                                                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                        <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7">
-                                                            <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 nfl8ryma tv7at329 thwo4zme">
-                                                                <i class="hu5pjgll eb18blue sp_QNN4YN1C7aq sx_9554b1">
-                                                                </i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                            <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
-                                                                <div class="">
-                                                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                        <div class="qzhwtbm6 knvmm38d">
-                                                                            <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m" dir="auto">
-                                                                                <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id">
-                                                                                    立即直播
-                                                                                </span>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                                <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="/live/producer/schedule/1802855113212622/" role="link" tabindex="0">
-                                                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                        <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7">
-                                                            <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e tv7at329 thwo4zme">
-                                                                <i class="hu5pjgll lzf7d6o1 sp_R3sWAz1YQdr sx_0ebbd1">
-                                                                </i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                            <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
-                                                                <div class="">
-                                                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                        <div class="qzhwtbm6 knvmm38d">
-                                                                            <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m" dir="auto">
-                                                                                <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id">
-                                                                                    预定直播时间
-                                                                                </span>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                                <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="/live/producer/upcoming/100004644524593/" role="link" tabindex="0">
-                                                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                        <div class="nqmvxvec j83agx80 cbu4d94t tvfksri0 aov4n071 bi6gxh9e l9j0dhe7">
-                                                            <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e tv7at329 thwo4zme">
-                                                                <i class="hu5pjgll lzf7d6o1 sp__HT3i0Dxok6 sx_a9ed61">
-                                                                </i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                            <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx pybr56ya f10w8fjw">
-                                                                <div class="">
-                                                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                        <div class="qzhwtbm6 knvmm38d">
-                                                                            <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m" dir="auto">
-                                                                                <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id">
-                                                                                    近期直播视频和活动
-                                                                                </span>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore">
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            <cart-list :list="menu" :type="'menu'" :active='mactive' @getcart="getmenu"></cart-list>
                                             <div class="s1tcr66n" role="separator" style="margin: 8px 12px;">
                                             </div>
                                             <div class="dati1w0a sj5x9vvc hv4rvrfc cxgpxx05">
@@ -1123,10 +1039,26 @@
 </template>
 
 <script>
+import cartList from '../../common/cart-list.vue';
 export default {
+  components: { cartList },
     data() {
         return {
-
+            mactive:0,
+            menu:[
+                {
+                    title:"立即直播",
+                    icon:"el-icon-video-camera-solid"
+                },
+                {
+                    title:"预定直播时间",
+                    icon:"el-icon-time"
+                },
+                {
+                    title:"近期直播视频和活动",
+                    icon:"el-icon-s-management"
+                },
+            ]
         };
     },
     created() {
@@ -1136,7 +1068,9 @@ export default {
 
     },
     methods: {
-
+        getmenu(i){
+            this.mactive=i
+        }
     }
 };
 </script>

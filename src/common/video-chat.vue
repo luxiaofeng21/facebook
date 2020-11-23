@@ -436,6 +436,7 @@ export default {
             this.dialogVisible4 = false;
             this.dialogVisible5 = false;
             this.chat[0] = Object.assign({}, this.bookObj);
+            this.chat=JSON.parse(JSON.stringify(this.chat))
             this.$message.success("保存成功")
         },
         //选择标记符号

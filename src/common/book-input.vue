@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="book-input" :class="active?'active':(book.text!=''?'active2':'')" @click="getClick">
-        <div class="book-icon">
+        <div class="book-icon" v-if="book.img || book.icon">
             <img :src="book.img" alt="" v-if="book.img">
             <i v-else :class="book.icon"> </i>
         </div>
@@ -9,11 +9,11 @@
             <div class="book-placeholder">
                 <span class="book-input-text">{{book.title}}</span>
                 <slot id="right">
-                    <span class="book-input-total">{{book.text.length}} / 20</span>
+                    <span v-if="maxlength" class="book-input-total">{{book.text.length}} / 20</span>
                 </slot>
             </div>
             <div class="book-input-title">
-                <input :disabled="book.disabled?true:false" type="text" maxlength="20" ref="bookInput" placeholder="请输入名称" @blur.stop="active = false" @focus.stop="active=true" v-model="book.text">
+                <input :disabled="book.disabled?true:false" type="text" :maxlength="maxlength" ref="bookInput" placeholder="请输入名称" @blur.stop="active = false" @focus.stop="active=true" v-model="book.text">
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    props: ["book"],
+    props: ["book","maxlength"],
     data() {
         return {
             active: false
@@ -56,10 +56,10 @@ export default {
 .book-input:hover {
     border-color: #999;
 }
-
+/*
 .book-input-content {
-    width: 85%;
-}
+    min-width: 85%;
+}*/
 
 .book-placeholder {
     display: flex;
@@ -69,7 +69,7 @@ export default {
     position: relative;
 }
 
-.book-placeholder>*:last-child {
+.book-placeholder>.book-input-total {
     position: absolute;
     right: 0;
 }
@@ -88,6 +88,7 @@ export default {
 .book-input-text {
     font-size: 16px;
     transition: all 0.2s;
+    color: #666;
 }
 
 .book-input-total {
