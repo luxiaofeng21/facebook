@@ -1,5 +1,6 @@
 const db = require('./db.js')
 let nodemailer=require("nodemailer");
+let bcrypt=require("bcrypt");
 let codes={};
 let user_info={};
 // 用户表
@@ -91,35 +92,44 @@ exports.email=function(req,res){ //调用指定的邮箱给用户发送邮件
 
 
 //注册用户
-exports.createUser=function (req,res) {
-         for(let i in user_info){
-             if(user_info[i]=='' || !user_info){
-                 res.send({code:-1,msg:"请完善用户信息"})
-             }
-         }
-         if(codes != req.body.code){
-                res.send({code:-1,msg:"验证码错误"})
-         }else{
-                let sql=`insert into user values('${user_info.xing}','${user_info.ming}','${user_info.email}','${user_info.password}','${user_info.year}','${user_info.month}','${user_info.day}','${user_info.sex}')`
-                db.base(sql,"",(result)=>{
-                        res.send({code:1,msg:"注册成功"})
-                })
-         }
+exports.createUser=async function (req,res) {
+        //  const salt=await bcrypt.genSalt(10)
+        try{
+            const password=bcrypt.hash(user_info.password,10)
+            console.log("🚀 ~ file: services.js ~ line 98 ~ password", password)
+            for(let i in user_info){
+                if(user_info[i]=='' || !user_info){
+                    res.send({code:-1,msg:"请完善用户信息"})
+                }
+            }
+            if(codes != req.body.code){
+                   res.send({code:-1,msg:"验证码错误"})
+            }else{
+                   let sql=`insert into user values('${user_info.xing}','${user_info.ming}','${user_info.email}','${password}','${user_info.year}','${user_info.month}','${user_info.day}','${user_info.sex}')`
+                   db.base(sql,"",(result)=>{
+                           res.send({code:1,msg:"注册成功"})
+                   })
+            }
+        }
+        catch{
+            res.redirect(500,'/createUser')
+        }
+        
        
 }
 
 
 //用户登录
-exports.getlogin=function(req,res){
+exports.getlogin= async function(req,res){
     var data=req.body;
     for(let i in data){
         if(data[i]==''){
             return  res.send({code:-1,msg:"请填写完整用户信息"})
         }
     }
-    let sql=`select * from user where email='${data.email}' and password='${data.password}'`
-    db.base(sql,req,(result)=>{
-        if(result.length>0){
+    let sql=`select * from user where email='${data.email}'`
+    db.base(sql, (result)=>{
+        if( bcrypt.compare(data.password,result.password)){
             res.send({code:1,msg:"登录成功"})
         }else{
             res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})

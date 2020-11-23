@@ -236,7 +236,7 @@ export default {
             var data=this.me;
             //循环判断
             var list=[]
-            var arr=document.getElementsByClassName("el-input__inner")
+            var arr=document.querySelector(".el-dialog__body .el-input__inner")
             for(let i=0;i<arr.length;i++){
                 if(arr[i].value==''){
                         this.$message.error(arr[i].placeholder+"不能为空");
