@@ -7,7 +7,7 @@ let user_info={};
 exports.user = (req,res)=>{
     // 查询语句
     let sql = 'select * from user'
-    db.base(sql,(result)=>{
+    db.base(sql,'',(result)=>{
        res.send(result)
     })
 }
@@ -25,7 +25,7 @@ exports.recommended = (req,res)=>{
 exports.friends = (req,res)=>{
     // 查询语句
     let sql = 'select * from friends'
-    db.base(sql,(result)=>{
+    db.base(sql,'',(result)=>{
        res.send(result)
     })
 }
@@ -68,7 +68,7 @@ exports.email=function(req,res){ //调用指定的邮箱给用户发送邮件
                     }
                 });
                 let mailOption={
-                    from:"2584278167@qq.com",
+                    from:"facebook <2584278167@qq.com>", //发件人
                     to:req.body.email,//收件人
                     subject:"facebook注册校验码",//纯文本
                     html:"<h1>欢迎注册facebook，您本次的注册验证码为："+code+"</h1>"
@@ -97,7 +97,6 @@ exports.createUser=async function (req,res) {
         try{
             const password=await bcrypt.hash(user_info.password,10)
             user_info.password=password
-            console.log(" services.js ~ line 98 ~ password", password)
             for(let i in user_info){
                 if(user_info[i]=='' || !user_info){
                     res.send({code:-1,msg:"请完善用户信息"})
@@ -131,16 +130,22 @@ exports.getlogin=  function(req,res){
     let sql=`select * from user where email=?`
     db.base(sql,data.email,async (result)=>{
         if(await bcrypt.compare(data.password,result[0].password)){
-            req.session.user_info=data
+            user_info=data
             res.send({code:1,msg:"登录成功"})
         }else{
             res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})
         }
     })
 }
+
 //获取用户信息
 exports.getuserInfo=function(req,res){
-    res.send(req.session.user_info)
+    if(user_info!={}){
+        res.send({code:1,data:user_info})
+    }else{
+        res.send({code:-1,msg:"用户信息获取失败"})
+    }
+    
 }
 
 //创建主页
@@ -162,6 +167,22 @@ exports.publicPage=function(req,res){
     
 }
 
+//获取指定公共主页
+exports.getpublicPage=function(req,res){
+   try{
+       let id=req.query.id
+       console.log("id", id)
+       if(!id) return res.status(500)
+        let sql="select * from publicpage where id=?";
+        db.base(sql,id,(result)=>{
+                res.send({code:1,data:result[0]})
+        })
+       
+   }
+    catch{
+        res.status(500)
+    }
+}
 
 //创建小组
 exports.createGroups=function(req,res){

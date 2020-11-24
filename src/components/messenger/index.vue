@@ -12,13 +12,13 @@
                     <div class="book-search">
                         <el-input prefix-icon="el-icon-search" placeholder="搜索Messenger"></el-input>
                     </div>
-                    <cart-list style="margin-top:10px" :list="menu" type="menu" :active="mactive"></cart-list>
+                    <cart-list style="margin-top:10px" :list="menu" type="menu" :active="mactive" @getcart="getmenu"></cart-list>
             </div>
             <div class="rg">
                     <div class="list-haed msg-flex">
                             <div class="lf user-msg">
-                                    <img src="" alt="">
-                                    <div class="msg-name">杨小萱</div>
+                                    <img :src="mobj.img" alt="">
+                                    <div class="msg-name">{{mobj.name}}</div>
                                     <div class="msg-date">6小时在线</div>
                             </div>
                             <div class="rg">
@@ -29,26 +29,27 @@
                     </div>
                     <div class="msg-list">
                             <div class="lf">
-                                <div class="user-msg">
-                                        <img src="" alt="">
-                                        <div class="msg-name2">杨小萱</div>
-                                        <div class="msg-text">你们是facebook好友</div>
-                                        <div class="msg-date">香港</div>
-                                        <div class="msg-date">所在地：香港</div>
-                                </div>
+                                
                                 <div class="what">
+                                        
                                         <div class="what-list">
+                                                <div class="user-msg">
+                                                        <img :src="mobj.img" alt="">
+                                                        <div class="msg-name2">{{mobj.name}}</div>
+                                                        <div class="msg-text">你们是facebook好友</div>
+                                                        <div class="msg-date">所在地：香港</div>
+                                                </div>
                                                  <div class="what-user">
                                                     <div class="what-date">2017/10/09 19:19</div>
                                                     <div class="what-user-img">
-                                                            <img src="../../assets/bg.jpg" alt="">
+                                                            <img :src="mobj.img" alt="">
                                                             <img src="../../assets/me.jpg" alt="">
                                                     </div>
                                                     <div class="what-user-text">你们现在是Message联系人了</div>
                                                 </div>
                                                 <div class="what-item" v-for="(item,index) in msgAll" :key="index">
                                                         <div class="what-date">{{item.date}}</div>
-                                                        <div class="what-msg">
+                                                        <div class="what-msg" v-if="item.role==1">
                                                                 <div class="lf">
                                                                         <div class="hover-icon"> <i class="el-icon-s-promotion"></i> </div>
                                                                         <div class="hover-icon"> <i class="el-icon-more"></i> </div>
@@ -56,6 +57,16 @@
                                                                 </div>
                                                                 <div class="what-title">{{item.title}}</div>
                                                                 <i class="el-icon-success"> </i>
+                                                        </div>
+                                                        <div class="what-msg what-msg2" v-else>
+                                                                 <img :src="mobj.img" alt="">
+                                                                 <div class="what-title">{{item.title}}</div>
+                                                                 <div class="lf">
+                                                                        <div class="hover-icon"><img src="../../assets/face.png" alt=""> </div>
+                                                                        <div class="hover-icon"> <i class="el-icon-more"></i> </div>
+                                                                        <div class="hover-icon"> <i class="el-icon-s-promotion"></i> </div>
+                                                                        
+                                                                </div>
                                                         </div>
                                                 </div>
                                         </div>
@@ -82,8 +93,8 @@
                             </div>
                             <div class="rg">
                                 <div class="list-msg">
-                                        <img src="../../assets/bg.jpg" alt="">
-                                        <div class="list-name">杨小萱</div>
+                                        <img :src="mobj.img" alt="">
+                                        <div class="list-name">{{mobj.name}}</div>
                                         <div class="list-date">6小时在线</div>
                                 </div>
                                 <div class="list-set">
@@ -119,7 +130,13 @@ export default {
         return {
             mobj:{},
             mactive:0,
-            msgAll:[],
+            msgAll:[
+                {
+                    title:"你好呀",
+                    date:"2020-10-11",
+                    role:2
+                }
+            ],
             collapse:[
                 {
                     title:"在对话内搜索",
@@ -139,13 +156,7 @@ export default {
                 },
             ],
             activeNames:["1"],
-            menu:[
-                {
-                    img:require("@/assets/me.jpg"),
-                    title:"杨小邪",
-                    text:"你们现在已经是Message联系人了"
-                }
-            ],
+            menu:[],
             what:""
         }
     },
@@ -154,7 +165,9 @@ export default {
         this.$axios.get(this.$url+"/friends").then(res=>{
         console.log("created -> res", res)
             that.menu=res.data
+            that.mobj=res.data[0]
         })
+         
     },
     methods:{
         //表情
@@ -165,10 +178,14 @@ export default {
         getsub(){
             if(this.what=='') return 
             var now=new Date();
-            var date=now.toLocaleString()
-            console.log(date)
-            this.msgAll.push({title:this.what,date})
+            var date=now.toLocaleString();
+            this.msgAll.push({title:this.what,date,role:1});
             this.what="";
+        },
+        //左侧
+        getmenu(i){
+            this.mactive=i
+            this.mobj=this.menu[i]
         }
     }
 }
@@ -230,6 +247,19 @@ export default {
             border: 1px solid #eee;
             width: 40px;
             height: 40px;
+            border-radius: 50%;
+        }
+        .msg-list .user-msg{
+            padding-left: 70px;
+            margin:  16px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            padding-bottom: 20px;
+        }
+        .msg-list .user-msg>img{
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
         }
         .list-haed{
             padding: 0 16px;
@@ -242,9 +272,6 @@ export default {
             margin: 0  5px;
             color: #52B9F3;
             cursor: pointer;
-        }
-        .msg-list .user-msg{
-            margin:  16px;
         }
         .msg-name{
                 font-size: 16px;
@@ -341,10 +368,22 @@ export default {
             align-items: center;
             justify-content: end;
         }
+        .what-msg2{
+            justify-content: flex-start;
+        }
+        .what-msg2 .what-title{
+           background-color: #f1f0f0;
+           color: #000;
+        }
+        .what-msg2>img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin:0 5px 0 8px;
+        }
         .what-msg>i{
             color: #1877F2;
             margin:0 5px;
-           
         }
         .what-msg>.lf>*{
             width: 30px;

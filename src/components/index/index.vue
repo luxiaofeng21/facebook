@@ -605,7 +605,7 @@
                                                                             <i class="el-icon-more"></i>
                                                                     </div>
                                                                 </div>
-                                                                <cart-list :list="pages" :size="'small'">
+                                                                <cart-list :list="pages" :size="'small'" @getcart="getpublic">
                                                                 </cart-list>
                                                             </div>
                                                         </div>
@@ -952,10 +952,11 @@ export default {
             })
             this.chat = ""
         },
-        
+        //关闭
         getclose() {
             this.dialogVisible = false
         },
+        //收缩
         getdown() {
             if (this.down < 10) {
                 this.down = 99
@@ -963,6 +964,12 @@ export default {
             } else {
                 this.down = 9
                 this.downtile = "展开"
+            }
+        },
+        //公共主页
+        getpublic(i,item){
+            if(i==0){
+                this.$router.push({name:"manageHome",params:{id:item.id}})
             }
         }
     },

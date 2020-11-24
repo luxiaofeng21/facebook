@@ -14350,7 +14350,7 @@ to {
 }
 .thodolrn {
 	padding-left:110px;
-	box-shadow:  10px 10px 10px #eee;
+	box-shadow:  0px 5px 5px #eee;
 }
 .thwo4zme {
 	width:36px
@@ -24375,4 +24375,8 @@ body{
 
 .dialog-footer{
 	display: flex;
+}
+
+.i1fnvgqd {
+    justify-content: space-between;
 }

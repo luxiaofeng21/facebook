@@ -34,7 +34,7 @@
 												<span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db a5q79mjw g1cxx5fr ekzkrbhg oo9gr5id"
 												dir="auto">
 													<span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ojkyduve" style="-webkit-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-														第一个公共主页
+														{{mobj.title}}
 													</span>
 												</span>
 												<span class="bvsf4q5n scb9dxdr l9j0dhe7">
@@ -107,7 +107,7 @@
 																		<div class="do00u71z l9j0dhe7 k4urcfbm ni8dbmo4 stjgntxs" style="padding-top: 37.037%;">
 																			<div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
 																				<img data-imgperflogname="profileCoverPhoto" alt="" class="i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4 datstx6m k4urcfbm"
-																				src="/images/pages/finch/cover_placeholder-2x.png">
+																				src="../../assets/pageBg.png">
 																			</div>
 																		</div>
 																	</div>
@@ -157,7 +157,7 @@
 													<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t pfnyh3mw d2edcug0 hpfvmrgz nqmvxvec ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
 														<div class="aovydwv3 j83agx80 wkznzc2l dlu2gh78">
 															<div class="b3onmgus e5nlhep0 ph5uu5jm ecm0bbzt spb7xbtv bkmhp75w emlxlaya s45kfl79 cwj9ozl2">
-																<a aria-label="第一个公共主页的头像" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l oo9gr5id"
+																<a  class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l oo9gr5id"
 																href="#" role="link" tabindex="0">
 																	<div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
 																		<svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none"
@@ -202,7 +202,7 @@
 																		<span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 embtmqzv fe6kdd0r mau55g9w c8b282yb hrzyx87i m6dqt4wy h7mekvxk hnhda86s oo9gr5id hzawbc8m"
 																		dir="auto">
 																			<span>
-																				第一个公共主页
+																				{{mobj.title}}
 																			</span>
 																		</span>
 																	</h2>
@@ -396,7 +396,7 @@
 																											<span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db a5q79mjw g1cxx5fr ekzkrbhg oo9gr5id hzawbc8m"
 																											dir="auto">
 																												<span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 ojkyduve">
-																													第一个公共主页
+																													{{mobj.title}}
 																												</span>
 																											</span>
 																										</div>
@@ -467,7 +467,7 @@
 															</a>
 															<div class="h676nmdw">
 																<a aria-label="访客视图" class="oajrlxb2 tdjehn4e gcieejh5 bn081pho humdl8nn izx4hr6d rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l beltcj47 p86d2i9g aot14ch1 kzx2olss cbu4d94t taijpn5t ni8dbmo4 stjgntxs k4urcfbm tv7at329"
-																href="/第一个公共主页-101592591792174/?view_public_for=101592591792174" role="link"
+																href="" role="link"
 																tabindex="0">
 																	<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw taijpn5t bp9cbjyn owycx6da btwxx1t3 c4xchbtz by2jbhx6">
 																		<div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 hpfvmrgz j83agx80 j5wkysh0 hytbnt81">
@@ -1069,7 +1069,7 @@
 																													<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3">
 																														<div class="b0kwm4yp gcieejh5 bn081pho humdl8nn izx4hr6d jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc q9uorilb kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 pzggbiyp">
 																															<a class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8 hnhda86s"
-																															href="/第一个公共主页-101592591792174/insights/?referrer=page_admin_insights_card"
+																															href=""
 																															role="link" tabindex="0">
 																																<span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 jq4qci2q a3bd9o3v knj5qynh py34i1dx">
 																																	查看全部
@@ -1109,7 +1109,7 @@
 																		<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 cxgpxx05 b5q2rw42 lq239pai mysgfdmx hddg9phg">
 																			<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
 																				<a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l"
-																				href="/第一个公共主页-101592591792174/insights/?section=navReach" role="link"
+																				href="" role="link"
 																				tabindex="0">
 																					<div class="j83agx80 l9j0dhe7 k4urcfbm">
 																						<div class="rq0escxv l9j0dhe7 du4w35lb g6srhlxm ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm"
@@ -1148,7 +1148,7 @@
 																		<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 cxgpxx05 b5q2rw42 lq239pai mysgfdmx hddg9phg">
 																			<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
 																				<a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l"
-																				href="/第一个公共主页-101592591792174/insights/?section=navPosts" role="link"
+																				href="" role="link"
 																				tabindex="0">
 																					<div class="j83agx80 l9j0dhe7 k4urcfbm">
 																						<div class="rq0escxv l9j0dhe7 du4w35lb g6srhlxm ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm"
@@ -1187,7 +1187,7 @@
 																		<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 cxgpxx05 b5q2rw42 lq239pai mysgfdmx hddg9phg">
 																			<div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
 																				<a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l"
-																				href="/第一个公共主页-101592591792174/insights/?section=navLikes" role="link"
+																				href="" role="link"
 																				tabindex="0">
 																					<div class="j83agx80 l9j0dhe7 k4urcfbm">
 																						<div class="rq0escxv l9j0dhe7 du4w35lb g6srhlxm ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm"
@@ -1746,7 +1746,7 @@
 															<div class="tvfksri0 btwxx1t3 j83agx80 bp9cbjyn">
 																<div class="ozuftl9m n851cfcs tvfksri0 n1l5q3vz">
 																	<div class="">
-																		<a aria-label="第一个公共主页" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l oo9gr5id"
+																		<a  class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l oo9gr5id"
 																		href="https://www.facebook.com/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E4%B8%BB%E9%A1%B5-101592591792174/?__tn__=%3C"
 																		role="link" tabindex="0">
 																			<div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
@@ -1993,7 +1993,7 @@ export default {
     },
     data(){
         return{
-            
+            mobj:{},
             mactive:0,
             menu:[
                 {
@@ -2041,6 +2041,14 @@ export default {
             ]
         }
     },
+	created(){
+		var that=this;
+		var id=this.$route.params.id;
+		this.$axios.get(this.$url+"/getpublicPage?id="+id).then(res=>{
+			that.mobj=res.data.data
+            console.log("created -> that.mobj", that.mobj)
+		})
+	},
     methods:{
         getmenu(i){
             if(i==3){
