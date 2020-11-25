@@ -366,7 +366,7 @@ export default {
         .what-msg{
             display: flex;
             align-items: center;
-            justify-content: end;
+            justify-content: flex-end;
         }
         .what-msg2{
             justify-content: flex-start;
@@ -418,6 +418,8 @@ export default {
         }
         .what-input>.lf{
             width: 20%;
+            white-space:nowrap;
+            margin-right: 15px;
             font-size: 25px;
             color: #1877F2;
         }

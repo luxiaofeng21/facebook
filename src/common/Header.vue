@@ -623,7 +623,7 @@
                         </div>
                     </div>
                     <div class="k4urcfbm dati1w0a hv4rvrfc i1fnvgqd j83agx80 rq0escxv bp9cbjyn discj3wi">
-                        <div role="button" tabindex="-1" aria-disabled="true" class="oajrlxb2 c98fg2ug qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv t5a262vz pq6dq46d p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x cxgpxx05 d1544ag0 sj5x9vvc tw6a2znq oqcyycmt esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l ljzjr9fn tkdm7zml bp9cbjyn beltcj47 p86d2i9g aot14ch1 kzx2olss rt8b4zig n8ej3o3l agehan2d sk4xxmp2 lrazzd5p gigivrx4 sf5mxxl7 g0qnabr5 mi62g4hq iqfcb0g7 lsqurvkf id6903cd mf7ej076 jq4qci2q m5l1wtfr taijpn5t sn7ne77z oqhjfihn" :class="topic!=''?'s1i5eluu':''">
+                        <div @click="createCard" role="button" tabindex="-1" aria-disabled="true" class="oajrlxb2 c98fg2ug qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv t5a262vz pq6dq46d p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x cxgpxx05 d1544ag0 sj5x9vvc tw6a2znq oqcyycmt esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l ljzjr9fn tkdm7zml bp9cbjyn beltcj47 p86d2i9g aot14ch1 kzx2olss rt8b4zig n8ej3o3l agehan2d sk4xxmp2 lrazzd5p gigivrx4 sf5mxxl7 g0qnabr5 mi62g4hq iqfcb0g7 lsqurvkf id6903cd mf7ej076 jq4qci2q m5l1wtfr taijpn5t sn7ne77z oqhjfihn" :class="topic!=''?'s1i5eluu':''">
                             发帖
                         </div>
                     </div>
@@ -1225,6 +1225,26 @@ export default {
     },
 
     methods: {
+        //发帖
+        createCard(){
+            var user_info=JSON.parse(localStorage.getItem("user_info"));
+            var info={
+                name:user_info.name + user_info.surname,
+                me_img:user_info.img,
+                title:this.topic,
+                date:new Date(),
+            }
+            console.log(this.topic)
+            this.$axios.post(this.$url+"/createRecommended",info).then(res=>{
+                   if(res.data.code==1){
+                       this.$message.success(res.data.msg)
+                       this.dialogVisible=false
+                   }else{
+                       this.$message.error(res.data.msg)
+                   }
+            })
+        },
+        //选择表情
         selectEmoji(data){
             this.topic+=data.data
         },

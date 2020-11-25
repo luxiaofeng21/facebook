@@ -12,7 +12,7 @@ exports.user = (req,res)=>{
     })
 }
 
-//推荐
+//推荐帖子
 exports.recommended = (req,res)=>{
     // 查询语句
     let sql = 'select * from recommended'
@@ -20,7 +20,14 @@ exports.recommended = (req,res)=>{
        res.send(result)
     })
 }
-
+//创建帖子
+exports.createRecommended = (req,res)=>{
+    // 查询语句
+    let sql = 'insert into recommended set ?'
+    db.base(sql,[req.body],(result)=>{
+       res.send({code:1,msg:"发布成功"})
+    })
+}
 //朋友
 exports.friends = (req,res)=>{
     // 查询语句
@@ -130,7 +137,7 @@ exports.getlogin=  function(req,res){
     let sql=`select * from user where email=?`
     db.base(sql,data.email,async (result)=>{
         if(await bcrypt.compare(data.password,result[0].password)){
-            user_info=data
+            user_info=result[0]
             res.send({code:1,msg:"登录成功"})
         }else{
             res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})
