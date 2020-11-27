@@ -1055,7 +1055,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 /*搜索 */
 .search_con {

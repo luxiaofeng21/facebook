@@ -169,4 +169,8 @@ a {
     font-weight: 600;
     color: var(--secondary-text);
 }
+.menu-title{
+    padding: 16px;
+    border-top: 1px solid #eee;
+}
 </style>

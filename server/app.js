@@ -1,5 +1,6 @@
 // 创建express服务器
 const express = require('express')
+const path=require("path")
 const app = express()
 const session=require("express-session")
 // 注册解析 表单数据的 body-parser
@@ -24,6 +25,7 @@ app.use('/*', function (req, res, next) {
     // next()方法表示进入下一个路由
     next();
 });
+app.use("/",express.static(path.resolve(__dirname,"../dist")))
 // post
 app.use(bodyParser.urlencoded({extended:false}))
 // 处理json格式的参数

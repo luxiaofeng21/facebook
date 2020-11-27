@@ -48,7 +48,7 @@
         <div class="cart-children" v-show="item.down">
             <div class="cart-item" v-for="(detail,indexs) in item.children" :key="indexs" :class="item.active==indexs?'ischecked':''" @click="getcart(index,item,indexs)">
                 <div class="cart-left">
-                    <div class="cart-img" :class="detail.iconChecked?'iconChecked':''">
+                    <div class="cart-img" v-if="detail.icon ||detail.img" :class="detail.iconChecked?'iconChecked':''">
                         <!--消息类型-->
                         <img v-if="detail.img" :src="detail.img" alt="">
                         <i v-else :class="detail.icon"></i>
@@ -326,19 +326,7 @@ export default {
     background-position: -2px -209px;
 }
 
-.msg-ul>li {
-    padding: 10px;
-    border-radius: 5px;
-}
 
-.msg-ul>li>i {
-    font-size: 22px;
-    margin-right: 10px;
-}
-
-.msg-ul>li:hover {
-    background: #eee;
-}
 
 /*菜单 */
 

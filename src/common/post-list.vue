@@ -31,6 +31,7 @@
                 <div class="card-what">
                         <div class="card-title" v-html="item.title"></div>
                         <div class="card-img" v-if="item.img"> <img :src="item.img" alt=""></div>
+                        <div class="card-img" v-if="item.video"> <video :src="item.video" alt="" controls> </video> </div>
                 </div>
                 <!--查看点赞人数-->
                 <div class="card-count">
@@ -69,7 +70,7 @@
                         <ul class="collect-list" v-if="item.collection.length>0">
                                 <li v-for="(items,indexs) in item.collection" :key="indexs" @click="eindex2=indexs">
                                         <div class="me-img">
-                                                <img :src="item.img" alt="">
+                                                <img :src="item.me_img" alt="">
                                         </div>
                                         <div class="rg">
                                                 <div class="collent-msg">
@@ -239,9 +240,10 @@ export default {
         background-image: url(../assets/08_2WsnTY6B.png);
         background-repeat: no-repeat;
         background-size: auto;
-        margin-left:-8px;
+        margin-left:-10px;
         border: 1px solid #fff;
         border-radius: 50%;
+        transform: scale(0.8);
     }
     .card-count>.lf{
             display: flex;
@@ -349,8 +351,8 @@ export default {
             background: #000;
             text-align: center;
     }
-    .card-img>img{
-            max-width: 500px;
+    .card-img>*{
+            max-height: 500px;
     }
     .card-count{
             display: flex;

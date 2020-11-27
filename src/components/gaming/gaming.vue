@@ -5965,7 +5965,6 @@ export default {
             } else {
                 this.state = i.toString()
             }
-            console.log(this.state)
             this.mactive = i
         }
     },
