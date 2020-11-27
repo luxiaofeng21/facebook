@@ -29,8 +29,8 @@
                 </div>
                 <!--发布的内容-->
                 <div class="card-what">
-                        <div class="card-title">{{item.title}}</div>
-                        <div class="card-img"> <img :src="item.img" alt=""></div>
+                        <div class="card-title" v-html="item.title"></div>
+                        <div class="card-img" v-if="item.img"> <img :src="item.img" alt=""></div>
                 </div>
                 <!--查看点赞人数-->
                 <div class="card-count">

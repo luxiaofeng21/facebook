@@ -755,7 +755,6 @@ export default {
                     collect_title:"",
                     goodsNum: 0,
                     date: "9月18日20:44",
-                    title: "",
                     share: 12,
                     name: "陈某某",
                     title: "二珂《這裡有埋伏》，聽完感覺戀愛了，大長腿的小仙女兒",
@@ -911,7 +910,7 @@ export default {
         var that = this;
         //推荐
         this.$axios.get(this.$url+"/recommended").then(res => {
-            // that.list = res.data
+            that.list = res.data
         })
         //朋友
         this.$axios.get(this.$url+"/friends").then(res => {
@@ -926,7 +925,10 @@ export default {
 
         //用户信息
          this.$axios.get(this.$url+"/getuserInfo").then(res => {
-            console.log("🚀 ~ file: index.vue ~ line 929 ~ this.$axios.get ~ res", res)
+            if(res.data.code){
+                console.log("来了")
+                localStorage.setItem("user_info",JSON.stringify(res.data.data))
+            }
         })
     },
     mounted() {
