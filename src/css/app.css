@@ -8640,7 +8640,9 @@ to {
 	background-color:var(--shadow-2)
 }
 .katn9ffz {
-	width:879px
+	width:879px;
+	margin:0 auto;
+	padding:10px 0;
 }
 .kavbgo14 {
 	z-index:2
@@ -24407,3 +24409,4 @@ body{
 	margin-top: 5px;
 	font-size: 13px;
 }
+

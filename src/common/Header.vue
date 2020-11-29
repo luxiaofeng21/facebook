@@ -239,14 +239,14 @@
                                 <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
                                 <div class="visible-title">设置与隐私</div>
                             </div>
-                            <cart-list :list="setAll" @getcart="getset"></cart-list>
+                            <cart-list :list="setAll" @getcart="getset($event)"></cart-list>
                         </div>
                         <div v-else-if="mactive==1">
                             <div class="book-flex book-items">
                                 <div class="book-icon" @click="mactive=-1"> <i class="el-icon-back"></i> </div>
                                 <div class="visible-title">帮助与支持</div>
                             </div>
-                            <cart-list :list="setAll2" @getcart="getset"></cart-list>
+                            <cart-list :list="setAll2" @getcart="gethelp"></cart-list>
                         </div>
                         <div v-else-if="mactive==2">
                             <div class="book-flex book-items">
@@ -1292,6 +1292,10 @@ export default {
                     }
                 })
             }
+        },
+        //帮助中心
+        gethelp(i){
+
         },
         //个人中心
         getme(i) {

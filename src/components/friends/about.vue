@@ -1,6 +1,37 @@
 <template>
-<div class="bp9cbjyn j83agx80 cbu4d94t d2edcug0">
-    <div class="d2edcug0 h3gjbzrl ihqw7lf3 discj3wi katn9ffz qv66sw1b">
+<div class="about">
+    <div class="katn9ffz">
+        <div class="book-container">
+            <div class="lf">
+                    <div class="book-card">
+                            <div class="book-title2">个人资料</div>
+                            <ul class="me-ul">
+                                <li v-for="(item,index) in me_ul.user" :key="index">
+                                    <img :src="item.img" alt="">
+                                    <span class="me-label">{{item.label}}</span>
+                                    <span class="me-title">{{item.title}}</span>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="book-card">
+                            <div class="flex">
+                                <div class="book-title2">照片</div>
+                                <div class="link">所有照片</div>
+                            </div>
+                            <share-list :list="me_ul.imgAll" :type="'vertical'"></share-list>
+                    </div>
+                    <div class="book-card">
+                            <div class="flex">
+                                <div class="book-title2">好友</div>
+                                <div class="link">全部好友</div>
+                            </div>
+                            <share-list :list="me_ul.friend" :type="'vertical'"></share-list>
+                    </div>
+            </div>
+            <div class="rg">
+                    <post-list :list="me_ul.list"></post-list>
+            </div>
+        </div>
         <div class="sjgh65i0">
             <div class="j83agx80 l9j0dhe7 k4urcfbm">
                 <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm sbcfpzgs">
@@ -142,14 +173,18 @@
 <script>
 import shareList from '@/common/share-list'
 import bookInput from '@/common/book-input'
+import postList from '@/common/post-list'
 export default {
     props:["me_ul"],
     components:{
+        postList,
         shareList,
         bookInput
     },
+
     data() {
         return {
+            list:[],
             tabs5:"1",
             tabs4:"1",
             tabs:"1",
@@ -170,6 +205,45 @@ export default {
 
 
 <style>
+    /*导航*/
+    .el-tabs__header{
+        margin: 0;
+    }
+    
+    .el-tabs__nav-wrap::after {
+        height: 0;
+    }
+
+    .el-tabs__active-bar {
+        height: 4px;
+        border-radius: 10px;
+        background-color: var(--accent);
+    }
+    .el-tabs__item{
+        height: 45px;
+    }
+    /*个人资料 */
+    .me-ul{
+        margin-top: 10px;
+    }
+    .me-ul li {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .me-ul li img {
+        filter: var(--filter-placeholder-icon);
+        margin-right: 10px;
+    }
+    .me-rg{
+        position: absolute;
+        right: 0;
+        display: flex;
+    }
+
+    .about{
+        background-color: #eee;
+    }
     a{
         color: #333;
     }

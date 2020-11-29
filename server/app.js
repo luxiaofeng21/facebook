@@ -15,7 +15,9 @@ app.use(session({
       maxAge : 1000 * 60 * 3, // 设置 session 的有效时间，单位毫秒
     },
   }));
-app.use('/*', function (req, res, next) {
+app.use(express.static(path.join(__dirname,"../dist")))
+app.use("/images",express.static("./images"))
+app.use('/', function (req, res, next) {
 	// 设置请求头为允许跨域
     res.header("Access-Control-Allow-Origin", "*");
     // 设置服务器支持的所有头信息字段
@@ -25,7 +27,7 @@ app.use('/*', function (req, res, next) {
     // next()方法表示进入下一个路由
     next();
 });
-app.use("/",express.static(path.resolve(__dirname,"../dist")))
+
 // post
 app.use(bodyParser.urlencoded({extended:false}))
 // 处理json格式的参数

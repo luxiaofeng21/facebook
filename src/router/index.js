@@ -49,6 +49,7 @@ import categories from '@/components/groups/categories'
 import publicHomePage from '@/components/publicHomePage/index'
 import jobs from '@/components/jobs/index'
 import managementGroup from '@/components/groups/management_group'
+import Mailbox from '@/components/help/Mailbox'
 Vue.use(Router)
 
 export default new Router({
@@ -57,6 +58,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: Index
+    },
+    {
+      path:"/help/Mailbox",
+      name:"Mailbox",
+      component:Mailbox
     },
     {
       path:"/pages",

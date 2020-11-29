@@ -156,7 +156,15 @@
     <div id="bottomContent"></div>
 </div>
 </template>
-
+<script>
+export default {
+    data() {
+        return {
+            
+        }
+    },
+}
+</script>
 <style scoped>
 @import '../../css/me.css';
 </style>

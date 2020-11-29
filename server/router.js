@@ -21,4 +21,6 @@ router.get("/publicPage",services.publicPage)
 router.post("/createGroups",services.createGroups)
 router.get("/getGroups",services.getGroups)
 router.get("/getpublicPage",services.getpublicPage)
+//上传图片
+router.post("/uploadImg",services.uploadImg)
 module.exports = router
