@@ -75,7 +75,7 @@ export default {
                     let from = 'zh';
                     let to = newLanguage;
                     let str1 = appid + query + salt + key;
-                    let sign = $.md5(str1);
+                    let sign = md5(str1);
                     $.ajax({
                         url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
                         type: 'get',
@@ -129,9 +129,12 @@ export default {
         }
     },
     created() {
-        this.transformLanguage("en")
+       
         this.getactive()
-    }
+    },
+    mounted() {
+         this.transformLanguage("en")
+    },
 }
 </script>
 
