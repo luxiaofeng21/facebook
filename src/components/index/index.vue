@@ -27,103 +27,7 @@
                                                     </h2>
                                                     <div class="l9j0dhe7 tr9rh885 buofh1pr cbu4d94t j83agx80" data-pagelet="LeftRail">
                                                         <div class="sn7ne77z buofh1pr cbu4d94t j83agx80" ref="down">
-                                                            <div class="buofh1pr">
-                                                                <ul>
-                                                                    <li>
-                                                                        <div data-visualcompletion="ignore-dynamic" style="padding-left: 8px; padding-right: 8px;">
-                                                                            <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" href="/profile.php?id=100004644524593" role="link" tabindex="0">
-                                                                                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                                                    <div class="nqmvxvec j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7 m6uieof3 icc0peqn hx8drtub j13r6fgp nddp3pr2">
-                                                                                        <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                                                                                            <img src="../../assets/me.jpg" style="width:35px;height:35px;border-radius:50%" alt="">
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                                                        <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
-                                                                                            <div class="">
-                                                                                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                    <div class="qzhwtbm6 knvmm38d">
-                                                                                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m" dir="auto">
-                                                                                                            <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-moz-box-orient: vertical; -webkit-line-clamp: 2; display: -webkit-box;">
-                                                                                                                枫果果
-                                                                                                            </div>
-                                                                                                        </span>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore">
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                                <div>
-                                                                    <ul>
-                                                                        <label v-for="(item,index) in navRig" :key="index">
-                                                                            <li class="" v-if="index<down">
-                                                                                <div style="padding-left:8px;padding-right:8px">
-                                                                                    <router-link class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" :to="{name:item.name}" role="link" tabindex="0">
-                                                                                        <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                                                            <div class="nqmvxvec j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7 m6uieof3 icc0peqn hx8drtub j13r6fgp nddp3pr2">
-                                                                                                <img class="hu5pjgll bixrwtb6" :src="item.img" style="height:36px;width:36px" alt="">
-                                                                                            </div>
-                                                                                            <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                                                                <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
-                                                                                                    <div class="">
-                                                                                                        <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                            <div class="qzhwtbm6 knvmm38d">
-                                                                                                                <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m" dir="auto">
-                                                                                                                    <div class="l9j0dhe7 stjgntxs ni8dbmo4" style="-webkit-box-orient:vertical;-webkit-line-clamp:2;display:-webkit-box">
-                                                                                                                        {{item.title}}
-                                                                                                                    </div>
-                                                                                                                </span>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
-                                                                                        </div>
-                                                                                    </router-link>
-                                                                                </div>
-                                                                            </li>
-                                                                        </label>
-                                                                    </ul>
-                                                                    <div @click="getdown" style="padding-left: 8px; padding-right: 8px;">
-                                                                        <div class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" role="button" tabindex="0">
-                                                                            <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                                                                                <div class="o8rfisnq j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7 m6uieof3 icc0peqn hx8drtub j13r6fgp nddp3pr2">
-                                                                                    <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e tv7at329 thwo4zme">
-                                                                                        <i class="el-icon-arrow-down">
-                                                                                        </i>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                                                                                    <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
-                                                                                        <div class="">
-                                                                                            <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                                                                <div class="qzhwtbm6 knvmm38d">
-                                                                                                    <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
-                                                                                                        {{downtile}}
-                                                                                                    </span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div>
-                                                                </div>
-                                                            </div>
+                                                            <cart-list :list="menu" @getcart="getmenu" ></cart-list>
                                                             <div class="dati1w0a ihqw7lf3 hv4rvrfc discj3wi pfnyh3mw">
                                                                 <footer aria-label="Facebook" role="contentinfo">
                                                                     <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain" dir="auto">
@@ -188,21 +92,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 559px;">
-                                                </div>
-                                                <div class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 517.789px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1) scale(1.03903) translateZ(-0.0390335px) translateZ(-2px);">
-                                                    <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm">
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <span id="ssrb_left_rail_end" style="display: none;">
-                                    </span>
-                                    <h1 class="gmql0nx0 l94mrbxd p1ri9a11 lzcic4wl q45zohi1 g0aa4cga pmk7jnqg" dir="auto">
-                                        首页
-                                    </h1>
-                                    <div role="main" class="rq0escxv l9j0dhe7 du4w35lb j83agx80 rj1gh0hx buofh1pr g5gj957u hpfvmrgz taijpn5t gs1a9yip owycx6da btwxx1t3 f7vcsfb0 fjf4s8hc">
+                                    <slae v-if="mactive==20"></slae>
+                                    <div  v-else role="main" class="katn9ffz">
                                         <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0">
                                             <div class="tr9rh885 k4urcfbm">
                                                 <div aria-hidden="true" class="b5wmifdl lpgh02oy t4zy2t7z hltw3bd0 kmdw4o4n pnx7fd3z msbwk0y7 tkr6xdv7 qzwx5pty hzruof5a" data-visualcompletion="ignore">
@@ -238,15 +132,11 @@
                                                                                 创建帖子
                                                                             </h3>
                                                                             <a aria-label="枫果果的时间线" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 oi9244e8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l" href="/profile.php?id=100004644524593" role="link" tabindex="0">
-                                                                                <div class="l9j0dhe7">
-                                                                                    <img class="s45kfl79 emlxlaya bkmhp75w spb7xbtv a8c37x1j" src="../../assets/me.jpg" alt="" width="40" height="40">
-                                                                                    <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv oaz4zybt pmk7jnqg j9ispegn kr520xx4" style="height: 40px; width: 40px;">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
+                                                                                <div class="me-img">
+                                                                                    <img :src="$store.state.user_info.me_img" >
                                                                                 </div>
                                                                             </a>
-                                                                            <el-input class="search" placeholder="枫果果，分享你的新鲜事吧"></el-input>
+                                                                            <el-input class="search" :placeholder="`${user_info.user_name}，分享你的新鲜事吧`"></el-input>
                                                                         </div>
                                                                         <div class="k4urcfbm cxgpxx05 stjgntxs ni8dbmo4 n1l5q3vz kwzhilbh qypqp5cg lhclo0ds j83agx80 bo76ibdq">
                                                                             <a href="#/live" class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 g5gj957u p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo idt9hxom cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi buofh1pr taijpn5t" role="button" tabindex="0">
@@ -597,7 +487,7 @@
                                                     <span id="ssrb_rhc_start" style="display: none;">
                                                     </span>
                                                     <div class="cxgpxx05" data-pagelet="RightRail">
-                                                         <div class="ignore-dynamic">
+                                                        <div class="ignore-dynamic">
                                                             <div class="l9j0dhe7">
                                                                 <div class="flex">
                                                                     <span class="el-title">你的公共主页</span>
@@ -662,6 +552,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -683,7 +574,7 @@
                         </ul>
                         <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
                             <div aria-label="新消息" class="oajrlxb2 bp9cbjyn ovq5dppa mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l eb3gnj61 s45kfl79 emlxlaya bkmhp75w spb7xbtv m7zwrmfr taijpn5t tmrshh9y akv41dx8" role="button" tabindex="0">
-                                <i class="hu5pjgll lzf7d6o1 sp_9v2_9kG0o8E sx_42c6ab">
+                                <i class="el-icon-edit-outline">
                                 </i>
                                 <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore" style="inset: 0px;">
                                 </div>
@@ -725,14 +616,18 @@ import '../../css/index.css';
 import videoChat from '@/common/video-chat'
 import cartList from '@/common/cart-list'
 import postList from '@/common/post-list'
+import slae from './sale'
 export default {
     components: {
+        slae,
         cartList,
         postList,
         videoChat
     },
     data() {
         return {
+            mactive:0,
+            user_info:[],
             videoAll: [],
             chatAll: [],
             friends: [],
@@ -793,7 +688,13 @@ export default {
             }],
             downtile: "展开",
             down: 9,
-            navRig: [{
+            menu: [
+                {
+                    title:"",
+                    img:"",
+                    url:"mePage"
+                },
+                {
                     title: "新冠疫情信息中心",
                     img: require("@/assets/kOxV5aCYUAE.png"),
 
@@ -801,65 +702,68 @@ export default {
                 {
                     title: "好友",
                     img: require("@/assets/S0U5ECzYUSu.png"),
-                    name: "friends"
+                    url: "friends"
                 },
                 {
                     title: "Messenger",
                     img: require("@/assets/SeXJIAlf_z-.png"),
-                    name: "messenger"
+                    url: "messenger"
                 },
                 {
                     title: "筹款活动",
                     img: require("@/assets/n2vd2VduYc1.png"),
-                    name: "fundraisers"
+                    url: "fundraisers"
                 },
                 {
                     title: "公共主页",
                     img: require("@/assets/kyCAf2jbZvF.png"),
-                    name: "publicpage"
+                    url: "publicpage"
                 },
                 {
                     title: "视频",
                     img: require("@/assets/duk32h44Y31.png"),
-                    name: "watch"
+                    url: "watch"
                 },
                 {
                     title: "活动",
                     img: require("@/assets/8wTx0Eu2vRq.png"),
-                    name: "events"
+                    url: "events"
                 },
                 {
                     title: "小组",
                     img: require("@/assets/PrjLkDYpYbH.png"),
-                    name: "groups"
+                    url: "groups"
                 },
                 {
                     title: "收藏夹",
                     img: require("@/assets/lVijPkTeN-r.png"),
-                    name: "saved"
+                    url: "saved"
                 },
                 {
                     title: "好友名单",
                     img: require("@/assets/MN5ZSGIfEZ3.png"),
-                    name: "bookmarks"
+                    url: "bookmarks"
                 },
-                {
-                    title: "游戏",
-                    img: require("@/assets/PObY9OA5lvJ.png"),
-                    name: "gaming"
-                },
+               
                 {
                     title: "那年今天",
                     img: require("@/assets/VPndBxotRgH.png"),
-                    name: "memories"
+                    url: "memories"
+                },
+                 {
+                    title: "游戏",
+                    img: require("@/assets/PObY9OA5lvJ.png"),
+                    url: "gaming"
                 },
                 {
                     title: "游戏视频",
-                    img: require("@/assets/5EU1wNhLmR6.png")
+                    img: require("@/assets/5EU1wNhLmR6.png"),
+                    url: "gaming"
                 },
                 {
                     title: "招聘求职",
-                    img: require("@/assets/DO-SN-shaZL.png")
+                    img: require("@/assets/DO-SN-shaZL.png"),
+                    url:"jobs"
                 },
                 {
                     title: "最新动态",
@@ -868,22 +772,22 @@ export default {
                 {
                     title: "直播视频",
                     img: require("@/assets/Nl9CPY6q_n-.png"),
-                    name:"watch"
+                    url:"watch"
                 },
                 {
                     title: "近期广告动态",
                     img: require("@/assets/8OasGoQgQgF.png"),
-                    name: "ads"
+                    url: "ads"
                 },
                 {
                     title: "Facebook Pay",
                     img: require("@/assets/GJ4EaivDaSj.png"),
-                    name: "pay"
+                    url: "pay"
                 },
                 {
                     title: "天气",
                     img: require("@/assets/bo0Zt72NIra.png"),
-                    name:"weather"
+                    url:"weather"
                 },
                 {
                     title: "优惠",
@@ -892,7 +796,7 @@ export default {
                 {
                     title: "应急中心",
                     img: require("@/assets/cT5nPnO8Wsc.png"),
-                    name: "onemi"
+                    url: "onemi"
                 },
             ],
             pages:[{
@@ -907,13 +811,24 @@ export default {
         }
     },
     created() {
+        var user_info=JSON.parse(localStorage.getItem("user_info"))
         var that = this;
+        this.user_info=user_info
+        this.menu[0].title=user_info.user_name;
+        this.menu[0].img=user_info.me_img;
         //推荐
         this.$axios.get(this.$url+"/recommended").then(res => {
+            res.data.map(x=>{
+                if(x.collection=='') x.collection=[]
+            })
             that.list = res.data
         })
         //朋友
         this.$axios.get(this.$url+"/friends").then(res => {
+            for(let item of res.data){
+                item.me_img=that.$imgUrl + item.me_img
+                item.bg_img=that.$imgUrl + item.bg_img
+            }
             that.friends = res.data
         })
         //公共主页
@@ -923,13 +838,7 @@ export default {
             that.pages.unshift(data[data.length-1])
         })
 
-        //用户信息
-         this.$axios.get(this.$url+"/getuserInfo").then(res => {
-            if(res.data.code){
-                console.log("来了")
-                localStorage.setItem("user_info",JSON.stringify(res.data.data))
-            }
-        })
+       
     },
     mounted() {
         var mySwiper = new Swiper('#swiper', {
@@ -937,6 +846,14 @@ export default {
         })
     },
     methods: {
+        //跳转
+        getmenu(index,item){
+            console.log("🚀 ~ file: index.vue ~ line 851 ~ getmenu ~ index", index)
+            this.mactive=index
+            if(item.url){
+                this.$router.push({name:item.url})
+            }
+        },
         //创建聊天室
         getnewVideo(item) {
             this.videoAll.push(item)
@@ -981,7 +898,6 @@ export default {
 <style scoped>
 
 
-
 a>.scb9dxdr:hover {
     background-color: #eee;
 }
@@ -1016,5 +932,8 @@ a>.scb9dxdr:hover {
 
 .search .el-input__inner {
     border-radius: 100px;
+}
+.el-icon-edit-outline{
+    font-size: 20px;
 }
 </style>

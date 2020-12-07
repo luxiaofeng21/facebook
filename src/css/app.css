@@ -11137,7 +11137,10 @@ to {
 	left:180px
 }
 .ofs802cu {
-	scrollbar-width:none
+	scrollbar-width:thin;
+}
+::-webkit-scrollbar{
+	width: 40px;
 }
 .ofv0k9yr {
 	padding-bottom:20px
@@ -18562,6 +18565,7 @@ img.tracking_pixel {
 	background:none
 }
 .__fb-dark-mode ._71pn ._5r5n {
+	color: #fff;
 	filter:var(--filter-primary-icon)
 }
 ._71pn ._5r5l {
@@ -24410,3 +24414,30 @@ body{
 	font-size: 13px;
 }
 
+
+.__fb-dark-mode .el-tabs__item{
+	color: #fff;
+}
+
+.__fb-dark-mode .about{
+	background-color: #18191A !important;
+}
+.__fb-dark-mode .mactive{
+	background-color: #252F3C !important;
+}
+.__fb-dark-mode .book-card,.__fb-dark-mode .card-item ,.__fb-dark-mode .el-popover,.__fb-dark-mode .el-aside, .__fb-dark-mode .el-main{
+	background-color: var(--surface-background) !important;
+	color: #fff;
+}
+.__fb-dark-mode .l9j0dhe7  {
+    fill: var(--secondary-icon);
+}
+
+.concise{
+	font-family:"Times New Roman", Times, serif !important
+}
+
+
+.el-footer >.el-button{
+	width: auto;
+}

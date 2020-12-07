@@ -13,12 +13,7 @@ import Groups from '@/components/groups/groups'
 import GroupsItem from '@/components/groups/groups_item'
 import Create from '@/components/groups/create'
 import Gaming from '@/components/gaming/gaming'
-import About from '@/components/friends/about'
 import Friends from '@/components/friends/friends'
-import Following from '@/components/friends/following'
-import PhotosAll from '@/components/friends/photos_all'
-import Videos from '@/components/friends/videos'
-import Maps from '@/components/friends/map'
 import Creation from '@/components/create/creation'
 import Account from '@/components/me/account'
 import YourInformation from '@/components/me/your_information'
@@ -26,7 +21,6 @@ import Interese from '@/components/me/interese'
 import Stories from '@/components/create/stories'
 import Events from '@/components/events/events'
 import Fundraisers from '@/components/events/fundraisers'
-import BookMarks from '@/components/friends/bookmarks'
 import Saved from "@/components/index/saved"
 import Ads from "@/components/index/Ads"
 import Pay from "@/components/pay/index"
@@ -50,17 +44,33 @@ import publicHomePage from '@/components/publicHomePage/index'
 import jobs from '@/components/jobs/index'
 import managementGroup from '@/components/groups/management_group'
 import Mailbox from '@/components/help/Mailbox'
+import mePage from '@/components/mePage/index'
+import help from '@/components/help/index'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    
     {
       path: '/',
       name: 'index',
-      component: Index
+      component: Index,
+      meta: {
+        keepAlive: true
+      }
     },
     {
-      path:"/help/Mailbox",
+      path:"/help",
+      name:"help",
+      component:help
+    },
+    {
+      path:"/mePage",
+      name:"mePage",
+      component:mePage
+    },
+    {
+      path:"/Mailbox",
       name:"Mailbox",
       component:Mailbox
     },
@@ -206,31 +216,7 @@ export default new Router({
       name: 'groups_item',
       component: GroupsItem
     },
-    {
-      path: '/friends/about',
-      name: 'about',
-      component: About
-    },
-    {
-      path: '/friends/following',
-      name: 'following',
-      component: Following
-    },
-    {
-      path: '/friends/photos_all',
-      name: 'photos_all',
-      component: PhotosAll
-    },
-    {
-      path: '/friends/videos',
-      name: 'videos',
-      component: Videos
-    },
-    {
-      path: '/friends/maps',
-      name: 'maps',
-      component: Maps
-    },
+   
     {
       path: '/groups/create',
       name: 'create',
@@ -270,11 +256,6 @@ export default new Router({
       path:"/events/fundraiser",
       name:"fundraisers",
       component:Fundraisers
-    },
-    {
-      path:"/friends/bookmarks",
-      name:"bookmarks",
-      component:BookMarks
     }
     ,
     {

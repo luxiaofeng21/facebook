@@ -20,38 +20,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 d8ncny3e buofh1pr g5gj957u tgvbjcpo l56l04vs r57mb794 kh7kg01d c3g1iek1 k4xni2cv">
-                                    <div class="j83agx80 cbu4d94t buofh1pr">
-                                        <div class="ll8tlv6m rq0escxv j83agx80 n1l5q3vz cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 k4urcfbm,false">
-                                            <div class="bp9cbjyn j83agx80 jifvfom9">
-                                                <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb"><svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none" style="height: 40px; width: 40px;">
-                                                        <mask id="jsc_c_2e">
-                                                            <circle cx="20" cy="20" fill="white" r="20"></circle>
-                                                        </mask>
-                                                        <g mask="url(#jsc_c_2e)">
-                                                            <image style="height: 40px; width: 40px;" x="0" y="0" height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xlink:href="/v/t1.30497-1/cp0/c10.0.75.60a/p60x60/83673520_2658149737637082_641258756394450944_n.png?_nc_cat=1&amp;_nc_sid=1eb0c7&amp;_nc_ohc=RbGSkyEUvMwAX_XJR5o&amp;_nc_ht=scontent-nrt1-1.xx&amp;oh=94a6014980735128fd8026184364b43d&amp;oe=5F825836"></image>
-                                                            <circle class="mlqo0dh0 georvekb s6kb5r3f" cx="20" cy="20" r="20"></circle>
-                                                        </g>
-                                                    </svg></div>
-                                                <div class="ozuftl9m bwqydv98 hzawbc8m">
-                                                    <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                                        <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id" dir="auto">大家</span></div>
-                                                        <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh oo9gr5id" dir="auto">
-                                                                <div class="bp9cbjyn j83agx80"><i class="hu5pjgll m6k467ps sp_ZQ31FkBW8J2_1_5x sx_c7efcb"></i>
-                                                                    <div class="ph5uu5jm b3onmgus"><span class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5 oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql e9vueds3 j5wam9gi knj5qynh m9osqain">Public</span></div>
-                                                                </div>
-                                                            </span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <cart-list :list="menu" :active="mactive" @getcart="getmenu"></cart-list>
-                                    </div>
-                                    <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: none; right: 0px; height: 425px;"></div>
-                                    <div class="rq0escxv mkhogb32 b5wmifdl jb3vyjys ph5uu5jm qt6c0cv9 b3onmgus hzruof5a pmk7jnqg kwrap0ej kr520xx4 enuw37q7 dpja2al7 art1omkt nw2je8n7 hhz5lgdu" data-visualcompletion="ignore" data-thumb="1" style="display: block; right: 0px; height: 0px;">
-                                        <div class="oj68ptkr jk6sbkaj kdgqqoy6 ihh4hy1g qttc61fc datstx6m k4urcfbm"></div>
-                                    </div>
-                                </div>
+                                <cart-list :list="menu" :active="mactive" @getcart="getmenu"></cart-list>
                                 <div class="kd0sc8dh sl8jk4me ie5zihkj i09qtzwb rm3jng1j hzruof5a pmk7jnqg kr520xx4 c0wkt4kp"></div>
                             </div>
                         </div>
@@ -412,7 +381,16 @@ export default {
             dailogVisible:false,
             dialogVisible2: true,
             mactive: 0,
-            menu: [{
+            menu: [
+                {
+                    active:0,
+                    down:false,
+                    title:"大家",
+                    text:"公开",
+                    img:require("@/assets/public.png"),
+                    children:[]
+                },
+                {
                     title: "获得建议",
                     text: "从回答几个问题开始",
                     icon: "el-icon-cherry",
@@ -451,6 +429,15 @@ export default {
             ]
         }
     },
+    created(){
+        var that=this;
+        this.$axios.get(this.$url+"/publicPage").then(res=>{
+            for(let item of res.data.data){
+                item.img=require("@/assets/public.png")
+            }
+            that.menu[0].children=res.data.data
+        })
+    },
     methods: {
         //选择目标
         getflag(i){
@@ -486,7 +473,15 @@ export default {
     }
 }
 </script>
-
+<style>
+    .cart-img{
+         overflow: hidden;
+     }
+     .cart-img>img{
+         height:100%;
+         object-fit: cover;
+     }
+</style>
 <style scoped>
 .l9j0dhe7 {
     position: static;
@@ -558,4 +553,7 @@ export default {
      .flag-ul>li:hover{
          background-color: #f5f5f5;
      }
+
+
+    
 </style>

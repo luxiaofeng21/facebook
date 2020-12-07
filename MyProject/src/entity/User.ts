@@ -1,5 +1,6 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 
+
 @Entity()
 export class User {
 
@@ -7,6 +8,9 @@ export class User {
     id: number;
     @Column()
     me_img: string;
+    
+    @Column()
+    bg_img: string;
 
     @Column()
     user_name: string;
@@ -23,8 +27,8 @@ export class User {
     @Column()
     password: string;
 
-    @Column()
-    date: string;
+    @Column({ comment: '创建时间' })
+    date: Date;
 
     @Column()
     year: number;
@@ -40,16 +44,48 @@ export class User {
 
     @Column()
     age: number;
+    
+    @Column("simple-array")
+    user: object[];
+
+    @Column("simple-array")
+    friend: object[];
+
+    @Column("simple-array")
+    imgAll: object[];
+
+    @Column("simple-array")
+    music: object[];
+    
+    @Column("simple-array")
+    movies: object[];
+
+    @Column("simple-array")
+    Tv: object[];
+
+    @Column("simple-array")
+    books: object[];
+
+    @Column("simple-array")
+    sports: object[];
+
+    @Column("simple-array")
+    video: object[];
+
+    @Column("simple-array")
+    lasts: object[];
 
 }
-
-export class recommended {
+@Entity()
+export class Recommended {
 
     @PrimaryGeneratedColumn()
     id: number;
+    
     @Column()
     me_img: string;
 
+    
     @Column()
     user_name: string;
 
@@ -57,7 +93,10 @@ export class recommended {
     title: string;
     
     @Column()
-    date: string;
+    name: string;
+    
+    @Column()
+    date: Date;
 
     @Column()
     share: number;
@@ -71,9 +110,27 @@ export class recommended {
     @Column()
     showEmoji: boolean;
 
-    @Column()
-    collection: string;
+    @Column("simple-array")
+    collection: object[];
 
     @Column()
     collect_title: string;
+}
+
+@Entity()
+export class Groups {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+    @Column()
+    title: string;
+
+    @Column()
+    type: string;
+
+    @Column()
+    friends: string;
+    
+    @Column()
+    date: number;
 }

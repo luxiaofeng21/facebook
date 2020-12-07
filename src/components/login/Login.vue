@@ -25,8 +25,8 @@ export default {
     },
     data() {
         return {
-            email:"",
-            password:"",
+            email:"2584278167@qq.com",
+            password:"123456",
             dialogVisible: false
         }
     },

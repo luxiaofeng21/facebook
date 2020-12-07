@@ -17,7 +17,7 @@
             <div class="rg">
                     <div class="list-haed msg-flex">
                             <div class="lf user-msg">
-                                    <img :src="mobj.img" alt="">
+                                    <img :src="mobj.me_img" alt="">
                                     <div class="msg-name">{{mobj.name}}</div>
                                     <div class="msg-date">6小时在线</div>
                             </div>
@@ -34,7 +34,7 @@
                                         
                                         <div class="what-list">
                                                 <div class="user-msg">
-                                                        <img :src="mobj.img" alt="">
+                                                        <img :src="mobj.me_img" alt="">
                                                         <div class="msg-name2">{{mobj.name}}</div>
                                                         <div class="msg-text">你们是facebook好友</div>
                                                         <div class="msg-date">所在地：香港</div>
@@ -42,7 +42,7 @@
                                                  <div class="what-user">
                                                     <div class="what-date">2017/10/09 19:19</div>
                                                     <div class="what-user-img">
-                                                            <img :src="mobj.img" alt="">
+                                                            <img :src="mobj.me_img" alt="">
                                                             <img src="../../assets/me.jpg" alt="">
                                                     </div>
                                                     <div class="what-user-text">你们现在是Message联系人了</div>
@@ -59,7 +59,7 @@
                                                                 <i class="el-icon-success"> </i>
                                                         </div>
                                                         <div class="what-msg what-msg2" v-else>
-                                                                 <img :src="mobj.img" alt="">
+                                                                 <img :src="mobj.me_img" alt="">
                                                                  <div class="what-title">{{item.title}}</div>
                                                                  <div class="lf">
                                                                         <div class="hover-icon"><img src="../../assets/face.png" alt=""> </div>
@@ -93,8 +93,8 @@
                             </div>
                             <div class="rg">
                                 <div class="list-msg">
-                                        <img :src="mobj.img" alt="">
-                                        <div class="list-name">{{mobj.name}}</div>
+                                        <img :src="mobj.me_img" alt="">
+                                        <div class="list-name">{{mobj.user_name}}</div>
                                         <div class="list-date">6小时在线</div>
                                 </div>
                                 <div class="list-set">
@@ -162,10 +162,12 @@ export default {
     },
     created(){
         var that=this;
+        var user_info=JSON.parse(localStorage.getItem("user_info"))
+        that.mobj=user_info
         this.$axios.get(this.$url+"/friends").then(res=>{
-        console.log("created -> res", res)
+            res.data.map(x=>{x.me_img=this.$imgUrl+x.me_img})
+            console.log("🚀 ~ file: index.vue ~ line 169 ~ this.$axios.get ~ res.data", res.data)
             that.menu=res.data
-            that.mobj=res.data[0]
         })
          
     },

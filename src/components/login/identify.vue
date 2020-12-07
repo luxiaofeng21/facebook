@@ -8,7 +8,7 @@
             <div class="identifyCon">
                 <div class="lf">
                     <div class="identifyText">请输入邮箱或手机号来找回帐户。</div>
-                    <input type="text" name="tell" placeholder="手机号">
+                    <input type="text" name="tell" placeholder="手机号或邮箱">
                 </div>
             </div>
             <div class="identifyFoor">

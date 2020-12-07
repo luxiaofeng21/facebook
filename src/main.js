@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import ElementUI from 'element-ui';
 import jquery from 'jquery'
 import Swiper from 'swiper'
@@ -11,11 +12,13 @@ import 'swiper/swiper-bundle.css'
 import '@/css/app.css'
 import axios from 'axios'
 import VEmojiPicker from 'v-emoji-picker';
+
 Vue.use(VEmojiPicker);
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios;
 Vue.prototype.$url = "http://127.0.0.1:1212";
+Vue.prototype.$imgUrl = "http://127.0.0.1:1212/images/";
 Vue.prototype.getTimeDistance=function(time) {
 
   var date_now = new Date();
@@ -60,6 +63,7 @@ window.jquery = window.$ = jquery
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

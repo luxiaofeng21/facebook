@@ -81,7 +81,7 @@
                                     <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
                                         <div class="o8rfisnq j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7">
                                             <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                                                <div class="me-img"> <img src="../assets/me.jpg" alt=""> </div>
+                                                <div class="me-img"> <img :src="$store.state.user_info.me_img" alt=""> </div>
                                             </div>
                                         </div>
                                         <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
@@ -90,7 +90,7 @@
                                                     <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
                                                         <div class="qzhwtbm6 knvmm38d">
                                                             <span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr lrazzd5p oo9gr5id hzawbc8m" dir="auto">
-                                                                枫果果
+                                                                {{user_info.user_name}}
                                                             </span>
                                                         </div>
                                                         <div class="qzhwtbm6 knvmm38d">
@@ -507,23 +507,19 @@
             </el-popover>
             <div class="bp9cbjyn j83agx80 datstx6m taijpn5t oi9244e8 d74ut37n">
                 <!--$-->
-                <a aria-label="枫果果" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn e72ty7fz qlfml3jp inkptoze qmr60zad btwxx1t3 tv7at329 taijpn5t" href="/profile.php?id=100004644524593" role="link" tabindex="0">
+                <a  class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn e72ty7fz qlfml3jp inkptoze qmr60zad btwxx1t3 tv7at329 taijpn5t" href="#/mePage" role="link" tabindex="0">
                     <div class="j83agx80 fv0vnmcu fop5sh7t">
                         <div class="me-img">
-                            <img src="../assets/me.jpg" alt="">
+                            <img :src="$store.state.user_info.me_img" alt="">
                         </div>
                     </div>
                     <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
-                        枫果果
+                        {{user_info.user_name}}
                     </span>
                     <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore" style="border-radius:18px">
                     </div>
                 </a>
                 <!--/$-->
-            </div>
-        </div>
-        <div>
-            <div>
             </div>
         </div>
     </div>
@@ -533,9 +529,9 @@
                 <div class="hv4rvrfc dati1w0a">
                     <div class="a8nywdso ihqw7lf3 rz4wbd8a discj3wi j83agx80 bp9cbjyn">
                         <div class="g9en0fbe">
-                            <a aria-label="枫果果的时间线" href="/profile.php?id=100004644524593" role="link" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8">
+                            <a  href="#/mePage" role="link" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8">
                                 <div class="l9j0dhe7">
-                                    <img src="../assets/me.jpg" alt="" class="s45kfl79 emlxlaya bkmhp75w spb7xbtv a8c37x1j" width="40" height="40">
+                                    <img :src="$store.state.user_info.me_img" alt="" class="s45kfl79 emlxlaya bkmhp75w spb7xbtv a8c37x1j" width="40" height="40">
                                     <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv oaz4zybt pmk7jnqg j9ispegn kr520xx4" style="height: 40px; width: 40px;">
                                     </div>
                                 </div>
@@ -543,7 +539,7 @@
                         </div>
                         <div class="cbu4d94t j83agx80">
                             <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">
-                                枫果果
+                                {{user_info.user_name}}
                             </span>
                             <div class="dbvibxzo">
                                 <div class="j83agx80 bp9cbjyn">
@@ -575,7 +571,7 @@
                     </div>
                 </div>
                 <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 l56l04vs r57mb794 kh7kg01d c3g1iek1 buofh1pr">
-                    <el-input :autosize="{minRows:6}" type="textarea" placeholder="枫果果分享你的新鲜事吧" v-model="topic">
+                    <el-input :autosize="{minRows:6}" type="textarea" :placeholder="$store.state.user_info.user_name+'分享你的新鲜事吧'" v-model="topic">
                     </el-input>
                     <div class="flex" style="margin-top:20px;padding:0 10px">
                         <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
@@ -1221,28 +1217,51 @@ export default {
                     title: "语言"
                 },
             ],
+            user_info:{}
         }
     },
-
+    created() {
+         var that=this;
+         //用户信息
+         this.$axios.get(this.$url+"/getuserInfo").then(res => {
+            if(res.data.code){
+                if(res.data.data.name){
+                    res.data.data.me_img=this.$imgUrl+res.data.data.me_img
+                    res.data.data.bg_img=this.$imgUrl+res.data.data.bg_img
+                    this.user_info=res.data.data
+                    localStorage.setItem("$store.state.user_info",JSON.stringify(res.data.data))
+                }else{
+                    this.$message.error("登录过期，请重新登录！！")
+                    setTimeout(res=>{
+                            this.$router.push({name:"login"})
+                    },1000)
+                }
+                
+            }
+        })
+        // console.log(this.$store)
+        // console.log(this.$store.commit("$store.state.user_info"))
+    },
     methods: {
         //发帖
         createCard(){
-            var user_info=JSON.parse(localStorage.getItem("user_info"));
+            var user_info=JSON.parse(localStorage.getItem("$store.state.user_info"));
             var info={
-                name:user_info.name + user_info.surname,
-                me_img:user_info.img,
-                title:this.topic,
+                name:user_info.user_name,
+                me_img:user_info.me_img,
+                title:JSON.stringify(this.topic),
                 date:new Date(),
             }
-            console.log(this.topic)
             this.$axios.post(this.$url+"/createRecommended",info).then(res=>{
                    if(res.data.code==1){
                        this.$message.success(res.data.msg)
                        this.dialogVisible=false
+                    //    this.$router.go(0);
                    }else{
                        this.$message.error(res.data.msg)
                    }
             })
+            this.topic=""
         },
         //选择表情
         selectEmoji(data){
@@ -1295,15 +1314,27 @@ export default {
         },
         //帮助中心
         gethelp(i){
-
+            if(i==3){
+                this.dialogVisible3 = true
+            }else if(i==2){
+                this.$router.push({name:"Mailbox"})
+            }else if(i==0){
+                  this.$router.push({name:"help"})
+            }
         },
         //个人中心
         getme(i) {
 
             if (i == 3) {
-                this.$router.push({
-                    name: "login"
+                this.$axios.post(this.$url+"/outlogin").then(res=>{
+                        this.$message.success(res.data.msg)
+                        setTimeout(()=>{
+                            this.$router.push({
+                                name: "login"
+                            })
+                        },1000)
                 })
+                
             } else {
                 this.mactive = i;
             }

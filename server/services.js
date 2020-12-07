@@ -3,8 +3,10 @@ let nodemailer=require("nodemailer");
 let bcrypt=require("bcrypt");
 let formidable = require('formidable');
 let path=require("path");
+const { expr } = require('jquery');
 let codes={};
 let user_info={};
+
 // 用户表
 exports.user = (req,res)=>{
     // 查询语句
@@ -17,24 +19,27 @@ exports.user = (req,res)=>{
 //推荐帖子
 exports.recommended = (req,res)=>{
     // 查询语句
-    let sql = 'select * from recommended'
+    let sql = 'select * from recommended order by  date desc'
     db.base(sql,req,(result)=>{
        res.send(result)
     })
 }
+
 //创建帖子
 exports.createRecommended = (req,res)=>{
+console.log("🚀 ~ file: services.js ~ line 27 ~ req", req.body)
     // 查询语句
     let sql = 'insert into recommended set ?'
     db.base(sql,[req.body],(result)=>{
        res.send({code:1,msg:"发布成功"})
     })
 }
+
 //朋友
 exports.friends = (req,res)=>{
     // 查询语句
-    let sql = 'select * from friends'
-    db.base(sql,'',(result)=>{
+    let sql = 'select * from user where not(?)'
+    db.base(sql,[{id:user_info.id}],(result)=>{
        res.send(result)
     })
 }
@@ -99,7 +104,6 @@ exports.email=function(req,res){ //调用指定的邮箱给用户发送邮件
     
 }
 
-
 //注册用户
 exports.createUser=async function (req,res) {
         //  const salt=await bcrypt.genSalt(10)
@@ -127,28 +131,40 @@ exports.createUser=async function (req,res) {
        
 }
 
-
 //用户登录
 exports.getlogin=  function(req,res){
-    var data=req.body;
-    for(let i in data){
-        if(data[i]==''){
-            return  res.send({code:-1,msg:"请填写完整用户信息"})
+    try{
+        var data=req.body;
+        for(let i in data){
+            if(data[i]==''){
+                return  res.send({code:-1,msg:"请填写完整用户信息"})
+            }
         }
+        let sql=`select * from user where email=?`
+        db.base(sql,data.email,async (result)=>{
+            if(result.length<=0){
+                return  res.send({code:-1,msg:"邮箱未注册，请先注册邮箱！！！"})
+            }
+            var result=result[0]
+            if(await bcrypt.compare(data.password,result.password)){
+                user_info=result
+                req.session.user_info=JSON.stringify(result)
+                res.send({code:1,msg:"登录成功"})
+            }else{
+                res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})
+            }
+        })
     }
-    let sql=`select * from user where email=?`
-    db.base(sql,data.email,async (result)=>{
-        var result=result[0]
-        if(await bcrypt.compare(data.password,result.password)){
-            user_info=result
-            req.session.user_info=JSON.stringify(result)
-            res.send({code:1,msg:"登录成功"})
-        }else{
-            res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})
-        }
-    })
+    catch{
+        res.status(500)
+        res.send({code:-1,msg:"服务器内部错误"})
+    }
 }
-
+//用户退出 
+exports.outlogin=function(req,res){
+    user_info={};
+    res.send({code:1,msg:"退出成功"})
+}
 //获取用户信息
 exports.getuserInfo=function(req,res){
     if(user_info!={}){
@@ -158,6 +174,16 @@ exports.getuserInfo=function(req,res){
     }
     
 }
+
+//修改用户信息
+exports.setUser=function(req,res){
+    console.log(req.body)
+    let sql="update user set ? where id="+req.body.id
+    db.base(sql,[req.body],(result)=>{
+                res.send({code:1,msg:"修改成功"})
+    })
+}
+
 
 //创建主页
 exports.createPage=function(req,res){
@@ -222,14 +248,14 @@ exports.uploadImg=function(req,res){
     form.uploadDir = path.join(__dirname, './images/');
     // 解析 formData 数据
     form.parse(req, (err, fields ,files) => {
-      console.log("🚀 ~ file: services.js ~ line 225 ~ form.parse ~ files", files)
       if(err) return next(err)
       let imgPath = files.file.path;
-      let imgName = files.file.name;
-      console.log(imgName, imgPath);
+      let imgName = files.file.path.split("\\").pop();
       // 返回路径和文件名
-      res.send({code: 1, data: { name: imgName, path: imgPath }});
+      res.send({code: 1, data: { name: imgName, path: imgPath ,date:files.file.lastModifiedDate,size:files.file.size}});
     })
   
 }
+
+
 

@@ -1,7 +1,7 @@
 <template>
 <div class="card-collect"> 
         <div class="me-img">
-                <img :src="item.me_img" alt="">
+                <img :src="$store.state.user_info.me_img" alt="">
         </div>
         <div class="collect-input">
                 <input type="text" @keyup.13="getup(item)" v-model="item.collect_title" placeholder="写评论....">
@@ -46,12 +46,13 @@ export default {
     methods: {
         //发表评论
         getup(item){
+              var info=this.$store.state.user_info;
               if(this.item.collect_title=='')
                return false
               var nowDate=new Date();
               var date=nowDate.getTime() ;
               item.remark+=1;
-              item.collection.push({title:item.collect_title,img:"",date,collect_title:"",collection:[],me_img:item.me_img,name:item.name,showEmoji:false});
+              item.collection.push({title:item.collect_title,img:"",date,collect_title:"",collection:[],me_img:info.me_img,name:info.user_name,showEmoji:false});
               item.collect_title="";
         },
         selectEmoji(emoji) {

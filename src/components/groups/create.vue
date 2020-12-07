@@ -241,7 +241,7 @@
                                                               <div class="do00u71z l9j0dhe7 k4urcfbm ni8dbmo4 stjgntxs" style="padding-top: 37.037%;">
                                                                 <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
                                                                   <img data-imgperflogname="profileCoverPhoto" alt="" class="i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4 datstx6m k4urcfbm"
-                                                                  src="../../assets/page.png">
+                                                                  src="../../assets/groupBg.png">
                                                                 </div>
                                                               </div>
                                                             </div>

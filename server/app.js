@@ -25,6 +25,7 @@ app.use('/', function (req, res, next) {
     // 设置服务器支持的所有跨域请求的方法
     res.header("Access-Control-Allow-Methods", "POST,GET");
     // next()方法表示进入下一个路由
+    // console.log(req.session)
     next();
 });
 

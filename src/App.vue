@@ -1,7 +1,10 @@
 <template>
-<div id="app">
+<div >
     <Header @getnav="getNav" :hactive="active" v-if="path"></Header>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view  v-if="!$route.meta.keepAlive"></router-view>
 </div>
 </template>
 
@@ -9,7 +12,7 @@
 import md5 from 'js-md5';
 import Header from '@/common/Header.vue'
 export default {
-    name: 'App',
+    name: 'facebook',
     components: {
         Header
     },
@@ -124,16 +127,16 @@ export default {
     },
     watch: {
         $route(to, form) {
-            console.log("$route -> to", to)
+            // console.log("$route -> to", to)
             this.getactive()
         }
     },
     created() {
-       
+        this.transformLanguage("en")
         this.getactive()
     },
     mounted() {
-         this.transformLanguage("en")
+        
     },
 }
 </script>

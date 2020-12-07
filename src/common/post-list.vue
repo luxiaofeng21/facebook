@@ -1,12 +1,12 @@
 <template>
-    <div>
-         <div v-for="(item,index) in list" :key="index" class="card-item" @click="eindex=index">
+    <div >
+         <div v-for="(item,index) in list" :key="index" class="card-item hybvsw6c" @click="eindex=index">
                 <!--用户头部信息-->
                 <div class="card-head">
                         <div class="lf">
                                 <img :src="item.me_img" alt="">
                                 <div class="card-name">{{item.name}}</div>
-                                <div class="card-date">19小时 <i class="date-icon"></i></div>
+                                <div class="card-date">{{item.date}} <i class="date-icon"></i></div>
                         </div>
                          <el-popover
                         placement="bottom"

@@ -219,6 +219,7 @@ export default {
             custom: 0,
             customAll: ["他：“祝他生日快乐！”", "她：“祝她生日快乐！”", "TA:“祝TA生日快乐！”"],
             me: {
+                date:new Date(),
                 surname: "lu",
                 name: "feng",
                 email: "2584278167@qq.com",
@@ -234,6 +235,12 @@ export default {
         getemail() {
             var that=this;
             var data=this.me;
+            data.user_name=data.surname+data.name;
+            if(data.sex=='女'){
+                data.me_img="tou.png"
+            }else{
+                data.me_img="tou2.png"
+            }
             //循环判断
             var list=[]
             var arr=document.querySelector(".el-dialog__body .el-input__inner")

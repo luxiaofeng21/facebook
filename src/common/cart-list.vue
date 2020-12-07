@@ -6,7 +6,7 @@
             <div class="cart-left">
                 <div class="cart-img" :class="item.iconChecked?'iconChecked':''">
                     <!--消息类型-->
-                    <img v-if="item.img" :src="item.img" alt="">
+                    <img v-if="item.img || item.me_img" :src="item.img|| item.me_img" alt="">
                     <i v-else :class="item.icon"></i>
                     <span v-if="type=='msg'" class="imgicon" :class="item.imgicon"></span>
                 </div>
@@ -23,7 +23,7 @@
                     <!--单选-->
                     <span v-if="type=='radio'" class="el-radio__inner"></span>
                     <!--开关-->
-                    <el-switch v-if="type=='switch'" v-model="item.switch"></el-switch>
+                    <el-switch v-if="type=='switch'" @change="getswitch($event,index)" v-model="item.switch"></el-switch>
                     <!--跳转-->
                     <i v-if="type=='arrow' || item.arrow" slot="right" class="el-icon-arrow-right"></i>
                     <!--下拉-->
@@ -84,6 +84,22 @@
 export default {
     props: ["list", "type", "active", "size"],
     methods: {
+        getswitch(state,index){
+           if(index==0){    
+               if(state){
+                   $("#facebook").attr("class","_9dls __fb-dark-mode")
+               }else{
+                   $("#facebook").attr("class","_9dls")
+               }
+           }else{
+               if(state){
+                     $("#facebook body").addClass("concise")
+               }else{
+                     $("#facebook body").removeClass("concise")
+               }
+            
+           }
+        },
         //切换
         getcart(i, item, indexs) {
             //子数组
@@ -427,9 +443,18 @@ export default {
 
 /*子数组 */
 .cart-children {
-    padding: 0 20px;
+    padding: 5px 20px;
 }
-
+.cart-children .cart-img{
+    width: 35px;
+    height: 35px;
+}
+.cart-children .cart-title{
+    font-size: 0.9rem;
+}
+.cart-children .cart-text{
+    font-size: 0.8rem;
+}
 .cart-img2 {
     width: 35px;
     height: 35px;
@@ -450,5 +475,15 @@ export default {
 
 .down-icon {
     transform: rotate(-90deg);
+}
+
+.__fb-dark-mode .cart-title,.__fb-dark-mode .cart-img > i{
+    color: #fff !important;
+}
+.__fb-dark-mode .cart-item:hover{
+    background-color: #252F3C !important;
+}
+.__fb-dark-mode .ischecked{
+    background-color: #252F3C  !important;
 }
 </style>
