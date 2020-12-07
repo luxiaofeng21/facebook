@@ -1229,7 +1229,8 @@ export default {
                     res.data.data.me_img=this.$imgUrl+res.data.data.me_img
                     res.data.data.bg_img=this.$imgUrl+res.data.data.bg_img
                     this.user_info=res.data.data
-                    localStorage.setItem("$store.state.user_info",JSON.stringify(res.data.data))
+                    this.$store.commit("eidt",res.data.data)
+                    localStorage.setItem("user_info",JSON.stringify(res.data.data))
                 }else{
                     this.$message.error("登录过期，请重新登录！！")
                     setTimeout(res=>{
