@@ -3,10 +3,11 @@ let nodemailer=require("nodemailer");
 let bcrypt=require("bcrypt");
 let formidable = require('formidable');
 let path=require("path");
+let iconv = require('iconv-lite');
 const { expr } = require('jquery');
 let codes={};
 let user_info={};
-
+let imgUrl='http://127.0.0.1:75/images/';
 // 用户表
 exports.user = (req,res)=>{
     // 查询语句
@@ -27,12 +28,23 @@ exports.recommended = (req,res)=>{
 
 //创建帖子
 exports.createRecommended = (req,res)=>{
-console.log("🚀 ~ file: services.js ~ line 27 ~ req", req.body)
+    var chunks = [];
+    req.on('data', function (chunk) {
+        console.log("🚀 ~ file: services.js ~ line 33 ~ chunk", chunk)
+        chunks.push(chunk)
+    });
+ 
+    chunks = Buffer.concat(chunks);
+ 
+    // 对二进制进行解码
+    var title = iconv.decode(chunks, 'gbk');
+    req.body.title=title
     // 查询语句
     let sql = 'insert into recommended set ?'
     db.base(sql,[req.body],(result)=>{
-       res.send({code:1,msg:"发布成功"})
+        res.send({code:1,msg:"发布成功"})
     })
+   
 }
 
 //朋友
@@ -108,6 +120,9 @@ exports.email=function(req,res){ //调用指定的邮箱给用户发送邮件
 exports.createUser=async function (req,res) {
         //  const salt=await bcrypt.genSalt(10)
         try{
+            user_info.me_img=imgUrl+"tou.png"
+            user_info.user_nmae=user_info.surname+user_info.name;
+            user_info.date=new Date();
             const password=await bcrypt.hash(user_info.password,10)
             user_info.password=password
             for(let i in user_info){
@@ -177,10 +192,10 @@ exports.getuserInfo=function(req,res){
 
 //修改用户信息
 exports.setUser=function(req,res){
-    console.log(req.body)
+    user_info=req.body
     let sql="update user set ? where id="+req.body.id
     db.base(sql,[req.body],(result)=>{
-                res.send({code:1,msg:"修改成功"})
+                res.send({code:1,msg:"修改成功",data:user_info})
     })
 }
 
@@ -250,7 +265,7 @@ exports.uploadImg=function(req,res){
     form.parse(req, (err, fields ,files) => {
       if(err) return next(err)
       let imgPath = files.file.path;
-      let imgName = files.file.path.split("\\").pop();
+      let imgName =imgUrl+ files.file.path.split("\\").pop();
       // 返回路径和文件名
       res.send({code: 1, data: { name: imgName, path: imgPath ,date:files.file.lastModifiedDate,size:files.file.size}});
     })

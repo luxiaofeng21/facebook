@@ -164,8 +164,8 @@ export default {
         var that=this;
         var user_info=JSON.parse(localStorage.getItem("user_info"))
         that.mobj=user_info
-        this.$axios.get(this.$url+"/friends").then(res=>{
-            res.data.map(x=>{x.me_img=this.$imgUrl+x.me_img})
+        this.$axios.get("/friends").then(res=>{
+            res.data.map(x=>{x.me_img=x.me_img})
             console.log("🚀 ~ file: index.vue ~ line 169 ~ this.$axios.get ~ res.data", res.data)
             that.menu=res.data
         })
@@ -447,5 +447,8 @@ export default {
             width: 25px;
             height: 25px;
             margin: 0 5px;
+        }
+        body{
+            background: #fff;
         }
 </style>

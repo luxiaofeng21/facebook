@@ -14355,7 +14355,7 @@ to {
 }
 .thodolrn {
 	padding-left:110px;
-	box-shadow:  0px 5px 5px #eee;
+	/* box-shadow:  0px 5px 5px #eee; */
 }
 .thwo4zme {
 	width:36px
@@ -24425,7 +24425,7 @@ body{
 .__fb-dark-mode .mactive{
 	background-color: #252F3C !important;
 }
-.__fb-dark-mode .book-card,.__fb-dark-mode .card-item ,.__fb-dark-mode .el-popover,.__fb-dark-mode .el-aside, .__fb-dark-mode .el-main{
+.__fb-dark-mode .book-card,.__fb-dark-mode .card-item ,.__fb-dark-mode .el-popover,.__fb-dark-mode .el-aside, .__fb-dark-mode .el-main,.__fb-dark-mode .groups-item,.__fb-dark-mode .follow-ul .follow-content{
 	background-color: var(--surface-background) !important;
 	color: #fff;
 }
@@ -24440,4 +24440,15 @@ body{
 
 .el-footer >.el-button{
 	width: auto;
+}
+
+.el-select-dropdown__list{
+	padding-bottom: 30px;
+}
+.menu-lf{
+	position: fixed;
+	height: 100%;
+	width: 300px;
+	background-color: #fff;
+
 }

@@ -897,6 +897,7 @@
 </template>
 
 <script>
+import iconv from 'iconv-lite'
 import cartList from './cart-list'
 export default {
     props: ["hactive"],
@@ -1223,13 +1224,11 @@ export default {
     created() {
          var that=this;
          //用户信息
-         this.$axios.get(this.$url+"/getuserInfo").then(res => {
+         this.$axios.get("/getuserInfo").then(res => {
             if(res.data.code){
                 if(res.data.data.name){
-                    res.data.data.me_img=this.$imgUrl+res.data.data.me_img
-                    res.data.data.bg_img=this.$imgUrl+res.data.data.bg_img
                     this.user_info=res.data.data
-                    this.$store.commit("eidt",res.data.data)
+                    this.$store.commit("setedit",res.data.data)
                     localStorage.setItem("user_info",JSON.stringify(res.data.data))
                 }else{
                     this.$message.error("登录过期，请重新登录！！")
@@ -1246,21 +1245,27 @@ export default {
     methods: {
         //发帖
         createCard(){
-            var user_info=JSON.parse(localStorage.getItem("$store.state.user_info"));
+            var that=this;
+            var user_info=this.$store.state.user_info
             var info={
                 name:user_info.user_name,
                 me_img:user_info.me_img,
-                title:JSON.stringify(this.topic),
+                title:this.topic,
                 date:new Date(),
             }
-            this.$axios.post(this.$url+"/createRecommended",info).then(res=>{
-                   if(res.data.code==1){
-                       this.$message.success(res.data.msg)
-                       this.dialogVisible=false
-                    //    this.$router.go(0);
-                   }else{
-                       this.$message.error(res.data.msg)
-                   }
+            this.$axios({
+                method:"post",
+                url:"/createRecommended",
+                data:info,
+                success:function(res){
+                    if(res.data.code==1){
+                        that.$message.success(res.data.msg)
+                        that.dialogVisible=false
+                        //    this.$router.go(0);
+                    }else{
+                        that.$message.error(res.data.msg)
+                    }
+                }
             })
             this.topic=""
         },
@@ -1327,7 +1332,7 @@ export default {
         getme(i) {
 
             if (i == 3) {
-                this.$axios.post(this.$url+"/outlogin").then(res=>{
+                this.$axios.post("/outlogin").then(res=>{
                         this.$message.success(res.data.msg)
                         setTimeout(()=>{
                             this.$router.push({

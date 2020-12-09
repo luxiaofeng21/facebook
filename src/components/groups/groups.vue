@@ -91,7 +91,7 @@
                                             </div>
                                         </div>
                                          <div class="me-group">
-                                            <div class="me-group-item" v-for='(item,index) in groups' :key="index">
+                                            <div class="me-group-item" v-for='(item,index) in groups' :key="index"  @click="getgroups(item)">
                                                     <div class="lf">
                                                         <img :src="item.img" alt="">
                                                     </div>
@@ -153,12 +153,15 @@ export default {
     },
     created(){
         var that=this;
-        this.$axios(this.$url+"/getGroups").then(res=>{
+        this.$axios("/getGroups").then(res=>{
             res.data.data.map(x=>x.img=require("@/assets/group.jpg"))
            that.groups=res.data.data
         })
     },
     methods: {
+        getgroups(item){
+            this.$router.push({name:"grouopHome",query:{id:item.id}})
+        },
         getmenu(i) {
             this.mactive = i
         }

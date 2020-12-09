@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="book-firend">
         <div class="book-tou katn9ffz">
                 <div class="tou-bg" :style="me_ul.bg_img?`background:url(${me_ul.bg_img}) 100%;`:''"> 
                     <div class="tou-img"> 
@@ -305,21 +305,21 @@ export default {
             this.mactive=i
         },
         getfile(file,state){
-            var user_info=JSON.parse(localStorage.getItem("user_info"))
-            var info={id:user_info.id}
+            var that=this;
+            var user_info=this.$store.state.user_info
             var name=file.data.name;
            if(state==1){
-                user_info.me_img=this.$imgUrl+name
-                info.me_img=name
+                user_info.me_img=name
                 this.me_ul.me_img=user_info.me_img
            }else{
-                user_info.bg_img=this.$imgUrl+name
-                info.bg_img=name
+                user_info.bg_img=name
                 this.me_ul.bg_img=user_info.bg_img
            }
-            this.$store.commit("edit",user_info)
-            this.$axios.post(this.$url+"/setUser",info).then(res=>{
-                this.$message.success(res.data.msg)
+            
+            this.$axios.post("/setUser",user_info).then(res=>{
+                localStorage.setItem("user_info",JSON.stringify(res.data.data))
+                that.$store.commit("edit",res.data.data)
+                that.$message.success(res.data.msg)
             })
         }, 
         handlePreview(file) {
@@ -332,9 +332,7 @@ export default {
 }
 </script>
 <style>
-   body{
-       background-color: #fff;
-   }
+
   /*导航*/
     .el-tabs__header{
         margin: 0;
@@ -357,6 +355,9 @@ export default {
     }
 </style>
 <style scoped>
+.book-firend{
+    background-color: #fff;
+}
 .book-tou{
     text-align: center;
 }

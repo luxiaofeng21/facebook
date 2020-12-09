@@ -690,8 +690,8 @@ export default {
             down: 9,
             menu: [
                 {
-                    title:"",
-                    img:"",
+                    title:this.$store.state.user_info.user_name,
+                    img:this.$store.state.user_info.me_img,
                     url:"mePage"
                 },
                 {
@@ -814,30 +814,27 @@ export default {
         var user_info=JSON.parse(localStorage.getItem("user_info"))
         var that = this;
         this.user_info=user_info
-        this.menu[0].title=user_info.user_name;
-        this.menu[0].img=user_info.me_img;
         //推荐
-        this.$axios.get(this.$url+"/recommended").then(res => {
+        this.$axios.get("/recommended").then(res => {
             res.data.map(x=>{
                 if(x.collection=='') x.collection=[]
             })
             that.list = res.data
         })
         //朋友
-        this.$axios.get(this.$url+"/friends").then(res => {
+        this.$axios.get("/friends").then(res => {
             for(let item of res.data){
-                item.me_img=that.$imgUrl + item.me_img
-                item.bg_img=that.$imgUrl + item.bg_img
+                item.me_img= item.me_img
+                item.bg_img=item.bg_img
             }
             that.friends = res.data
         })
         //公共主页
-        this.$axios.get(this.$url+"/publicPage").then(res=>{
+        this.$axios.get("/publicPage").then(res=>{
             var data=res.data.data
             data.map(x=>x.img=require("@/assets/flag.png"))
             that.pages.unshift(data[data.length-1])
         })
-
        
     },
     mounted() {
@@ -888,7 +885,7 @@ export default {
         //公共主页
         getpublic(i,item){
             if(i==0){
-                this.$router.push({name:"manageHome",params:{id:item.id}})
+                this.$router.push({name:"manageHome",query:{id:item.id}})
             }
         }
     },

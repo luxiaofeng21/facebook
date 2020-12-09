@@ -9,7 +9,7 @@ const store=new vuex.Store({
     },
     //eidt方法
     mutations:{
-          edit(state,data){
+          setedit(state,data){
             state.user_info=data
           }
     },

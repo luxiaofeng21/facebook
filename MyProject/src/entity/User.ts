@@ -74,7 +74,9 @@ export class User {
 
     @Column("simple-array")
     lasts: object[];
-
+    
+    @Column()
+    lang: string;
 }
 @Entity()
 export class Recommended {
@@ -115,6 +117,8 @@ export class Recommended {
 
     @Column()
     collect_title: string;
+
+  
 }
 
 @Entity()

@@ -10,6 +10,7 @@ import Ineligible from '@/components/login/ineligible'
 import Index from '@/components/index/index'
 import Watch from '@/components/watch/watch'
 import Groups from '@/components/groups/groups'
+import grouopHome from '@/components/groups/home'
 import GroupsItem from '@/components/groups/groups_item'
 import Create from '@/components/groups/create'
 import Gaming from '@/components/gaming/gaming'
@@ -230,7 +231,10 @@ export default new Router({
     {
       path: '/me/account',
       name: 'account',
-      component: Account
+      component: Account,
+      meta: {
+        keepAlive: true
+      }
     },
     {
       path: '/me/interese',
@@ -292,7 +296,11 @@ export default new Router({
       path:"/ad_center/create",
       name:"adCreate",
       component:adCreate
+    },
+    {
+      path:"/groups/grouopHome",
+      name:"grouopHome",
+      component:grouopHome
     }
-    
   ]
 })

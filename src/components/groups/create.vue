@@ -776,7 +776,7 @@ export default {
   created(){
 	  var that=this;
 	  //朋友
-        this.$axios.get(this.$url+"/friends").then(res => {
+        this.$axios.get("/friends").then(res => {
             that.friends = res.data
         })
   },
@@ -795,7 +795,7 @@ export default {
 		var date=new Date();
 		info.date=date.getTime();
         info.friends=info.friends.join(",")
-        this.$axios.post(this.$url+"/createGroups",info).then(res=>{
+        this.$axios.post("/createGroups",info).then(res=>{
             if(res.data.code==1){
                 that.$message.success(res.data.msg)
                 setTimeout(()=>{

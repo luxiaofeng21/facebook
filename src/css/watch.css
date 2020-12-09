@@ -1,4 +1,4 @@
-sp_09zgoVgTxqp {
+.sp_09zgoVgTxqp {
   background-image: url(/rsrc.php/v3/yr/r/yQAlXGBtWhd.png);
   background-size: auto;
   background-repeat: no-repeat;
@@ -6,7 +6,9 @@ sp_09zgoVgTxqp {
   height: 16px;
   width: 16px
 }
-
+body{
+  background-color: #eee;
+}
 .sp_09zgoVgTxqp.sx_816df8 {
   width: 20px;
   height: 20px;

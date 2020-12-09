@@ -1,5 +1,5 @@
-<template>
-<div >
+<template >
+<div id="root">
     <Header @getnav="getNav" :hactive="active" v-if="path"></Header>
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import md5 from 'js-md5';
+
 import Header from '@/common/Header.vue'
 export default {
     name: 'facebook',
@@ -18,93 +18,20 @@ export default {
     },
     data() {
         return {
+            loading:true,
+            load:null,
             path: true,
             active: 0,
         }
     },
     methods: {
-        //语言
-        transformLanguage(newLanguage) {
-                // 获取所有dom元素中文
-                let transformStr = '';
-                // 获取所有dom元素
-                function getChildDom(dom, type, data = {}) {
-                    if(type == 'read') {
-                        [...dom.children].forEach(v => {
-                            // 判断中文
-                            // /^[\u0391-\uFFE5]+$/
-                            let re= /[\u4e00-\u9fa5]/g;
-                            // 防止某些标签有内容并且有标签 ，或者有空格 
-                            let vHtml = $(v).contents().filter(function (index, content) {return content.nodeType === 3}).text().trim();
-                            // 跳过script标签
-                            if (re.test(vHtml) && v.tagName != 'SCRIPT') {
-                                transformStr += `${vHtml},`
-                            }
-                            // 递归获取元素
-                            getChildDom(v, type, data);
-                        })
-                    }else {
-                        let transOld = data.trans_result[0].src.split(',');
-                        let transNew = data.trans_result[0].dst.split(',');
-                        [...dom.children].forEach(v => {
-                            // 判断中文
-                            // /^[\u0391-\uFFE5]+$/
-                            let re= /[\u4e00-\u9fa5]/g;
-                            let vHtml = $(v).contents().filter(function (index, content) {return content.nodeType === 3}).text().trim();
-                            // 跳过script标签
-                            if (re.test(vHtml) && v.tagName != 'SCRIPT') {
-                                // 防止标签里面还有标签，所以只替换里面的html,使用replace
-                                $(v).html(
-                                    $(v).html().replace(
-                                    transOld[transOld.findIndex(arrList => arrList == vHtml)]
-                                    ,
-                                    transNew[transOld.findIndex(arrList => arrList == vHtml)]
-                                    )
-                                )
-                            }
-                            // 递归获取元素
-                            getChildDom(v, type, data);
-                        })
-                    }
-                }
-                getChildDom(document,'read');
-                getTranslateData();
-                // 获取翻译
-                function getTranslateData() {
-                    let appid = '20201120000621336';   // 百度翻译API的appid
-                    let key = 'pMdmtj4djcGj7M4EOAMv';   // 百度翻译API的key
-                    let salt = (new Date).getTime();
-                    let query = transformStr;
-                    let from = 'zh';
-                    let to = newLanguage;
-                    let str1 = appid + query + salt + key;
-                    let sign = md5(str1);
-                    $.ajax({
-                        url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
-                        type: 'get',
-                        dataType: 'jsonp',
-                        data: {
-                            q: query,
-                            appid: appid,
-                            salt: salt,
-                            from: from,
-                            to: to,
-                            sign: sign
-                        },
-                        success: function(data) {
-                            data.trans_result && getChildDom(document,'write',data);
-                            console.log(data);
-                        }
-                    });
-                }
-        },
-
+        
         getNav(i) {
             this.active = i
         },
         getactive() {
             var to = this.$route
-            var reg = /login/ //是否包含login
+            var reg = /login|help/ //是否包含login
             var test = reg.test(to.fullPath)
             if (test) {
                 this.path = false
@@ -126,17 +53,16 @@ export default {
         }
     },
     watch: {
-        $route(to, form) {
-            // console.log("$route -> to", to)
+       async $route(to, form) {
+            getlang()
             this.getactive()
         }
     },
     created() {
-        this.transformLanguage("en")
-        this.getactive()
+       
     },
     mounted() {
-        
+        this.getactive()
     },
 }
 </script>
@@ -193,6 +119,7 @@ a {
     justify-content: center;
     background-color: var(--secondary-button-background);
     border-radius: 50%;
+ 
 
 }
 .book-icon.small{
@@ -200,6 +127,7 @@ a {
     height: 25px;
 }
 .book-icon {
+       font-size: 25px;
     margin-right: 15px;
 }
 
@@ -229,7 +157,7 @@ a {
 }
 .book-card{
     background-color: #fff;
-    box-shadow: 0 0 10px #eee;
+    /* box-shadow: 0 0 10px #eee; */
     border-radius: 5px;
     padding: 10px;
     margin: 16px 0;
@@ -241,7 +169,11 @@ a {
     text-align: center;
     display: block;
     font-size: 1.25rem;
+    width: 100%;
     color: var(--placeholder-text);
+}
+.book-null>img{
+    width:200px ;
 }
 .flex{
     display: flex;
@@ -269,6 +201,13 @@ a {
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 10px;
+}
+.tou-title2{
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
 }
 /*布局*/
 .book-container{

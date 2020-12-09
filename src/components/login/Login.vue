@@ -48,7 +48,7 @@ export default {
                   this.$message.error("请输入密码")
                 return false
             }
-            this.$axios.post(this.$url+"/login",{email,password}).then(res=>{
+            this.$axios.post("/login",{email,password}).then(res=>{
                 if(res.data.code==1){
                     this.$message.success(res.data.msg)
                     setTimeout(res=>{

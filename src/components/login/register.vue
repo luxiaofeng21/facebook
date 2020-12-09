@@ -219,7 +219,6 @@ export default {
             custom: 0,
             customAll: ["他：“祝他生日快乐！”", "她：“祝她生日快乐！”", "TA:“祝TA生日快乐！”"],
             me: {
-                date:new Date(),
                 surname: "lu",
                 name: "feng",
                 email: "2584278167@qq.com",
@@ -227,7 +226,8 @@ export default {
                 year: "2020",
                 month: "10",
                 day: "01",
-                sex: "女"
+                sex: "女",
+                lang:"zh"
             },
         }
     },
@@ -235,7 +235,6 @@ export default {
         getemail() {
             var that=this;
             var data=this.me;
-            data.user_name=data.surname+data.name;
             if(data.sex=='女'){
                 data.me_img="tou.png"
             }else{
@@ -254,7 +253,7 @@ export default {
             if(!reg.test(data.email)){
                 this.$message.error("邮箱格式不正确，请重新输入！！");
             }
-            this.$axios.post(this.$url+"/email",data).then(res=>{
+            this.$axios.post("/email",data).then(res=>{
                 if(res.data.code==-1){
                     this.$message.error(res.data.msg)
                 }else{

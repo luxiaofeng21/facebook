@@ -1,10 +1,10 @@
 <template>
     <div class="video-list" :class="type">
-            <div class="video-item" v-for="(item,index) in list" :key="index">
+            <div class="video-item" :class="size" v-for="(item,index) in list" :key="index">
                     <div class="video-img">
                             <img :src="item.img" alt="">
                             <div class="video-tips">
-                                    <div class="lf" v-if="!type" >
+                                    <div class="lf" v-if="type!='list'" >
                                         <span class="video-button">直播</span>
                                         <span class="video-look"> <i class="el-icon-view"></i>765 </span>
                                     </div>
@@ -32,8 +32,8 @@
                         <div class="rg">
                                 <div class="video-title">{{item.title}}</div>
                                 <div class="video-name">{{item.name}}</div>
-                                <div v-if="type" class="video-name">{{item.date}} {{item.look}}次播放</div>
-                                <div class="video-face"> 
+                                <div v-if="type && type!='live'" class="video-name">{{item.date}} {{item.look}}次播放</div>
+                                <div class="video-face"  v-if="type!='live'"> 
                                         <i class="icon-count icon1"></i>
                                         <i class="icon-count icon2"></i>
                                         <i class="icon-count icon3"></i>
@@ -51,7 +51,7 @@
 
 <script>
 export default {
-    props:["list","type"],
+    props:["list","type","size"],
     data() {
         return {
             msgul: [{
@@ -85,11 +85,15 @@ export default {
     flex-wrap: wrap;
     margin: 10px  -5px;
 }
+.video-list>div.medium{
+    width: 24.2%;
+}
 .video-list>div{
     width: 32%;
     margin: 0 5px 10px 5px;
     cursor: pointer;
 }
+
 .video-img{
     position: relative;
 }
@@ -203,8 +207,11 @@ export default {
 .video-face>span:hover{
     text-decoration: underline;
 }
-
-
+/*直播 */
+.video-list.live  .me-img{
+    border:2px solid red;
+    padding: 3px;
+}
 /*列表类型*/
 .video-list.list>div{
     width: 100%;

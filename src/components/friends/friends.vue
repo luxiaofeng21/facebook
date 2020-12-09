@@ -2,56 +2,63 @@
     <div>
         <el-container>
             <el-aside>
-                <div class="menu-title ">    
-                    <div class="tou-title">好友</div> 
-                    <div class="book-title2">加好友请求</div> 
-                    <div style="margin-top:5px" class="link">查看已发送请求</div>
-                </div> 
-                <ul class="friend-ul" >
-                    <li v-for="(item,index) in reqFriend" :key="index">
-                        <div class="friend-lf">
-                            <img :src="item.img" alt="">
-                        </div>
-                        <div class="friend-rg">
-                            <div class="friend-title">{{item.title}}</div>
-                            <div class="friend-text">
-                                <span class="friend-text-img" v-for="(items,indexs) in item.common" :key="indexs"> <img :src="items.img" alt=""></span>
-                                <span>{{item.common.length}}位共同好友</span>
+                <div class="menu-lf">
+                    <div class="menu-title ">    
+                        <div class="tou-title">好友</div> 
+                        <div class="book-title2">加好友请求</div> 
+                        <div style="margin-top:5px" class="link">查看已发送请求</div>
+                    </div> 
+                    <ul class="friend-ul" >
+                        <li v-for="(item,index) in reqFriend" :key="index">
+                            <div class="friend-lf">
+                                <img :src="item.img" alt="">
                             </div>
-                            <div class="friend-button" v-if="!item.req">
-                                <el-button size="small" type="primary" >确认</el-button>
-                                <el-button size="small" type="info" @click="reqFriend.splice(index,1)">删除</el-button>
+                            <div class="friend-rg">
+                                <div class="friend-title">{{item.title}}</div>
+                                <div class="friend-text">
+                                    <span class="friend-text-img" v-for="(items,indexs) in item.common" :key="indexs"> <img :src="items.img" alt=""></span>
+                                    <span>{{item.common.length}}位共同好友</span>
+                                </div>
+                                <div class="friend-button" v-if="!item.req">
+                                    <el-button size="small" type="primary" >确认</el-button>
+                                    <el-button size="small" type="info" @click="reqFriend.splice(index,1)">删除</el-button>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-                <p><hr/></p>
-                <ul class="friend-ul">
-                    <li v-for="(item,index) in friend" :class="active==index?'mactive':''" :key="index" @click="getmenu(item,index)">
-                        <div class="friend-lf">
-                            <img :src="item.me_img" alt="">
-                        </div>
-                        <div class="friend-rg">
-                            <div class="friend-title">{{item.user_name}}</div>
-                            <div class="friend-text" v-if="item.common">
-                                <span class="friend-text-img" v-for="(items,indexs) in item.common" :key="indexs"> <img :src="items.img" alt=""></span>
-                                <span>{{item.common.length}}位共同好友</span>
+                        </li>
+                    </ul>
+                    <p><hr/></p>
+                    <div class="book-null" v-if="friend.length<=0">暂无好友推荐</div>
+                    <ul class="friend-ul">
+                        <li v-for="(item,index) in friend" :class="active==index?'mactive':''" :key="index" @click="getmenu(item,index)">
+                            <div class="friend-lf">
+                                <img :src="item.me_img" alt="">
                             </div>
-                            <div class="friend-button" v-if="!item.req">
-                                <el-button size="small" type="primary" @click="gethabdle(1,item)">加为好友</el-button>
-                                <el-button size="small" type="info" @click="gethabdle(2,item,index)">移除</el-button>
+                            <div class="friend-rg">
+                                <div class="friend-title">{{item.user_name}}</div>
+                                <div class="friend-text" v-if="item.common">
+                                    <span class="friend-text-img" v-for="(items,indexs) in item.common" :key="indexs"> <img :src="items.img" alt=""></span>
+                                    <span>{{item.common.length}}位共同好友</span>
+                                </div>
+                                <div class="friend-button" v-if="!item.req">
+                                    <el-button size="small" type="primary" @click="gethabdle(1,item)">加为好友</el-button>
+                                    <el-button size="small" type="info" @click="gethabdle(2,item,index)">移除</el-button>
+                                </div>
+                                <div class="friend-button" v-else>
+                                    <span>请求已发送</span>
+                                    <el-button size="small" type="info" @click="gethabdle(3,item)">取消请求</el-button>
+                                </div>
                             </div>
-                            <div class="friend-button" v-else>
-                                <span>请求已发送</span>
-                                <el-button size="small" type="info" @click="gethabdle(3,item)">取消请求</el-button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </el-aside>
-            <el-main>
+            <el-main v-if="active>=0">
                     <book-friend :me_ul="me_ul"></book-friend>
             </el-main>
+             <div class="book-null" v-else>
+                    <img src="../../assets/null.svg" alt="">
+                    <div>选择用户姓名来预览 TA 的个人主页。</div>
+            </div>
         </el-container>
     </div>
 </template>
@@ -66,7 +73,7 @@ export default {
     },
     data() {
         return {
-            active:0,
+            active:-1,
             me_ul:{},
             reqFriend:[{
                     title: "小黄人",
@@ -93,31 +100,7 @@ export default {
                     img: require("@/assets/me.jpg")
                 },
             ],
-            friend: [{
-                    title: "小黄人",
-                    req:false,
-                    common: [{
-                            img: require("@/assets/me.jpg")
-                        },
-                        {
-                            img: require("@/assets/me.jpg")
-                        },
-                    ],
-                    img: require("@/assets/me.jpg")
-                },
-                {
-                    req:false,
-                    title: "小黄人2",
-                    common: [{
-                            img: require("@/assets/me.jpg")
-                        },
-                        {
-                            img: require("@/assets/me.jpg")
-                        },
-                    ],
-                    img: require("@/assets/me.jpg")
-                },
-            ],
+            friend: [],
             dialogVisible: false,
             search: "",
             activeName: "0",
@@ -128,19 +111,21 @@ export default {
         var height=document.body.clientHeight;
         var that = this;
          //推荐好友
-        this.$axios.get(this.$url+"/friends").then(res => {
+        this.$axios.get("/friends").then(res => {
+             console.log(res.data)
             if(res.data.length>0){
                 res.data.map(x=>{
-                    x.me_img=this.$imgUrl+x.me_img
-                    x.bg_img?x.bg_img=this.$imgUrl+x.bg_img:''
+                    x.me_img=x.me_img
+                    x.bg_img?x.bg_img=x.bg_img:''
                 })
                 that.friend=res.data
                 that.me_ul=res.data[0]
+               
             }
             
         })
         //推荐
-        this.$axios.get(this.$url+"/recommended").then(res => {
+        this.$axios.get("/recommended").then(res => {
                     
                    that.me_ul.list = res.data
             

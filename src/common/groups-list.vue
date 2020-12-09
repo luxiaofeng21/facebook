@@ -48,6 +48,7 @@ export default {
     background-color: #fff;
     position: relative;
 }
+
 .groups-item.big{
     width: 50%;
 }

@@ -1967,6 +1967,7 @@
 						</div>
 					</div>
                     <news-feed v-else-if="mactive==1"></news-feed>
+					<edit-list v-else-if="mactive==8"></edit-list>
 				</div>
 				<div>
 					<div>
@@ -1986,15 +1987,17 @@
 <script>
 import cartList from '@/common/cart-list'
 import newsFeed from './news_feed'
+import editList from './edit'
 export default {
     components:{
+		editList,
         cartList,
         newsFeed
     },
     data(){
         return{
             mobj:{},
-            mactive:0,
+            mactive:8,
             menu:[
                 {
                     icon:"el-icon-s-home",
@@ -2043,8 +2046,8 @@ export default {
     },
 	created(){
 		var that=this;
-		var id=this.$route.params.id;
-		this.$axios.get(this.$url+"/getpublicPage?id="+id).then(res=>{
+		var id=this.$route.query.id;
+		this.$axios.get("/getpublicPage?id="+id).then(res=>{
 			that.mobj=res.data.data
             console.log("created -> that.mobj", that.mobj)
 		})

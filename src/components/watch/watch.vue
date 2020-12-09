@@ -139,7 +139,7 @@ export default {
     },
     created() {
         var that = this;
-        this.$axios.get(this.$url+"/user").then(res => {
+        this.$axios.get("/user").then(res => {
             that.friends = that.friends.concat(res.data)
         })
     },

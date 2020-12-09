@@ -13,7 +13,7 @@
                 </slot>
             </div>
             <div class="book-input-title">
-                <input :disabled="book.disabled?true:false" type="text" :maxlength="maxlength" ref="bookInput" placeholder="请输入名称" @blur.stop="active = false" @focus.stop="active=true" v-model="book.text">
+                <input :disabled="book.disabled?true:false" type="text" :maxlength="maxlength" ref="bookInput" :placeholder="'请输入'+book.title" @blur.stop="active = false" @focus.stop="active=true" v-model="book.text">
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@ export default {
 
 .book-input-title input {
     border: 0;
-    font-size: 20px;
+    font-size: 18px;
     outline: none;
     width: 100%;
 }
