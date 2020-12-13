@@ -229,4 +229,12 @@ a {
 .book-container>.rg{
     width: 60%;
 }
+
+.menu-head{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.menu-head>*{
+    margin: 0;
+}
 </style>

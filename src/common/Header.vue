@@ -513,7 +513,7 @@
                             <img :src="$store.state.user_info.me_img" alt="">
                         </div>
                     </div>
-                    <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
+                    <span class="head-name oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
                         {{user_info.user_name}}
                     </span>
                     <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore" style="border-radius:18px">

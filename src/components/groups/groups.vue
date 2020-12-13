@@ -90,17 +90,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                         <div class="me-group">
-                                            <div class="me-group-item" v-for='(item,index) in groups' :key="index"  @click="getgroups(item)">
-                                                    <div class="lf">
-                                                        <img :src="item.img" alt="">
-                                                    </div>
-                                                    <div class="rg">
-                                                            <div class="me-group-title">{{item.title}}</div>
-                                                            <div class="me-group-date">上次发帖：{{getTimeDistance(item.date)}}</div>
-                                                    </div>
-                                            </div>
-                                         </div>
+                                         <groups-list2 :list="groups" @getgroups="getgroups"></groups-list2>
                                     </div>
                                         
                                 </div>
@@ -126,11 +116,13 @@
 </template>
 
 <script>
+import groupsList2 from '@/common/groups-list2'
 import cartList from '@/common/cart-list'
 import feed from './feed'
 import discover from './discover'
 export default {
     components: {
+        groupsList2,
         discover,
         feed,
         cartList
@@ -168,38 +160,3 @@ export default {
     }
 }
 </script>
-
-<style>
-    .me-group-item{
-        display: flex;
-        padding: 10px 16px;
-        cursor: pointer;
-        align-items: center;
-    }
-    .me-group-item>.lf{
-        width: 60px;
-        height: 60px;
-        border-radius: 10px;
-        border: 1px solid #eee;
-        margin-right: 10px;
-    }
-    .me-group-item>.lf>img{
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
-    .me-group-item:hover{
-        background-color: #eee;
-    }
-    .me-group-title{
-      font-weight: 600;
-      font-size: .9375rem;
-      margin-bottom: 5px;
-    }
-    .me-group-date{
-        color: var(--secondary-text);
-        line-height: 1.2308;
-        font-size: .8125rem;
-
-    }
-</style>

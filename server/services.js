@@ -223,7 +223,6 @@ exports.publicPage=function(req,res){
 exports.getpublicPage=function(req,res){
    try{
        let id=req.query.id
-       console.log("id", id)
        if(!id) return res.status(500)
         let sql="select * from publicpage where id=?";
         db.base(sql,id,(result)=>{
@@ -252,6 +251,13 @@ exports.getGroups=function(req,res){
     })
 }
 
+//获取指定列表
+exports.groupsDetail=function(req,res){
+    let sql="select * from groups where ?"
+    db.base(sql,[req.query],(result)=>{
+        res.send({code:1,data:result})
+    })
+}
 
 //上传图片
 exports.uploadImg=function(req,res){

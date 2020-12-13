@@ -11139,9 +11139,7 @@ to {
 .ofs802cu {
 	scrollbar-width:thin;
 }
-::-webkit-scrollbar{
-	width: 40px;
-}
+
 .ofv0k9yr {
 	padding-bottom:20px
 }
@@ -24447,8 +24445,26 @@ body{
 }
 .menu-lf{
 	position: fixed;
-	height: 100%;
+	height: 93%;
 	width: 300px;
 	background-color: #fff;
+	overflow-y: auto;
+}
 
+::-webkit-scrollbar{
+	width: 6px;
+	background-color: #fff;  
+	cursor: pointer;
+}
+
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+	cursor: pointer;
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #ddd;  
+} 
+.head-name{
+	max-width: 200px;
 }
