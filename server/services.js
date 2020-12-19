@@ -121,7 +121,7 @@ exports.createUser=async function (req,res) {
         //  const salt=await bcrypt.genSalt(10)
         try{
             user_info.me_img=imgUrl+"tou.png"
-            user_info.user_nmae=user_info.surname+user_info.name;
+            user_info.user_name=user_info.surname+user_info.name;
             user_info.date=new Date();
             const password=await bcrypt.hash(user_info.password,10)
             user_info.password=password

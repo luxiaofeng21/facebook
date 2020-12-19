@@ -589,7 +589,6 @@
             </div>
         </div>
     </div>
-    
     <video-chat @getclose="getclose" :dialogVisible="dialogVisible" @getnewVideo="getnewVideo"></video-chat>
     <el-dialog title="创建群聊" :visible.sync="dialogVisible2" width="500px">
         <el-select placeholder="添加成员" v-model="chat" :filterable="true" :multiple="true" class="book-width">
