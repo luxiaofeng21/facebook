@@ -48,9 +48,12 @@ export default {
                   this.$message.error("请输入密码")
                 return false
             }
-            this.$axios.post("/login",{email,password}).then(res=>{
+            this.$axios.post("/api/login",{email,password}).then(res=>{
                 if(res.data.code==1){
                     this.$message.success(res.data.msg)
+                    this.$store.commit("setedit",res.data.data)
+                    localStorage.setItem("user_info",JSON.stringify(res.data.data))
+                    localStorage.setItem("token",res.data.token)
                     setTimeout(res=>{
                         that.$router.push({name:"index"})
                     },1000)

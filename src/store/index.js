@@ -15,7 +15,7 @@ const store=new vuex.Store({
     },
     actions: {
         increment (context) {
-          context.commit('edit')
+          context.commit('setedit')
         }
       }
 })

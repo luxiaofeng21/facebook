@@ -133,9 +133,7 @@
          </div>   
     </div>
 </template>
-
 <script>
-var getTimeDistance=this.getTimeDistance;
 import postButton from './post-button'
 export default {
     components:{

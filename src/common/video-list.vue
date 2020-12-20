@@ -86,7 +86,7 @@ export default {
     margin: 10px  -5px;
 }
 .video-list>div.medium{
-    width: 24.2%;
+    width: 24%;
 }
 .video-list>div{
     width: 32%;

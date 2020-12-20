@@ -1222,25 +1222,25 @@ export default {
         }
     },
     created() {
-         var that=this;
-         //用户信息
-         this.$axios.get("/getuserInfo").then(res => {
-            if(res.data.code){
-                if(res.data.data.name){
-                    this.user_info=res.data.data
-                    this.$store.commit("setedit",res.data.data)
-                    localStorage.setItem("user_info",JSON.stringify(res.data.data))
-                }else{
-                    this.$message.error("登录过期，请重新登录！！")
-                    setTimeout(res=>{
-                            this.$router.push({name:"login"})
-                    },1000)
-                }
+        //  var that=this;
+        //  //用户信息
+        //  this.$axios.get("/api/getuserInfo").then(res => {
+        //     if(res.data.code){
+        //         if(res.data.data.name){
+        //             this.user_info=res.data.data
+        //             this.$store.commit("setedit",res.data.data)
+        //             localStorage.setItem("user_info",JSON.stringify(res.data.data))
+        //         }else{
+        //             this.$message.error("登录过期，请重新登录！！")
+        //             setTimeout(res=>{
+        //                     this.$router.push({name:"login"})
+        //             },1000)
+        //         }
                 
-            }
-        })
-        // console.log(this.$store)
-        // console.log(this.$store.commit("$store.state.user_info"))
+        //     }
+        // })
+        // // console.log(this.$store)
+        // // console.log(this.$store.commit("$store.state.user_info")) 
     },
     methods: {
         //发帖
@@ -1255,16 +1255,15 @@ export default {
             }
             this.$axios({
                 method:"post",
-                url:"/createRecommended",
-                data:info,
-                success:function(res){
-                    if(res.data.code==1){
-                        that.$message.success(res.data.msg)
-                        that.dialogVisible=false
-                        //    this.$router.go(0);
-                    }else{
-                        that.$message.error(res.data.msg)
-                    }
+                url:"/api/createRecommended",
+                data:info
+            }).then(res=>{
+                 if(res.data.code==1){
+                    that.$message.success(res.data.msg)
+                    that.dialogVisible=false
+                    //    this.$router.go(0);
+                }else{
+                    that.$message.error(res.data.msg)
                 }
             })
             this.topic=""
@@ -1332,7 +1331,8 @@ export default {
         getme(i) {
 
             if (i == 3) {
-                this.$axios.post("/outlogin").then(res=>{
+                this.$axios.post("/api/outlogin").then(res=>{
+                        localStorage.clear();
                         this.$message.success(res.data.msg)
                         setTimeout(()=>{
                             this.$router.push({

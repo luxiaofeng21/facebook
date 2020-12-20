@@ -25,7 +25,7 @@ export default {
     }
     .follow-ul>li{
         display: inline-block;
-        width: 10.5%;
+        width: 10%;
         margin: 4px;
     }
     .follow-ul .follow-img{

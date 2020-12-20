@@ -53,7 +53,7 @@ export default {
                 this.$message.error("请输入6位数验证码")
                 return false
             }
-            this.$axios.post("/createUser",{code:this.code}).then(res=>{
+            this.$axios.post("/api/createUser",{code:this.code}).then(res=>{
                 
                 if(res.data.code==1){
                     this.$message.success(res.data.msg);

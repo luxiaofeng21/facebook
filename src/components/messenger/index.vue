@@ -164,7 +164,7 @@ export default {
         var that=this;
         var user_info=JSON.parse(localStorage.getItem("user_info"))
         that.mobj=user_info
-        this.$axios.get("/friends").then(res=>{
+        this.$axios.get("/api/friends").then(res=>{
             res.data.map(x=>{x.me_img=x.me_img})
             console.log("🚀 ~ file: index.vue ~ line 169 ~ this.$axios.get ~ res.data", res.data)
             that.menu=res.data

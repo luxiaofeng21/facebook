@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import {Message} from 'element-ui'
 import Login from '@/components/login/index'
 import NewUser from '@/components/login/newUser'
 import Identify from '@/components/login/identify'
@@ -47,18 +48,15 @@ import managementGroup from '@/components/groups/management_group'
 import Mailbox from '@/components/help/Mailbox'
 import mePage from '@/components/mePage/index'
 import help from '@/components/help/index'
-Vue.use(Router)
 
-export default new Router({
+
+var router= new Router({
   routes: [
     
     {
       path: '/',
       name: 'index',
-      component: Index,
-      meta: {
-        keepAlive: true
-      }
+      component: Index
     },
     {
       path:"/help",
@@ -304,3 +302,24 @@ export default new Router({
     }
   ]
 })
+
+//路由守卫
+router.beforeEach((to, from, next) => {
+  const istoken=localStorage.token;
+  var reg = /login|help/ //是否包含login
+  if(reg.test(to.path)){
+      next()
+  }else{
+    if(istoken){
+      next()
+    }else{
+        Message.error("登录过期，请重新登录！！！")
+        setTimeout(res=>{
+          next("/login")
+        },1000)
+    }
+  }
+  
+})
+Vue.use(Router)
+export default router

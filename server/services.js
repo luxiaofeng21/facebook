@@ -1,10 +1,9 @@
-const db = require('./db.js')
+const db = require('./db.js');
+const session=require("express-session");
 let nodemailer=require("nodemailer");
 let bcrypt=require("bcrypt");
 let formidable = require('formidable');
 let path=require("path");
-let iconv = require('iconv-lite');
-const { expr } = require('jquery');
 let codes={};
 let user_info={};
 let imgUrl='http://127.0.0.1:75/images/';
@@ -28,23 +27,20 @@ exports.recommended = (req,res)=>{
 
 //创建帖子
 exports.createRecommended = (req,res)=>{
-    var chunks = [];
-    req.on('data', function (chunk) {
-        console.log("🚀 ~ file: services.js ~ line 33 ~ chunk", chunk)
-        chunks.push(chunk)
-    });
- 
-    chunks = Buffer.concat(chunks);
- 
-    // 对二进制进行解码
-    var title = iconv.decode(chunks, 'gbk');
-    req.body.title=title
     // 查询语句
     let sql = 'insert into recommended set ?'
     db.base(sql,[req.body],(result)=>{
         res.send({code:1,msg:"发布成功"})
     })
    
+}
+
+//评论集合
+exports.comments=(req,res)=>{
+      var sql="select * comments where ?"  
+      db.base(sql,[req.body],(result)=>{
+            res.send(result)
+      })
 }
 
 //朋友
@@ -118,8 +114,6 @@ exports.email=function(req,res){ //调用指定的邮箱给用户发送邮件
 
 //注册用户
 exports.createUser=async function (req,res) {
-        //  const salt=await bcrypt.genSalt(10)
-        try{
             user_info.me_img=imgUrl+"tou.png"
             user_info.user_name=user_info.surname+user_info.name;
             user_info.date=new Date();
@@ -138,17 +132,13 @@ exports.createUser=async function (req,res) {
                            res.send({code:1,msg:"注册成功"})
                    })
             }
-        }
-        catch{
-            res.redirect(500,'/createUser')
-        }
+       
         
        
 }
 
 //用户登录
 exports.getlogin=  function(req,res){
-    try{
         var data=req.body;
         for(let i in data){
             if(data[i]==''){
@@ -162,18 +152,15 @@ exports.getlogin=  function(req,res){
             }
             var result=result[0]
             if(await bcrypt.compare(data.password,result.password)){
-                user_info=result
-                req.session.user_info=JSON.stringify(result)
-                res.send({code:1,msg:"登录成功"})
+                var token=result.id+"."+result.user_name;
+                req.session.user_info=result
+
+                res.send({code:1,msg:"登录成功",data:result,token:token})
             }else{
                 res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})
             }
         })
-    }
-    catch{
-        res.status(500)
-        res.send({code:-1,msg:"服务器内部错误"})
-    }
+   
 }
 //用户退出 
 exports.outlogin=function(req,res){
@@ -189,7 +176,6 @@ exports.getuserInfo=function(req,res){
     }
     
 }
-
 //修改用户信息
 exports.setUser=function(req,res){
     user_info=req.body
@@ -198,7 +184,21 @@ exports.setUser=function(req,res){
                 res.send({code:1,msg:"修改成功",data:user_info})
     })
 }
-
+//验证token
+exports.getoken=function(req,res){
+    //获取token
+    const token=req.headers.authorization
+    const id=token.split(".")[0];
+    const username=token.split(".")[1]
+    //判断用户是否存在
+    db.base(`select id from where id=${id} and username=${username}`,(result)=>{
+            if(result.length<=0){
+                res.status(422).send("用户错误")
+            }else{
+                res.send("Admin")
+            }
+    })
+}
 
 //创建主页
 exports.createPage=function(req,res){
@@ -221,18 +221,12 @@ exports.publicPage=function(req,res){
 
 //获取指定公共主页
 exports.getpublicPage=function(req,res){
-   try{
        let id=req.query.id
        if(!id) return res.status(500)
         let sql="select * from publicpage where id=?";
         db.base(sql,id,(result)=>{
                 res.send({code:1,data:result[0]})
         })
-       
-   }
-    catch{
-        res.status(500)
-    }
 }
 
 //创建小组

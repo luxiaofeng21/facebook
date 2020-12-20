@@ -25,7 +25,6 @@ export default {
         }
     },
     methods: {
-        
         getNav(i) {
             this.active = i
         },
@@ -53,8 +52,8 @@ export default {
         }
     },
     watch: {
-       async $route(to, form) {
-            getlang()
+        $route(to, form) {
+            // getlang()
             this.getactive()
         }
     },

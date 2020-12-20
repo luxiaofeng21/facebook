@@ -16,6 +16,8 @@ router.post("/login",services.getlogin)
 router.get("/getuserInfo",services.getuserInfo)
 router.post("/setUser",services.setUser)
 router.post("/outlogin",services.outlogin)
+router.get("/getoken",services.getoken)
+router.post("/comments",services.comments)
 //公共主页
 router.post("/createPage",services.createPage)
 router.get("/publicPage",services.publicPage)

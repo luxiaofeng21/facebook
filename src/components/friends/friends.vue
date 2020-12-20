@@ -111,7 +111,7 @@ export default {
         var height=document.body.clientHeight;
         var that = this;
          //推荐好友
-        this.$axios.get("/friends").then(res => {
+        this.$axios.get("/api/friends").then(res => {
              console.log(res.data)
             if(res.data.length>0){
                 res.data.map(x=>{
@@ -125,7 +125,7 @@ export default {
             
         })
         //推荐
-        this.$axios.get("/recommended").then(res => {
+        this.$axios.get("/api/recommended").then(res => {
                     
                    that.me_ul.list = res.data
             
