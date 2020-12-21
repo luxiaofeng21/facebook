@@ -126,9 +126,7 @@ export default {
         })
         //推荐
         this.$axios.get("/api/recommended").then(res => {
-                    
                    that.me_ul.list = res.data
-            
         })
        
     },

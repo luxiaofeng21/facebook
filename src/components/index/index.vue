@@ -890,7 +890,11 @@ export default {
     },
 }
 </script>
-
+<style>
+.activity .cart-img>img{
+    width: auto;
+}
+</style>
 <style scoped>
 
 
@@ -932,4 +936,6 @@ a>.scb9dxdr:hover {
 .el-icon-edit-outline{
     font-size: 20px;
 }
+
+
 </style>

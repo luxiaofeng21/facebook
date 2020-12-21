@@ -7,7 +7,7 @@
                         <el-upload
                         v-if="type=='me'"
                         class="upload-img"
-                        :action="$url+'/uploadImg'"
+                        :action="'api/uploadImg'"
                         accept="image/*"
                         :on-success="handlePreview" >
                             <span class="book-icon"> <i class="el-icon-camera-solid"></i></span> 
@@ -17,7 +17,7 @@
                     <el-upload
                         v-if="type=='me'"
                         class="upload-img"
-                        :action="$url+'/uploadImg'"
+                        :action="'api/uploadImg'"
                         accept="image/*"
                         :on-success="handlePreview2" >
                           <div class="book-icon2" v-if="type=='me'"><i class="el-icon-camera-solid"></i> 添加封面照片</div>
