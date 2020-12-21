@@ -296,6 +296,26 @@ var router= new Router({
       component:adCreate
     },
     {
+      path:"/ad_center/appinstall",
+      name:"appinstall",
+      component:()=>import("@/components/ad_center/appinstall")
+    },
+    {
+      path:"/ad_center/pagead",
+      name:"pagead",
+      component:()=>import("@/components/ad_center/pagead")
+    },
+    {
+      path:"/ad_center/websitead",
+      name:"websitead",
+      component:()=>import("@/components/ad_center/websitead")
+    },
+    {
+      path:"/ad_center/entry_point",
+      name:"entry_point",
+      component:()=>import("@/components/ad_center/entry_point")
+    },
+    {
       path:"/groups/grouopHome",
       name:"grouopHome",
       component:grouopHome
