@@ -7,8 +7,33 @@
                 <!--/$-->
                 <div class="j83agx80 cbu4d94t d6urw2fd dp1hu0rb l9j0dhe7 du4w35lb" data-pagelet="page">
                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 jifvfom9 gs1a9yip owycx6da btwxx1t3 dp1hu0rb ka73uehy">
-                        <div aria-label="游戏" role="navigation" class="rq0escxv l9j0dhe7 tkr6xdv7 j83agx80 cbu4d94t d2edcug0 pfnyh3mw dp1hu0rb rek2kq2y o36gj0jk">
+                        <div aria-label="游戏" role="navigation" class="hybvsw6c rq0escxv l9j0dhe7 tkr6xdv7 j83agx80 cbu4d94t d2edcug0 pfnyh3mw dp1hu0rb rek2kq2y o36gj0jk">
+                            <div class="flex menu-head">
+                                <div class="tou-title">游戏</div>
+                                <div class="book-icon"> <i class="el-icon-s-tools"></i> </div>
+                            </div>
                             <cart-list :list="menu" :active="mactive" @getcart="getmenu"></cart-list>
+                            <div class="menu-button">
+                                    <div class="book-icon2">
+                                        <i class="el-icon-video-camera-solid"></i>开始直播
+                                    </div>
+                                    <div class="book-icon2">
+                                        <i class="el-icon-trophy-1"></i>创建排位赛
+                                    </div>
+                            </div>
+                            <div class="menu-button">
+                                    <div class="book-title">近期观看</div>
+                                    <cart-list :list="last"></cart-list>
+                            </div>
+                            <div class="menu-button">
+                                    <div class="flex">
+                                        <div class="book-title">推荐</div>
+                                        <span class="link">查看全部 </span>
+                                    </div>
+                                    <cart-list :list="recommended">
+                                        <div slot="right" class="look"> <i class="el-icon-view"></i> <span>12</span> </div>
+                                    </cart-list>
+                            </div>
                         </div>
                         <div v-if="state=='0'" aria-label="游戏" role="main" class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz dp1hu0rb">
                             <div class="j83agx80 cbu4d94t buofh1pr dp1hu0rb hpfvmrgz l9j0dhe7 du4w35lb">
@@ -160,6 +185,30 @@ export default {
     },
     data() {
         return {
+            recommended:[ //推荐
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"Thirdy Gaming",
+                    text:"Mobile Legends"
+                },
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"Thirdy Gaming",
+                    text:"Mobile Legends"
+                },
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"Thirdy Gaming",
+                    text:"Mobile Legends"
+                }
+            ],
+            last:[//最近
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"Thirdy Gaming",
+                    text:"Mobile Legends"
+                }
+            ],
             list:[
 				{
 					img:require("@/assets/bg.jpg"),
@@ -280,6 +329,7 @@ export default {
 }
 </script>
 <style scoped>
+    
     .pc-banner {
     background: url(../../assets/bg2.jpg)  no-repeat;
     background-size: 100% 100%;
@@ -474,5 +524,30 @@ export default {
 }	
 .live-item{
     margin-top: 20px;
+}
+.menu-button{
+    margin-top: 10px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+.menu-button>*{
+    margin-bottom: 10px;
+}
+.menu-button>*:last-child{
+    margin: 0;
+}
+.look{
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 15px;
+}
+.look>i{
+    font-size: 18px;
+    font-weight: bold;
+}
+.look>span{
+    font-weight: normal;
+    margin-left: 5px;
 }
 </style>

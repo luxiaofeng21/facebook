@@ -74,7 +74,8 @@
                             <div class="j83agx80 cbu4d94t buofh1pr dp1hu0rb hpfvmrgz l9j0dhe7 du4w35lb">
                                 <div v-if="mactive==0" class="j83agx80 taijpn5t">
                                     <div class="bglkmn5o">
-                                                <div class="book-title2"> 热门商品推荐 </div>
+                                                <p></p>
+                                                <div class="tou-title"> 热门商品推荐 </div>
                                                 <post-list :list="list"  ></post-list>
                                     </div>
                                 </div>
@@ -83,7 +84,7 @@
                                 <Saved v-else-if="mactive==3"></Saved>
                                 <div v-else>
                                     <Latest v-if="factive==0"></Latest>
-                                    <Loveyunuang v-else></Loveyunuang>
+                                    <Loveyunuang :me="friends[factive]" v-else></Loveyunuang>
                                 </div>
                             </div>
 

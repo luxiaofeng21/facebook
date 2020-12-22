@@ -1,15 +1,12 @@
 <template>
 <div>
     <!--创建聊天室-->
-    <el-dialog :visible.sync="dialogVisible" :show-close="false" width="500px" :before-close="getclose">
-        <div class="dialog-title" slot="title">
-            <span class="dialog-icon"><i class="el-icon-info"></i></span>
-            <span class="dialog-icon" @click="getclose"><i class="el-icon-close"></i></span>
-        </div>
+    <el-dialog :visible.sync="dialogVisible"  width="500px" :before-close="getclose">
         <div class="video-header">
             <div class="etr7akla taijpn5t pioscnbf j83agx80 rq0escxv spb7xbtv bkmhp75w emlxlaya s45kfl79 snggw924 czabki66 hx37s9t6 qjs0y65x bp9cbjyn"><i class="hu5pjgll bixrwtb6 sp_Dk-puqZ-HC9 sx_6798ea" style="height: 36px; width: 36px;"></i></div>
             <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 ns63r2gh fe6kdd0r mau55g9w c8b282yb iv3no6db o3w64lxj b2s5l15y hnhda86s oo9gr5id oqcyycmt" dir="auto">创建你的视频聊天室</span>
         </div>
+        <p></p>
         <cart-list :list="chat" @getcart="getcart" type="arrow"></cart-list>
         <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
             <div class="qzhwtbm6 knvmm38d"><span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d9wwppkn fe6kdd0r mau55g9w c8b282yb mdeji52x e9vueds3 j5wam9gi knj5qynh m9osqain oqcyycmt" dir="auto">首先，请选择你想邀请的用户</span></div>

@@ -149,10 +149,7 @@
                                                                                         直播视频
                                                                                     </span>
                                                                                 </div>
-                                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
-                                                                                </div>
                                                                             </a>
-                                                                            <input accept="image/*,image/heif,image/heic,video/*,video/mp4,video/x-m4v,video/x-matroska" class="mkhogb32" multiple="" type="file">
                                                                             <div class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 g5gj957u p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo idt9hxom cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi buofh1pr taijpn5t" role="button" tabindex="0">
                                                                                 <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
                                                                                     <span class="pq6dq46d kb5gq1qc pfnyh3mw oi9244e8">
@@ -163,11 +160,9 @@
                                                                                         照片/视频
                                                                                     </span>
                                                                                 </div>
-                                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
-                                                                                </div>
                                                                             </div>
                                                                             <div class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 rj1gh0hx btwxx1t3 g5gj957u p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo idt9hxom cxgpxx05 dflh9lhu sj5x9vvc scb9dxdr l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi buofh1pr taijpn5t" role="button" tabindex="0">
-                                                                                <div class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
+                                                                                <div @click="dialogVisible3=true" class="bp9cbjyn j83agx80 taijpn5t dfwzkoeu ni8dbmo4 stjgntxs">
                                                                                     <span class="pq6dq46d kb5gq1qc pfnyh3mw oi9244e8">
                                                                                         <i class="sp_5kM2vwYmVrv sx_649950" role="img">
                                                                                         </i>
@@ -175,8 +170,6 @@
                                                                                     <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p m9osqain ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
                                                                                         感受/活动
                                                                                     </span>
-                                                                                </div>
-                                                                                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -590,7 +583,7 @@
         </div>
     </div>
     <video-chat @getclose="getclose" :dialogVisible="dialogVisible" @getnewVideo="getnewVideo"></video-chat>
-    <el-dialog title="创建群聊" :visible.sync="dialogVisible2" width="500px">
+    <el-dialog title="创建群聊" :visible.sync="dialogVisible2" width="550px">
         <el-select placeholder="添加成员" v-model="chat" :filterable="true" :multiple="true" class="book-width">
             <el-option :key="index" v-for="(item,index) in friends" :label="item.name" :value="item.id">
                 <div class="friend-item">
@@ -606,6 +599,31 @@
         <span slot="footer">
             <el-button type="primary" @click="cearteChat">创建</el-button>
         </span>
+    </el-dialog>
+    <el-dialog :visible.sync="dialogVisible3" title="你有什么感受？" width="600px">
+            <el-tabs v-model="feel.tabs">
+                    <el-tab-pane label="感受" name="1">
+                       <p>
+                            <el-input v-model="feel.search" placeholder="搜索">
+                                <i class="el-input__icon  el-icon-search" slot="prefix"></i>
+                            </el-input>
+                       </p>
+                        <cart-list class="cart-list" :list="feel.list"></cart-list>
+                    </el-tab-pane>
+                    <el-tab-pane label="活动" name="2">
+                        <p class="flex">
+                            <span class="book-icon2 icon-primary2" v-if="factive>=0">{{feel.list2[factive].title}} <i class="el-icon-close" @click="factive=-1"></i> </span>
+                            <el-input style="flex:1" v-model="feel.search2" placeholder="搜索">
+                                <i class="el-input__icon  el-icon-search" slot="prefix"></i>
+                            </el-input>
+                        </p>
+                        <cart-list v-if="factive<0" :list="feel.list2" type="arrow" size="medium" @getcart="getfeel" :active="factive"></cart-list>
+                        <cart-list v-else class="cart-list" :list="feel.activity"  size="medium" ></cart-list>
+                    </el-tab-pane>
+            </el-tabs>
+            
+            
+           
     </el-dialog>
 </div>
 </template>
@@ -625,6 +643,186 @@ export default {
     },
     data() {
         return {
+            factive:-1,
+            dialogVisible3:false,
+            feel:{
+                tabs:"1",
+                search:"",
+                list: [
+                    {
+                        emoji: " 😄 ",
+                        title: "快乐"
+                    },
+                    {
+                        emoji:" 😊 ",
+                        title: "幸福"
+                    },
+                    {
+                        emoji:" 💑 ",
+                        title: "被关爱"
+                    },
+                    {
+                        emoji:"😭",
+                        title: "伤心"
+                    },
+                    {
+                        emoji:"💑",
+                        title: "卡哇伊"
+                    }, {
+                        emoji:"🙂",
+                        title: "感恩"
+                    }, {
+                        emoji:"😆",
+                        title: "兴奋"
+                    }, {
+                        emoji:"💑",
+                        title: "在热恋"
+                    }, {
+                        img: require("@/assets/1f393.png"),
+                        title: "很疯狂"
+                    }, {
+                        img: require("@/assets/1f334.png"),
+                        title: "很感激"
+                    }, {
+                        img: require("@/assets/1f939.png"),
+                        title: "有福"
+                    }, {
+                        img: require("@/assets/1f319.png"),
+                        title: "棒极了"
+                    }, {
+                        img: require("@/assets/2600.png"),
+                        title: "好傻"
+                    }, {
+                        img: require("@/assets/2615.png"),
+                        title: "节日模式全开"
+                    },
+                    {
+                        img: require("@/assets/1f4aa.png"),
+                        title: "很美妙"
+                    },
+                    {
+                        img: require("@/assets/1f4da.png"),
+                        title: "很酷"
+                    },
+                    {
+                        img: require("@/assets/1f4fa.png"),
+                        title: "很搞笑"
+                    },
+                    {
+                        img: require("@/assets/1f495.png"),
+                        title: "很放松"
+                    },
+                    {
+                        img: require("@/assets/1f958.png"),
+                        title: "positive"
+                    },
+                    {
+                        img: require("@/assets/1f37d.png"),
+                        title: "很悠闲"
+                    },
+                    {
+                        img: require("@/assets/1f3b2.png"),
+                        title: "充满希望"
+                    },
+                    {
+                        img: require("@/assets/1f382.png"),
+                        title: "很快乐"
+                    },
+                    {
+                        img: require("@/assets/1f57a.png"),
+                        title: "很累"
+                    },
+                    {
+                        img: require("@/assets/1f57a.png"),
+                        title: "很有动力"
+                    },
+                    {
+                        emoji:"🤗",
+                        title: "proud"
+                    },
+                    {
+                        emoji:"😔",
+                        title: "孤单"
+                    },
+                    {
+                        emoji:"😏",
+                        title: "很周到"
+                    },
+                    {
+                        emoji:"😉",
+                        title: "还不错"
+                    },
+                    {
+                        emoji:"🧐",
+                        title: "怀旧"
+                    },
+                    {
+                        emoji:"😤",
+                        title: "愤怒"
+                    },
+                    {
+                        emoji:"😷",
+                        title: "生病了"
+                    },
+                    {
+                        emoji:" 😄 ",
+                        title: "开心"
+                    },
+                ],
+                search2:"",
+                list2:[
+                    {
+                        emoji:"😀",
+                        title:"庆祝..."
+                    },
+                    {
+                        emoji:" 🧐 ",
+                        title:"在看..."
+                    },
+                    {
+                        emoji:" 😋 ",
+                        title:"在吃..."
+                    },
+                    {
+                        emoji:" 🍺 ",
+                        title:"在喝..."
+                    },
+                    {
+                        emoji:" 🤵 ",
+                        title:"参加..."
+                    },
+                    {
+                        emoji:"✈️ ",
+                        title:"前往..."
+                    },
+                    {
+                        emoji:" 💽 ",
+                        title:"在听..."
+                    },
+                    {
+                        emoji:" 👁‍🗨 ",
+                        title:"在找..."
+                    },
+                    {
+                        emoji:" 💭 ",
+                        title:"想..."
+                    },
+                    {
+                        emoji:" 👨‍🏫 ",
+                        title:"在读..."
+                    },
+                    {
+                        emoji:" 👨‍💻 ",
+                        title:"在玩..."
+                    },
+                    {
+                        emoji:"🙌",
+                        title:"支持..."
+                    },
+                    
+                ],
+                activity:[]
+            },
             mactive:0,
             user_info:[],
             videoAll: [],
@@ -842,6 +1040,145 @@ export default {
         })
     },
     methods: {
+        //感受
+        getfeel(i){
+            let ul=[];
+            if(i==0){
+                ul=[
+                    {emoji:"🙌",title:"友谊"},
+                    {emoji:"🙌",title:"生日"},
+                    {emoji:"🙌",title:"你的好日子"},
+                    {emoji:"🙌",title:"圣诞节"},
+                    {emoji:"🙌",title:"跨年夜"},
+                    {emoji:"🙌",title:"这特殊的一天"},
+                    {emoji:"🙌",title:"我母亲的生日"},
+                    {emoji:"🙌",title:"我姐妹的生日"},
+                    {emoji:"🙌",title:"我的生日"},
+                    {emoji:"🙌",title:"成功"},
+                    {emoji:"🙌",title:"节日"},
+                    {emoji:"🙌",title:"新的一年"},
+                    {emoji:"🙌",title:"我们的结婚纪念日"},
+                    {emoji:"🙌",title:"周年纪念日"},
+                    {emoji:"🙌",title:"爱情"},
+                    {emoji:"🙌",title:"我妈妈的生日"},
+                    {emoji:"🙌",title:"生命"},
+                    {emoji:"🙌",title:"胜利"},
+                    {emoji:"🙌",title:"我爸爸的生日"},
+                    {emoji:"🙌",title:"这一天"},
+                    {emoji:"🙌",title:"我们的周年纪念日"},
+                    {emoji:"🙌",title:"我们的好日子"},
+                    {emoji:"🙌",title:"毕业"},
+                    {emoji:"🙌",title:"订婚"},
+                    {emoji:"🙌",title:"节日季"},
+                    {emoji:"🙌",title:"周日"},
+                    {emoji:"🙌",title:"每一天"},
+                    {emoji:"🙌",title:"自由"},
+                    {emoji:"🙌",title:"迎婴派对"},
+                    {emoji:"🙌",title:"周五"},
+                    {emoji:"🙌",title:"某些东西"},
+                    {emoji:"🙌",title:"社群"},
+                    {emoji:"🙌",title:"周末"},
+                    {emoji:"🙌",title:"我们的婚礼"},
+                    {emoji:"🙌",title:"重聚"},
+                    {emoji:"🙌",title:"冬季"},
+                ]
+            }else if(i==1){
+                ul=[
+                    {emoji:"🙌",title:"猫和老鼠"},
+                    {emoji:"🙌",title:"熊出没"},
+                    {emoji:"🙌",title:"喜羊羊与灰太狼"},
+                ]
+            }else if(i==2){
+                ul=[
+                    {emoji:"🙌",title:"午餐"},
+                    {emoji:"🙌",title:"晚餐"},
+                    {emoji:"🙌",title:"早餐"},
+                ]
+            }else if(i==3){
+                ul=[
+                    {emoji:"🙌",title:"咖啡"},
+                    {emoji:"🙌",title:"饮料"},
+                    {emoji:"🙌",title:"牛奶"},
+                ]
+            }else if(i==4){
+                ul=[
+                    {emoji:"🙌",title:"一场婚礼"},
+                    {emoji:"🙌",title:"活动"},
+                    {emoji:"🙌",title:"生日晚宴"},
+                    {emoji:"🙌",title:"圣诞晚宴"},
+                    {emoji:"🙌",title:"工作"},
+                    {emoji:"🙌",title:"婚礼"},
+                    {emoji:"🙌",title:"培训"},
+                    {emoji:"🙌",title:"一场篮球赛"},
+                    {emoji:"🙌",title:"婚礼酒席"},
+                    {emoji:"🙌",title:"一个派对"},
+                    {emoji:"🙌",title:"会议"},
+                ]
+            }else if(i==5){
+                ul=[
+                    {emoji:"🙌",title:"香港"},
+                    {emoji:"🙌",title:"澳门"},
+                    {emoji:"🙌",title:"河内市"},
+                    {emoji:"🙌",title:"菲律宾"},
+                    {emoji:"🙌",title:"迪拜"},
+                    {emoji:"🙌",title:"韩国"},
+                    {emoji:"🙌",title:"日本"},
+                ]
+            }else if(i==6){
+                ul=[
+                    {emoji:"🙌",title:"稻香"},
+                    {emoji:"🙌",title:"听妈妈的话"},
+                    {emoji:"🙌",title:"晴天"},
+                    {emoji:"🙌",title:"青花瓷"},
+                ]
+            }else if(i==7){
+                ul=[
+                    {emoji:"🙌",title:"建议"},
+                    {emoji:"🙌",title:"帮助"},
+                    {emoji:"🙌",title:"一个奇迹"},
+                    {emoji:"🙌",title:"答案"},
+                    {emoji:"🙌",title:"点子"},
+                    {emoji:"🙌",title:"祷告者"},
+                    {emoji:"🙌",title:"完美"},
+                    {emoji:"🙌",title:"生日礼物建议"},
+                    {emoji:"🙌",title:"尼斯湖水怪"},
+                    {emoji:"🙌",title:"平衡"},
+                    {emoji:"🙌",title:"旅游建议"},
+                    {emoji:"🙌",title:"旅程"},
+                ]
+            }else if(i==8){
+                ul=[
+                    {emoji:" 🕸 ",title:"旧日回忆"},
+                    {emoji:" ☁️ ",title:"生命的意义"},
+                    {emoji:" ☁️ ",title:"很多事情"},
+                    {emoji:" ☁️ ",title:"做出改变"},
+                    {emoji:" ☁️ ",title:"去度假"},
+                    {emoji:" ☁️ ",title:"玩点疯狂"},
+                    {emoji:" ☁️ ",title:"明天"},
+                    {emoji:" ☁️ ",title:"回学校学习"},
+                ]
+            }else if(i==9){
+                ul=[
+                    {emoji:"  👨‍🎤  ",title:"活出生命的意义"},
+                    {emoji:"  👨‍🎤  ",title:"蛤蟆先生去看心理医生"},
+                    {emoji:"  👨‍🎤  ",title:"红楼梦"},
+                ]
+            }else if(i==10){
+                ul=[
+                    {emoji:"  👨‍🎤  ",title:"足球"},
+                    {emoji:"  👨‍🎤  ",title:"篮球"},
+                    {emoji:"  👨‍🎤  ",title:"木球"},
+                    {emoji:"  👨‍🎤  ",title:"游戏"},
+                ]
+            }else if(i==11){
+                ul=[
+                    {emoji:"  👨‍🎤  ",title:"特朗普"},
+                    {emoji:"  👨‍🎤  ",title:"拜登"},
+                ]
+            }
+            this.feel.activity=ul
+            this.factive=i
+        },
         //跳转
         getmenu(index,item){
             console.log("🚀 ~ file: index.vue ~ line 851 ~ getmenu ~ index", index)
