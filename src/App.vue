@@ -236,4 +236,29 @@ a {
 .menu-head>*{
     margin: 0;
 }
+
+
+
+.el-tabs__nav-wrap::after {
+    height: 0;
+}
+
+.el-tabs__active-bar {
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--accent);
+}
+
+.el-tabs__item {
+    font-size: 16px;
+}
+
+.du4w35lb .el-tabs__item {
+    height: 60px;
+    line-height: 60px;
+}
+
+.el-tabs__header {
+    margin: 0;
+}
 </style>

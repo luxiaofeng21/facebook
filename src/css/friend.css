@@ -1,0 +1,179 @@
+.book-firend{
+    background-color: #fff;
+}
+.book-tou{
+    text-align: center;
+}
+/*头部 */
+.tou-bg{
+    background-image: var(--always-dark-gradient);
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+}
+.tou-bg .book-icon2{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.tou-img{
+    width: 176px;
+    height: 176px;
+    position: absolute;
+    left: 50%;
+    margin-left: -88px;
+    margin-bottom: -40px;
+    bottom: 0;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.tou-img .upload-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 25px;
+}
+.tou-img>img{
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+    object-fit: cover;
+    background: #fff;
+}
+.tou-title{
+    margin-top: 45px;
+}
+.el-tabs{
+    margin-right: 10px;
+}
+/*icon */
+.tou-nav>div{
+    display: flex;
+}
+.tou-nav .book-icon2{
+    margin-left: 10px;
+}
+.tou-nav .book-down {
+    border: 0;
+    margin: 2px 0;
+    font-size:15px;
+}
+.friend-icon {
+    background-image: url(../assets/_AgLJqLL0tL.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.msg-icon {
+    background-position: 0 -255px;
+}
+
+.search-icon {
+    background-position: 0 -1115px;
+}
+
+.arrow-icon {
+    height: 15px;
+    background-position: 0 -1735px;
+}
+
+.icon-success {
+    background: #E7F3FF;
+    color: #056FE7;
+}
+/*搜索 */
+.search_con {
+    text-align: center;
+}
+
+.search_con img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.search_con>.search_title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+    /*个人资料 */
+    .me-ul{
+        margin-top: 10px;
+    }
+    .me-ul li {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .me-ul li img {
+        filter: var(--filter-placeholder-icon);
+        margin-right: 10px;
+    }
+    .me-rg{
+        position: absolute;
+        right: 0;
+        display: flex;
+    }
+
+    .about{
+        background-color: #eee;
+    }
+    a{
+        color: #333;
+    }
+    .intimi-icon{
+        width: 15px;
+        height: 15px;
+        background-image: url('../assets/xVr-bSpqpnp.png');
+        background-position: 2px -720px;
+    }
+    .about-list{
+        width: 100%;
+    }
+    .about-ul{
+        width: 95%;
+    }
+    .about-ul .book-input{
+        margin-bottom: 10px;
+    }
+    .book-input-content{
+        width: 100%;
+    }
+    .about-ul>li{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .about-ul>li>.about-title{
+        display: flex;
+        align-items: center;
+        color: #0084ff;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .about-ul>li i{
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .book-input{
+        width: 100%;
+    }
+    .book-footer{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    .book-footer>.rg{
+        display: flex;
+    }
+    .book-footer>.rg>div:last-child{
+        margin-left: 10px;
+    }
+    .book-card .el-button{
+        width: 100%;
+        font-size: 16px;
+        font-weight:bold;
+    }

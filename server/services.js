@@ -1,4 +1,6 @@
 const db = require('./db.js');
+const express = require('express')
+const app = express()
 const session=require("express-session");
 let nodemailer=require("nodemailer");
 let bcrypt=require("bcrypt");
@@ -7,6 +9,13 @@ let path=require("path");
 let codes={};
 let user_info={};
 let imgUrl='http://127.0.0.1:75/images/';
+app.use(session({
+    secret:'Keyboard cat',
+    resave:false,
+    saveUninitialized: true,
+    cookie: {secure:false,maxAge:1000 * 600}, /*第一个参数：只有在https才可以访问cookie；第二个参数：设置cookie的过期时间*/
+    rolling:true/*只要页面在操作就不会过期，无操作5秒后过期*/
+  }));
 // 用户表
 exports.user = (req,res)=>{
     // 查询语句
@@ -46,8 +55,8 @@ exports.comments=(req,res)=>{
 //朋友
 exports.friends = (req,res)=>{
     // 查询语句
-    let sql = 'select * from user where not(?)'
-    db.base(sql,[{id:user_info.id}],(result)=>{
+    let sql = 'select * from user'
+    db.base(sql,"",(result)=>{
        res.send(result)
     })
 }
@@ -138,7 +147,7 @@ exports.createUser=async function (req,res) {
 }
 
 //用户登录
-exports.getlogin=  function(req,res){
+exports.getlogin=function(req,res){
         var data=req.body;
         for(let i in data){
             if(data[i]==''){
@@ -152,9 +161,10 @@ exports.getlogin=  function(req,res){
             }
             var result=result[0]
             if(await bcrypt.compare(data.password,result.password)){
+                user_info=result
                 var token=result.id+"."+result.user_name;
-                req.session.user_info=result
-
+                req.session.user_info=result;
+                req.session.token=token;
                 res.send({code:1,msg:"登录成功",data:result,token:token})
             }else{
                 res.send({code:-1,msg:"账户邮箱或者密码错误！！！"})
@@ -162,11 +172,13 @@ exports.getlogin=  function(req,res){
         })
    
 }
+
 //用户退出 
 exports.outlogin=function(req,res){
     user_info={};
     res.send({code:1,msg:"退出成功"})
 }
+
 //获取用户信息
 exports.getuserInfo=function(req,res){
     if(user_info!={}){
@@ -176,6 +188,7 @@ exports.getuserInfo=function(req,res){
     }
     
 }
+
 //修改用户信息
 exports.setUser=function(req,res){
     user_info=req.body
@@ -184,6 +197,7 @@ exports.setUser=function(req,res){
                 res.send({code:1,msg:"修改成功",data:user_info})
     })
 }
+
 //验证token
 exports.getoken=function(req,res){
     //获取token

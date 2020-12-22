@@ -1,6 +1,6 @@
 <template>
 <div class="groups-list">
-    <div v-for="(item,index) in list" :key="index"  class="groups-item" :class="size">
+    <div v-for="(item,index) in list" :key="index"  class="groups-item" :class="size" @click="getitem(item)">
         <img :src="item.img" alt="">
         <div class="groups-con">
                 <div class="groups-title">{{item.title}} </div>
@@ -28,7 +28,9 @@ export default {
 
     },
     methods: {
-
+        getitem(item){
+            this.$router.push({name:"groups_item"})
+        }
     }
 };
 </script>
