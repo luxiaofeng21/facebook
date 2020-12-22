@@ -424,8 +424,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <cart-list :list="frineds">
-                                </cart-list>
+                                <cart-list :list="frineds" @getcart="getmessage"></cart-list>
                             </div>
                         </div>
                         <div class="pwoa4pd7 mkhogb32 datstx6m b5wmifdl pmk7jnqg kwrap0ej kr520xx4 qgmjvhk0 art1omkt nw2je8n7 hhz5lgdu pyaxyem1" data-visualcompletion="ignore" data-thumb="1" style="display: none; right: 0px; height: 172px;">
@@ -629,7 +628,7 @@
             </div>
         </div>
         <div v-if="choose==2" class="tr9rh885 sjgh65i0">
-            <img draggable="false" alt="" src="/rsrc.php/v3/yt/r/st43MlfQdGP.png" width="1680" height="460">
+            <img draggable="false" alt="" src="../assets/life.png" width="1680" height="460">
             <div class="j83agx80 cbu4d94t mysgfdmx hddg9phg">
                 <div class="w0hvl6rk qjjbsfad">
                     <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b o3w64lxj b2s5l15y hnhda86s oo9gr5id oqcyycmt">
@@ -648,206 +647,12 @@
                 选择类别
             </span>
             <div class="gh1tjcio frluczxc gupp8or6 sej5wr8e">
-                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw jifvfom9 gs1a9yip lhclo0ds btwxx1t3 hv4rvrfc dati1w0a discj3wi dlv3wnog rl04r1d5 enqfppq2 muag1w35">
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/y1/r/qo8ukTPT9VZ.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                工作
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/y3/r/vHD_ZsXzQOE.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                教育
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yi/r/G6fHsH4QurG.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                感情状况
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yN/r/09zyjdM4r6c.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                居家与生活
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yZ/r/E8yAnrNoGWY.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                家人
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yj/r/0M5U6NaXQW9.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                旅行
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yc/r/XjtPoGuPbkE.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                兴趣与爱好
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/y5/r/KRH4AYqp4Ni.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                健康与保养
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yx/r/JWMA3QC8QZq.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                里程碑与成就
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yN/r/bYwgrRENmdE.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                纪念
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 ftbm7790 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                        <div role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 a8c37x1j p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                            <div class="do00u71z l9j0dhe7 k4urcfbm" style="padding-top: 100%;">
-                                <div class="gs1a9yip ow4ym5g4 auili1gw j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb i09qtzwb rq0escxv n7fi1qx3 pmk7jnqg j9ispegn kr520xx4">
-                                    <div class="bp9cbjyn j83agx80 cbu4d94t dflh9lhu scb9dxdr aodizinl">
-                                        <img src="/rsrc.php/v3/yH/r/k24D_-sRyTo.png" alt="" class="hu5pjgll lzf7d6o1" width="32" height="32">
-                                        <div class="n1l5q3vz">
-                                            <span dir="auto" class="a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh oo9gr5id oqcyycmt" style="-moz-box-orient: vertical; -webkit-line-clamp: 3; display: -webkit-box;">
-                                                新建生活纪事类别
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-visualcompletion="ignore" class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" style="border-radius: 4px;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <ul class="life-ul">
+                        <li v-for="(item,index) in life" :key="index">
+                            <img :src="item.img" alt="">
+                            <div class="life-title">{{item.title}}</div>
+                        </li>
+                    </ul>
             </div>
         </div>
         <span slot="footer" class="dialog-footer" v-if="choose==5">
@@ -906,6 +711,53 @@ export default {
     },
     data() {
         return {
+            life:[//生活纪实
+                {
+                    img:require("@/assets/life1.png"),
+                    title:"工作"
+                },
+                {
+                    img:require("@/assets/life2.png"),
+                    title:"教育"
+                },
+                {
+                    img:require("@/assets/life3.png"),
+                    title:"感情状况"
+                },
+                {
+                    img:require("@/assets/life4.png"),
+                    title:"居家与生活"
+                },
+                {
+                    img:require("@/assets/life5.png"),
+                    title:"家人"
+                },
+                {
+                    img:require("@/assets/life6.png"),
+                    title:"旅行"
+                },
+                {
+                    img:require("@/assets/life7.png"),
+                    title:"兴趣与爱好"
+                },
+                {
+                    img:require("@/assets/life8.png"),
+                    title:"健康与保养"
+                },
+                {
+                    img:require("@/assets/life9.png"),
+                    title:"里程碑与成就"
+                },
+                {
+                    img:require("@/assets/life10.png"),
+                    title:"纪念"
+                },
+                {
+                    img:require("@/assets/life11.png"),
+                    title:"新建生活纪事类别"
+                },
+
+            ],
             dialogVisible4: false,
             feed: {
                 title: "",
@@ -1373,6 +1225,10 @@ export default {
                 this.dialogVisible = true;
             }
 
+        },
+        //跳转聊天
+        getmessage(i,v){
+            this.$router.push({name:"messenger"})
         }
     }
 }

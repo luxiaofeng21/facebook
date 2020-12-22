@@ -13290,10 +13290,6 @@ to {
 .royuam97 {
 	min-width:210px
 }
-.rozst971 {
-	background-image:url(data:image/png;
-	base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAOBAMAAAD3WtBsAAAAFVBMVEUAAAAAAAAAAAAAAAAAAAAAAAD29va1cB7UAAAAB3RSTlMCCwQHGBAaZf6MKAAAABpJREFUCNdjSGNIY3BhCGUQBEJjIFQCQigAACyJAjLNW4w5AAAAAElFTkSuQmCC)
-}
 .rpc5pvtz {
 	text-shadow:2px 2px var(--shadow-5)
 }
@@ -13304,7 +13300,7 @@ to {
 	width:45%
 }
 .rq0escxv {
-	box-sizing:border-box
+	box-sizing:border-box;
 }
 .rq1lv6aj {
 	height:233px

@@ -7,8 +7,10 @@
                 <div class="cart-img" :class="item.iconChecked?'iconChecked':''">
                     <!--消息类型-->
                     <img v-if="item.img || item.me_img" :src="item.img|| item.me_img" alt="">
+                    <span v-else-if="item.emoji">{{item.emoji}}</span>
                     <i v-else :class="item.icon"></i>
                     <span v-if="type=='msg'" class="imgicon" :class="item.imgicon"></span>
+                   
                 </div>
                 <div class="cart-content">
                     <div class="cart-title">{{item.title}} </div>
@@ -485,5 +487,8 @@ export default {
 }
 .__fb-dark-mode .ischecked{
     background-color: #252F3C  !important;
+}
+.cart-img>span{
+    font-size: 20px;
 }
 </style>

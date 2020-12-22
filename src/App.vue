@@ -114,8 +114,9 @@ a {
     width: 40px;
     height: 40px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    line-height: 40px;
     background-color: var(--secondary-button-background);
     border-radius: 50%;
  
@@ -134,6 +135,7 @@ a {
     width: auto;
     border-radius: 5px;
     padding: 0 15px;
+    text-align: center;
 }
 
 .book-icon2>i {
@@ -143,7 +145,16 @@ a {
     color: #fff;
     background-color: #1877F2;
 }
-
+.icon-primary2{
+    background-color: #E7F3FF;
+    color: #1877F2;
+    font-size: 14px;
+}
+.icon-primary2 i{
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+}
 .book-title{
     color: var(--primary-text);
     font-weight: 600;
@@ -236,4 +247,9 @@ a {
 .menu-head>*{
     margin: 0;
 }
+.el-block{
+    display: block;
+    width: 100%;
+}
+
 </style>

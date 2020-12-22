@@ -1,5 +1,5 @@
 <template>
- <ul class="follow-ul">
+ <ul class="follow-ul" :class="size">
         <li v-for="(item,index) in list" :key="index">
             <div class="follow-img">
                     <img :src="item.img" alt="">
@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-    props:["list"]
+    props:["list","size"]
 }
 </script>
 <style scoped>
@@ -62,5 +62,8 @@ export default {
     }
     .book-icon2 i{
         margin-right: 5px;
+    }
+    .medium>li{
+        width: 15.5%;
     }
 </style>
