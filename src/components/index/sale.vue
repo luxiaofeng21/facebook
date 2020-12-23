@@ -65,7 +65,7 @@ export default {
         var that=this;
         //公共主页
         this.$axios.get("/api/publicPage").then(res=>{
-            var data=res.data.data
+            var data=res
             data.map(x=>x.img=require("@/assets/flag.png"))
             that.pages=data
         })

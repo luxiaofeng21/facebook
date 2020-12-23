@@ -777,7 +777,7 @@ export default {
 	  var that=this;
 	  //朋友
         this.$axios.get("/api/friends").then(res => {
-            that.friends = res.data
+            that.friends = res
         })
   },
   methods:{
@@ -796,13 +796,13 @@ export default {
 		info.date=date.getTime();
         info.friends=info.friends.join(",")
         this.$axios.post("/api/createGroups",info).then(res=>{
-            if(res.data.code==1){
-                that.$message.success(res.data.msg)
+            if(res.code==1){
+                that.$message.success(res.msg)
                 setTimeout(()=>{
                     that.$router.go(-1)
                 },1000)
             }else{
-               that.$message.error(res.data.msg)
+               that.$message.error(res.msg)
             }
         })
     }

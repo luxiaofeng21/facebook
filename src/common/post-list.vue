@@ -190,7 +190,18 @@ export default {
             this.list[this.eindex].collection[this.eindex2]=item;  
         },
         getemoji(item){
-             this.list[this.eindex]=item;   
+             var user_info=this.$store.state.user_info;
+             console.log(item);
+             var info={
+                     aid:item.id,
+                     uid:user_info.id,
+                     content:item.collect_title,
+                     date:new Date()
+             }
+        //      item.collect_title=""
+             this.$axios.post("/api/createComments",info).then(res=>{
+                     console.log(res)
+             })
         },
         gethandle(state, item,e) {
             //点赞
@@ -208,6 +219,9 @@ export default {
                         $("body,html").animate({"scrollTop":dom.offset().top - 800})
                         $(dom).find("input").focus()
                 }
+                this.$axios.get("/api/comments",{params:{aid:item.id}}).then(res=>{
+                        console.log(res)
+                })
                 item.showEmoji = true
                 
             //转发

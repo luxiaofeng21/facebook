@@ -1013,22 +1013,22 @@ export default {
         this.user_info=user_info
         //推荐
         this.$axios.get("/api/recommended").then(res => {
-            res.data.map(x=>{
+            res.map(x=>{
                 if(x.collection=='') x.collection=[]
             })
-            that.list = res.data
+            that.list = res
         })
         //朋友
         this.$axios.get("/api/friends").then(res => {
-            for(let item of res.data){
+            for(let item of res){
                 item.me_img= item.me_img
                 item.bg_img=item.bg_img
             }
-            that.friends = res.data
+            that.friends = res
         })
         //公共主页
         this.$axios.get("/api/publicPage").then(res=>{
-            var data=res.data.data
+            var data=res.data
             data.map(x=>x.img=require("@/assets/flag.png"))
             that.pages.unshift(data[data.length-1])
         })

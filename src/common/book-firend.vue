@@ -315,9 +315,9 @@ export default {
            }
             
             this.$axios.post("/api/setUser",user_info).then(res=>{
-                localStorage.setItem("user_info",JSON.stringify(res.data.data))
-                that.$store.commit("edit",res.data.data)
-                that.$message.success(res.data.msg)
+                localStorage.setItem("user_info",JSON.stringify(res))
+                that.$store.commit("edit",res)
+                that.$message.success(res.msg)
             })
         }, 
         handlePreview(file) {

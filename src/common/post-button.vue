@@ -38,22 +38,18 @@ export default {
     mounted() {
 
     },
-    watch:{
-        item(newVlaue,oldValue){
-            this.$emit("getemoji",newVlaue)
-        }
-    },
     methods: {
         //发表评论
         getup(item){
+              console.log("🚀 ~ file: post-button.vue ~ line 44 ~ getup ~ item", item)
+              this.$emit("getemoji",item)
               var info=this.$store.state.user_info;
-              if(this.item.collect_title=='')
-               return false
+              if(this.item.collect_title=='') return false
               var nowDate=new Date();
               var date=nowDate.getTime() ;
               item.remark+=1;
               item.collection.push({title:item.collect_title,img:"",date,collect_title:"",collection:[],me_img:info.me_img,name:info.user_name,showEmoji:false});
-              item.collect_title="";
+             
         },
         selectEmoji(emoji) {
            this.item.collect_title+=emoji.data

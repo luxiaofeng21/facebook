@@ -141,7 +141,7 @@ export default {
     created() {
         var that = this;
         this.$axios.get("/api/user").then(res => {
-            that.friends = that.friends.concat(res.data)
+            that.friends = that.friends.concat(res)
         })
     },
     data() {

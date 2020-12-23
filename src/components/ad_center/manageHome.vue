@@ -2048,7 +2048,7 @@ export default {
 		var that=this;
 		var id=this.$route.query.id;
 		this.$axios.get("/api/getpublicPage?id="+id).then(res=>{
-			that.mobj=res.data.data
+			that.mobj=res
             console.log("created -> that.mobj", that.mobj)
 		})
 	},

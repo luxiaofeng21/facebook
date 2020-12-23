@@ -254,8 +254,8 @@ export default {
                 this.$message.error("邮箱格式不正确，请重新输入！！");
             }
             this.$axios.post("/api/email",data).then(res=>{
-                if(res.data.code==-1){
-                    this.$message.error(res.data.msg)
+                if(res.code==-1){
+                    this.$message.error(res.msg)
                 }else{
                      that.$router.push({path:"/login/code",query:{title:data.email,state:"email"}})
                 }

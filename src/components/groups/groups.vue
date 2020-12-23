@@ -146,8 +146,8 @@ export default {
     created(){
         var that=this;
         this.$axios.get("/api/getGroups").then(res=>{
-            res.data.data.map(x=>x.img=require("@/assets/group.jpg"))
-           that.groups=res.data.data
+            res.map(x=>x.img=require("@/assets/group.jpg"))
+           that.groups=res
         })
     },
     methods: {

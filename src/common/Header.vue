@@ -1077,11 +1077,11 @@ export default {
         //  var that=this;
         //  //用户信息
         //  this.$axios.get("/api/getuserInfo").then(res => {
-        //     if(res.data.code){
-        //         if(res.data.data.name){
-        //             this.user_info=res.data.data
-        //             this.$store.commit("setedit",res.data.data)
-        //             localStorage.setItem("user_info",JSON.stringify(res.data.data))
+        //     if(res.code){
+        //         if(res.name){
+        //             this.user_info=res
+        //             this.$store.commit("setedit",res)
+        //             localStorage.setItem("user_info",JSON.stringify(res))
         //         }else{
         //             this.$message.error("登录过期，请重新登录！！")
         //             setTimeout(res=>{
@@ -1110,12 +1110,12 @@ export default {
                 url:"/api/createRecommended",
                 data:info
             }).then(res=>{
-                 if(res.data.code==1){
-                    that.$message.success(res.data.msg)
+                 if(res.code==1){
+                    that.$message.success(res.msg)
                     that.dialogVisible=false
                     //    this.$router.go(0);
                 }else{
-                    that.$message.error(res.data.msg)
+                    that.$message.error(res.msg)
                 }
             })
             this.topic=""
@@ -1185,7 +1185,7 @@ export default {
             if (i == 3) {
                 this.$axios.post("/api/outlogin").then(res=>{
                         localStorage.clear();
-                        this.$message.success(res.data.msg)
+                        this.$message.success(res.msg)
                         setTimeout(()=>{
                             this.$router.push({
                                 name: "login"

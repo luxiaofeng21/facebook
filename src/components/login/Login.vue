@@ -48,17 +48,17 @@ export default {
                   this.$message.error("请输入密码")
                 return false
             }
-            this.$axios.post("/api/login",{email,password}).then(res=>{
-                if(res.data.code==1){
-                    this.$message.success(res.data.msg)
-                    this.$store.commit("setedit",res.data.data)
-                    localStorage.setItem("user_info",JSON.stringify(res.data.data))
-                    localStorage.setItem("token",res.data.token)
+            this.$axios.post("/login",{email,password}).then(res=>{
+                if(res.code==1){
+                    this.$message.success(res.msg)
+                    this.$store.commit("setedit",res.data)
+                    localStorage.setItem("user_info",JSON.stringify(res.data))
+                    localStorage.setItem("token",res.token)
                     setTimeout(res=>{
                         that.$router.push({name:"index"})
                     },1000)
                 }else{
-                    this.$message.error(res.data.msg)
+                    this.$message.error(res.msg)
                 }
             })
         }

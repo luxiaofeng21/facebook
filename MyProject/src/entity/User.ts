@@ -138,3 +138,22 @@ export class Groups {
     @Column()
     date: number;
 }
+
+@Entity()
+export class Comments {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+    
+    @Column()
+    aid:number
+
+    @Column()
+    content: string;
+
+    @Column()
+    uid: Number;
+    
+    @Column()
+    date: Date;
+}

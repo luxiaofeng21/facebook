@@ -277,10 +277,10 @@ export default {
     created(){
         var that=this;
         this.$axios.get("/api/publicPage").then(res=>{
-            for(let item of res.data.data){
+            for(let item of res){
                 item.img=require("@/assets/public.png")
             }
-            that.menu[0].children=res.data.data
+            that.menu[0].children=res
         })
     },
     methods: {

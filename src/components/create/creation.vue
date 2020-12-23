@@ -774,13 +774,13 @@ export default {
         info.type=info.type.join(",")
         this.$axios.post("/api/createPage",info).then(res=>{
       
-            if(res.data.code==1){
-                that.$message.success(res.data.msg)
+            if(res.code==1){
+                that.$message.success(res.msg)
                 setTimeout(()=>{
                     that.$router.go(-1)
                 },1000)
             }else{
-               that.$message.error(res.data.msg)
+               that.$message.error(res.msg)
             }
         })
     }

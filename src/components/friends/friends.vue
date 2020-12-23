@@ -112,21 +112,21 @@ export default {
         var that = this;
          //推荐好友
         this.$axios.get("/api/friends").then(res => {
-             console.log(res.data)
-            if(res.data.length>0){
-                res.data.map(x=>{
+             console.log(res)
+            if(res.length>0){
+                res.map(x=>{
                     x.me_img=x.me_img
                     x.bg_img?x.bg_img=x.bg_img:''
                 })
-                that.friend=res.data
-                that.me_ul=res.data[0]
+                that.friend=res
+                that.me_ul=res[0]
                
             }
             
         })
         //推荐
         this.$axios.get("/api/recommended").then(res => {
-                   that.me_ul.list = res.data
+                   that.me_ul.list = res
         })
        
     },

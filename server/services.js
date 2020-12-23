@@ -44,11 +44,26 @@ exports.createRecommended = (req,res)=>{
    
 }
 
+//发表评论
+exports.createComments=(req,res)=>{
+    var sql="insert into comments set?"
+    db.base(sql,[req.body],(result)=>{
+        res.send({msg:"创建成功",code:1})
+  })
+}
+
 //评论集合
 exports.comments=(req,res)=>{
-      var sql="select * comments where ?"  
-      db.base(sql,[req.body],(result)=>{
-            res.send(result)
+      var sql="select * from comments where ?"  
+      db.base(sql,[req.query],async (result)=>{
+          for(let item of result){
+             db.base(`select * from user where id=?`,item.uid,(v)=>{
+                    item.user_info=v[0]
+             })
+          }
+          setTimeout(()=>{
+            res.send(result) 
+          },10)
       })
 }
 

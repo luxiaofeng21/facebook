@@ -55,13 +55,13 @@ export default {
             }
             this.$axios.post("/api/createUser",{code:this.code}).then(res=>{
                 
-                if(res.data.code==1){
-                    this.$message.success(res.data.msg);
+                if(res.code==1){
+                    this.$message.success(res.msg);
                     setTimeout(()=>{
                         this.$router.push({name:"login"})
                     },1000)
                 }else{
-                    this.$message.error(res.data.msg);
+                    this.$message.error(res.msg);
                 }
             })
             

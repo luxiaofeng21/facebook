@@ -10,19 +10,19 @@ var url="http://127.0.0.1:83"
 var http=axios.create({
     baseURL:url
 })
-// //请求拦截
-// http.interceptors.request.use(config=>{ 
-//     if(localStorage.token){
-//         config.headers.Authorization=localStorage.token
-//     }
-//     return config
-// })
-// //响应拦截
-// http.interceptors.request.use(res=>{
-//     return res
-// },error=>{
-//     ElementUI.Message.error(error.response.data)
-// })
+//请求拦截
+http.interceptors.request.use(config=>{ 
+    if(localStorage.token){
+        config.headers.Authorization=localStorage.token
+    }
+    return config
+})
+//响应拦截
+http.interceptors.response.use(res=>{
+    return res.data
+},error=>{
+    ElementUI.Message.error(error.response.data)
+})
 Vue.prototype.$axios = http;
 Vue.prototype.$url=url
 

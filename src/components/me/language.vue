@@ -132,7 +132,7 @@ export default {
 			}
 			if(v.state==1){
 				this.$axios.post("/api/setUser",info).then(res=>{
-					if(res.data.code==1){
+					if(res.code==1){
 						this.$message.success("修改成功");
 					}
 					getlang(v.atitle)
