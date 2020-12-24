@@ -48,7 +48,7 @@ export default {
               var nowDate=new Date();
               var date=nowDate.getTime() ;
               item.remark+=1;
-              item.collection.push({title:item.collect_title,img:"",date,collect_title:"",collection:[],me_img:info.me_img,name:info.user_name,showEmoji:false});
+              item.collection.push({content:item.collect_title,img:"",date,collect_title:"",collection:[],showEmoji:false,user_info:info});
              
         },
         selectEmoji(emoji) {

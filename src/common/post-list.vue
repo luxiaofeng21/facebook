@@ -70,12 +70,12 @@
                         <ul class="collect-list" v-if="item.collection.length>0">
                                 <li v-for="(items,indexs) in item.collection" :key="indexs" @click="eindex2=indexs">
                                         <div class="me-img">
-                                                <img :src="item.me_img" alt="">
+                                                <img :src="items.user_info.me_img" alt="">
                                         </div>
                                         <div class="rg">
                                                 <div class="collent-msg">
-                                                        <div class="me-name">{{item.name}}</div>
-                                                        <div class="collect-text" v-html="items.title"></div>
+                                                        <div class="me-name">{{items.user_info.user_name}}</div>
+                                                        <div class="collect-text" v-html="items.content"></div>
                                                         <div class="hover-icon">
                                                                 <el-popover>
                                                                         <ul class="popver-ul">
@@ -94,14 +94,14 @@
                                                         <span>{{ getTimeDistance(items.date)}}</span>
                                                 </div>
                                         
-                                                <li   v-for="(detail,i) in items.collection" :key="i">
+                                                <!-- <li   v-for="(detail,i) in items.collection" :key="i">
                                                         <div class="me-img">
                                                                 <img :src="detail.me_img" alt="">
                                                         </div>
                                                         <div class="rg">
                                                                 <div class="collent-msg">
                                                                         <div class="me-name">{{detail.name}}</div>
-                                                                        <div class="collect-text" v-html="detail.title"></div>
+                                                                        <div class="collect-text" v-html="detail.content"></div>
                                                                         <div class="hover-icon">
                                                                                 <el-popover>
                                                                                         <ul class="popver-ul">
@@ -121,7 +121,7 @@
                                                                 </div>
                                                         </div>
                                                         
-                                                </li>
+                                                </li> -->
                                                 <post-button v-if="items.showEmoji" :item="items" @getemoji="getemoji2"></post-button>
                                         </div>
                                 </li>
@@ -191,19 +191,27 @@ export default {
         },
         getemoji(item){
              var user_info=this.$store.state.user_info;
-             console.log(item);
              var info={
                      aid:item.id,
                      uid:user_info.id,
                      content:item.collect_title,
                      date:new Date()
              }
-        //      item.collect_title=""
+      
              this.$axios.post("/api/createComments",info).then(res=>{
-                     console.log(res)
+                     if(res.code==1){
+                       item.collect_title=""
+                       this.$notify({
+                                title: '成功',
+                                message: '评论成功',
+                                type: 'success',
+                                position: 'bottom-left'
+                        });
+                     }
              })
         },
         gethandle(state, item,e) {
+        //     console.log("🚀 ~ file: post-list.vue ~ line 207 ~ gethandle ~ item", item)
             //点赞
             if (state == 1) {
                 item.checked = !item.checked
@@ -220,13 +228,14 @@ export default {
                         $(dom).find("input").focus()
                 }
                 this.$axios.get("/api/comments",{params:{aid:item.id}}).then(res=>{
-                        console.log(res)
+                        console.log("🚀 ~ file: post-list.vue ~ line 225 ~ this.$axios.get ~ res", res)
+                        item.collection=res
                 })
                 item.showEmoji = true
                 
             //转发
             }else{
-
+                    
             }
         },
         

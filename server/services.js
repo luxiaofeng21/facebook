@@ -63,7 +63,7 @@ exports.comments=(req,res)=>{
           }
           setTimeout(()=>{
             res.send(result) 
-          },10)
+          },100)
       })
 }
 
