@@ -108,8 +108,15 @@
         display: flex;
         margin-bottom: 10px;
     }
-
+    .me-ul li:nth-child(2) img {
+        height: 15px;
+    }
+    .me-ul .me-label{
+        font-size: 15px;
+    }
     .me-ul li img {
+        width: 20px;
+        height: 20px;
         filter: var(--filter-placeholder-icon);
         margin-right: 10px;
     }
@@ -176,4 +183,17 @@
         width: 100%;
         font-size: 16px;
         font-weight:bold;
+    }
+
+
+    .tou-text{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: #666;
+    }
+    .tou-text img{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
     }

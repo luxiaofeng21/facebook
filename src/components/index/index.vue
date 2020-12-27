@@ -495,6 +495,16 @@
                                                         <div class="ignore-dynamic">
                                                             <div class="l9j0dhe7">
                                                                 <div class="flex">
+                                                                    <span class="el-title">加好友请求</span>
+                                                                    <span class="link">查看全部</span>
+                                                                </div>
+                                                                <cart-list :list="friends" :size="'small'">
+                                                                </cart-list>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ignore-dynamic">
+                                                            <div class="l9j0dhe7">
+                                                                <div class="flex">
                                                                     <span class="el-title">联系人</span>
                                                                     <div class="hover-icon">
                                                                             <i class="el-icon-more"></i>
@@ -678,62 +688,62 @@ export default {
                         emoji:"💑",
                         title: "在热恋"
                     }, {
-                        img: require("@/assets/1f393.png"),
+                        emoji:"🤪",
                         title: "很疯狂"
                     }, {
-                        img: require("@/assets/1f334.png"),
+                        emoji:" 😏 ",
                         title: "很感激"
                     }, {
-                        img: require("@/assets/1f939.png"),
+                        emoji:" 😊 ",
                         title: "有福"
                     }, {
-                        img: require("@/assets/1f319.png"),
+                        emoji:"😝",
                         title: "棒极了"
                     }, {
-                        img: require("@/assets/2600.png"),
+                        emoji:"🤪",
                         title: "好傻"
                     }, {
-                        img: require("@/assets/2615.png"),
+                        emoji:" 🌏 ",
                         title: "节日模式全开"
                     },
                     {
-                        img: require("@/assets/1f4aa.png"),
+                        emoji:"😉",
                         title: "很美妙"
                     },
                     {
-                        img: require("@/assets/1f4da.png"),
+                        emoji:"😎",
                         title: "很酷"
                     },
                     {
-                        img: require("@/assets/1f4fa.png"),
+                        emoji:"🤣",
                         title: "很搞笑"
                     },
                     {
-                        img: require("@/assets/1f495.png"),
+                        emoji:"😊",
                         title: "很放松"
                     },
                     {
-                        img: require("@/assets/1f958.png"),
+                        emoji:"🤤",
                         title: "positive"
                     },
                     {
-                        img: require("@/assets/1f37d.png"),
+                        emoji:"🤤",
                         title: "很悠闲"
                     },
                     {
-                        img: require("@/assets/1f3b2.png"),
+                        emoji:"🌹",
                         title: "充满希望"
                     },
                     {
-                        img: require("@/assets/1f382.png"),
+                        emoji:"😚",
                         title: "很快乐"
                     },
                     {
-                        img: require("@/assets/1f57a.png"),
+                        emoji:"😴",
                         title: "很累"
                     },
                     {
-                        img: require("@/assets/1f57a.png"),
+                        emoji:"🤗",
                         title: "很有动力"
                     },
                     {
@@ -1230,6 +1240,7 @@ export default {
 <style>
 .activity .cart-img>img{
     width: auto;
+    height: auto;
 }
 </style>
 <style scoped>

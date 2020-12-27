@@ -246,5 +246,9 @@ export default {
 		font-size: 20px;
 		margin-right: 5px;
 	}
+
+	.book-icon2{
+		display:inline-block;
+	}
 </style>
     

@@ -50,7 +50,7 @@
                                             <div data-pagelet="LeftNav">
                                                 <div>
                                                     <cart-list :list="menu" :type="'menu'" :active="mactive" @getcart="getcart"></cart-list>
-                                                     <div class="flex menu-title">
+                                                    <div class="flex menu-title">
                                                                     <div class="book-title2">你的看单</div>
                                                                     <div class="link">管理</div>
                                                     </div>
@@ -111,7 +111,6 @@
 
 <script scoped>
 import '@/css/watch.css'
-
 import Live from './live.vue'
 import Shows from './shows.vue'
 import Saved from './saved.vue'
@@ -189,8 +188,7 @@ export default {
                 {
                     title: "视频收藏",
                     icon: "watch-video collect-icon"
-                }
-            ],
+                }],
             tab: [{
                 title: "首页",
                 i: "sx_4718e0",
@@ -200,3 +198,4 @@ export default {
     },
 }
 </script>
+

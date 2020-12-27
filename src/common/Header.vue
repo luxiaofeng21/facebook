@@ -550,7 +550,7 @@
                                                         <div class="e5nlhep0 ecm0bbzt scb9dxdr dflh9lhu kzx2olss aot14ch1 p86d2i9g beltcj47 tdjehn4e">
                                                             <div class=" taijpn5t j83agx80 bp9cbjyn">
                                                                 <div class="taijpn5t pq6dq46d bp9cbjyn cgat1ltu">
-                                                                    <img src="../assets/n8s2iDL-sOI.png" alt="好友" class="hu5pjgll lzf7d6o1" width="12" height="12">
+                                                                    <img src="../assets/diqiu.png" alt="好友" class="hu5pjgll lzf7d6o1" width="12" height="12">
                                                                 </div>
                                                                 <span class="l3itjdph cgat1ltu">
                                                                     公开

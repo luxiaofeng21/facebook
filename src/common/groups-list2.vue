@@ -10,7 +10,7 @@
                     <slot></slot>
             </div>
     </div>
-</div>
+</div> 
 </template>
 
 <script>
@@ -54,6 +54,7 @@ export default {
         width: 100%;
         height: 100%;
         border-radius: 10px;
+        object-fit: cover;
     }
     .me-group-item:hover{
         background-color: #eee;

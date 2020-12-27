@@ -26,7 +26,7 @@
                             </div>
                         </li>
                     </ul>
-                    <p><hr/></p>
+                    <el-divider></el-divider>
                     <div class="book-null" v-if="friend.length<=0">暂无好友推荐</div>
                     <ul class="friend-ul">
                         <li v-for="(item,index) in friend" :class="active==index?'mactive':''" :key="index" @click="getmenu(item,index)">

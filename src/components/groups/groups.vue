@@ -91,6 +91,7 @@
                                             </div>
                                         </div>
                                          <groups-list2 :list="groups" @getgroups="getgroups"></groups-list2>
+                                         <div class="book-null" v-if="groups.length<=0"> 暂无小组 </div>
                                     </div>
                                         
                                 </div>
@@ -146,8 +147,8 @@ export default {
     created(){
         var that=this;
         this.$axios.get("/api/getGroups").then(res=>{
-            res.map(x=>x.img=require("@/assets/group.jpg"))
-           that.groups=res
+           res.data.map(x=>x.img=require("@/assets/group.jpg"))
+           that.groups=res.data
         })
     },
     methods: {

@@ -9,7 +9,7 @@
                     </div>
                     <el-popover height="200">
                            <groups-list2 :list="groups" @getgroups="getgroups"> </groups-list2>
-                           <groups-list2 slot="reference" :list="newlist"> <i class="el-icon-caret-bottom"></i></groups-list2>
+                           <groups-list2 slot="reference" :list="[accout]"> <i class="el-icon-caret-bottom"></i></groups-list2>
                     </el-popover>
                     <hr>
                     <cart-list :list="menu" :active="mactive" @getcart="getmenu"> </cart-list>
@@ -18,19 +18,21 @@
             <el-main >
                    <div class="book-firend">
                         <div class="book-tou katn9ffz">
-                                <div class="tou-bg"> 
+                                <div class="tou-bg" :style="{backgroundImage:`url(${accout.img})`}"> 
                                     <el-upload
-                                        v-if="type=='me'"
                                         class="upload-img"
-                                        :action="'api/uploadImg'"
+                                        :action="'/api/uploadImg'"
                                         accept="image/*"
                                         :on-success="handlePreview2" >
-                                        <div class="book-icon2" v-if="type=='me'"><i class="el-icon-camera-solid"></i> 添加封面照片</div>
+                                        <div class="book-icon2" ><i class="el-icon-camera-solid"></i> 编辑</div>
                                     </el-upload>
                                 
                                 </div>
-                                <div class="tou-title">哈哈哈</div>
-                                <div class="tou-text">嘿嘿嘿</div>
+                                <div class="tou-title" v-if="accout">{{accout.title}}</div>
+                                <div class="tou-text" v-if="accout.friends"> 
+                                    <img src="../../assets/diqiu.png" alt="">  {{accout.type==1?"公开小组":"非公开小组"}} · {{accout.friends.length}} 位成员
+                                </div>
+                                <p><hr></p>
                                 <div class="flex tou-nav">
                                     <div class="lf">
                                         <el-tabs v-model="activeName">
@@ -79,7 +81,39 @@
                                     </div>
                                 </div>
                         </div>
-                        <div class="about">
+                        <div class="about ">
+                            <div class="katn9ffz">
+                                <div class="book-container">
+                                    <div class="rg">
+                                        <el-card>
+                                            <div class="flex">
+                                                <el-avatar :src="user_info.me_img"></el-avatar>
+                                                <el-input style="margin-left:10px;flex:1" placeholder="发布公开贴..."></el-input>
+                                            </div>
+                                            <ul class="tie-ul">
+                                                <li><i class="sp_5kM2vwYmVrv sx_99956b"></i> <strong>照片/视频</strong></li>
+                                                <li><i class="sp_5kM2vwYmVrv sx_4fb45f"></i> <strong>标记用户</strong></li>
+                                                <li><i class="sp_5kM2vwYmVrv sx_649950"></i> <strong>感受活动</strong></li>
+                                            </ul>
+                                        </el-card>
+                                        <post-list v-if="accout" :list="accout.list"></post-list>
+                                    </div>
+                                    <div class="lf">
+                                            <el-card>
+                                                <div class="el-title">简介</div>
+                                                <ul class="me-ul">
+                                                    <li v-for="(item,index) in about" :key="index">
+                                                        <img :src="item.img" alt="">
+                                                        <div class="rg">
+                                                            <div class="me-label">{{item.label}}</div>
+                                                            <div class="me-title">{{item.title}}</div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </el-card>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
             </el-main>
@@ -112,19 +146,38 @@
 <script>
 import cartList from '@/common/cart-list'
 import groupsList2 from '@/common/groups-list2'
+import postList from "@/common/post-list"
 export default {
     components:{
         groupsList2,
-        cartList
+        cartList,
+        postList
     },
     data() {
         return {
+            about:[
+                {
+                    img:require("@/assets/diqiu.png"),
+                    label:"公开",
+                    title:"任何人都能查看成员名单和小组帖。"
+                },
+                {
+                    img:require("@/assets/look.png"),
+                    label:"可发现",
+                    title:"任何人都能找到这个小组。"
+                },
+                {
+                    img:require("@/assets/team.png"),
+                    label:"通用小组",
+                    title:""
+                },
+            ],
             user_info:{},
             search:"",
             dialogVisible:false,
             activeName:"1",
             me_ul:{},
-            newlist:[],
+            accout:[],
             groups:[
                 {
                     img:require("@/assets/group.jpg"),
@@ -190,23 +243,28 @@ export default {
     created() {
         var that=this;
         this.$axios.get("/api/getGroups").then(res=>{
-            res.map(x=>x.img=require("@/assets/group.jpg"))
-           that.groups=res
+            that.groups=res.data
         })
-        var id=this.$route.query.id
-        console.log("🚀 ~ file: home.vue ~ line 107 ~ created ~ id", id)
-        this.$axios("/groupsDetail?id="+id).then(res=>{
-            res.map(x=>x.img=require("@/assets/group.jpg"))
-           that.newlist=res
-        })
+        var id=this.$route.query.id;
+        this.getlist(id)
     },
     mounted() {
         this.user_info=this.$store.state.user_info
     },
     
     methods: {
+        getlist(id){
+            var that=this;
+            this.$axios("/api/groupsDetail?id="+id).then(res=>{
+                res.data.friends=JSON.parse(res.data.friends)
+                that.accout=res.data
+            })
+        },
+        handlePreview2(file){
+            // console.log("🚀 ~ file: home.vue ~ line 208 ~ handlePreview2 ~ file", file)
+        },
         getgroups(item){
-            this.$router.push({name:"grouopHome",query:{id:item.id}})
+             this.getlist(item.id)
         },
         getmenu(i){
             this.mactive=i
@@ -230,5 +288,28 @@ export default {
     }
     .tou-title{
         margin-top: 15px;
+    }
+    .el-popover .me-group{
+        max-height: 500px;
+        overflow: auto;
+    }
+    .tie-ul{
+        display: flex;
+        margin-top: 15px;
+    }
+    .tie-ul>li{
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
+    .tie-ul>li:hover{
+        cursor: pointer;
+        background-color: #eee;
+    }
+    .tie-ul>li>i{
+        margin-right: 5px;
     }
 </style>

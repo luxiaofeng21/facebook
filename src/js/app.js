@@ -4,25 +4,29 @@ import jquery from 'jquery'
 import ElementUI from 'element-ui';
 import MD5 from '@/js/md5.js';
 Vue.use(ElementUI);
-
 var url="http://127.0.0.1:83"
 //设置请求接口
 var http=axios.create({
-    baseURL:url
+    baseURL:url,
+    // headers:{
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    // }
 })
 //请求拦截
-http.interceptors.request.use(config=>{ 
-    if(localStorage.token){
-        config.headers.Authorization=localStorage.token
-    }
-    return config
-})
+// http.interceptors.request.use(config=>{ 
+//     if(localStorage.token){
+//         config.headers.Authorization=localStorage.token
+//     }
+//     return config
+// })
+
 //响应拦截
 http.interceptors.response.use(res=>{
     return res.data
 },error=>{
-    ElementUI.Message.error(error.response.data)
+    return error
 })
+
 Vue.prototype.$axios = http;
 Vue.prototype.$url=url
 

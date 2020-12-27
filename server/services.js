@@ -260,6 +260,8 @@ exports.getpublicPage=function(req,res){
 
 //创建小组
 exports.createGroups=function(req,res){
+    req.body.img=imgUrl+"groupBg.png"
+    req.body.date=new Date();
     let sql="insert into groups set ?"
     db.base(sql,[req.body],(err,result)=>{
         res.send({code:1,msg:"创建成功"})
@@ -278,7 +280,7 @@ exports.getGroups=function(req,res){
 exports.groupsDetail=function(req,res){
     let sql="select * from groups where ?"
     db.base(sql,[req.query],(result)=>{
-        res.send({code:1,data:result})
+        res.send({code:1,data:result[0]})
     })
 }
 

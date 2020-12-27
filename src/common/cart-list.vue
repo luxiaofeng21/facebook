@@ -197,8 +197,8 @@ export default {
 }
 
 .cart-img>img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--secondary-button-background);
 }

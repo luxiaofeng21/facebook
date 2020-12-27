@@ -132,6 +132,7 @@ a {
 }
 
 .book-icon2 {
+    /* display: inline-block; */
     width: auto;
     border-radius: 5px;
     padding: 0 15px;

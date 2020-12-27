@@ -82,40 +82,34 @@
                                       <el-input placeholder="小组名称（必填）" v-model="page.title"></el-input>
                                     </div>
                                   </div>
-								  <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
+								                  <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
                                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                    
-									 <el-select placeholder="选择隐私设置" v-model="page.type"  class="book-width">
-										<el-option :key="index" v-for="(item,index) in settings" :label="item.title" :value="index+1">
-												<div class="friend-left">
-													<div class="friend-img"> <img :src="item.img" alt=""> </div>
-													<div class="friend-content">
-														<div class="friend-title">{{item.title}}</div>
-														<div class="friend-text">{{item.text}}</div>
-													</div>
-											</div>
-										</el-option>
-                                     </el-select>
-                                      <div class="cxgpxx05">
-                                        <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
-                                        dir="auto">
-                                        </span>
-                                      </div>
+                                        <el-select placeholder="选择隐私设置" v-model="page.type"  class="book-width">
+                                            <el-option :key="index" v-for="(item,index) in settings" :label="item.title" :value="index+1">
+                                                <div class="friend-left">
+                                                  <div class="friend-img"> <img :src="item.img" alt=""> </div>
+                                                  <div class="friend-content">
+                                                    <div class="friend-title">{{item.title}}</div>
+                                                    <div class="friend-text">{{item.text}}</div>
+                                                  </div>
+                                              </div>
+                                            </el-option>
+                                        </el-select>
                                     </div>
                                   </div>
                                   <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 pfnyh3mw i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
                                     <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
                                      <el-select placeholder="邀请好友（可选）" v-model="page.friends" :filterable="true" :multiple="true" class="book-width">
-										<el-option :key="index" v-for="(item,index) in friends" :label="item.name" :value="item.id">
-											<div class="friend-item">
-												<div class="friend-left">
-													<div class="friend-img"> <img :src="item.img" alt=""> </div>
-													<div class="friend-content">
-														<div class="friend-title">{{item.name}}</div>
-													</div>
-												</div>
-											</div>
-										</el-option>
+                                        <el-option :key="index" v-for="(item,index) in friends" :label="item.name" :value="item.id">
+                                          <div class="friend-item">
+                                            <div class="friend-left">
+                                              <div class="friend-img"> <img :src="item.me_img" alt=""> </div>
+                                              <div class="friend-content">
+                                                <div class="friend-title">{{item.user_name}}</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </el-option>
                                      </el-select>
                                       <div class="cxgpxx05">
                                         <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain"
@@ -124,10 +118,6 @@
                                         </span>
                                       </div>
                                     </div>
-                                  </div>
-                                  
-                                
-                                  <div>
                                   </div>
                                 </div>
                               </div>
@@ -744,7 +734,7 @@ export default {
 	  friends:[],
 	  settings:[
 		  {
-			  img:require("@/assets/n8s2iDL-sOI.png"),
+			  img:require("@/assets/diqiu.png"),
 			  title:"公开",
 			  text:"任何人都能查看成员名单和小组帖"
 		  },
@@ -756,7 +746,7 @@ export default {
 	  ],
 	  seletAll:[
 		  {
-			  img:require("@/assets/n8s2iDL-sOI.png"),
+			  img:require("@/assets/diqiu.png"),
 			  title:"公开",
 			  text:"任何人都能查看成员名单和小组帖"
 		  },
@@ -792,9 +782,7 @@ export default {
            this.$message.error("隐私设置不能为空哦~")
             return false
         }
-		var date=new Date();
-		info.date=date.getTime();
-        info.friends=info.friends.join(",")
+        info.friends=JSON.stringify(info.friends)
         this.$axios.post("/api/createGroups",info).then(res=>{
             if(res.code==1){
                 that.$message.success(res.msg)

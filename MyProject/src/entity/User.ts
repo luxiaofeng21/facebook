@@ -126,17 +126,44 @@ export class Groups {
 
     @PrimaryGeneratedColumn()
     id: number;
+
     @Column()
     title: string;
+
+    @Column()
+    content: string;
 
     @Column()
     type: string;
 
     @Column()
-    friends: string;
-    
+    img: string;
+
     @Column()
-    date: number;
+    address: string;
+
+    @Column()
+    find: Boolean;
+
+    @Column()
+    date: Date;
+
+    @Column("simple-array")
+    friends: Array<number>
+    // @Column() //定制
+    // makes: object;
+    
+    // @Column() //更多
+    // arrow: object;
+
+    // @Column() //定制
+    // status: object;
+
+    // @Column() //讨论
+    // discuss: object;
+    
+    // @Column() //高级设置
+    // high: object;
 }
 
 @Entity()

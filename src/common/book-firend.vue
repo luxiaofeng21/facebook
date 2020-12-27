@@ -160,7 +160,7 @@
                                     </div>
                                 </div>
                                 <div class="about-list rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                                <ul class="about-ul">
+                                    <ul class="about-ul">
                                         <li v-for="(item,index) in me_ul.user" :key="index">
                                             <div v-if="!item.down" class="about-title" @click="item.down=!item.down">
                                                 <i class="el-icon-circle-plus-outline"></i>
@@ -168,23 +168,22 @@
                                             </div>
                                             <div v-else class="eidt-input">
                                                 <book-input v-for="(item,index) in item.offect" :key="index" :book="item"></book-input>
-                                            <div  v-if="item.now_title">
-                                                    <div class="book-title">时间段</div>
-                                                        <p>
-                                                                <el-checkbox v-model="item.now">{{item.now_title}}</el-checkbox>
-                                                        </p>
-                                                        <p >
-                                                                <el-date-picker
-                                                                    v-model="item.date"
-                                                                    type="daterange"
-                                                                    range-separator="至"
-                                                                    start-placeholder="开始日期"
-                                                                    end-placeholder="结束日期">
-                                                                </el-date-picker>
-                                                        </p>
-                                            </div>
-                                            
-                                            <hr>
+                                                <div  v-if="item.now_title">
+                                                            <div class="book-title">时间段</div>
+                                                            <p>
+                                                                    <el-checkbox v-model="item.now">{{item.now_title}}</el-checkbox>
+                                                            </p>
+                                                            <p >
+                                                                    <el-date-picker
+                                                                        v-model="item.date"
+                                                                        type="daterange"
+                                                                        range-separator="至"
+                                                                        start-placeholder="开始日期"
+                                                                        end-placeholder="结束日期">
+                                                                    </el-date-picker>
+                                                            </p>
+                                                </div>
+                                                <hr>
                                                 <div class="book-footer">
                                                     <div class="book-icon2"> <i class="intimi-icon"></i> 公开</div>
                                                     <div class="rg">

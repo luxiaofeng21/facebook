@@ -6,7 +6,7 @@
                         <div class="lf">
                                 <img :src="item.me_img" alt="">
                                 <div class="card-name">{{item.name}}</div>
-                                <div class="card-date">{{item.date}} <i class="date-icon"></i></div>
+                                <div class="card-date">{{getTimeDistance(item.date)}} <i class="date-icon"></i></div>
                         </div>
                          <el-popover
                         placement="bottom"
