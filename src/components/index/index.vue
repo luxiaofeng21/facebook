@@ -177,104 +177,19 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="sjgh65i0">
-                                                            <div>
-                                                                <div data-pagelet="VideoChatHomeUnit">
-                                                                    <div class="" data-visualcompletion="ignore-dynamic">
-                                                                        <div class="j83agx80 l9j0dhe7 k4urcfbm">
-                                                                            <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm sbcfpzgs">
-                                                                                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 jifvfom9 bp9cbjyn owycx6da btwxx1t3 hv4rvrfc dati1w0a pybr56ya dlv3wnog rl04r1d5 enqfppq2 muag1w35">
-                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                                                                                        <i class="hu5pjgll sp_5kM2vwYmVrv sx_deb456">
-                                                                                        </i>
-                                                                                    </div>
-                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                                                                                        <h3 class="oo9gr5id jq4qci2q lrazzd5p lzcic4wl oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b a3bd9o3v" dir="auto">
-                                                                                            视频聊天室
-                                                                                        </h3>
-                                                                                    </div>
-                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz ph5uu5jm b3onmgus e5nlhep0 ecm0bbzt">
-                                                                                        <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd bp9cbjyn owycx6da btwxx1t3 ph5uu5jm b3onmgus jb3vyjys b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                                                                                            <div class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 rj1gh0hx buofh1pr g5gj957u hpfvmrgz p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                                                                                <span>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                            <div v-on:click="dialogVisible=true" class="rq0escxv l9j0dhe7 du4w35lb d2edcug0 p8fzw8mz pcp91wgn iuny7tx3 ipjc6fyt">
-                                                                                                <div aria-label="创建你的视频聊天室" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l" role="button" tabindex="0">
-                                                                                                    <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v knj5qynh q66pz984 ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
-                                                                                                        创建
-                                                                                                    </span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="ecm0bbzt e5nlhep0 l9j0dhe7 k4urcfbm du4w35lb">
-                                                                                    <div class="rq0escxv l9j0dhe7 du4w35lb">
-                                                                                        <div aria-hidden="true" class="b5wmifdl pmk7jnqg rk01pc8j ke6wolob dpja2al7 art1omkt nw2je8n7 tkr6xdv7 re5koujm hzruof5a">
-                                                                                            <div aria-label="上一行" class="oajrlxb2 hn33210v qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t m7zwrmfr tmrshh9y m7msyxje m9osqain" role="button" tabindex="0">
-                                                                                                <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_c749d0">
-                                                                                                </i>
-                                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div aria-label="video chats that people can join" class="rq0escxv l9j0dhe7 du4w35lb obtkqiv7 sv5sfqaa sj5x9vvc cxgpxx05">
-                                                                                            <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t d76ob5m9 stjgntxs l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 qan41l3s rq0escxv oygrvhab sj5x9vvc cxgpxx05 tu18w1b4" style="scroll-padding: 44px;">
-                                                                                                <div class="j83agx80 btwxx1t3 buofh1pr">
-                                                                                                    <span style="min-width: 16px;">
-                                                                                                    </span>
-                                                                                                    <div class="gs1a9yip kb5gq1qc pfnyh3mw hpfvmrgz qdtcsgvi oi9244e8 t7l9tvuc" style="flex-basis: 48px;">
-                                                                                                        <div aria-label="video chats that people can join" class="oajrlxb2 bp9cbjyn g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 j83agx80 mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l s45kfl79 emlxlaya bkmhp75w spb7xbtv qypqp5cg taijpn5t q676j6op" role="button" tabindex="0">
-                                                                                                            <div class="q676j6op taijpn5t qypqp5cg j83agx80 rq0escxv spb7xbtv bkmhp75w emlxlaya s45kfl79 snggw924 czabki66 hx37s9t6 qjs0y65x bp9cbjyn">
-                                                                                                                <div class="q9uorilb l9j0dhe7 pzggbiyp du4w35lb">
-                                                                                                                    <svg class="pzggbiyp" data-visualcompletion="ignore-dynamic" role="none" style="height: 40px; width: 40px;">
-                                                                                                                        <mask id="jsc_c_f9">
-                                                                                                                            <circle cx="20" cy="20" fill="white" r="20">
-                                                                                                                            </circle>
-                                                                                                                        </mask>
-                                                                                                                        <g mask="url(#jsc_c_f9)">
-                                                                                                                            <image style="height: 40px; width: 40px;" x="0" y="0" height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xlink:href="/v/t1.30497-1/cp0/c15.0.50.50a/p50x50/84241059_189132118950875_4138507100605120512_n.jpg?_nc_cat=1&amp;_nc_sid=7206a8&amp;_nc_ohc=ZOOKeoZysIMAX9r-xWD&amp;_nc_ht=scontent-hkt1-1.xx&amp;oh=b3fe377a51cee02fdc040eb3af1d153c&amp;oe=5F4E838F">
-                                                                                                                            </image>
-                                                                                                                            <circle class="mlqo0dh0 georvekb s6kb5r3f" cx="20" cy="20" r="20">
-                                                                                                                            </circle>
-                                                                                                                        </g>
-                                                                                                                    </svg>
-                                                                                                                </div>
-                                                                                                                <div class="kr520xx4 j9ispegn pmk7jnqg hzruof5a n7fi1qx3 i09qtzwb k77z8yql qs9ysxi8 arfg74bv n00je7tq d6rk862h">
-                                                                                                                </div>
-                                                                                                                <div class="pmk7jnqg">
-                                                                                                                    <i class="hu5pjgll sp_5kM2vwYmVrv sx_e43d72">
-                                                                                                                    </i>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore">
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <span style="min-width: 44px;">
-                                                                                                    </span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div aria-hidden="true" class="b5wmifdl pmk7jnqg rk01pc8j ke6wolob dpja2al7 art1omkt nw2je8n7 tkr6xdv7 cypi58rs hzruof5a">
-                                                                                            <div aria-label="下一行" class="oajrlxb2 hn33210v qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t m7zwrmfr tmrshh9y m7msyxje m9osqain" role="button" tabindex="0">
-                                                                                                <i class="hu5pjgll m6k467ps sp_9v2_9kG0o8E sx_282555">
-                                                                                                </i>
-                                                                                                <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s" data-visualcompletion="ignore">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                        
+                                                        <div class="el-card">
+                                                            <div class="flex video-head">
+                                                                <div class="lf">
+                                                                     <i class="hu5pjgll sp_5kM2vwYmVrv sx_deb456"> </i>
+                                                                     <span class="me-name">视频聊天室</span>
                                                                 </div>
+                                                                <span class="link" v-on:click="dialogVisible=true">创建</span>
+                                                            </div>
+                                                            <div class="video-content">
+                                                                <el-avatar :src="user_info.me_img"></el-avatar>
                                                             </div>
                                                         </div>
-                                                        <span id="ssrb_composer_end" style="display: none;">
-                                                        </span>
                                                         <div class="pedkr2u6 tn0ko95a pnx7fd3z">
                                                             <span id="ssrb_feed_start" style="display: none;">
                                                             </span>
@@ -1285,5 +1200,19 @@ a>.scb9dxdr:hover {
     font-size: 20px;
 }
 
-
+.video-head{
+    padding:10px 15px;
+    border-bottom: 1px solid #eee;
+}
+.video-head>.lf{
+    display: flex;
+    align-items: center;
+}
+.video-head>.lf>i{margin-right: 5px;}
+.video-content{
+    padding: 10px 15px;
+}
+.el-card{
+    margin-bottom: 15px;
+}
 </style>

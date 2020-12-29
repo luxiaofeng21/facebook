@@ -24297,7 +24297,7 @@ body{
 }
 
 
-.el-icon-close{
+.el-dialog__header .el-icon-close{
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -24466,4 +24466,22 @@ body{
 } 
 .head-name{
 	max-width: 200px;
+}
+
+
+
+.icon-handle{
+	display: inline-block;
+	width: 18px;
+	height: 18px; 
+	background-image: url(../assets/xVr-bSpqpnp.png);
+}
+.icon-handle.icon1{
+	  background-position: 0 -267px;
+}
+.icon-handle.icon2{
+	  background-position: 0 -151px;
+}
+.icon-handle.icon3{
+	  background-position: 0 -342px;
 }

@@ -51,15 +51,16 @@ export default {
     border: 1px solid #ccc;
     height: 60px;
     cursor: auto;
+    background-color: #fff;
 }
 
 .book-input:hover {
     border-color: #999;
 }
-/*
+
 .book-input-content {
-    min-width: 85%;
-}*/
+    flex: 1;
+}
 
 .book-placeholder {
     display: flex;

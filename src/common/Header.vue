@@ -509,7 +509,7 @@
                 <a  class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys d1544ag0 qt6c0cv9 tw6a2znq i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn e72ty7fz qlfml3jp inkptoze qmr60zad btwxx1t3 tv7at329 taijpn5t" href="#/mePage" role="link" tabindex="0">
                     <div class="j83agx80 fv0vnmcu fop5sh7t">
                         <div class="me-img">
-                            <img :src="$store.state.user_info.me_img" alt="">
+                            <img :src="user_info.me_img" alt="">
                         </div>
                     </div>
                     <span class="head-name oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id ni8dbmo4 stjgntxs ltmttdrg g0qnabr5" dir="auto">
@@ -530,7 +530,7 @@
                         <div class="g9en0fbe">
                             <a  href="#/mePage" role="link" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8">
                                 <div class="l9j0dhe7">
-                                    <img :src="$store.state.user_info.me_img" alt="" class="s45kfl79 emlxlaya bkmhp75w spb7xbtv a8c37x1j" width="40" height="40">
+                                    <img :src="user_info.me_img" alt="" class="s45kfl79 emlxlaya bkmhp75w spb7xbtv a8c37x1j" width="40" height="40">
                                     <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv oaz4zybt pmk7jnqg j9ispegn kr520xx4" style="height: 40px; width: 40px;">
                                     </div>
                                 </div>
@@ -570,7 +570,7 @@
                     </div>
                 </div>
                 <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 l56l04vs r57mb794 kh7kg01d c3g1iek1 buofh1pr">
-                    <el-input :autosize="{minRows:6}" type="textarea" :placeholder="$store.state.user_info.user_name+'分享你的新鲜事吧'" v-model="topic">
+                    <el-input :autosize="{minRows:6}" type="textarea" :placeholder="user_info.user_name+'分享你的新鲜事吧'" v-model="topic">
                     </el-input>
                     <div class="flex" style="margin-top:20px;padding:0 10px">
                         <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
@@ -1074,6 +1074,7 @@ export default {
         }
     },
     created() {
+        this.user_info=JSON.parse(localStorage.getItem("user_info"))
         //  var that=this;
         //  //用户信息
         //  this.$axios.get("/api/getuserInfo").then(res => {
@@ -1218,7 +1219,7 @@ export default {
                 })
             }  else if (e == 6) {
                 this.$router.push({
-                    name: "events"
+                    name: "events_create"
                 })
             } else {
                 this.choose = e;

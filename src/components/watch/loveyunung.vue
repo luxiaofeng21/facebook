@@ -190,7 +190,7 @@ export default {
 	.list>.lf img{
 		width: 100px;
 		height: 100px;
-		border-radius: 10px;
+		border-radius: 5px;
 		margin-right: 15px;
 	}
 	.list>.lf{

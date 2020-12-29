@@ -316,6 +316,11 @@ var router= new Router({
       component:()=>import("@/components/ad_center/entry_point")
     },
     {
+      path:"/events/create",
+      name:"events_create",
+      component:()=>import("@/components/events/create")
+    },
+    {
       path:"/groups/grouopHome",
       name:"grouopHome",
       component:grouopHome

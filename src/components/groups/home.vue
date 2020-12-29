@@ -15,8 +15,8 @@
                     <cart-list :list="menu" :active="mactive" @getcart="getmenu"> </cart-list>
                 </div>
             </el-aside>
-            <el-main >
-                   <div class="book-firend">
+            <el-main v-if="mactive==0" :style="{'height':$store.state.clienHeight}">
+                   <div class="book-firend" >
                         <div class="book-tou katn9ffz">
                                 <div class="tou-bg" :style="{backgroundImage:`url(${accout.img})`}"> 
                                     <el-upload
@@ -88,7 +88,7 @@
                                         <el-card>
                                             <div class="flex">
                                                 <el-avatar :src="user_info.me_img"></el-avatar>
-                                                <el-input style="margin-left:10px;flex:1" placeholder="发布公开贴..."></el-input>
+                                                <el-input style="margin-left:10px;flex:1" placeholder="发布公开贴..." @focus="show=true"></el-input>
                                             </div>
                                             <ul class="tie-ul">
                                                 <li><i class="sp_5kM2vwYmVrv sx_99956b"></i> <strong>照片/视频</strong></li>
@@ -116,11 +116,18 @@
                             </div>
                         </div>
                     </div>
+                    
             </el-main>
+            <div class="book-main" v-else>
+                     <Requests v-if="mactive==1"></Requests>
+                     <auto-approve v-else-if="mactive==2"></auto-approve>
+                     <membership-questions v-else-if="mactive==3"></membership-questions>
+            </div>
+           
         </el-container>
         <el-dialog :visible.sync="dialogVisible" width="500px">
                     <div class="dialog-title2" style="width:80%">
-                        <el-input prefix-icon="el-icon-search" class="search" :placeholder="`搜索${user_info.user_name}的个人主页`" v-model="search"></el-input>
+                        <el-input prefix-icon="el-icon-search"  class="search" :placeholder="`搜索${user_info.user_name}的个人主页`" v-model="search"></el-input>
                     </div>
                     <div class="search_con" v-if="search==''">
                         <img :src="me_ul.me_img" alt="">
@@ -140,21 +147,31 @@
                         </div>
                     </span>
         </el-dialog>
+        <tie-post :show.sync="show" @getbtn="getie"></tie-post>
     </div>
 </template>
 
 <script>
+import tiePost from '@/common/tie-post'
 import cartList from '@/common/cart-list'
 import groupsList2 from '@/common/groups-list2'
 import postList from "@/common/post-list"
+import Requests from './requests'
+import autoApprove from './auto_approve'
+import membershipQuestions from './membership_questions'
 export default {
     components:{
+        membershipQuestions,
+        autoApprove,
+        Requests,
+        tiePost,
         groupsList2,
         cartList,
         postList
     },
     data() {
         return {
+            show:false,
             about:[
                 {
                     img:require("@/assets/diqiu.png"),
@@ -253,6 +270,10 @@ export default {
     },
     
     methods: {
+        //发帖
+        getie(e){
+            console.log(e)
+        },
         getlist(id){
             var that=this;
             this.$axios("/api/groupsDetail?id="+id).then(res=>{
@@ -311,5 +332,10 @@ export default {
     }
     .tie-ul>li>i{
         margin-right: 5px;
+    }
+
+    .about{
+        margin: -20px;
+        margin-top: 0;
     }
 </style>

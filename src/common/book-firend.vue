@@ -1,7 +1,7 @@
 <template>
     <div class="book-firend">
         <div class="book-tou katn9ffz">
-                <div class="tou-bg" :style="me_ul.bg_img?`background:url(${me_ul.bg_img}) 100%;`:''"> 
+                <div class="tou-bg" :style="me_ul.bg_img?`background-image:url(${me_ul.bg_img});background-size:cover;`:''"> 
                     <div class="tou-img"> 
                         <img :src="me_ul.me_img" alt="" > 
                         <el-upload
@@ -108,7 +108,7 @@
         </div>
         <div class="about">
             <div class="katn9ffz">
-                <div class="book-container">
+                <div class="book-container" v-if="activeName==0">
                     <div class="lf">
                             <div class="book-card">
                                     <div class="book-title2">个人资料</div>
@@ -139,7 +139,7 @@
                             <post-list :list="me_ul.list"></post-list>
                     </div>
                 </div>
-                <div class="sjgh65i0">
+                <div class="sjgh65i0" v-else-if="activeName==1">
                     <div class="j83agx80 l9j0dhe7 k4urcfbm">
                         <div style="border-radius: max(0px, min(8px, -999900% - 39996px + 999900vw)) / 8px;" class="rq0escxv l9j0dhe7 du4w35lb hybvsw6c ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi ni8dbmo4 stjgntxs k4urcfbm sbcfpzgs">
                             <div class="j83agx80">
@@ -199,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-else-if="activeName==2">
                         <div class="book-title2">好友</div>
                         <el-tabs v-model="tabs[0]">
                             <el-tab-pane label="粉丝" name="1"></el-tab-pane>
@@ -208,8 +208,7 @@
                         <share-list :list="me_ul.friend" :type="'friend'"></share-list>
                         <el-button type="info">查看全部</el-button>
                 </div>
-            
-                <div class="book-card">
+                <div class="book-card" v-else-if="activeName==3">
                         <div class="book-title2">相册</div>
                         <el-tabs v-model="tabs[1]">
                             <el-tab-pane :label="me_ul.user_name+'的相册'" name="1"></el-tab-pane>
@@ -218,13 +217,20 @@
                         <share-list :list="me_ul.imgAll" :type="'vertical'"></share-list>
                         <el-button type="info">查看全部</el-button>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-else-if="activeName==4">
                         <div class="book-title2">视频</div>
                         <el-tabs v-model="tabs[2]">
                             <el-tab-pane :label="me_ul.user_name+'的视频'" name="1"></el-tab-pane>
                         </el-tabs>
                         <share-list :list="me_ul.video" :type="'vertical'"></share-list>
                         <el-button type="info">查看全部</el-button>
+                </div>
+                <div class="book-card" v-else-if="activeName==5">
+                        <div class="book-title2">签到</div>
+                        <el-tabs value="1">
+                            <el-tab-pane label="最近去过" name="1"></el-tab-pane>
+                        </el-tabs>
+                    <share-list :list="me_ul.lasts"></share-list>
                 </div>
                 <div class="book-card">
                         <div class="book-title2">运动</div>
@@ -265,13 +271,7 @@
                         </el-tabs>
                     <share-list :list="me_ul.books" :type="'vertical'"></share-list>
                 </div>
-                <div class="book-card">
-                        <div class="book-title2">签到</div>
-                        <el-tabs value="1">
-                            <el-tab-pane label="最近去过" name="1"></el-tab-pane>
-                        </el-tabs>
-                    <share-list :list="me_ul.lasts"></share-list>
-                </div>
+                
             </div>
         </div>
     </div>

@@ -20,16 +20,16 @@
             </div>
             <div class="cart-arrow">
                 <slot name="right">
+                     <!--跳转-->
+                    <i v-if="item.arrow || type=='arrow'" slot="right" class="el-icon-arrow-right"></i>
                     <!--消息-->
-                    <span v-if="type=='msg'" class="cart-msg"></span>
+                    <span v-else-if="type=='msg'" class="cart-msg"></span>
                     <!--单选-->
-                    <span v-if="type=='radio'" class="el-radio__inner"></span>
+                    <span v-else-if="type=='radio'" class="el-radio__inner"></span>
                     <!--开关-->
-                    <el-switch v-if="type=='switch'" @change="getswitch($event,index)" v-model="item.switch"></el-switch>
-                    <!--跳转-->
-                    <i v-if="type=='arrow' || item.arrow" slot="right" class="el-icon-arrow-right"></i>
+                    <el-switch v-else-if="type=='switch'" @change="getswitch($event,index)" v-model="item.switch"></el-switch>
                     <!--下拉-->
-                    <div v-if="item.children" @click.stop="item.down=!item.down" class="cart-img2">
+                    <div v-else-if="item.children" @click.stop="item.down=!item.down" class="cart-img2">
                         <i :class="item.down?'down-icon':''" class="el-icon-arrow-right"></i>
                     </div>
                 </slot>

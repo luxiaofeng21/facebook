@@ -1,6 +1,4 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
-
-
 @Entity()
 export class User {
 
@@ -87,7 +85,6 @@ export class Recommended {
     @Column()
     me_img: string;
 
-    
     @Column()
     user_name: string;
 
@@ -117,8 +114,6 @@ export class Recommended {
 
     @Column()
     collect_title: string;
-
-  
 }
 
 @Entity()
@@ -183,4 +178,44 @@ export class Comments {
     
     @Column()
     date: Date;
+}
+
+@Entity()
+export class Grouprecommended {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+    
+    @Column()
+    me_img: string;
+
+    @Column()
+    user_name: string;
+
+    @Column()
+    title: string;
+    
+    @Column()
+    name: string;
+    
+    @Column()
+    date: Date;
+
+    @Column()
+    share: number;
+
+    @Column()
+    remark: number;
+
+    @Column()
+    goodsNum: number;
+
+    @Column()
+    showEmoji: boolean;
+
+    @Column("simple-array")
+    collection: object[];
+
+    @Column()
+    collect_title: string;
 }

@@ -300,12 +300,7 @@ export default {
     .icon-count.icon7{
            background-position:-50px -1489px;
     }
-    .icon-handle{
-        display: inline-block;
-        width: 18px;
-        height: 18px; 
-        background-image: url(../assets/xVr-bSpqpnp.png);
-    }
+    
 
     .handle-li.checked{
             color: #1877F2;
@@ -313,15 +308,7 @@ export default {
     .handle-li.checked .icon-handle.icon1{
             background-position: 0 -229px;
     }
-    .icon-handle.icon1{
-          background-position: 0 -267px;
-    }
-    .icon-handle.icon2{
-          background-position: 0 -151px;
-    }
-    .icon-handle.icon3{
-          background-position: 0 -342px;
-    }
+    
     .card-item{
             background: #fff;
             border-radius: 5px;

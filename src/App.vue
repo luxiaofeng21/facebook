@@ -119,15 +119,13 @@ a {
     line-height: 40px;
     background-color: var(--secondary-button-background);
     border-radius: 50%;
- 
-
 }
 .book-icon.small{
     width: 25px;
     height: 25px;
 }
 .book-icon {
-       font-size: 25px;
+    font-size: 25px;
     margin-right: 15px;
 }
 
@@ -278,4 +276,49 @@ a {
     width: 100%;
 }
 
+.el-flex{
+    display: flex;
+}
+.el-flex>.rg{
+    margin-left: 10px;
+}
+.el-button>span{
+    display: inline-flex;
+    align-items: center;
+}
+.el-button img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.el-bottom{
+    margin-bottom: 16px;
+}
+.el-margin{
+    margin: 15px 0;
+}
+
+.book-inline{
+    display: inline-block;
+    width: auto;
+}
+
+.book-main{
+    width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.el-success{
+    display: inline-block;
+    color: #1877F2;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.el-success:hover{
+    background-color: #f5f5f5;
+}
 </style>
