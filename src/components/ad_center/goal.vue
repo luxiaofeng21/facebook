@@ -276,7 +276,7 @@ export default {
     },
     created(){
         var that=this;
-        this.$axios.get("/api/publicPage").then(res=>{
+        this.$axios.get("/publicPage").then(res=>{
             for(let item of res){
                 item.img=require("@/assets/public.png")
             }

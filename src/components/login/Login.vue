@@ -48,7 +48,7 @@ export default {
                   this.$message.error("请输入密码")
                 return false
             }
-            this.$axios.post("/api/login",{email,password}).then(res=>{
+            this.$axios.post("/login",{email,password}).then(res=>{
                 if(res.code==1){
                     this.$message.success(res.msg)
                     this.$store.commit("setedit",res.data)

@@ -937,14 +937,14 @@ export default {
         var that = this;
         this.user_info=user_info
         //推荐
-        this.$axios.get("/api/recommended").then(res => {
+        this.$axios.get("/recommended").then(res => {
             res.map(x=>{
                 if(x.collection=='') x.collection=[]
             })
             that.list = res
         })
         //朋友
-        this.$axios.get("/api/friends").then(res => {
+        this.$axios.get("/friends").then(res => {
             for(let item of res){
                 item.me_img= item.me_img
                 item.bg_img=item.bg_img
@@ -952,7 +952,7 @@ export default {
             that.friends = res
         })
         //公共主页
-        this.$axios.get("/api/publicPage").then(res=>{
+        this.$axios.get("/publicPage").then(res=>{
             var data=res.data
             data.map(x=>x.img=require("@/assets/flag.png"))
             that.pages.unshift(data[data.length-1])

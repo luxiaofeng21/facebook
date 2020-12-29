@@ -259,7 +259,7 @@ export default {
     },
     created() {
         var that=this;
-        this.$axios.get("/api/getGroups").then(res=>{
+        this.$axios.get("/getGroups").then(res=>{
             that.groups=res.data
         })
         var id=this.$route.query.id;

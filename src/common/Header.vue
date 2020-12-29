@@ -1077,7 +1077,7 @@ export default {
         this.user_info=JSON.parse(localStorage.getItem("user_info"))
         //  var that=this;
         //  //用户信息
-        //  this.$axios.get("/api/getuserInfo").then(res => {
+        //  this.$axios.get("/getuserInfo").then(res => {
         //     if(res.code){
         //         if(res.name){
         //             this.user_info=res
@@ -1184,7 +1184,7 @@ export default {
         getme(i) {
 
             if (i == 3) {
-                this.$axios.post("/api/outlogin").then(res=>{
+                this.$axios.post("/outlogin").then(res=>{
                         localStorage.clear();
                         this.$message.success(res.msg)
                         setTimeout(()=>{

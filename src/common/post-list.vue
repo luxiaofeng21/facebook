@@ -198,7 +198,7 @@ export default {
                      date:new Date()
              }
       
-             this.$axios.post("/api/createComments",info).then(res=>{
+             this.$axios.post("/createComments",info).then(res=>{
                      if(res.code==1){
                        item.collect_title=""
                        this.$notify({
@@ -227,7 +227,7 @@ export default {
                         $("body,html").animate({"scrollTop":dom.offset().top - 800})
                         $(dom).find("input").focus()
                 }
-                this.$axios.get("/api/comments",{params:{aid:item.id}}).then(res=>{
+                this.$axios.get("/comments",{params:{aid:item.id}}).then(res=>{
                         console.log("🚀 ~ file: post-list.vue ~ line 225 ~ this.$axios.get ~ res", res)
                         item.collection=res
                 })

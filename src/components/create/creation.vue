@@ -772,7 +772,7 @@ export default {
             return false
         }
         info.type=info.type.join(",")
-        this.$axios.post("/api/createPage",info).then(res=>{
+        this.$axios.post("/createPage",info).then(res=>{
       
             if(res.code==1){
                 that.$message.success(res.msg)

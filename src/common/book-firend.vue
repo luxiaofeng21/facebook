@@ -313,7 +313,7 @@ export default {
                 this.me_ul.bg_img=user_info.bg_img
            }
             
-            this.$axios.post("/api/setUser",user_info).then(res=>{
+            this.$axios.post("/setUser",user_info).then(res=>{
                 localStorage.setItem("user_info",JSON.stringify(res))
                 that.$store.commit("edit",res)
                 that.$message.success(res.msg)

@@ -131,7 +131,7 @@ export default {
 				v.title=v.atitle
 			}
 			if(v.state==1){
-				this.$axios.post("/api/setUser",info).then(res=>{
+				this.$axios.post("/setUser",info).then(res=>{
 					if(res.code==1){
 						this.$message.success("修改成功");
 					}
