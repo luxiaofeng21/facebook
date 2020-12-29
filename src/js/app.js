@@ -4,7 +4,7 @@ import jquery from 'jquery'
 import ElementUI from 'element-ui';
 import MD5 from '@/js/md5.js';
 Vue.use(ElementUI);
-var url="http://127.0.0.1:83"
+var url="http://0.0.0.0:83"
 //设置请求接口
 var http=axios.create({
     baseURL:url,

@@ -8,7 +8,7 @@ let formidable = require('formidable');
 let path=require("path");
 let codes={};
 let user_info={};
-let imgUrl='http://127.0.0.1:75/images/';
+let imgUrl='http://0.0.0.0:75/images/';
 app.use(session({
     secret:'Keyboard cat',
     resave:false,
