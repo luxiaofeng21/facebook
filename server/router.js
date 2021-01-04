@@ -22,11 +22,16 @@ router.post("/createComments",services.createComments)
 //公共主页
 router.post("/createPage",services.createPage)
 router.get("/publicPage",services.publicPage)
+router.get("/getpublicPage",services.getpublicPage)
 //小组
 router.post("/createGroups",services.createGroups)
 router.get("/getGroups",services.getGroups)
-router.get("/getpublicPage",services.getpublicPage)
 router.get("/groupsDetail",services.groupsDetail)
+router.post("/groupcreateRecommended",services.groupcreateRecommended) //帖子集合
+router.get("/groupRecommended",services.groupRecommended) //获取帖子
+router.post("/groupcreateComments",services.groupcreateComments)      //创建评论
+router.get("/groupComments",services.groupComments)  //评论集合
+
 //上传图片
 router.post("/uploadImg",services.uploadImg)
 module.exports = router

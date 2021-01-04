@@ -522,111 +522,7 @@
             </div>
         </div>
     </div>
-    <el-dialog :title="dialogTitle" :visible.sync="dialogVisible" width="550px">
-        <div v-if="choose==0">
-            <div class="j83agx80 cbu4d94t f0kvp8a6 mfofr4af l9j0dhe7 oh7imozk">
-                <div class="hv4rvrfc dati1w0a">
-                    <div class="a8nywdso ihqw7lf3 rz4wbd8a discj3wi j83agx80 bp9cbjyn">
-                        <div class="g9en0fbe">
-                            <a  href="#/mePage" role="link" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8">
-                                <div class="l9j0dhe7">
-                                    <img :src="user_info.me_img" alt="" class="s45kfl79 emlxlaya bkmhp75w spb7xbtv a8c37x1j" width="40" height="40">
-                                    <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv oaz4zybt pmk7jnqg j9ispegn kr520xx4" style="height: 40px; width: 40px;">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="cbu4d94t j83agx80">
-                            <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">
-                                {{user_info.user_name}}
-                            </span>
-                            <div class="dbvibxzo">
-                                <div class="j83agx80 bp9cbjyn">
-                                    <div class="taijpn5t pq6dq46d bp9cbjyn">
-                                        <span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">
-                                            <div aria-label="编辑隐私设置。分享对象：你的好友" role="button" tabindex="0" class="oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l">
-                                                <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi lrazzd5p oo9gr5id">
-                                                    <div class="l9j0dhe7">
-                                                        <div class="e5nlhep0 ecm0bbzt scb9dxdr dflh9lhu kzx2olss aot14ch1 p86d2i9g beltcj47 tdjehn4e">
-                                                            <div class=" taijpn5t j83agx80 bp9cbjyn">
-                                                                <div class="taijpn5t pq6dq46d bp9cbjyn cgat1ltu">
-                                                                    <img src="../assets/diqiu.png" alt="好友" class="hu5pjgll lzf7d6o1" width="12" height="12">
-                                                                </div>
-                                                                <span class="l3itjdph cgat1ltu">
-                                                                    公开
-                                                                </span>
-                                                                <i class="hu5pjgll lzf7d6o1 sp_Osp8PMBw1xR sx_e0c969">
-                                                                </i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 l56l04vs r57mb794 kh7kg01d c3g1iek1 buofh1pr">
-                    <el-input :autosize="{minRows:6}" type="textarea" :placeholder="user_info.user_name+'分享你的新鲜事吧'" v-model="topic">
-                    </el-input>
-                    <div class="flex" style="margin-top:20px;padding:0 10px">
-                        <img alt="" src="../assets/SATP_Aa_square-2x.png" height="38">
-                        <el-popover
-                            placement="bottom"
-                            trigger="click">
-                             <VEmojiPicker @select="selectEmoji"   /> 
-                                <div class="hover-icon " slot="reference" >
-                                    <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_b6020a" style="height: 24px; width: 24px;"> </i>
-                                </div>
-                        </el-popover>
-                    </div>
-                    
-                </div>
-                <div class="ihqw7lf3 discj3wi l9j0dhe7">
-                    <div class="scb9dxdr sj5x9vvc dflh9lhu cxgpxx05 dhix69tm wkznzc2l i1fnvgqd j83agx80 rq0escxv ibutc8p7 l82x9zwi uo3d90p7 pw54ja7n ue3kfks5 tr4kgdav eip75gnj ccnbzhu1 dwg5866k cwj9ozl2 bp9cbjyn">
-                        <div id="toolbarLabel" class="scb9dxdr qt6c0cv9 dflh9lhu jb3vyjys">
-                            <div aria-label="添加更多内容" role="button" tabindex="0" class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 pq6dq46d mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l">
-                                <span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 ew0dbk1b jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">
-                                    添加更多内容
-                                </span>
-                            </div>
-                        </div>
-                        <div aria-labelledby="toolbarLabel">
-                            <div class="j83agx80">
-                                <div class="hover-icon">
-                                    <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;"> </i>
-                                </div>
-                                <div class="hover-icon">
-                                     <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_ee8eae" style="height: 24px; width: 24px;"></i>
-                                </div>
-                                <div class="hover-icon">
-                                     <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_c48911" style="height: 24px; width: 24px;"></i>
-                                </div>
-                                <div class="hover-icon">
-                                        <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_3bba41" style="height: 24px; width: 24px;"></i>
-                                </div>
-                                <div class="hover-icon">
-                                        <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_346c20" style="height: 24px; width: 24px;"> </i>
-                                </div>
-                                <div class="hover-icon">
-                                        <i class="hu5pjgll bixrwtb6 sp_Osp8PMBw1xR sx_19f068" style="height: 24px; width: 24px;"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="k4urcfbm dati1w0a hv4rvrfc i1fnvgqd j83agx80 rq0escxv bp9cbjyn discj3wi">
-                        <div @click="createCard" role="button" tabindex="-1" aria-disabled="true" class="oajrlxb2 c98fg2ug qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv t5a262vz pq6dq46d p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x cxgpxx05 d1544ag0 sj5x9vvc tw6a2znq oqcyycmt esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l ljzjr9fn tkdm7zml bp9cbjyn beltcj47 p86d2i9g aot14ch1 kzx2olss rt8b4zig n8ej3o3l agehan2d sk4xxmp2 lrazzd5p gigivrx4 sf5mxxl7 g0qnabr5 mi62g4hq iqfcb0g7 lsqurvkf id6903cd mf7ej076 jq4qci2q m5l1wtfr taijpn5t sn7ne77z oqhjfihn" :class="topic!=''?'s1i5eluu':''">
-                            发帖
-                        </div>
-                    </div>
-                    <div class="dhix69tm wkznzc2l">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <el-dialog  :visible.sync="dialogVisible" width="550px">
         <div v-if="choose==2" class="tr9rh885 sjgh65i0">
             <img draggable="false" alt="" src="../assets/life.png" width="1680" height="460">
             <div class="j83agx80 cbu4d94t mysgfdmx hddg9phg">
@@ -696,21 +592,24 @@
                 </span>
             </div>
         </div>
-
     </el-dialog>
+    <tie-post :show.sync="dialogVisible1" @getbtn="getie" ></tie-post>
 </div>
 </template>
 
 <script>
 import iconv from 'iconv-lite'
 import cartList from './cart-list'
+import tiePost from './tie-post'
 export default {
     props: ["hactive"],
     components: {
+         tiePost,
         "cart-list": cartList
     },
     data() {
         return {
+            dialogVisible1:false,
             life:[//生活纪实
                 {
                     img:require("@/assets/life1.png"),
@@ -953,7 +852,6 @@ export default {
                 },
             ],
             topic: "",
-            dialogTitle: "",
             createArr: [{
                     title: "帖子",
                     icon: "sp_Osp8PMBw1xR sx_b7c943",
@@ -1077,7 +975,7 @@ export default {
         this.user_info=JSON.parse(localStorage.getItem("user_info"))
         //  var that=this;
         //  //用户信息
-        //  this.$axios.get("/getuserInfo").then(res => {
+        //  this.$axios.get("/api/getuserInfo").then(res => {
         //     if(res.code){
         //         if(res.name){
         //             this.user_info=res
@@ -1097,33 +995,26 @@ export default {
     },
     methods: {
         //发帖
-        createCard(){
-            var that=this;
-            var user_info=this.$store.state.user_info
-            var info={
-                name:user_info.user_name,
-                me_img:user_info.me_img,
-                title:this.topic,
-                date:new Date(),
-            }
+        getie(item){
+             var user_info=this.$store.state.user_info
+             var info={
+                 uid:user_info.id,
+                 content:item.content,
+                 type:item.type
+             }
             this.$axios({
                 method:"post",
                 url:"/api/createRecommended",
                 data:info
             }).then(res=>{
                  if(res.code==1){
-                    that.$message.success(res.msg)
-                    that.dialogVisible=false
-                    //    this.$router.go(0);
+                    this.$message.success(res.msg)
+                    this.dialogVisible1=false
                 }else{
-                    that.$message.error(res.msg)
+                    this.$message.error(res.msg)
                 }
             })
-            this.topic=""
-        },
-        //选择表情
-        selectEmoji(data){
-            this.topic+=data.data
+
         },
         getNav(i) {
             this.$emit("getnav", i)
@@ -1184,7 +1075,7 @@ export default {
         getme(i) {
 
             if (i == 3) {
-                this.$axios.post("/outlogin").then(res=>{
+                this.$axios.post("/api/outlogin").then(res=>{
                         localStorage.clear();
                         this.$message.success(res.msg)
                         setTimeout(()=>{
@@ -1199,9 +1090,9 @@ export default {
             }
         },
         getshow(e) {
-            if (e == 0) this.dialogTitle = "创建帖子"
-            if (e == 2) this.dialogTitle = ""
-            if (e == 1) {
+            if (e == 0) {
+                this.dialogVisible1 = true; 
+            }else if (e == 1) {
                 this.$router.push({
                     name: "stories"
                 })
@@ -1230,7 +1121,7 @@ export default {
         //跳转聊天
         getmessage(i,v){
             this.$router.push({name:"messenger"})
-        }
+        },
     }
 }
 </script>

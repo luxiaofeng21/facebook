@@ -5,7 +5,7 @@ Vue.use(vuex)
 //创建vuex对象
 const store=new vuex.Store({
     state:{
-        clienHeight:document.body.clientHeight -60,
+        clienHeight:window.screen.availHeight - 65 -document.body.scrollHeight,
         user_info:JSON.parse(localStorage.getItem("user_info"))
     },
     //eidt方法

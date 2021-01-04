@@ -111,7 +111,7 @@ export default {
         var height=document.body.clientHeight;
         var that = this;
          //推荐好友
-        this.$axios.get("/friends").then(res => {
+        this.$axios.get("/api/friends").then(res => {
              console.log(res)
             if(res.length>0){
                 res.map(x=>{
@@ -125,7 +125,7 @@ export default {
             
         })
         //推荐
-        this.$axios.get("/recommended").then(res => {
+        this.$axios.get("/api/recommended").then(res => {
                    that.me_ul.list = res
         })
        
@@ -157,8 +157,9 @@ export default {
 </script>
 
 <style scoped>
-
-
+.el-main{
+    background-color: #fff;
+}
 
 /*好友列表 */
 .friend-ul {

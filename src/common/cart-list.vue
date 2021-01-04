@@ -310,6 +310,9 @@ export default {
     line-height: 30px;
 }
 
+.small .cart-title{
+    font-size: 0.95rem;
+}
 .small .cart-item:hover {
     background-color: #E4E6E9;
 }
@@ -490,5 +493,7 @@ export default {
 }
 .cart-img>span{
     font-size: 20px;
+    color: #fff;
+    line-height: 20px;
 }
 </style>

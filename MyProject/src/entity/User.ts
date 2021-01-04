@@ -1,4 +1,5 @@
 import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+//用户
 @Entity()
 export class User {
 
@@ -75,24 +76,23 @@ export class User {
     
     @Column()
     lang: string;
+
 }
+
+//帖子
 @Entity()
 export class Recommended {
-
     @PrimaryGeneratedColumn()
-    id: number;
-    
-    @Column()
-    me_img: string;
+    id: number; //帖子id
+
+    @Column()   //用户id
+    uid: number;
 
     @Column()
-    user_name: string;
+    type: number;
 
     @Column()
-    title: string;
-    
-    @Column()
-    name: string;
+    content: string;
     
     @Column()
     date: Date;
@@ -105,17 +105,55 @@ export class Recommended {
 
     @Column()
     goodsNum: number;
-
-    @Column()
-    showEmoji: boolean;
-
-    @Column("simple-array")
-    collection: object[];
-
-    @Column()
-    collect_title: string;
 }
 
+//帖子评论集合
+@Entity()
+export class Comments {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+    
+    @Column()
+    aid:number
+
+    @Column()
+    content: string;
+
+    @Column()
+    uid: Number;
+    
+    @Column()
+    date: Date;
+}
+
+//公共主页
+@Entity()
+export class publicpage {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column()
+    title: string;
+
+    @Column()
+    text: string;
+
+    @Column()
+    type: string;
+
+    @Column()
+    img: string;
+    
+    @Column()
+    date: Date;
+
+    @Column("simple-array")
+    friends: Array<number>
+}
+
+//小组
 @Entity()
 export class Groups {
 
@@ -161,42 +199,24 @@ export class Groups {
     // high: object;
 }
 
-@Entity()
-export class Comments {
-
-    @PrimaryGeneratedColumn()
-    id: number;
-    
-    @Column()
-    aid:number
-
-    @Column()
-    content: string;
-
-    @Column()
-    uid: Number;
-    
-    @Column()
-    date: Date;
-}
-
+//小组帖子集合
 @Entity()
 export class Grouprecommended {
 
     @PrimaryGeneratedColumn()
-    id: number;
-    
-    @Column()
-    me_img: string;
+    id: number; //帖子id
+
+    @Column()   //用户id
+    uid: number;
+
+    @Column()   //小组id
+    aid: number;
 
     @Column()
-    user_name: string;
+    type: number;
 
     @Column()
-    title: string;
-    
-    @Column()
-    name: string;
+    content: string;
     
     @Column()
     date: Date;
@@ -209,13 +229,24 @@ export class Grouprecommended {
 
     @Column()
     goodsNum: number;
+}
+
+//小组评论集合
+@Entity()
+export class Groupcomments {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+    
+    @Column()
+    aid:number
 
     @Column()
-    showEmoji: boolean;
-
-    @Column("simple-array")
-    collection: object[];
+    uid: Number;
 
     @Column()
-    collect_title: string;
+    content: string;
+
+    @Column()
+    date: Date;
 }

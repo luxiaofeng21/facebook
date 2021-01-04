@@ -24297,7 +24297,7 @@ body{
 }
 
 
-.el-dialog__header .el-icon-close{
+.el-dialog__header .el-icon-close,.groups-icon>i{
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -24484,4 +24484,38 @@ body{
 }
 .icon-handle.icon3{
 	  background-position: 0 -342px;
+}
+
+
+.book-i{
+	background-image: url(../assets/EV8jUR6lEDt.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+.book-i.yes{
+	background-position: 0px -231px;
+	vertical-align: -0.25em;
+}
+
+
+.friend-img {
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.friend-img>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.friend-left {
+    display: flex;
+    align-items: center;
 }

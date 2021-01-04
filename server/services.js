@@ -8,7 +8,8 @@ let formidable = require('formidable');
 let path=require("path");
 let codes={};
 let user_info={};
-let imgUrl='http://localhost:75/images/';
+let imgUrl='http://127.0.0.1:75/images/';
+
 app.use(session({
     secret:'Keyboard cat',
     resave:false,
@@ -16,6 +17,7 @@ app.use(session({
     cookie: {secure:false,maxAge:1000 * 600}, /*第一个参数：只有在https才可以访问cookie；第二个参数：设置cookie的过期时间*/
     rolling:true/*只要页面在操作就不会过期，无操作5秒后过期*/
   }));
+
 // 用户表
 exports.user = (req,res)=>{
     // 查询语句
@@ -30,12 +32,20 @@ exports.recommended = (req,res)=>{
     // 查询语句
     let sql = 'select * from recommended order by  date desc'
     db.base(sql,req,(result)=>{
-       res.send(result)
+        for(let item of result){
+            db.base(`select * from user where id=?`,item.uid,(v)=>{
+                   item.user_info=v[0]
+            })
+         }
+         setTimeout(()=>{
+           res.send(result) 
+         },100)
     })
 }
 
 //创建帖子
 exports.createRecommended = (req,res)=>{
+    req.body.date=new Date();
     // 查询语句
     let sql = 'insert into recommended set ?'
     db.base(sql,[req.body],(result)=>{
@@ -46,10 +56,12 @@ exports.createRecommended = (req,res)=>{
 
 //发表评论
 exports.createComments=(req,res)=>{
+    req.body.date=new Date();
     var sql="insert into comments set?"
-    db.base(sql,[req.body],(result)=>{
-        res.send({msg:"创建成功",code:1})
-  })
+        db.base(sql,[req.body],(result)=>{
+            db.base(`update recommended set remark=remark+1 where id=?`,req.body.aid)
+            res.send({msg:"创建成功",code:1})
+    })
 }
 
 //评论集合
@@ -231,6 +243,8 @@ exports.getoken=function(req,res){
 
 //创建主页
 exports.createPage=function(req,res){
+        req.body.img=imgUrl+"gao.png"
+        req.body.date=new Date();
         var data=req.body;
         let sql="insert into publicPage set ?";
         db.base(sql,[data],(err,result)=>{
@@ -276,11 +290,61 @@ exports.getGroups=function(req,res){
     })
 }
 
-//获取指定列表
+//获取指定小组
 exports.groupsDetail=function(req,res){
     let sql="select * from groups where ?"
     db.base(sql,[req.query],(result)=>{
         res.send({code:1,data:result[0]})
+    })
+}
+
+//小组帖子
+exports.groupRecommended=function(req,res){
+    
+    // 查询语句
+    let sql = 'select * from grouprecommended where ?'
+    db.base(sql,[req.query],(result)=>{
+        for(let item of result){
+            db.base(`select * from user where id=?`,item.uid,(v)=>{
+                   item.user_info=v[0]
+            })
+         }
+         setTimeout(()=>{
+           res.send(result) 
+         },100)
+    })
+}
+
+//创建小组帖子
+exports.groupcreateRecommended=function(req,res){
+    req.body.date=new Date();
+    // 查询语句
+    let sql = 'insert into grouprecommended set ?'
+    db.base(sql,[req.body],(result)=>{
+        res.send({code:1,msg:"发布成功"})
+    })
+}
+
+//小组发表评论
+exports.groupcreateComments=(req,res)=>{
+    var sql="insert into groupcomments set?"
+    db.base(sql,[req.body],(result)=>{
+            db.base(`update grouprecommended set remark=remark+1 where id=?`,req.body.aid)
+            res.send({msg:"创建成功",code:1})
+    })
+}
+//小组评论集合
+exports.groupComments=(req,res)=>{
+    var sql="select * from groupcomments where aid=?"  
+    db.base(sql,req.query,async (result)=>{
+        for(let item of result){
+           db.base(`select * from user where id=?`,item.uid,(v)=>{
+                  item.user_info=v[0]
+           })
+        }
+        setTimeout(()=>{
+          res.send(result) 
+        },100)
     })
 }
 

@@ -8,7 +8,18 @@
                             <div class="event-text">{{item.text}}</div>
                             <div class="event-footer">
                                 <div class="book-icon2" @click="getcollect(item)"> <i :class="!item.collect?'el-icon-star-off':'el-icon-star-on'"></i>有兴趣 </div>
-                                <div class="book-icon2"> <i class="el-icon-s-promotion"></i> </div>
+                                <el-popover>
+                                    <ul class="popver-ul">
+                                        <li v-for="(v,i) in popover" :key="i"> 
+                                            <i :class="v.icon"></i>
+                                            <div class="rg">
+                                                <span class="popver-title">{{ v.title }}</span>
+                                                <div class="popver-text">{{ v.text }}</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div slot="reference" class="book-icon2"> <i class="el-icon-s-promotion"></i> </div>
+                                </el-popover>
                             </div>
                     </div>
             </div>
@@ -18,6 +29,34 @@
 <script>
 export default {
     props:["list"],
+    data(){
+        return{
+            popover:[
+                {
+                    icon:"el-icon-paperclip",
+                    title:"https://127.0.0.1",
+                    text:"分享此链接来邀请其他人"
+                },
+                {
+                    icon:"el-icon-edit-outline",
+                    title:"分享到动态消息"
+                },
+                {
+                    icon:"el-icon-discover",
+                    title:"用Message发送"
+                },{
+                    icon:"el-icon-wind-power",
+                    title:"分享到公共主页"
+                },{
+                    icon:"el-icon-user",
+                    title:"分享到小组"
+                },{
+                    icon:"el-icon-user",
+                    title:"分享到好友的个人主页"
+                },
+            ]
+        }
+    },
     methods: {
         getcollect(item){
             item.collect=!item.collect;

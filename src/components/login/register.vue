@@ -253,7 +253,7 @@ export default {
             if(!reg.test(data.email)){
                 this.$message.error("邮箱格式不正确，请重新输入！！");
             }
-            this.$axios.post("/email",data).then(res=>{
+            this.$axios.post("/api/email",data).then(res=>{
                 if(res.code==-1){
                     this.$message.error(res.msg)
                 }else{

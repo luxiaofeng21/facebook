@@ -41,7 +41,6 @@ export default {
     methods: {
         //发表评论
         getup(item){
-              console.log("🚀 ~ file: post-button.vue ~ line 44 ~ getup ~ item", item)
               this.$emit("getemoji",item)
               var info=this.$store.state.user_info;
               if(this.item.collect_title=='') return false

@@ -85,7 +85,7 @@
                             <div class="katn9ffz">
                                 <div class="book-container">
                                     <div class="rg">
-                                        <el-card>
+                                        <el-card class="el-bottom">
                                             <div class="flex">
                                                 <el-avatar :src="user_info.me_img"></el-avatar>
                                                 <el-input style="margin-left:10px;flex:1" placeholder="发布公开贴..." @focus="show=true"></el-input>
@@ -96,7 +96,7 @@
                                                 <li><i class="sp_5kM2vwYmVrv sx_649950"></i> <strong>感受活动</strong></li>
                                             </ul>
                                         </el-card>
-                                        <post-list v-if="accout" :list="accout.list"></post-list>
+                                        <post-list :list="list" url="/api/groupcreateComments" url2="/api/groupComments"></post-list>
                                     </div>
                                     <div class="lf">
                                             <el-card>
@@ -113,6 +113,7 @@
                                             </el-card>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -122,6 +123,13 @@
                      <Requests v-if="mactive==1"></Requests>
                      <auto-approve v-else-if="mactive==2"></auto-approve>
                      <membership-questions v-else-if="mactive==3"></membership-questions>
+                     <pending-posts v-else-if="mactive==4"></pending-posts>
+                     <post-tags v-else-if="mactive==5"></post-tags>
+                     <dynamic-recording v-else-if="mactive==7"></dynamic-recording>
+                     <manage-rules v-else-if="mactive==8"></manage-rules>
+                     <jubao v-else-if="mactive==9"></jubao>
+                     <alerted v-else-if="mactive==10"></alerted>
+                     <group-quality v-else-if="mactive==11"></group-quality>
             </div>
            
         </el-container>
@@ -159,8 +167,22 @@ import postList from "@/common/post-list"
 import Requests from './requests'
 import autoApprove from './auto_approve'
 import membershipQuestions from './membership_questions'
+import pendingPosts from './pending_posts'
+import postTags from './post_tags'
+import dynamicRecording from './dynamic_recording'
+import manageRules from './manage_rules'
+import jubao from './jubao'
+import alerted from './alerted'
+import groupQuality from './group_quality'
 export default {
     components:{
+        groupQuality,
+        alerted,
+        jubao,
+        manageRules,
+        dynamicRecording,
+        postTags,
+        pendingPosts,
         membershipQuestions,
         autoApprove,
         Requests,
@@ -171,6 +193,7 @@ export default {
     },
     data() {
         return {
+            list:[],
             show:false,
             about:[
                 {
@@ -244,7 +267,7 @@ export default {
                 },
                 {
                     icon:"el-icon-s-comment",
-                    title:"关键词提醒"
+                    title:"审核提醒"
                 },{
                     icon:"el-icon-s-open",
                     title:"小组内容品质"
@@ -259,33 +282,60 @@ export default {
     },
     created() {
         var that=this;
-        this.$axios.get("/getGroups").then(res=>{
+        //小组列表
+        this.$axios.get("/api/getGroups").then(res=>{
             that.groups=res.data
         })
         var id=this.$route.query.id;
-        this.getlist(id)
+        //小组详情
+        this.$axios("/api/groupsDetail?id="+id).then(res=>{
+            res.data.friends=JSON.parse(res.data.friends)
+            that.accout=res.data
+        })
+        //帖子列表
+        this.getrecommend();
+        
     },
     mounted() {
         this.user_info=this.$store.state.user_info
     },
     
     methods: {
-        //发帖
-        getie(e){
-            console.log(e)
+        //帖子
+        getrecommend(){
+            this.$axios.get("/api/groupRecommended?aid="+this.$route.query.id).then(res=>{
+                this.list=res
+            })
         },
-        getlist(id){
-            var that=this;
-            this.$axios("/api/groupsDetail?id="+id).then(res=>{
-                res.data.friends=JSON.parse(res.data.friends)
-                that.accout=res.data
+        //发帖
+        getie(item){
+             var user_info=this.$store.state.user_info
+             var info={
+                 aid:this.$route.query.id,
+                 uid:user_info.id,
+                 content:item.content,
+                 type:item.type
+             }
+            this.$axios({
+                method:"post",
+                url:"/api/groupcreateRecommended",
+                data:info
+            }).then(res=>{
+                if(res.code==1){
+                    this.getrecommend()
+                    this.$message.success(res.msg)
+                    this.show=false
+                }else{
+                    this.$message.error(res.msg)
+                }
             })
         },
         handlePreview2(file){
             // console.log("🚀 ~ file: home.vue ~ line 208 ~ handlePreview2 ~ file", file)
         },
         getgroups(item){
-             this.getlist(item.id)
+             this.$router.push({name:"grouopHome",query:{id:item.id}})
+             this.getrecommend()
         },
         getmenu(i){
             this.mactive=i

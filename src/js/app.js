@@ -4,13 +4,13 @@ import jquery from 'jquery'
 import ElementUI from 'element-ui';
 import MD5 from '@/js/md5.js';
 Vue.use(ElementUI);
-var url="http://localhost:75"
+var url="http://locahost:75"
 //设置请求接口
 var http=axios.create({
-    baseURL:url,
-    // headers:{
-    //     'Content-Type': 'application/x-www-form-urlencoded'
-    // }
+    // baseURL:url,
+    // // headers:{
+    // //     'Content-Type': 'application/x-www-form-urlencoded'
+    // // }
 })
 //请求拦截
 // http.interceptors.request.use(config=>{ 
@@ -31,7 +31,7 @@ Vue.prototype.$axios = http;
 Vue.prototype.$url=url
 
 
-Vue.prototype.getTimeDistance=function(time_str){var now = new Date();
+Vue.prototype.showDate=function(time_str){var now = new Date();
 	var date = new Date(time_str);
 	//计算时间间隔，单位为分钟
 	var inter = parseInt((now.getTime() - date.getTime())/1000/60);

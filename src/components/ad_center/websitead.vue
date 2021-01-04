@@ -668,10 +668,12 @@ export default {
 }
 .perview-head>.lf>.content{
     margin-left: 10px;
+    flex: 1;
 }
 .perview-head>.lf>.content>.title{
     font-size: 15px;
     font-weight: 500;
+    word-break:break-all
 }
 .perview-head>.lf>.content>.text{
     font-size: 12px;
@@ -689,6 +691,7 @@ export default {
 .perview-content>.title{
     background-color: #fff;
     padding: 0 15px 10px 15px;
+    word-break:break-all;
 }
 .perview-content>.content{
     padding: 10px;

@@ -6,7 +6,7 @@
             </div>
             <div class="rg">
                     <div class="me-group-title">{{item.title}}</div>
-                    <div class="me-group-date">上次发帖：{{getTimeDistance(item.date)}}</div>
+                    <div class="me-group-date">上次发帖：{{showDate(item.date)}}</div>
                     <slot></slot>
             </div>
     </div>

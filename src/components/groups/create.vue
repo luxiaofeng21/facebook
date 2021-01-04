@@ -766,7 +766,7 @@ export default {
   created(){
 	  var that=this;
 	  //朋友
-        this.$axios.get("/friends").then(res => {
+        this.$axios.get("/api/friends").then(res => {
             that.friends = res
         })
   },
@@ -783,7 +783,7 @@ export default {
             return false
         }
         info.friends=JSON.stringify(info.friends)
-        this.$axios.post("/createGroups",info).then(res=>{
+        this.$axios.post("/api/createGroups",info).then(res=>{
             if(res.code==1){
                 that.$message.success(res.msg)
                 setTimeout(()=>{

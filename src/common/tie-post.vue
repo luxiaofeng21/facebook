@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-dialog title="创建帖子" :visible.sync="show" width="550px" :before-close="getclose">
+        <el-dialog title="创建帖子" :visible.sync="show" width="550px" :before-close="getclose" :append-to-body="true">
             <div class="el-flex">
                 <el-avatar :src="user_info.me_img"></el-avatar>
                 <div class="rg">

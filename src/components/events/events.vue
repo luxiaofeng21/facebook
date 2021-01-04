@@ -29,11 +29,11 @@
                         </div>
                     </div>
                 </div>
-                <div aria-label="活动面板" role="main" class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr dp1hu0rb">
+                <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t g5gj957u d2edcug0 hpfvmrgz rj1gh0hx buofh1pr dp1hu0rb">
                     <div class="j83agx80 cbu4d94t buofh1pr dp1hu0rb hpfvmrgz l9j0dhe7 du4w35lb">
                         <div class="dp1hu0rb d2edcug0 taijpn5t j83agx80 gs1a9yip">
                             <div class="k4urcfbm dp1hu0rb d2edcug0 cbu4d94t j83agx80 bp9cbjyn" role="main">
-                                <div class="d2edcug0 aodizinl rz4wbd8a ofv0k9yr a8nywdso h8czfk5b">
+                                <div v-if="mactive==0" class="d2edcug0 aodizinl rz4wbd8a ofv0k9yr a8nywdso h8czfk5b">
                                     <div class="qcwxy68d oygrvhab piqn31j5 jei6r52m">
                                         <div>
                                             <div class="f10w8fjw">
@@ -229,10 +229,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                <calendar v-else></calendar>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -241,8 +243,10 @@
 <script>
 import cartList from '@/common/cart-list'
 import eventList from '@/common/event-list'
+import calendar from './calendar'
 export default {
     components: {
+        calendar,
         eventList,
         cartList,
     },

@@ -51,7 +51,7 @@
                 </div>
                 <span class="el-footer">
                     <el-button @click="dialogVisible=false">取消</el-button>
-                    <el-button @click="getsave" type="primary">保存</el-button>
+                    <el-button @click="getsave" type="primary" :disabled="filter.issue.length>1?false:true">保存</el-button>
                 </span>
         </el-dialog>
     </div>
@@ -85,6 +85,10 @@ export default {
         getsave(){
             var info=Object.assign({},this.filter);
             this.list.push(info)
+            this.filter.type="1"
+             this.filter.title="";
+            this.filter.issue=[]
+            this.dialogVisible=false
         }
     }
 };

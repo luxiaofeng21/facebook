@@ -34,7 +34,7 @@
 								<li v-for="(item,index) in account" :key="index">
 									<video :src="item.video" controls></video>
 									<div class="title">{{item.title}}</div>
-									<div class="text">{{getTimeDistance(item.date)}} {{item.num}}次播放</div>
+									<div class="text">{{showDate(item.date)}} {{item.num}}次播放</div>
 									<div class="handle">
 										<el-tooltip v-if="item.handle.good">
 											<div slot="content">

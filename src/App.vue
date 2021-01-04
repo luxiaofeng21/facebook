@@ -140,9 +140,18 @@ a {
 .book-icon2>i {
     font-size: 20px;
 }
+
+.book-icon2>img{
+    width: 20px;
+    margin-right: 5px;
+}
 .icon-primary{
     color: #fff;
     background-color: #1877F2;
+    
+}
+.icon-primary img{
+    filter: var(--filter-always-white);
 }
 .icon-primary2{
     background-color: #E7F3FF;
@@ -150,8 +159,9 @@ a {
     font-size: 14px;
 }
 .icon-primary2 i{
-    font-size: 14px;
-    margin-left: 5px;
+    font-size: 18px;
+    margin: 0 5px;
+    fill: var(--primary-button-background);
     font-weight: bold;
 }
 .book-title{
@@ -202,7 +212,7 @@ a {
 .el-aside{
     border-right: 1px solid #eee;
 }
-.el-aside,.el-main{
+.el-aside{
     background-color: #fff;
 }
 
@@ -320,5 +330,9 @@ a {
 }
 .el-success:hover{
     background-color: #f5f5f5;
+}
+
+.el-padding{
+    padding:  10px;
 }
 </style>

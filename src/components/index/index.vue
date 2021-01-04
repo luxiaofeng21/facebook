@@ -21,13 +21,16 @@
                                     <div role="navigation" class="rq0escxv l9j0dhe7 du4w35lb ftbm7790 pad24vr5 pzfvarvs dp1hu0rb fer614ym o9ndlxrr bx45vsiw">
                                         <div class="rq0escxv poy2od1o du4w35lb j83agx80 cbu4d94t qowsmv63 owwhemhu dp1hu0rb dhp61c6y czl6b2yu iyyx5f41">
                                             <div class="q5bimw55 rpm2j7zs k7i0oixp gvuykj2m j83agx80 cbu4d94t ni8dbmo4 eg9m0zos l9j0dhe7 du4w35lb ofs802cu pohlnb88 dkue75c7 mb9wzai9 d8ncny3e buofh1pr tgvbjcpo l56l04vs r57mb794 kh7kg01d c3g1iek1 k4xni2cv">
-                                                <div class="j83agx80 cbu4d94t buofh1pr">
-                                                    <h2 class="gmql0nx0 l94mrbxd p1ri9a11 lzcic4wl q45zohi1 g0aa4cga pmk7jnqg" dir="auto" tabindex="-1">
-                                                        Facebook 菜单
-                                                    </h2>
+                                               
                                                     <div class="l9j0dhe7 tr9rh885 buofh1pr cbu4d94t j83agx80" data-pagelet="LeftRail">
                                                         <div class="sn7ne77z buofh1pr cbu4d94t j83agx80" ref="down">
                                                             <cart-list :list="menu" @getcart="getmenu" ></cart-list>
+                                                             <hr> 
+                                                            <div class="flex el-padding">
+                                                                <div class="book-title">快速访问列表</div>
+                                                                 <span @click="showRecommed=true" class="link">编辑</span>
+                                                            </div>
+                                                            <cart-list :list="publicPage" @getcart="publicUrl"></cart-list>
                                                             <div class="dati1w0a ihqw7lf3 hv4rvrfc discj3wi pfnyh3mw">
                                                                 <footer aria-label="Facebook" role="contentinfo">
                                                                     <span class="oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh m9osqain" dir="auto">
@@ -91,7 +94,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -377,7 +379,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <post-list :list="list"></post-list>
+                                                                <post-list :list="list" url="/api/createComments" url2="/api/comments"></post-list>
 
                                                             </div>
                                                             <span id="ssrb_feed_end" style="display: none;">
@@ -546,15 +548,43 @@
                         <cart-list v-else class="cart-list" :list="feel.activity"  size="medium" ></cart-list>
                     </el-tab-pane>
             </el-tabs>
-            
-            
-           
+    </el-dialog>
+    <el-dialog :visible.sync="showRecommed" title="编辑快速访问列表" width="600px"> 
+        <div >
+            快速访问列表可以让你快速访问自己在 Facebook 的常用功能。你的快速访问列表是自动排序的，但你可以置顶某些快速访问项，让其始终显示在顶部，也可以从列表中隐藏快速访问项。
+        </div>
+        <el-input class="el-margin" v-model="recommend.name" placeholder="搜索主页、小组和游戏">
+            <i class="el-input__icon el-icon-search" slot="prefix"></i> 
+        </el-input>
+        <ul class="recommend-ul">
+            <li v-for="(item,index) in recommend.list" :key="index">
+                <div class="lf">
+                    <el-avatar :src="item.img"></el-avatar>
+                    <span>{{item.title}}</span>
+                </div>
+                <el-select v-model="item.type" @click="changeCommend">
+                    <el-option :value="1" label="自动排序">
+                        <i class="el-icon-s-marketing"></i> <span>自动排序</span>
+                    </el-option>
+                    <el-option :value="2" label="置顶">
+                        <i class="el-icon-s-open"></i> <span>置顶</span>
+                    </el-option>
+                    <el-option :value="3" label="隐藏">
+                        <i class="el-icon-view"></i> <span>隐藏</span>
+                    </el-option>
+                </el-select>
+            </li>
+        </ul>
+        <span slot="footer">
+            <el-button @click="showRecommed=false">取消</el-button>    
+            <el-button type="primary">保存</el-button>    
+        </span> 
     </el-dialog>
 </div>
 </template>
 
 <script scoped>
-import '../../css/index.css';
+// import '../../css/index.css';
 import videoChat from '@/common/video-chat'
 import cartList from '@/common/cart-list'
 import postList from '@/common/post-list'
@@ -568,6 +598,11 @@ export default {
     },
     data() {
         return {
+            recommend:{
+                name:"",
+                list:[]
+            },
+            showRecommed:false,
             factive:-1,
             dialogVisible3:false,
             feel:{
@@ -921,6 +956,7 @@ export default {
                     url: "onemi"
                 },
             ],
+            publicPage:[],
             pages:[{
                 icon:"el-icon-bell",
                 text:"通知",
@@ -937,14 +973,11 @@ export default {
         var that = this;
         this.user_info=user_info
         //推荐
-        this.$axios.get("/recommended").then(res => {
-            res.map(x=>{
-                if(x.collection=='') x.collection=[]
-            })
+        this.$axios.get("/api/recommended").then(res => {
             that.list = res
         })
         //朋友
-        this.$axios.get("/friends").then(res => {
+        this.$axios.get("/api/friends").then(res => {
             for(let item of res){
                 item.me_img= item.me_img
                 item.bg_img=item.bg_img
@@ -952,10 +985,16 @@ export default {
             that.friends = res
         })
         //公共主页
-        this.$axios.get("/publicPage").then(res=>{
+        this.$axios.get("/api/publicPage").then(res=>{
             var data=res.data
-            data.map(x=>x.img=require("@/assets/flag.png"))
-            that.pages.unshift(data[data.length-1])
+            this.publicPage=data
+            this.pages.unshift(data[data.length-1])
+            this.recommend.list=res.data
+            //小组
+            this.$axios.get("/api/getgroups").then(res=>{
+                this.recommend.list=this.recommend.list.concat(res.data)
+                this.recommend.list.map(x=>{x.type=1})
+            })
         })
        
     },
@@ -965,6 +1004,10 @@ export default {
         })
     },
     methods: {
+        //快速列表排序方式
+        changeCommend(item){
+                console.log(item)
+        },
         //感受
         getfeel(i){
             let ul=[];
@@ -1106,7 +1149,6 @@ export default {
         },
         //跳转
         getmenu(index,item){
-            console.log("🚀 ~ file: index.vue ~ line 851 ~ getmenu ~ index", index)
             this.mactive=index
             if(item.url){
                 this.$router.push({name:item.url})
@@ -1148,7 +1190,10 @@ export default {
             if(i==0){
                 this.$router.push({name:"manageHome",query:{id:item.id}})
             }
-        }
+        },
+        publicUrl(i,item){
+              this.$router.push({name:"manageHome",query:{id:item.id}})
+        },
     },
 }
 </script>
@@ -1214,5 +1259,20 @@ a>.scb9dxdr:hover {
 }
 .el-card{
     margin-bottom: 15px;
+}
+
+
+.recommend-ul>li{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.recommend-ul>li>.lf{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.recommend-ul>li>.lf>.el-avatar{
+    margin-right: 10px;
 }
 </style>
