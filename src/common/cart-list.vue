@@ -10,7 +10,6 @@
                     <span v-else-if="item.emoji">{{item.emoji}}</span>
                     <i v-else :class="item.icon"></i>
                     <span v-if="type=='msg'" class="imgicon" :class="item.imgicon"></span>
-                   
                 </div>
                 <div class="cart-content">
                     <div class="cart-title">{{item.title}} </div>
@@ -139,6 +138,14 @@ export default {
 </script>
 
 <style scoped>
+.el-radio__inner{
+    width: 20px;
+    height: 20px;
+}
+.el-radio__inner::after{
+    width: 8px;
+    height: 8px;
+}
 .video-list .cart-img img {
     height: 100%;
 }
@@ -309,7 +316,13 @@ export default {
     height: 30px;
     line-height: 30px;
 }
-
+.small .cart-arrow{
+    font-size: 18px;
+}
+.small .cart-img>img{
+    width: 20px;
+    height: auto;
+}
 .small .cart-title{
     font-size: 0.95rem;
 }
@@ -495,5 +508,16 @@ export default {
     font-size: 20px;
     color: #fff;
     line-height: 20px;
+}
+
+.alat{
+    background-image: url("../assets/alat.png");
+    transform: scale(0.9);
+}
+.alat.icon1{
+    background-position: -7px -44px;
+}
+.alat.icon2{
+    background-position: -7px -82px;
 }
 </style>

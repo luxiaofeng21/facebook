@@ -1,5 +1,6 @@
 .book-firend{
     background-color: #fff;
+    margin: -20px;
 }
 .book-tou{
     text-align: center;
@@ -40,7 +41,7 @@
     object-fit: cover;
     background: #fff;
 }
-.tou-title{
+.book-tou .tou-title{
     margin-top: 45px;
 }
 .el-tabs{
@@ -114,20 +115,25 @@
     .me-ul .me-label{
         font-size: 15px;
     }
-    .me-ul li img {
+    .me-ul li img,.me-ul li>i{
         width: 20px;
         height: 20px;
         filter: var(--filter-placeholder-icon);
         margin-right: 10px;
+        font-size: 22px;
     }
     .me-rg{
         position: absolute;
         right: 0;
         display: flex;
     }
+    .me-null{
+        font-size: .9375rem;
+        color: var(--secondary-text);
+    }
 
     .about{
-        background-color: #eee;
+        background-color: #F0F2F5;
     }
     a{
         color: #333;
@@ -197,3 +203,94 @@
         height: 20px;
         margin-right: 10px;
     }
+
+
+    .friend-footer>li{
+        display: inline-block;
+        color: #666;
+    }
+
+
+    .interest-ul>li{
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 100px;
+        padding: 5px 10px;
+    }
+
+    .address-ul>li{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .address-ul .content{
+        margin-left: 10px;
+    }
+    .address-ul .text{
+        font-size: 12px;
+        color: #666;
+        line-height: 20px;
+    }
+
+    
+
+.search-li {
+    display: flex;
+    align-items: center;
+}
+
+.search-li:hover {
+    background-color: #eee;
+}
+
+.search-li>span {
+    width: 70%;
+    word-break: break-all;
+    text-align: left;
+}
+
+
+.friend-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.friend-user>.lf{
+    display: flex;
+    align-items: center;
+}
+.friend-user{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -10px;
+}
+.friend-user .content{
+    margin-left: 20px;
+}
+.friend-user .el-avatar{
+    border: 4px solid #fff;
+    z-index: 11;
+}
+.friend-user .avatar-img{
+   position: relative;
+}
+.avatar-img >.book-icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+.tou-bg>.content{
+   position: absolute;
+   bottom: 0;
+   text-align: left; 
+   padding: 20px;
+   
+}
+.tou-bg>.content>.friend-title{
+    margin: 5px 0;
+}
+.tou-bg>.content>*:not(.book-icon){
+    color: #fff;
+}

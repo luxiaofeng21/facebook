@@ -24,7 +24,6 @@ import Stories from '@/components/create/stories'
 import Events from '@/components/events/events'
 import Fundraisers from '@/components/events/fundraisers'
 import Saved from "@/components/index/saved"
-import Ads from "@/components/index/Ads"
 import Pay from "@/components/pay/index"
 import  Memories from "@/components/memories/memories"
 import  Onemi from "@/components/index/onemi"
@@ -101,7 +100,10 @@ var router= new Router({
     {
       path:"/manageHome",
       name:"manageHome",
-      component:manageHome
+      component:manageHome,
+      meta: {
+        keepAlive: true
+      }
     },
     {
       path: '/login',
@@ -266,11 +268,6 @@ var router= new Router({
       component:Saved
     },
     {
-      path:"/index/ads",
-      name:"ads",
-      component:Ads
-    },
-    {
       path:"/index/pay",
       name:"pay",
       component:Pay
@@ -306,6 +303,11 @@ var router= new Router({
       component:()=>import("@/components/ad_center/pagead")
     },
     {
+      path:"/ad_center/inbox",
+      name:"inbox",
+      component:()=>import("@/components/ad_center/inbox")
+    },
+    {
       path:"/ad_center/websitead",
       name:"websitead",
       component:()=>import("@/components/ad_center/websitead")
@@ -321,9 +323,28 @@ var router= new Router({
       component:()=>import("@/components/events/create")
     },
     {
+      path:"/events/event-item",
+      name:"event-item",
+      component:()=>import("@/components/events/event-item")
+    },
+    {
+      path:"/events/detail",
+      name:"activity-detail",
+      component:()=>import("@/components/events/detail")
+    },
+    {
       path:"/groups/grouopHome",
       name:"grouopHome",
       component:grouopHome
+    },
+    {
+      path:"/tie_item",
+      name:"tie-item",
+      component:()=>import("@/common/tie-item")
+    },
+    {
+      path:"*",
+      component:()=>import("@/common/404")
     }
   ]
 })

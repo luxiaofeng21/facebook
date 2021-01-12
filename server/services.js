@@ -42,7 +42,22 @@ exports.recommended = (req,res)=>{
          },100)
     })
 }
-
+//获取指定帖子
+exports.getrecommended = (req,res)=>{
+console.log("🚀 ~ file: services.js ~ line 47 ~ req", req.query)
+    // 查询语句
+    let sql = 'select * from recommended where ?'
+    db.base(sql,[req.query],(result)=>{
+        for(let item of result){
+            db.base(`select * from user where id=?`,item.uid,(v)=>{
+                   item.user_info=v[0]
+            })
+         }
+         setTimeout(()=>{
+           res.send(result) 
+         },100)
+    })
+}
 //创建帖子
 exports.createRecommended = (req,res)=>{
     req.body.date=new Date();

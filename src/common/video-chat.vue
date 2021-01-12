@@ -3,14 +3,12 @@
     <!--创建聊天室-->
     <el-dialog :visible.sync="dialogVisible"  width="500px" :before-close="getclose">
         <div class="video-header">
-            <div class="etr7akla taijpn5t pioscnbf j83agx80 rq0escxv spb7xbtv bkmhp75w emlxlaya s45kfl79 snggw924 czabki66 hx37s9t6 qjs0y65x bp9cbjyn"><i class="hu5pjgll bixrwtb6 sp_Dk-puqZ-HC9 sx_6798ea" style="height: 36px; width: 36px;"></i></div>
-            <span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 ns63r2gh fe6kdd0r mau55g9w c8b282yb iv3no6db o3w64lxj b2s5l15y hnhda86s oo9gr5id oqcyycmt" dir="auto">创建你的视频聊天室</span>
+                <div class="viedeo-icon"></div> 
+                <div class="book-title2">创建你的视频聊天室</div>
         </div>
         <p></p>
-        <cart-list :list="chat" @getcart="getcart" type="arrow"></cart-list>
-        <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-            <div class="qzhwtbm6 knvmm38d"><span class="d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d9wwppkn fe6kdd0r mau55g9w c8b282yb mdeji52x e9vueds3 j5wam9gi knj5qynh m9osqain oqcyycmt" dir="auto">首先，请选择你想邀请的用户</span></div>
-        </div>
+        <cart-list :list="chat" @getcart="getcart" type="arrow" size="small"></cart-list>
+        <div class="el-margin">首先，请选择你想邀请的用户</div>
         <el-button style="width:100%" type="primary" v-on:click="getnewVideo" :disabled="chat[1].text!='选择用户' && chat[2].text!='选择时间'?false:true">创建聊天室</el-button>
     </el-dialog>
     <!--聊天室-->
@@ -350,12 +348,12 @@ export default {
                     text: "枫果果的视频聊天室"
                 },
                 {
-                    icon: "sp_Dk-puqZ-HC9 icon-login",
+                    img:require("@/assets/friend2.png"),
                     title: "谁会收到邀请？",
                     text: "选择用户"
                 },
                 {
-                    icon: "sp_Dk-puqZ-HC9 icon-date",
+                    icon: "el-icon-time",
                     title: "开始时间",
                     text: "选择时间"
                 },
@@ -482,6 +480,7 @@ export default {
 </script>
 
 <style scoped>
+@import "../css/index.css";
 .sp_UunXq4RlMQk {
     background-image: url(../assets/_AgLJqLL0tL.png);
     background-size: auto;

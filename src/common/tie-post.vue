@@ -4,7 +4,7 @@
             <div class="el-flex">
                 <el-avatar :src="user_info.me_img"></el-avatar>
                 <div class="rg">
-                    <div class="me-name">{{user_info.user_name}}</div>
+                    <div class="me-name">{{user_info.user_name}} <a v-if="feel" href="javascript:;" @click="$emit('getfeel')"> · {{feel}}</a> </div>
                     <div class="me-type" @click="showSet=true">
                             <img :src="selectObj.img" alt="" v-if="selectObj.img"> 
                             <i :class="selectObj.icon" v-else></i>
@@ -30,9 +30,16 @@
             <div class="tie-arrow">
                 <div class="lf">添加更多内容</div>
                 <div class="rg">
-                    <div class="hover-icon">
-                        <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;"> </i>
-                    </div>
+                    <el-upload
+                        class="upload-img"
+                        :action="'api/uploadImg'"
+                        accept="image/*"
+                        :on-success="handlePreview" >
+                             <div class="hover-icon">
+                                <i class="hu5pjgll bixrwtb6 sp_sCNqGdumk_3 sx_6bee45" style="height: 24px; width: 24px;"> </i>
+                            </div>
+                        </el-upload>
+                   
                     <div class="hover-icon">
                             <i class="hu5pjgll bixrwtb6 sp_JnKaLLvPoxR sx_ee8eae" style="height: 24px; width: 24px;"></i>
                     </div>
@@ -59,6 +66,11 @@
                 </div>
                 <cart-list class="cart-ul" :list="setList" type="radio" :active="active" @getcart="getcart"></cart-list>
         </el-dialog>
+        <el-dialog :visible.sync="dialogVisible" :title="customtitle"  width="550px" >
+            <el-input v-model="search" placeholder="搜索好友或名单"> <i slot="prefix" class="el-icon-search el-input__icon"></i> </el-input>
+            <div class="el-margin book-title2">好友</div>
+            
+        </el-dialog>
     </div>
 </template>
 
@@ -68,9 +80,12 @@ export default {
     components:{
         cartList
     },
-    props:["show"],
+    props:["show","feel"],
     data() {
         return {
+            search:"",
+            customtitle:"",
+            dialogVisible:false,
             selectObj:{},
             active:0,
             setList:[
@@ -125,6 +140,10 @@ export default {
             var content=this.content;
             var selectObj=this.selectObj;
             var type=this.active;
+            if(content==''){
+                this.$message.error("帖子内容不能为空！！！")
+                return false
+            }
             this.$emit("getbtn",{content,type,selectObj})
         },
         //关闭
@@ -136,6 +155,9 @@ export default {
                 this.active=i;
                 this.selectObj=this.setList[i];
                 this.showSet=false;
+            }else{
+                this.customtitle=item.title;
+                this.dialogVisible=true
             }
             
         },

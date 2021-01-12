@@ -6,6 +6,7 @@ const services = require('./services.js')
 router.get('/user',services.user)
 //帖子
 router.get('/recommended',services.recommended)
+router.get('/getrecommended',services.getrecommended)
 router.post("/createRecommended",services.createRecommended)
 //好友
 router.get('/friends',services.friends)
@@ -20,9 +21,9 @@ router.get("/getoken",services.getoken)
 router.get("/comments",services.comments)
 router.post("/createComments",services.createComments)
 //公共主页
-router.post("/createPage",services.createPage)
-router.get("/publicPage",services.publicPage)
-router.get("/getpublicPage",services.getpublicPage)
+router.post("/createPage",services.createPage)      //创建
+router.get("/publicPage",services.publicPage)       //所有
+router.get("/getpublicPage",services.getpublicPage) //指定
 //小组
 router.post("/createGroups",services.createGroups)
 router.get("/getGroups",services.getGroups)

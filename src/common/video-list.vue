@@ -1,6 +1,6 @@
 <template>
     <div class="video-list" :class="type">
-            <div class="video-item" :class="size" v-for="(item,index) in list" :key="index">
+            <div class="video-item" :class="size" v-for="(item,index) in list" :key="index" @click="geturl">
                     <div class="video-img">
                             <img :src="item.img" alt="">
                             <div class="video-tips">
@@ -76,6 +76,11 @@ export default {
             }]
         }
     },
+    methods:{
+        geturl(){
+            this.$router.push({name:"tie-item"})
+        }
+    }
 }
 </script>
 

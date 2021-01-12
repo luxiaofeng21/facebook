@@ -30,9 +30,9 @@
                     <div class="msg-list">
                             <div class="lf">
                                 
-                                <div class="what">
+                                <div class="what" >
                                         
-                                        <div class="what-list">
+                                        <div class="what-list" :style="{height:$store.state.clienHeight-230 + 'px'}">
                                                 <div class="user-msg">
                                                         <img :src="mobj.me_img" alt="">
                                                         <div class="msg-name2">{{mobj.name}}</div>
@@ -183,6 +183,9 @@ export default {
             var date=now.toLocaleString();
             this.msgAll.push({title:this.what,date,role:1});
             this.what="";
+           setTimeout(res=>{
+                $(".what-list").scrollTop($(".what-list").scrollTop() + 100)
+           },100)
         },
         //左侧
         getmenu(i){

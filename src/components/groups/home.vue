@@ -32,7 +32,7 @@
                                 <div class="tou-text" v-if="accout.friends"> 
                                     <img src="../../assets/diqiu.png" alt="">  {{accout.type==1?"公开小组":"非公开小组"}} · {{accout.friends.length}} 位成员
                                 </div>
-                                <p><hr></p>
+                                <div class="el-margin"><hr></div>
                                 <div class="flex tou-nav">
                                     <div class="lf">
                                         <el-tabs v-model="activeName">
@@ -85,17 +85,7 @@
                             <div class="katn9ffz">
                                 <div class="book-container">
                                     <div class="rg">
-                                        <el-card class="el-bottom">
-                                            <div class="flex">
-                                                <el-avatar :src="user_info.me_img"></el-avatar>
-                                                <el-input style="margin-left:10px;flex:1" placeholder="发布公开贴..." @focus="show=true"></el-input>
-                                            </div>
-                                            <ul class="tie-ul">
-                                                <li><i class="sp_5kM2vwYmVrv sx_99956b"></i> <strong>照片/视频</strong></li>
-                                                <li><i class="sp_5kM2vwYmVrv sx_4fb45f"></i> <strong>标记用户</strong></li>
-                                                <li><i class="sp_5kM2vwYmVrv sx_649950"></i> <strong>感受活动</strong></li>
-                                            </ul>
-                                        </el-card>
+                                        <tie-list @getie="getie"></tie-list>
                                         <post-list :list="list" url="/api/groupcreateComments" url2="/api/groupComments"></post-list>
                                     </div>
                                     <div class="lf">
@@ -155,12 +145,12 @@
                         </div>
                     </span>
         </el-dialog>
-        <tie-post :show.sync="show" @getbtn="getie"></tie-post>
+        
     </div>
 </template>
 
 <script>
-import tiePost from '@/common/tie-post'
+import tieList from '@/common/tie-list'
 import cartList from '@/common/cart-list'
 import groupsList2 from '@/common/groups-list2'
 import postList from "@/common/post-list"
@@ -176,6 +166,7 @@ import alerted from './alerted'
 import groupQuality from './group_quality'
 export default {
     components:{
+        tieList,
         groupQuality,
         alerted,
         jubao,
@@ -186,7 +177,6 @@ export default {
         membershipQuestions,
         autoApprove,
         Requests,
-        tiePost,
         groupsList2,
         cartList,
         postList
@@ -194,7 +184,6 @@ export default {
     data() {
         return {
             list:[],
-            show:false,
             about:[
                 {
                     img:require("@/assets/diqiu.png"),
@@ -364,25 +353,7 @@ export default {
         max-height: 500px;
         overflow: auto;
     }
-    .tie-ul{
-        display: flex;
-        margin-top: 15px;
-    }
-    .tie-ul>li{
-        width: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 5px;
-        border-radius: 10px;
-    }
-    .tie-ul>li:hover{
-        cursor: pointer;
-        background-color: #eee;
-    }
-    .tie-ul>li>i{
-        margin-right: 5px;
-    }
+  
 
     .about{
         margin: -20px;

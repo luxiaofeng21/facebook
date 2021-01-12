@@ -43,15 +43,9 @@
                                             <div class="tqsryivl datstx6m ni8dbmo4 stjgntxs l9j0dhe7 k4urcfbm">
                                                 
                                                 <swiper class="swiper" :options="swiperOption">
-                                                    <swiper-slide>Slide 1</swiper-slide>
-                                                    <swiper-slide>Slide 2</swiper-slide>
-                                                    <swiper-slide>Slide 3</swiper-slide>
-                                                    <swiper-slide>Slide 4</swiper-slide>
-                                                    <swiper-slide>Slide 5</swiper-slide>
-                                                    <swiper-slide>Slide 6</swiper-slide>
-                                                    <swiper-slide>Slide 7</swiper-slide>
-                                                    <swiper-slide>Slide 8</swiper-slide>
-                                                    <swiper-slide>Slide 9</swiper-slide>
+                                                    <swiper-slide v-for="(item,index) in gaming" :key="index"> 
+                                                            <img :src="item.img" alt="">
+                                                    </swiper-slide>
                                                     <div class="swiper-pagination" slot="pagination"></div>
                                                     <div class="swiper-button-prev" slot="button-prev"></div>
                                                     <div class="swiper-button-next" slot="button-next"></div>
@@ -160,19 +154,7 @@ export default {
         cartList
     },
     mounted(){
-        new Swiper('.swiper-container',{
-            autoplay:3000,
-            loop:false,
-            observer: true,
-            centeredSlides : true,
-            slidesPerView:2,
-            pagination : '.swiper-pagination',
-            paginationClickable: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+       
     },
     methods: {
         getmenu(i, item) {
@@ -187,11 +169,9 @@ export default {
     data() {
         return {
             swiperOption: {
+                centeredSlides: true,
                 slidesPerView: 3,
                 spaceBetween: 30,
-                slidesPerGroup: 3,
-                loop: true,
-                loopFillGroupWithBlank: true,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true
@@ -441,7 +421,7 @@ export default {
 
 .swiper-slide img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
 	border-radius: 14px;
 	display: block;
@@ -518,19 +498,6 @@ export default {
 .button div:hover {
 	background-color: #2f4798;
 }
-
-.swiper-button-prev,.swiper-button-next{
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-    background: #00a0e9 center 50%/50% 50% no-repeat;
-    font-size: 20px;
-    color: #fff;
-}
-.swiper-button-prev::after,.swiper-button-next::after{
-    display: none;
-}
-
 
 @media screen and (max-width: 668px) {
 	.button div {

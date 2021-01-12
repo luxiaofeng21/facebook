@@ -22,9 +22,10 @@ export default {
 <style scoped>
     .follow-ul{
         margin:0  -5px;
+        display: flex;
     }
     .follow-ul>li{
-        display: inline-block;
+        flex-grow: 1;
         width: 10%;
         margin: 4px;
     }

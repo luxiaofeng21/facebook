@@ -52,7 +52,8 @@
             </div>
             <div v-else>
                 <Category v-if="mactive2==0"></Category>
-                <Liked v-if="mactive2==1"></Liked>
+                <Liked v-else-if="mactive2==1"></Liked>
+                <invites v-else></invites>
             </div>
              
             
@@ -65,8 +66,10 @@
 import cartList from '@/common/cart-list'
 import Category from './category'
 import Liked from './liked'
+import invites from './invites'
 export default {
     components: {
+        invites,
         Liked,
         Category,
         cartList

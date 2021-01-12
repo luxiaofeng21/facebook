@@ -187,18 +187,24 @@ export default {
       ],
     };
   },
-  created() {},
-  mounted() {},
-  watch: {
-    list(newValue, oldValue) {
-      console.log("list -> newValue", newValue);
-      this.list = newValue;
-    },
+  created() {
+      
+  },
+  mounted() {
+      //   this.$nextTick(()=>{
+      //     this.list.map(x=>{
+      //       if(x.showEmoji){
+      //           this.$axios.get(this.url2, { params: { aid:x.id } }).then((res) => {
+      //               x.collection= res
+      //               this.$forceUpdate()
+      //           });
+                  
+      //       }
+      //     })
+      // })
+  
   },
   methods: {
-    // getemoji2(item) {
-    //   this.list[this.eindex].collection[this.eindex2] = item;
-    // },
     getemoji(item) {
       var user_info = this.$store.state.user_info;
       var info = {
@@ -231,20 +237,21 @@ export default {
       } else if (state == 2) {
         this.loading = true;
         if (!item.showEmoji) {
-          item.showEmoji = true;
-          var dom = $(e.currentTarget)
-            .parents(".card-item")
-            .children()
-            .children(".card-collect");
-          if (dom.length > 0) {
-            $("body,html").animate({ scrollTop: dom.offset().top - 800 });
-            $(dom).find("input").focus();
-          }
-          this.$axios.get(this.url2, { params: { aid: item.id } }).then((res) => {
-            item.collection = res;
-            this.loading = false;
-            this.$forceUpdate();
-          });
+            item.showEmoji = true;
+            var dom = $(e.currentTarget)
+              .parents(".card-item")
+              .children()
+              .children(".card-collect");
+            if (dom.length > 0) {
+              $("body,html").animate({ scrollTop: dom.offset().top - 800 });
+              $(dom).find("input").focus();
+            }
+            this.$axios.get(this.url2, { params: { aid:item.id } }).then((res) => {
+                item.collection= res
+                this.loading = false;
+                this.$forceUpdate();
+            });
+         
         } else {
           item.showEmoji = false;
           this.$forceUpdate();
@@ -253,7 +260,8 @@ export default {
         //转发
       } else {
       }
-    },
+    }
+         
   },
 };
 </script>

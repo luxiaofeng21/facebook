@@ -1,13 +1,13 @@
 <template>
     <div class="event-list">
-            <div class="event-item" v-for="(item,index) in list" :key="index">
-                    <img :src="item.img" alt="">
+            <div class="event-item" v-for="(item,index) in list" :key="index" >
+                    <img :src="item.img" alt="" @click="geturl">
                     <div class="event-content">
                             <div class="event-date">{{item.date}}</div>
-                            <div class="event-title">{{item.title}}</div>
+                            <a class="event-title" @click="geturl">{{item.title}}</a>
                             <div class="event-text">{{item.text}}</div>
                             <div class="event-footer">
-                                <div class="book-icon2" @click="getcollect(item)"> <i :class="!item.collect?'el-icon-star-off':'el-icon-star-on'"></i>有兴趣 </div>
+                                <div class="book-icon2" @click.stop="getcollect(item)"> <i :class="!item.collect?'el-icon-star-off':'el-icon-star-on'"></i>有兴趣 </div>
                                 <el-popover>
                                     <ul class="popver-ul">
                                         <li v-for="(v,i) in popover" :key="i"> 
@@ -60,6 +60,9 @@ export default {
     methods: {
         getcollect(item){
             item.collect=!item.collect;
+        },
+        geturl(){
+            this.$router.push({name:"event-item"})
         }
     },
 }
@@ -68,10 +71,10 @@ export default {
 <style>
 .event-list{
     display: flex;
-    padding: 0 -5px;
+    margin: 0 -5px;
 }
 .event-list>.event-item{
-    width:23%;
+    width:25%;
     margin: 0 5px;
     border-radius: 10px;
     background-color: #fff;
@@ -85,6 +88,9 @@ export default {
 .event-title{
     font-weight: 600;
     line-height: 1.1765;
+    color: #000;
+    margin-bottom: 5px;
+    display: block;
     font-size: 1.0625rem;
 }
 .event-footer{

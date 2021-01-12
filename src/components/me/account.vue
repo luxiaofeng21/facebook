@@ -8,26 +8,26 @@
                         <div id="toolbarContainer" class="hidden_elem">
                         </div>
                         <div id="mainContainer">
-                            <div id="leftCol">
+                            <div id="leftCol" class="el-padding">
                                 <div class="CometSettingsMainHeader">
                                     设置
                                 </div>
-                                <Menu :menu="menuAll" :findex="findex" v-on:getchild="getchild"></Menu>
+                                <cart-list :list="menuAll" :active="findex" @getcart="getchild"></cart-list>
                             </div>
                             <div id="contentCol">
-                                <Security v-if="state==1"></Security>
-                                <YourFacebook v-else-if="state==2"></YourFacebook>
-                                <Privacy v-else-if="state==4"></Privacy>
-                                <Timeline v-else-if="state==5"></Timeline>
-                                <Stories v-else-if="state==6"></Stories>
-                                <Location v-else-if="state==7"></Location>
-                                <Blocking v-else-if="state==8"></Blocking>
-                                <Language v-else-if="state==9"></Language>
-                                <Face v-else-if="state==10"></Face>
-                                <Notifications v-else-if="state==12"></Notifications>
-                                <Mobile v-else-if="state==13"></Mobile>
-                                <Followers v-else-if='state==14'></Followers>
-                                <Applications v-else-if='state==16'></Applications>
+                                <Security v-if="state=='security'"></Security>
+                                <YourFacebook v-else-if="state=='your_facebook'"></YourFacebook>
+                                <Privacy v-else-if="state=='privacy'"></Privacy>
+                                <Timeline v-else-if="state=='timeline'"></Timeline>
+                                <Stories v-else-if="state=='stories'"></Stories>
+                                <Location v-else-if="state=='location'"></Location>
+                                <Blocking v-else-if="state=='blocking'"></Blocking>
+                                <Language v-else-if="state=='language'"></Language>
+                                <Face v-else-if="state=='face'"></Face>
+                                <Notifications v-else-if="state=='notifications'"></Notifications>
+                                <Mobile v-else-if="state=='mobile'"></Mobile>
+                                <Followers v-else-if='state=="followers"'></Followers>
+                                <Applications v-else-if='state=="applications"'></Applications>
                                 <div v-else>
                                     <div id="headerArea">
                                         <div class="uiHeader uiHeaderPage">
@@ -512,7 +512,7 @@
 </template>
 
 <script>
-import Menu from '@/common/menu'
+import cartList from '@/common/cart-list'
 import Security from './security.vue'
 import YourFacebook from './your_facebook.vue'
 import Timeline from './timeline.vue'
@@ -539,7 +539,7 @@ export default {
         Stories,
         Privacy,
         Timeline,
-        Menu,
+        cartList,
         Security,
         YourFacebook
     },
@@ -559,68 +559,74 @@ export default {
             state: 0,
             menuAll: [{
                     title: "常规选项",
-                    icon: "el-icon-s-tools"
+                    icon: "el-icon-s-tools",
                 },
                 {
                     title: "安全与登录",
-                    icon: "el-icon-s-claim"
+                    icon: "el-icon-s-claim",
+                    tab:"security"
                 },
                 {
                     title: "你的facebook信息",
-                    icon: "el-icon-s-grid"
-                },
-                {
-                    title: "",
+                    icon: "el-icon-s-grid",
+                    tab:"your_facebook"
                 },
                 {
                     title: "隐私",
-                    icon: "el-icon-s-check"
+                    icon: "el-icon-s-check",
+                    tab:"privacy"
                 },
 
                 {
                     title: "时间线与标记 ",
-                    icon: "el-icon-s-promotion"
+                    icon: "el-icon-s-promotion",
+                    tab:"timeline"
                 },
                 {
                     title: "快拍",
-                    icon: "el-icon-camera-solid"
+                    icon: "el-icon-camera-solid",
+                    tab:"stories",
                 },
                 {
                     title: "定位",
-                    icon: "el-icon-location"
+                    icon: "el-icon-location",
+                    tab:"location"
                 },
                 {
                     title: "屏蔽",
-                    icon: "el-icon-s-check"
+                    icon: "el-icon-s-check",
+                    tab:"blocking"
                 },
                 {
                     title: "语言",
-                    icon: "el-icon-tickets"
+                    icon: "el-icon-tickets",
+                    tab:"language"
                 },
                 {
                     title: "人脸识别",
-                    icon: "el-icon-user-solid"
-                },
-                {
-                    title: ""
+                    icon: "el-icon-user-solid",
+                    tab:"face"
                 },
                 {
                     title: "通知",
-                    icon: "el-icon-message-solid"
+                    icon: "el-icon-message-solid",
+                    tab:"notifications"
                 }, {
                     title: "手机",
-                    icon: "el-icon-mobile-phone"
+                    icon: "el-icon-mobile-phone",
+                    tab:"mobile"
                 }, {
                     title: "公开贴",
-                    icon: "el-icon-view"
-                }, {
-                    title: "",
+                    icon: "el-icon-view",
+                    tab:"followers"
                 }, {
                     title: "应用和网站",
-                    icon: "el-icon-menu"
+                    icon: "el-icon-menu",
+                    tab:"applications"
                 }, {
                     title: "小游戏",
-                    icon: "el-icon-film"
+                    icon: "el-icon-film",
+                    
                 }, {
                     title: "业务集成工具",
                     icon: "el-icon-receiving"
@@ -689,7 +695,6 @@ export default {
     },
     mounted() {
         var state = this.$route.params.state;
-
         if (state) {
             this.state = state
             this.findex = state
@@ -710,8 +715,8 @@ export default {
             this.dialogVisible = true;
         },
         getchild(i, e) {
-
-            this.state = i;
+            this.$router.push({path:"account",query:{state:e.tab}})
+            this.state=e.tab;
             this.findex = i;
         },
         getLook(e) {

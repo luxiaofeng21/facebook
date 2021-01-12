@@ -88,7 +88,7 @@
                         <el-input prefix-icon="el-icon-search" class="search" :placeholder="`搜索${me_ul.user_name}的个人主页`" v-model="search"></el-input>
                     </div>
                     <div class="search_con" v-if="search==''">
-                        <img :src="me_ul.me_img" alt="">
+                        <img class="el-margin" :src="me_ul.me_img" alt="">
                         <div class="search_title">想找啥？搜搜吧！</div>
                         <div class="search_text">搜索DA Cellphone Cases的个人主页，查找帖子、照片和其他可见动态。</div>
                     </div>
@@ -113,10 +113,35 @@
                             <div class="book-card">
                                     <div class="book-title2">个人资料</div>
                                     <ul class="me-ul">
-                                        <li v-for="(item,index) in me_ul.user" :key="index">
-                                            <img :src="item.img" alt="">
-                                            <span class="me-label">{{item.label}}</span>
-                                            <span class="me-title">{{item.title}}</span>
+                                        <li>
+                                            <img src="../assets/bao.png" alt="">
+                                            <span class="me-label">微软 - 总经理</span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/maozi.png" alt="">
+                                            <span class="me-label">曾经就读：广州理工大学</span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/home.png" alt="">
+                                            <span class="me-label">所在地</span>
+                                            <span class="me-title"> <a href="">上海</a> </span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/city.png" alt="">
+                                            <span class="me-label">所在地</span>
+                                            <span class="me-title"> <a href="">上海</a> </span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/xin.png" alt="">
+                                            <span class="me-label">单身</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="interest-ul">
+                                        <li>
+                                                <span>🎤唱歌</span>
+                                        </li>
+                                        <li>
+                                                <span>📖阅读</span>
                                         </li>
                                     </ul>
                             </div>
@@ -125,18 +150,19 @@
                                         <div class="book-title2">照片</div>
                                         <div class="link">所有照片</div>
                                     </div>
-                                    <share-list :list="me_ul.imgAll" :type="'vertical'"></share-list>
+                                    <share-list :list="imgAll" :type="'vertical'"></share-list>
                             </div>
                             <div class="book-card">
                                     <div class="flex">
                                         <div class="book-title2">好友</div>
                                         <div class="link">全部好友</div>
                                     </div>
-                                    <share-list :list="me_ul.friend" :type="'vertical'"></share-list>
+                                    <share-list :list="friend" :type="'vertical'"></share-list>
                             </div>
                     </div>
                     <div class="rg">
-                            <post-list :list="me_ul.list"></post-list>
+                            <tie-list :show="show"></tie-list>
+                            <post-list :list="list"></post-list>
                     </div>
                 </div>
                 <div class="sjgh65i0" v-else-if="activeName==1">
@@ -160,40 +186,116 @@
                                     </div>
                                 </div>
                                 <div class="about-list rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg">
-                                    <ul class="about-ul">
-                                        <li v-for="(item,index) in me_ul.user" :key="index">
-                                            <div v-if="!item.down" class="about-title" @click="item.down=!item.down">
-                                                <i class="el-icon-circle-plus-outline"></i>
-                                                <span class="link">{{item.text}}</span> 
-                                            </div>
-                                            <div v-else class="eidt-input">
-                                                <book-input v-for="(item,index) in item.offect" :key="index" :book="item"></book-input>
-                                                <div  v-if="item.now_title">
-                                                            <div class="book-title">时间段</div>
-                                                            <p>
-                                                                    <el-checkbox v-model="item.now">{{item.now_title}}</el-checkbox>
-                                                            </p>
-                                                            <p >
-                                                                    <el-date-picker
-                                                                        v-model="item.date"
-                                                                        type="daterange"
-                                                                        range-separator="至"
-                                                                        start-placeholder="开始日期"
-                                                                        end-placeholder="结束日期">
-                                                                    </el-date-picker>
-                                                            </p>
-                                                </div>
-                                                <hr>
-                                                <div class="book-footer">
-                                                    <div class="book-icon2"> <i class="intimi-icon"></i> 公开</div>
-                                                    <div class="rg">
-                                                        <div class="book-icon2" @click="item.down=false">取消</div>
-                                                        <div class="book-icon2 icon-primary">保存</div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <ul class="me-ul" v-if="mactive==0">
+                                        <li>
+                                            <img src="../assets/bao.png" alt="">
+                                            <span class="me-null">无工作地点可显示</span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/maozi.png" alt="">
+                                            <span class="me-label">曾经就读：Lonoy Heroes Memorial High School</span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/home.png" alt="">
+                                            <span class="me-label">所在地：<a href="">Tagbilaran City</a></span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/city.png" alt="">
+                                            <span class="me-label">来自：<a href="">上海</a></span>
+                                        </li>
+                                        <li>
+                                            <img src="../assets/xin.png" alt="">
+                                            <span class="me-null">无感情状况可显示</span>
                                         </li>
                                     </ul>
+                                    <div v-else-if="mactive==1">
+                                        <ul class="me-ul">
+                                            <div class="book-title el-bottom">工作</div>
+                                            <li>
+                                                <img src="../assets/bao.png" alt="">
+                                                <span class="me-null">无工作地点可显示</span>
+                                            </li>
+                                            <div class="book-title el-bottom">大学</div>
+                                            <li>
+                                                <img src="../assets/maozi.png" alt="">
+                                                <span class="me-null">无学校资料可显示</span>
+                                            </li>
+                                            <div class="book-title el-bottom">高中</div>
+                                            <li>
+                                                <img src="../assets/school.png" alt="" style="filter:none">
+                                                <span class="me-label">曾经就读：Lonoy Heroes Memorial High School</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div v-else-if="mactive==2">
+                                            <div class="el-bottom book-title">居住地</div>
+                                            <ul class="address-ul">
+                                                    <li>
+                                                        <el-avatar src="../assets/groupBg.png"></el-avatar>
+                                                        <div class="content">
+                                                            <a class="title">上海市</a>
+                                                            <div class="text">所在地</div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <el-avatar src="../assets/groupBg.png"></el-avatar>
+                                                        <div class="content">
+                                                            <a class="title">上海市</a>
+                                                            <div class="text">家乡</div>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                    </div>
+                                    <div v-else-if="mactive==3">
+                                            <ul class="me-ul">
+                                                <div class="el-bottom book-title">联系方式</div>
+                                                <li>
+                                                    <img src="../assets/shenfen.png" alt="">
+                                                    <div class="me-null">无联系方式可显示</div>
+                                                </li>
+                                                <div class="el-bottom book-title">网站和社交链接</div>
+                                                <li>
+                                                    <i class="el-icon-paperclip"> </i>
+                                                    <div class="me-null">无链接可显示</div>
+                                                </li>
+                                                <div class="el-bottom book-title">基本信息</div>
+                                                <li>
+                                                    <i class="el-icon-s-custom"> </i>
+                                                    <div class="me-label">
+                                                        <span>男</span>
+                                                        <div class="me-text">性别</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    <div v-else-if="mactive==4">
+                                         <div class="el-bottom">
+                                             <div class="el-bottom book-title">联系方式</div>
+                                            <ul class="me-ul">
+                                                <li>
+                                                    <img src="../assets/xin.png" alt="">
+                                                    <span class="me-null">无感情状况可显示</span>
+                                                </li>
+                                            </ul>
+                                         </div>
+                                          <div class="el-margin book-title">家庭成员</div>
+                                           <ul class="address-ul">
+                                                <li>
+                                                    <el-avatar src="../assets/groupBg.png"></el-avatar>
+                                                    <div class="content">
+                                                        <a class="title">Yram Esor Caño</a>
+                                                        <div class="text">兄弟</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <el-avatar src="../assets/groupBg.png"></el-avatar>
+                                                    <div class="content">
+                                                        <a class="title">Yram Esor Caño</a>
+                                                        <div class="text">兄弟</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +307,7 @@
                             <el-tab-pane label="粉丝" name="1"></el-tab-pane>
                             <el-tab-pane label="粉已关注" name="2"></el-tab-pane>
                         </el-tabs>
-                        <share-list :list="me_ul.friend" :type="'friend'"></share-list>
+                        <share-list :list="friend" :type="'friend'"></share-list>
                         <el-button type="info">查看全部</el-button>
                 </div>
                 <div class="book-card" v-else-if="activeName==3">
@@ -214,50 +316,63 @@
                             <el-tab-pane :label="me_ul.user_name+'的相册'" name="1"></el-tab-pane>
                             <el-tab-pane label="相册" name="2"></el-tab-pane>
                         </el-tabs>
-                        <share-list :list="me_ul.imgAll" :type="'vertical'"></share-list>
+                        <share-list :list="imgAll" :type="'vertical'"></share-list>
                         <el-button type="info">查看全部</el-button>
                 </div>
                 <div class="book-card" v-else-if="activeName==4">
                         <div class="book-title2">视频</div>
-                        <el-tabs v-model="tabs[2]">
-                            <el-tab-pane :label="me_ul.user_name+'的视频'" name="1"></el-tab-pane>
-                        </el-tabs>
-                        <share-list :list="me_ul.video" :type="'vertical'"></share-list>
-                        <el-button type="info">查看全部</el-button>
+                         <div class="el-null" v-if="videos.length<=0">
+                            这里空空如也~
+                        </div>
+                        <div v-else>
+                            <el-tabs v-model="tabs[2]">
+                                <el-tab-pane :label="me_ul.user_name+'的视频'" name="1"></el-tab-pane>
+                            </el-tabs>
+                            <share-list :list="videos" :type="'vertical'"></share-list>
+                            <el-button type="info">查看全部</el-button>
+                        </div>
+                      
                 </div>
                 <div class="book-card" v-else-if="activeName==5">
                         <div class="book-title2">签到</div>
-                        <el-tabs value="1">
-                            <el-tab-pane label="最近去过" name="1"></el-tab-pane>
-                        </el-tabs>
-                    <share-list :list="me_ul.lasts"></share-list>
+                        <div class="el-null" v-if="signs.length<=0">
+                            这里空空如也~
+                        </div>
+                        <div v-else>
+                             <el-tabs value="1">
+                                <el-tab-pane label="最近去过" name="1"></el-tab-pane>
+                            </el-tabs>
+                            <share-list :list="signs"></share-list>
+                        </div>
+                     
+                       
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-if="sports.length>0">
                         <div class="book-title2">运动</div>
                         <el-tabs v-model="tabs[3]">
                             <el-tab-pane label="运动队" name="1"></el-tab-pane>
                             <el-tab-pane label="运动员" name="2"></el-tab-pane>
                         </el-tabs>
-                        <share-list :list="me_ul.sports" :type="'vertical'"></share-list>
+                        <share-list :list="sports" :type="'vertical'"></share-list>
                         <el-button type="info">查看全部</el-button>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-if="music.length>0">
                         <div class="book-title2">音乐</div>
-                        <share-list :list="me_ul.music"></share-list>
+                        <share-list :list="music"></share-list>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-if="movies.length>0">
                         <div class="book-title2">电影</div>
-                        <share-list :list="me_ul.movies"></share-list>
+                        <share-list :list="movies"></share-list>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-if="Tvs.length>0">
                         <div class="book-title2">电视节目</div>
-                    <share-list :list="me_ul.Tv"></share-list>
+                    <share-list :list="Tvs"></share-list>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-if="books.length>0">
                         <div class="book-title2">书籍</div>
-                    <share-list :list="me_ul.books"></share-list>
+                    <share-list :list="books"></share-list>
                 </div>
-                <div class="book-card">
+                <div class="book-card" v-if="gooks.length>0">
                         <div class="book-title2">赞</div>
                         <el-tabs v-model="tabs[4]">
                             <el-tab-pane label="全部" name="1"></el-tab-pane>
@@ -269,9 +384,12 @@
                             <el-tab-pane label="运动员" name="7"></el-tab-pane>
                             <el-tab-pane label="餐馆" name="8"></el-tab-pane>
                         </el-tabs>
-                    <share-list :list="me_ul.books" :type="'vertical'"></share-list>
+                    <share-list :list="gooks" :type="'vertical'"></share-list>
                 </div>
-                
+                <div class="book-card" v-if="activity.length>0">
+                        <div class="book-title2">活动</div>
+                        <share-list :list="activity"></share-list>
+                </div>
             </div>
         </div>
     </div>
@@ -280,8 +398,10 @@
 import shareList from '@/common/share-list'
 import bookInput from '@/common/book-input'
 import postList from '@/common/post-list'
+import tieList from '@/common/tie-list'
 export default {
     components:{
+        tieList,
         postList,
         shareList,
         bookInput
@@ -289,6 +409,149 @@ export default {
     props:["me_ul","type"],
     data(){
         return{
+            list:[],
+            show:false,
+            signs:[],
+            videos:[],
+            sports:[
+                {
+                    img:require("@/assets/activity.jpg"),
+                    title:"LHMHS Grade 10 Intramural Meet 2k16 Blue Eagle Team",
+                    text:"运动员"
+                },
+                {
+                    img:require("@/assets/activity.jpg"),
+                    title:"LHMHS Grade 10 Intramural Meet 2k16 Blue Eagle Team",
+                    text:"运动员"
+                },
+                {
+                    img:require("@/assets/activity.jpg"),
+                    title:"LHMHS Grade 10 Intramural Meet 2k16 Blue Eagle Team",
+                    text:"运动员"
+                },
+                {
+                    img:require("@/assets/activity.jpg"),
+                    title:"LHMHS Grade 10 Intramural Meet 2k16 Blue Eagle Team",
+                    text:"运动员"
+                },
+            ],
+            music:[
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"艾米",
+                    text:"歌手乐队"
+                },
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"艾米",
+                    text:"歌手乐队"
+                },
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"艾米",
+                    text:"歌手乐队"
+                },
+            ],
+            movies:[
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电影"
+                },
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电影"
+                },
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电影"
+                },
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电影"
+                },
+            ],
+            Tvs:[
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电视节目"
+                },
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电视节目"
+                },
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电视节目"
+                },
+                {
+                    img:require("@/assets/groupBg.png"),
+                    title:"小城爱情故事",
+                    text:"电视节目"
+                },
+            ],
+            books:[
+                {
+                    img:require("@/assets/activity.jpg"),
+                    title:"旅游规律教化书"
+                },
+                 {
+                    img:require("@/assets/activity.jpg"),
+                    title:"旅游规律教化书"
+                },
+            ],
+            gooks:[
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"张小姐",
+                    text:"音乐人"
+                },
+                 {
+                    img:require("@/assets/me.jpg"),
+                    title:"张小姐",
+                    text:"音乐人"
+                },
+                 {
+                    img:require("@/assets/me.jpg"),
+                    title:"张小姐",
+                    text:"音乐人"
+                },
+                 {
+                    img:require("@/assets/me.jpg"),
+                    title:"张小姐",
+                    text:"音乐人"
+                },
+            ],
+            activity:[
+                {
+                    img:require("@/assets/activity.jpg"),
+                    title:"嘿嘿嘿",
+                    date:new Date()
+                }
+            ],
+            friend:[
+                {
+                    img:require("@/assets/me.jpg"),
+                    title:"枫果果"
+                },
+                 {
+                    img:require("@/assets/me.jpg"),
+                    title:"枫果果"
+                },
+                
+            ],
+            imgAll:[
+                {
+                    img:require("@/assets/bg.jpg"),
+                    title:"呵呵"
+                }
+            ],
             tabs:["1","1","1","1","1"],
             mactive:0,
             menu:["概览","工作与学历","居住地","联系方式和基本信息","家庭成员与感情状况","你的详细资料","生活纪事"],
@@ -318,6 +581,7 @@ export default {
                 that.$store.commit("edit",res)
                 that.$message.success(res.msg)
             })
+           
         }, 
         handlePreview(file) {
            this.getfile(file,1)
@@ -326,6 +590,13 @@ export default {
            this.getfile(file,2)
         }
     },
+    created(){
+         let user_info=JSON.parse(localStorage.getItem("user_info"))
+         console.log("🚀 ~ file: book-firend.vue ~ line 594 ~ created ~ user_info", user_info)
+         this.$axios.get("/api/getrecommended?uid="+user_info.id).then(res=>{
+               this.list=res
+        })
+    }
 }
 </script>
 <style>

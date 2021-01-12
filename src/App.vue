@@ -58,7 +58,7 @@ export default {
         }
     },
     created() {
-       
+       localStorage.setItem("tui",true)
     },
     mounted() {
         this.getactive()
@@ -129,6 +129,10 @@ a {
     margin-right: 15px;
 }
 
+.book-icon>img{
+    width: 25px;
+}
+
 .book-icon2 {
     /* display: inline-block; */
     width: auto;
@@ -139,6 +143,7 @@ a {
 
 .book-icon2>i {
     font-size: 20px;
+    margin: 0 5px;
 }
 
 .book-icon2>img{
@@ -156,10 +161,8 @@ a {
 .icon-primary2{
     background-color: #E7F3FF;
     color: #1877F2;
-    font-size: 14px;
 }
 .icon-primary2 i{
-    font-size: 18px;
     margin: 0 5px;
     fill: var(--primary-button-background);
     font-weight: bold;
@@ -192,7 +195,7 @@ a {
     color: var(--placeholder-text);
 }
 .book-null>img{
-    width:200px ;
+    width:160px ;
 }
 .flex{
     display: flex;
@@ -209,17 +212,18 @@ a {
     border-top: 1px solid #eee;
 }
 
+
 .el-aside{
     border-right: 1px solid #eee;
-}
-.el-aside{
     background-color: #fff;
 }
-
 .tou-title{
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 10px;
+}
+.tou-text{
+    font-size: 18px;
 }
 .tou-title2{
     font-weight: bold;
@@ -283,7 +287,7 @@ a {
 }
 .el-block{
     display: block;
-    width: 100%;
+    width: 100% !important;
 }
 
 .el-flex{
@@ -334,5 +338,11 @@ a {
 
 .el-padding{
     padding:  10px;
+}
+
+
+
+.facebook-tou{
+    display: flex;
 }
 </style>
