@@ -24548,6 +24548,12 @@ body{
 	font-weight: bold;
 	color: #999;
 }
+.el-null>img{
+	display: block;
+	margin: 0 auto;
+	width:100px;
+	margin-bottom: 10px;
+}
 
 .el-dialog__headerbtn .el-dialog__close{
 	color: #000;
