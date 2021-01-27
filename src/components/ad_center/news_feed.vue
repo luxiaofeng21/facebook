@@ -84,7 +84,8 @@ export default {
         return{
             swiperOption: {
                 slidesPerView: 4,
-                spaceBetween: 30,
+                slidesPerGroup: 4,
+                spaceBetween: 5,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'

@@ -1,67 +1,48 @@
 <template>
   <div role="banner">
     <div style="height: 62px"></div>
-    <div
-      class="bp9cbjyn rq0escxv j83agx80 buofh1pr byvelhso dhix69tm poy2od1o j9ispegn kr520xx4 ehxjyohh"
-    >
-      <div
-        aria-hidden="true"
-        class="b5wmifdl pmk7jnqg kp4lslxn k4u0uxbm lxek4yd6 ms05siws pnx7fd3z nf1dmkjp hzruof5a"
-      >
-        <span
-          class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"
-        >
-          <div
-            aria-label="返回上一页"
-            class="oajrlxb2 tdjehn4e qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t qypqp5cg q676j6op"
-            role="button"
-            tabindex="0"
-          >
-            <i class="hu5pjgll lzf7d6o1 sp_Osp8PMBw1xR sx_8f758f"> </i>
-            <div
-              class="s45kfl79 emlxlaya bkmhp75w spb7xbtv i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s"
-              data-visualcompletion="ignore"
-            ></div>
+    <el-popover width="250">
+          <div class="bp9cbjyn rq0escxv j83agx80 buofh1pr byvelhso dhix69tm poy2od1o j9ispegn kr520xx4 ehxjyohh" slot="reference">
+                <router-link
+                  aria-label="Facebook"
+                  class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l pedkr2u6 ms05siws pnx7fd3z nf1dmkjp"
+                  to="/"
+                  role="link"
+                  tabindex="0"
+                >
+                  <svg
+                    viewBox="0 0 36 36"
+                    class="a8c37x1j ms05siws hwsy1cff b7h9ocf4"
+                    fill="url(#jsc_s_2)"
+                    height="40"
+                    width="40">
+                    <defs>
+                      <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_2">
+                        <stop offset="0%" stop-color="#0062E0"></stop>
+                        <stop offset="100%" stop-color="#19AFFF"></stop>
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"
+                    ></path>
+                    <path
+                      class="p361ku9c"
+                      d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"
+                    ></path>
+                  </svg>
+                </router-link>
+                <div class="book-search"  >
+                    <el-input prefix-icon="el-icon-search" placeholder="搜索facebook"></el-input>
+                </div>
           </div>
-        </span>
-      </div>
-      <router-link
-        aria-label="Facebook"
-        class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 q9uorilb mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l pedkr2u6 ms05siws pnx7fd3z nf1dmkjp"
-        to="/"
-        role="link"
-        tabindex="0"
-      >
-        <svg
-          viewBox="0 0 36 36"
-          class="a8c37x1j ms05siws hwsy1cff b7h9ocf4"
-          fill="url(#jsc_s_2)"
-          height="40"
-          width="40"
-        >
-          <defs>
-            <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_2">
-              <stop offset="0%" stop-color="#0062E0"></stop>
-              <stop offset="100%" stop-color="#19AFFF"></stop>
-            </linearGradient>
-          </defs>
-          <path
-            d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"
-          ></path>
-          <path
-            class="p361ku9c"
-            d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"
-          ></path>
-        </svg>
-      </router-link>
-      <div class="book-search">
-        <el-input prefix-icon="el-icon-search" placeholder="搜索facebook"></el-input>
-      </div>
-      <div>
-        <div></div>
-      </div>
-    </div>
-
+          <div class="book-search-item">
+                <div class="flex el-bottom">
+                    <span class="book-title2">近期搜索</span>
+                    <span class="link">编辑</span>
+                </div>
+                <cart-list :list="news" @getcart="geturl"></cart-list>
+          </div>
+    </el-popover>
     <div class="kr520xx4 j9ispegn poy2od1o n7fi1qx3 tkr6xdv7">
       <div class="rq0escxv l9j0dhe7 du4w35lb cddn0xzi j83agx80 cbu4d94t byvelhso">
         <div class="rq0escxv l9j0dhe7 du4w35lb j83agx80 cbu4d94t bkfpd7mw">
@@ -79,11 +60,7 @@
                 >
                   <div class="bp9cbjyn j83agx80 cb02d2ww l9j0dhe7">
                     <div
-                      :class="
-                        hactive == index
-                          ? 'ooq845xs s44p3ltw b2mspmbn akjuzmll bub6lnnc i09qtzwb lthxh50u pmk7jnqg tkxwya3v jav28p83 tt24zdws ms05siws flx89l3n b7h9ocf4'
-                          : ''
-                      "
+                      :class=" hactive == index? 'ooq845xs s44p3ltw b2mspmbn akjuzmll bub6lnnc i09qtzwb lthxh50u pmk7jnqg tkxwya3v jav28p83 tt24zdws ms05siws flx89l3n b7h9ocf4' : ''"
                     ></div>
                     <router-link
                       aria-label="首页"
@@ -109,10 +86,6 @@
                 </span>
               </li>
             </ul>
-          </div>
-          <!--/$-->
-          <div>
-            <div></div>
           </div>
         </div>
       </div>
@@ -498,7 +471,7 @@
             </div>
           </el-tooltip>
         </el-popover>
-        <router-link :to="{ path: '/mePage' }">
+        <router-link :to="{ path: '/book_friends',query:{id:user_info.id}}">
           <div class="flex facebook-tou" style="margin-right: 20px">
             <div class="me-img">
               <img :src="user_info.me_img" alt="" />
@@ -614,6 +587,7 @@ export default {
   },
   data() {
     return {
+      news:[],
       dialogVisible1: false,
       life: [
         //生活纪实
@@ -1036,25 +1010,12 @@ export default {
   },
   created() {
     this.user_info = JSON.parse(localStorage.getItem("user_info"));
-    //  var that=this;
-    //  //用户信息
-    //  this.$axios.get("/api/getuserInfo").then(res => {
-    //     if(res.code){
-    //         if(res.name){
-    //             this.user_info=res
-    //             this.$store.commit("setedit",res)
-    //             localStorage.setItem("user_info",JSON.stringify(res))
-    //         }else{
-    //             this.$message.error("登录过期，请重新登录！！")
-    //             setTimeout(res=>{
-    //                     this.$router.push({name:"login"})
-    //             },1000)
-    //         }
-
-    //     }
-    // })
-    // // console.log(this.$store)
-    // // console.log(this.$store.commit("$store.state.user_info"))
+     var that=this;
+     //用户信息
+     this.$axios.get("/api/friends").then(res => {
+        console.log(res,5465)
+        this.news=res
+    })
   },
   methods: {
     //发帖
@@ -1177,6 +1138,9 @@ export default {
     getmessage(i, v) {
       this.$router.push({ name: "messenger" });
     },
+    geturl(index,item){
+      this.$router.push({ name: "book_friend",query:{id:item.id}});
+    }
   },
 };
 </script>
@@ -1185,5 +1149,16 @@ export default {
 @import "../css/header.css";
 .facebook-tou {
   display: flex;
+}
+.life-ul{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.life-ul>li{
+  width: 25%;
+  margin: 10px 0;
+  cursor: pointer;
 }
 </style>

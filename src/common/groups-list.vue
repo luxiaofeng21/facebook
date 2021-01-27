@@ -1,24 +1,36 @@
 <template>
 <div class="groups-list">
-    <div v-for="(item,index) in list" :key="index"  class="groups-item" :class="size" @click="getitem(item)">
-        <img :src="item.img" alt="">
-        <div class="groups-con">
-                <div class="groups-title">{{item.title}} </div>
-                <div class="groups-text">{{item.num}}位成员 • 单日发帖：{{item.pian}} 篇  </div>
-                <div class="groups-city"> <i class="el-icon-location"></i> <span>在你的地区人气很高</span> </div>
-                <div class="book-icon2">加入小组</div>
-                <div class="groups-icon" @click="list.splice(index,1)"> <i class="el-icon-close"></i> </div>
-        </div>
-    </div>
+    <swiper class="swiper" :options="swiperOption">
+            <swiper-slide  v-for="(item,index) in list" :key="index"  class="groups-item" :class="size" >
+             <img :src="item.img" alt="" @click="getitem(item)">
+            <div class="groups-con">
+                    <div class="groups-title">{{item.title}} </div>
+                    <div class="groups-text">{{item.num}}位成员 • 单日发帖：{{item.pian}} 篇  </div>
+                    <div class="groups-city"> <i class="el-icon-location"></i> <span>在你的地区人气很高</span> </div>
+                    <div class="book-icon2" @click="getitem(item)">加入小组</div>
+                    <div class="groups-icon" @click="list.splice(index,1)"> <i class="el-icon-close"></i> </div>
+            </div>
+            </swiper-slide>
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+    </swiper>
 </div>
 </template>
 
 <script>
 export default {
-    props: ["list","size"],
+    props: ["list","size","num"],
     data() {
         return {
-
+            swiperOption: {
+                slidesPerGroup: this.num,
+                slidesPerView:  this.num,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            },
         };
     },
     created() {
@@ -29,7 +41,7 @@ export default {
     },
     methods: {
         getitem(item){
-            this.$router.push({name:"groups_item"})
+            this.$router.push({name:"groups_item",query:{id:item.id}})
         }
     }
 };
@@ -56,9 +68,10 @@ export default {
 }
 .groups-item>img{
     width: 100%;
-    height: 200px;
+    height: 180px;
     margin:0;
     padding: 0;
+    object-fit: cover;
 }
 .groups-con{
     padding: 5px 10px;

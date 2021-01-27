@@ -355,8 +355,8 @@ export default {
     }
   
 
-    .about{
+    /* .about{
         margin: -20px;
         margin-top: 0;
-    }
+    } */
 </style>

@@ -10,11 +10,12 @@
         </div>
         <cart-list :list="publicPage" @getcart="publicUrl"></cart-list>
       </el-aside>
-      <el-main :style="{ height: $store.state.clienHeight - 100 + 'px' }">
+      <el-main :style="{ height: $store.state.clienHeight + 'px' }">
         <div class="book-w6">
-          <slae v-if="mactive == 20"></slae>
-          <friend v-else-if="mactive == 10"></friend>
-          <ads v-else-if="mactive == 17"></ads>
+          <sale v-if="state == 'sale'"></sale>
+          <friend v-else-if="state == 'friends'"></friend>
+          <ads v-else-if="state == 'ads'"></ads>
+          <!--首页-->
           <div v-else>
             <tie-list @getie="getie"></tie-list>
             <div class="el-card">
@@ -38,7 +39,7 @@
         </div>
       </el-main>
       <el-aside
-        :style="{ height: $store.state.clienHeight - 100 + 'px' }"
+        :style="{ height: $store.state.clienHeight + 'px' }"
         style="background-color: transparent"
       >
         <div class="el-bottom">
@@ -154,21 +155,27 @@ import videoChat from "@/common/video-chat";
 import cartList from "@/common/cart-list";
 import postList from "@/common/post-list";
 import tieList from "@/common/tie-list";
-import slae from "./sale";
+import sale from "./sale";
 import friend from "./friend";
 import ads from "./ads";
 export default {
   components: {
     ads,
     tieList,
-    slae,
+    sale,
     friend,
     cartList,
     postList,
     videoChat,
   },
+  watch:{
+    $route(to,from){
+        this.state=to.query.state
+    }
+  },
   data() {
     return {
+      state:"",
       clienHeight: 0,
       recommend: {
         name: "",
@@ -225,24 +232,14 @@ export default {
           img: this.$store.state.user_info.me_img,
           url: "mePage",
         },
+        // {
+        //   title: "新冠疫情信息中心",
+        //   img: require("@/assets/kOxV5aCYUAE.png"),
+        // },
         {
-          title: "新冠疫情信息中心",
-          img: require("@/assets/kOxV5aCYUAE.png"),
-        },
-        {
-          title: "好友",
+          title: "搜索好友",
           img: require("@/assets/S0U5ECzYUSu.png"),
           url: "friends",
-        },
-        {
-          title: "Messenger",
-          img: require("@/assets/SeXJIAlf_z-.png"),
-          url: "messenger",
-        },
-        {
-          title: "筹款活动",
-          img: require("@/assets/n2vd2VduYc1.png"),
-          url: "fundraisers",
         },
         {
           title: "公共主页",
@@ -250,19 +247,39 @@ export default {
           url: "publicpage",
         },
         {
-          title: "视频",
-          img: require("@/assets/duk32h44Y31.png"),
-          url: "watch",
-        },
-        {
           title: "活动",
           img: require("@/assets/8wTx0Eu2vRq.png"),
           url: "events",
         },
         {
-          title: "小组",
-          img: require("@/assets/PrjLkDYpYbH.png"),
-          url: "groups",
+          title: "筹款活动",
+          img: require("@/assets/n2vd2VduYc1.png"),
+          url: "fundraisers",
+        },
+        {
+          title: "广告管理工具",
+          img: require("@/assets/ggao.png"),
+          url: "advertising",
+        },
+        {
+          title: "广告中心",
+          img: require("@/assets/ggzxin.png"),
+          url: "fundraisers",
+        },
+        {
+          title: "好友名单",
+          img: require("@/assets/MN5ZSGIfEZ3.png"),
+          state:"friends"
+        },
+        {
+          title: "近期广告动态",
+          img: require("@/assets/8OasGoQgQgF.png"),
+          state:"ads"
+        },
+        {
+          title: "那年今天",
+          img: require("@/assets/VPndBxotRgH.png"),
+          url: "memories",
         },
         {
           title: "收藏夹",
@@ -270,14 +287,29 @@ export default {
           url: "saved",
         },
         {
-          title: "好友名单",
-          img: require("@/assets/MN5ZSGIfEZ3.png"),
+          title: "特别关注",
+          img: require("@/assets/tebie.png"),
+          url: "saved",
         },
-
         {
-          title: "那年今天",
-          img: require("@/assets/VPndBxotRgH.png"),
-          url: "memories",
+          title: "天气",
+          img: require("@/assets/bo0Zt72NIra.png"),
+          url: "weather",
+        },
+        {
+          title: "小组",
+          img: require("@/assets/PrjLkDYpYbH.png"),
+          url: "groups",
+        },
+        {
+          title: "应急中心",
+          img: require("@/assets/cT5nPnO8Wsc.png"),
+          url: "onemi",
+        },
+        {
+          title: "优惠",
+          img: require("@/assets/NYOGcd-z-qs.png"),
+          state:"sale"
         },
         {
           title: "游戏",
@@ -294,38 +326,37 @@ export default {
           img: require("@/assets/DO-SN-shaZL.png"),
           url: "jobs",
         },
-        {
-          title: "最新动态",
-          img: require("@/assets/w-vdKCGzCy1.png"),
-        },
+      
         {
           title: "直播视频",
           img: require("@/assets/Nl9CPY6q_n-.png"),
           url: "watch",
         },
         {
-          title: "近期广告动态",
-          img: require("@/assets/8OasGoQgQgF.png"),
+          title: "最新动态",
+          img: require("@/assets/w-vdKCGzCy1.png"),
         },
         {
           title: "Facebook Pay",
           img: require("@/assets/GJ4EaivDaSj.png"),
           url: "pay",
         },
-        {
-          title: "天气",
-          img: require("@/assets/bo0Zt72NIra.png"),
-          url: "weather",
+        
+        
+         {
+          title: "Messenger",
+          img: require("@/assets/SeXJIAlf_z-.png"),
+          url: "messenger",
         },
+        
+        
         {
-          title: "优惠",
-          img: require("@/assets/NYOGcd-z-qs.png"),
+          title: "视频",
+          img: require("@/assets/duk32h44Y31.png"),
+          url: "watch",
         },
-        {
-          title: "应急中心",
-          img: require("@/assets/cT5nPnO8Wsc.png"),
-          url: "onemi",
-        },
+        
+        
       ],
       publicPage: [],
       pages: [
@@ -369,7 +400,7 @@ export default {
     });
   },
   mounted() {
-    this.clienHeight = document.body.clientHeight - 50;
+    this.clienHeight = document.body.clientHeight - 65;
     var mySwiper = new Swiper("#swiper", {
       slidesPerView: 3,
     });
@@ -413,6 +444,8 @@ export default {
       this.mactive = index;
       if (item.url) {
         this.$router.push({ name: item.url });
+      }else{
+        this.$router.push({path:"/index",query:{state:item.state}});
       }
     },
     //创建聊天室

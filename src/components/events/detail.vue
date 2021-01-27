@@ -2,7 +2,7 @@
     <div>
         <el-container>
             <!--左侧导航-->
-            <el-aside class="el-padding" :style="{height:$store.state.clienHeight-100+'px'}">
+            <el-aside class="el-padding" :style="{height:$store.state.clienHeight+'px'}">
                 <div class="el-text">活动 > 创建活动 </div>
                   <div v-if="showset">
                         <div class="tou-title">活动设置</div>
@@ -113,7 +113,7 @@
                
             </el-aside>
             <!--右侧主体内容-->
-            <el-main :style="{height:$store.state.clienHeight-100+'px'}">
+            <el-main :style="{height:$store.state.clienHeight+'px'}">
                 <div  :class="pc?'pc':'iphone'">
                     <div class="flex head">
                         <span class="lf">桌面版预览</span>

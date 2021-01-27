@@ -1,5 +1,5 @@
 <template>
-<div class="app">
+<div class="app-gaming">
     <div class="rq0escxv l9j0dhe7 du4w35lb">
         <div class="du4w35lb l9j0dhe7 cbu4d94t j83agx80">
             <div class="j83agx80 cbu4d94t jgljxmt5 l9j0dhe7 be9z9djy">
@@ -420,8 +420,8 @@ export default {
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: 250px;
+    width: 500px;
+    height: 200px;
     object-fit: cover;
 	border-radius: 14px;
 	display: block;
@@ -438,15 +438,7 @@ export default {
 	margin-bottom: 30px;
 }
 
-.swiper-pagination-bullet {
-	background: #00a0e9;
-	margin-left: 4px;
-	margin-right: 4px;
-	width: 17px;
-	height: 17px;
-	opacity: 1;
-	margin-bottom: 4px;
-}
+
 
 .swiper-pagination-bullet-active {
 	width: 13px;
@@ -532,5 +524,15 @@ export default {
 .look>span{
     font-weight: normal;
     margin-left: 5px;
+}
+</style>
+
+<style>
+.app-gaming .swiper-pagination-bullet {
+    background: #fff;
+    
+}
+.app-gaming .swiper-pagination{
+        bottom: -20px;
 }
 </style>

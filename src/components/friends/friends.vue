@@ -2,7 +2,7 @@
     <div>
         <el-container>
             <el-aside>
-                <div class="menu-lf">
+                <div :style="{height:$store.state.clienHeight +'px'}">
                     <div class="menu-title ">    
                         <div class="tou-title">好友</div> 
                         <div class="book-title2">加好友请求</div> 
@@ -53,7 +53,7 @@
                 </div>
             </el-aside>
             <el-main v-if="active>=0">
-                    <book-friend :me_ul="me_ul"></book-friend>
+                    <book-friend :id.sync="mid"></book-friend>
             </el-main>
              <div class="book-null" v-else>
                     <img src="../../assets/null.svg" alt="">
@@ -74,7 +74,7 @@ export default {
     data() {
         return {
             active:-1,
-            me_ul:{},
+            mid:"",
             reqFriend:[{
                     title: "小黄人",
                     req:false,
@@ -110,23 +110,15 @@ export default {
     created(){
         var height=document.body.clientHeight;
         var that = this;
-         //推荐好友
+        //推荐好友
         this.$axios.get("/api/friends").then(res => {
-             console.log(res)
             if(res.length>0){
                 res.map(x=>{
                     x.me_img=x.me_img
                     x.bg_img?x.bg_img=x.bg_img:''
                 })
                 that.friend=res
-                that.me_ul=res[0]
-               
             }
-            
-        })
-        //推荐
-        this.$axios.get("/api/recommended").then(res => {
-                   that.me_ul.list = res
         })
        
     },
@@ -134,7 +126,8 @@ export default {
         //切换
         getmenu(item,index){
             this.active=index
-            this.me_ul=item
+            this.$router.push({name:"friends",query:{id:item.id}})
+            this.$forceUpdate()
         },
         //请求好友操作
         gethabdle(state,item,i){

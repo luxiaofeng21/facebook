@@ -1,13 +1,10 @@
 <template>
   <div class="book-firend">
+    
     <div class="book-tou katn9ffz">
       <div
         class="tou-bg"
-        :style="
-          me_ul.bg_img
-            ? `background-image:url(${me_ul.bg_img});background-size:cover;`
-            : ''
-        "
+        :style=" me_ul.bg_img? `background-image:url(${me_ul.bg_img});background-size:cover;`: '' "
       >
         <div class="tou-img">
           <img :src="me_ul.me_img" alt="" />
@@ -103,11 +100,11 @@
               <ul class="me-ul">
                 <li>
                   <img src="../assets/bao.png" alt="" />
-                  <span class="me-label">微软 - 总经理</span>
+                  <span class="me-label">蓝翔 - 总经理</span>
                 </li>
                 <li>
                   <img src="../assets/maozi.png" alt="" />
-                  <span class="me-label">曾经就读：广州理工大学</span>
+                  <span class="me-label">曾经就读：蓝翔大学</span>
                 </li>
                 <li>
                   <img src="../assets/home.png" alt="" />
@@ -207,119 +204,176 @@
                 <div
                   class="about-list rq0escxv l9j0dhe7 du4w35lb j83agx80 i1fnvgqd gs1a9yip owycx6da btwxx1t3 hv4rvrfc dati1w0a discj3wi b5q2rw42 lq239pai mysgfdmx hddg9phg"
                 >
-                  <ul class="me-ul" v-if="mactive == 0">
-                    <li>
-                      <img src="../assets/bao.png" alt="" />
-                      <span class="me-null">无工作地点可显示</span>
-                    </li>
-                    <li>
-                      <img src="../assets/maozi.png" alt="" />
-                      <span class="me-label"
-                        >曾经就读：Lonoy Heroes Memorial High School</span
-                      >
-                    </li>
-                    <li>
-                      <img src="../assets/home.png" alt="" />
-                      <span class="me-label">所在地：<a href="">Tagbilaran City</a></span>
-                    </li>
-                    <li>
-                      <img src="../assets/city.png" alt="" />
-                      <span class="me-label">来自：<a href="">上海</a></span>
-                    </li>
-                    <li>
-                      <img src="../assets/xin.png" alt="" />
-                      <span class="me-null">无感情状况可显示</span>
-                    </li>
-                  </ul>
-                  <div v-else-if="mactive == 1">
-                    <ul class="me-ul">
-                      <div class="book-title el-bottom">工作</div>
-                      <li>
-                        <img src="../assets/bao.png" alt="" />
-                        <span class="me-null">无工作地点可显示</span>
-                      </li>
-                      <div class="book-title el-bottom">大学</div>
-                      <li>
-                        <img src="../assets/maozi.png" alt="" />
-                        <span class="me-null">无学校资料可显示</span>
-                      </li>
-                      <div class="book-title el-bottom">高中</div>
-                      <li>
-                        <img src="../assets/school.png" alt="" style="filter: none" />
-                        <span class="me-label"
-                          >曾经就读：Lonoy Heroes Memorial High School</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div v-else-if="mactive == 2">
-                    <div class="el-bottom book-title">居住地</div>
-                    <ul class="address-ul">
-                      <li>
-                        <el-avatar src="../assets/groupBg.png"></el-avatar>
-                        <div class="content">
-                          <a class="title">上海市</a>
-                          <div class="text">所在地</div>
-                        </div>
-                      </li>
-                      <li>
-                        <el-avatar src="../assets/groupBg.png"></el-avatar>
-                        <div class="content">
-                          <a class="title">上海市</a>
-                          <div class="text">家乡</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div v-else-if="mactive == 3">
-                    <ul class="me-ul">
-                      <div class="el-bottom book-title">联系方式</div>
-                      <li>
-                        <img src="../assets/shenfen.png" alt="" />
-                        <div class="me-null">无联系方式可显示</div>
-                      </li>
-                      <div class="el-bottom book-title">网站和社交链接</div>
-                      <li>
-                        <i class="el-icon-paperclip"> </i>
-                        <div class="me-null">无链接可显示</div>
-                      </li>
-                      <div class="el-bottom book-title">基本信息</div>
-                      <li>
-                        <i class="el-icon-s-custom"> </i>
-                        <div class="me-label">
-                          <span>男</span>
-                          <div class="me-text">性别</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div v-else-if="mactive == 4">
-                    <div class="el-bottom">
-                      <div class="el-bottom book-title">联系方式</div>
-                      <ul class="me-ul">
+                <div class="el-block" v-if="mactive == 0">
+                     <ul class="me-ul" v-if="type!='me'">
+                        <li>
+                          <img src="../assets/bao.png" alt="" />
+                          <span class="me-null">无工作地点可显示</span>
+                        </li>
+                        <li>
+                          <img src="../assets/maozi.png" alt="" />
+                          <span class="me-label"
+                            >曾经就读：Lonoy Heroes Memorial High School</span
+                          >
+                        </li>
+                        <li>
+                          <img src="../assets/home.png" alt="" />
+                          <span class="me-label">所在地：<a href="">Tagbilaran City</a></span>
+                        </li>
+                        <li>
+                          <img src="../assets/city.png" alt="" />
+                          <span class="me-label">来自：<a href="">上海</a></span>
+                        </li>
                         <li>
                           <img src="../assets/xin.png" alt="" />
                           <span class="me-null">无感情状况可显示</span>
                         </li>
-                      </ul>
+                  </ul>
+                  <div v-else> 
+                        <edit-info class="el-bottom" img="../assets/bao.png"  :title.sync="me_ul.job"   label="添加工作"></edit-info>
+                        <edit-info class="el-bottom" img="../assets/maozi.png"  :title.sync="me_ul.university"   label="添加大学"></edit-info>
+                        <edit-info class="el-bottom" img="../assets/home.png"  :title.sync="me_ul.senior"   label="添加高中"></edit-info>
+                        <edit-info class="el-bottom" img="../assets/home.png"  :title.sync="me_ul.residence"   label="居住地"></edit-info>
+                        <edit-info class="el-bottom" img="../assets/city.png" :title.sync="me_ul.hometown"   label="家乡"></edit-info>
+                        <edit-info class="el-bottom" img="../assets/xin.png" :title.sync="me_ul.feeling"  label="感情状况"></edit-info>
+                        <edit-info class="el-bottom" icon="el-icon-mobile-phone"  :title.sync="me_ul.tell"   label="联系方式"></edit-info>
+                  </div>
+                </div>
+                 
+                  <div v-else-if="mactive == 1" class="el-block">
+                    <div class="el-bottom">
+                          <div class="book-title el-bottom">工作</div>
+                          <ul class="me-ul">
+                              <li>
+                                <img src="../assets/bao.png" alt="" />
+                                <span class="me-null">无工作地点可显示</span>
+                            </li>
+                          </ul>
+                          <edit-info v-if="type=='me'" :title.sync="me_ul.job"   label="添加工作"></edit-info>
                     </div>
-                    <div class="el-margin book-title">家庭成员</div>
+                    <div class="el-bottom">
+                          <div class="book-title el-bottom">大学</div>
+                          <ul class="me-ul">
+                              <li>
+                                <img src="../assets/bao.png" alt="" />
+                                <span class="me-null">无学校资料可显示</span>
+                            </li>
+                          </ul>
+                          <edit-info v-if="type=='me'" :title.sync="me_ul.university"   label="添加大学"></edit-info>
+                    </div>
+                    <div class="el-bottom">
+                          <div class="book-title el-bottom">高中</div>
+                          <ul class="me-ul">
+                                    <li>
+                              <img src="../assets/school.png" alt="" style="filter: none" />
+                              <span class="me-label"
+                                >曾经就读：Lonoy Heroes Memorial High School</span
+                              >
+                            </li>
+                          </ul>
+                          <edit-info v-if="type=='me'" :title.sync="me_ul.senior"   label="添加高中"></edit-info>
+                    </div>
+                     
+                  </div>
+                  <div v-else-if="mactive == 2">
+                    <div class="el-bottom book-title">居住地</div>
+                    <edit-info v-if="type=='me'" :title.sync="me_ul.residence"   label="居住地"></edit-info>
+                    <edit-info v-if="type=='me'" :title.sync="me_ul.hometown"   label="家乡"></edit-info>
                     <ul class="address-ul">
-                      <li>
-                        <el-avatar src="../assets/groupBg.png"></el-avatar>
-                        <div class="content">
-                          <a class="title">Yram Esor Caño</a>
-                          <div class="text">兄弟</div>
-                        </div>
-                      </li>
-                      <li>
-                        <el-avatar src="../assets/groupBg.png"></el-avatar>
-                        <div class="content">
-                          <a class="title">Yram Esor Caño</a>
-                          <div class="text">兄弟</div>
-                        </div>
-                      </li>
+                          <li>
+                            <el-avatar :src="me_ul.me_img"></el-avatar>
+                            <div class="content">
+                              <a class="title">上海市</a>
+                              <div class="text">所在地</div>
+                            </div>
+                          </li>
+                          <li>
+                            <el-avatar :src="me_ul.me_img"></el-avatar>
+                            <div class="content">
+                              <a class="title">上海市</a>
+                              <div class="text">家乡</div>
+                            </div>
+                          </li>
                     </ul>
+                    
+                  </div>
+                  <div v-else-if="mactive == 3" class="el-block">
+                    <ul class="me-ul">
+                       <div class="el-bottom">
+                            <div class="el-bottom book-title">联系方式</div>
+                            <ul class="me-ul" v-if="type!='me'">
+                                <li>
+                                  <img src="../assets/shenfen.png" alt="" />
+                                  <div class="me-null">无联系方式可显示</div>
+                                </li>
+                            </ul>
+                             <edit-info v-else :title.sync="me_ul.tell"   label="联系方式"></edit-info>
+                      </div>
+                      <div class="el-bottom">
+                            <div class="el-bottom book-title">网站和社交链接</div>
+                            <ul class="me-ul" v-if="type!='me'">
+                              <li>
+                                <i class="el-icon-paperclip"> </i>
+                                <div class="me-null">无链接可显示</div>
+                              </li>
+                            </ul>
+                             <edit-info v-else :title.sync="me_ul.url"  label="网站和社交链接"></edit-info>
+                      </div>
+                      <div class="el-bottom">
+                            <div class="el-bottom book-title">基本信息</div>
+                            <ul class="me-ul" v-if="type!='me'">
+                                <li>
+                                  <i class="el-icon-s-custom"> </i>
+                                  <div class="me-label">
+                                    <span>男</span>
+                                    <div class="me-text">性别</div>
+                                  </div>
+                                </li>
+                            </ul>
+                            <edit-info v-else :title.sync="me_ul.sex"  icon="el-icon-s-custom" label="性别"></edit-info>
+                      </div>
+                      
+                    </ul>
+                  </div>
+                  <div v-else-if="mactive == 4" class="el-block">
+                    <div class="el-bottom ">
+                        <div class="el-bottom book-title">感情状况</div>
+                        <ul class="me-ul" v-if="type!='me'">
+                          <li>
+                            <img src="../assets/xin.png" alt="" />
+                            <span class="me-null">无感情状况可显示</span>
+                          </li>
+                        </ul>
+                        <edit-info v-else :title.sync="me_ul.feeling"  label="感情状况"></edit-info>
+                    </div>
+                    <div class="el-bottom">
+                          <div class="el-margin book-title">家庭成员</div>
+                          <edit-info img="jia.png" :title.sync="me_ul.family"  label="家庭成员"></edit-info>
+                    </div>
+                  </div>
+                  <div v-else-if="mactive==5" class="el-block"> 
+                        <div class="el-bottom">
+                          <div  class="book-title el-bottom">个人信息</div>
+                          <edit-info img="guanyu.png" :title.sync="me_ul.sign"  label="详细介绍自己"></edit-info>
+                        </div>
+                        <div class="el-bottom">
+                            <div  class="book-title el-bottom">姓名读音</div>
+                            <edit-info img="yin.png" :title.sync="me_ul.sounds" label="姓名读音"></edit-info>
+                        </div>
+                         <div class="el-bottom">
+                           <div  class="book-title el-bottom">其他名字</div>
+                           <edit-info img=""  :title.sync="me_ul.other" label="添加昵称、乳名..."></edit-info>
+                        </div>
+                        <div class="el-bottom">
+                           <div  class="book-title el-bottom">喜爱的人生引言</div>
+                           <edit-info  :title.sync="me_ul.quote" label="喜爱的人生引言"></edit-info>
+                        </div>
+                  </div>
+                  <div v-else-if="mactive==6" class="el-block"> 
+                        <div class="el-bottom">
+                          <div  class="book-title el-bottom">生活纪事</div>
+                          <edit-info  icon="el-icon-s-management" :type="type" :title.sync="me_ul.life"  label="生活纪事"></edit-info>
+                        </div>
                   </div>
                 </div>
               </div>
@@ -439,7 +493,7 @@
         </div>
       </span>
     </el-dialog>
-    <el-dialog title="编辑个人主页" :visible="dialogVisible2">
+    <el-dialog append-to-body title="编辑个人主页" :visible.sync="dialogVisible2" width="700px">
       <div class="edit-page">
         <div class="el-bottom">
           <div class="flex el-bottom">
@@ -457,7 +511,66 @@
             <img :src="me_ul.bg_img" alt="" />
           </div>
         </div>
+        <div class="el-bottom">
+          <div class="flex el-bottom">
+            <span class="book-title2">个性签名</span>
+            <span class="link">添加</span>
+          </div>
+          <div class="book-null"> 介绍一下自己呗…</div>
+        </div>
+         <div class="el-bottom">
+          <div class="flex el-bottom">
+            <span class="book-title2">定制个人资料</span>
+            <span class="link">编辑</span>
+          </div>
+          <ul class="me-ul">
+                <li>
+                  <img src="../assets/bao.png" alt="" />
+                  <span class="me-label">蓝翔 - 总经理</span>
+                </li>
+                <li>
+                  <img src="../assets/maozi.png" alt="" />
+                  <span class="me-label">曾经就读：蓝翔大学</span>
+                </li>
+                <li>
+                  <img src="../assets/home.png" alt="" />
+                  <span class="me-label">所在地</span>
+                  <span class="me-title"> <a href="">上海</a> </span>
+                </li>
+                <li>
+                  <img src="../assets/city.png" alt="" />
+                  <span class="me-label">所在地</span>
+                  <span class="me-title"> <a href="">上海</a> </span>
+                </li>
+                <li>
+                  <img src="../assets/xin.png" alt="" />
+                  <span class="me-label">单身</span>
+                </li>
+            </ul>
+        </div>
+        <div class="el-bottom">
+          <div class="flex el-bottom">
+            <span class="book-title2">爱好</span>
+            <span class="link">编辑</span>
+          </div>
+          <ul class="interest-ul">
+                <li>
+                  <span>🎤唱歌</span>
+                </li>
+                <li>
+                  <span>📖阅读</span>
+                </li>
+          </ul>
+        </div>
+        <div class="el-bottom">
+          <div class="flex el-bottom">
+            <span class="book-title2">精选</span>
+            <span class="link">编辑</span>
+          </div>
+          <share-list :list="imgAll" type="vertical"></share-list>
+        </div>
       </div>
+      <span slot="footer">  <el-button @click="dialogVisible2=false;activeName='1'" type="primary" plain>编辑你的简介信息</el-button> </span>
     </el-dialog>
   </div>
 </template>
@@ -466,16 +579,20 @@ import shareList from "@/common/share-list";
 import bookInput from "@/common/book-input";
 import postList from "@/common/post-list";
 import tieList from "@/common/tie-list";
+import editInfo from "@/common/edit-info";
 export default {
   components: {
+    editInfo,
     tieList,
     postList,
     shareList,
     bookInput,
   },
-  props: ["me_ul", "type"],
+  props: ["uid","type"],
   data() {
     return {
+      id:"",
+      me_ul:{},
       dialogVisible2: false,
       list: [],
       show: false,
@@ -620,7 +737,7 @@ export default {
         },
       ],
       tabs: ["1", "1", "1", "1", "1"],
-      mactive: 0,
+     
       menu: [
         "概览",
         "工作与学历",
@@ -630,7 +747,8 @@ export default {
         "你的详细资料",
         "生活纪事",
       ],
-      activeName: "",
+       mactive: 0,
+      activeName: "0",
       search: "",
       dialogVisible: false,
     };
@@ -645,10 +763,10 @@ export default {
       var name = file.data.name;
       if (state == 1) {
         user_info.me_img = name;
-        this.me_ul.me_img = user_info.me_img;
+        this.me_ul.me_img = name;
       } else {
         user_info.bg_img = name;
-        this.me_ul.bg_img = user_info.bg_img;
+        this.me_ul.bg_img =name;
       }
 
       this.$axios.post("/api/setUser", user_info).then((res) => {
@@ -664,13 +782,29 @@ export default {
       this.getfile(file, 2);
     },
   },
-  created() {
-    let user_info = JSON.parse(localStorage.getItem("user_info"));
-    console.log("🚀 ~ file: book-firend.vue ~ line 594 ~ created ~ user_info", user_info);
-    this.$axios.get("/api/getrecommended?uid=" + user_info.id).then((res) => {
-      this.list = res;
-    });
+  created(){
+    var id=this.$route.query.id
+    if(id){
+          this.id=id
+    }else{
+          this.id=this.uid
+    }
   },
+ watch:{
+    $route(to,from){
+        this.id=to.query.id
+    },
+    id(id,old){
+      //获取帖子
+      this.$axios.get("/api/getrecommended?uid=" + id).then((res) => {
+        this.list = res;
+      });
+      //获取用户信息
+      this.$axios.get("/api/getuserInfo?id="+id).then(res=>{
+        this.me_ul=res.data
+      })
+    }
+ }
 };
 </script>
 <style>
@@ -694,10 +828,23 @@ export default {
 .el-upload-list {
   display: none;
 }
+
+.el-button i{
+  margin: 0
+}
 </style>
 <style scoped>
 @import "../css/friend.css";
 .edit-page {
   text-align: center;
+}
+.feng-img{
+  height: 250px;
+}
+.feng-img>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 </style>

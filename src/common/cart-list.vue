@@ -335,6 +335,14 @@ export default {
     height: 30px;
 }
 
+.medium .cart-img {
+    width: 35px;
+    height: 35px;
+}
+.medium .cart-img>img{
+    width: 30px;
+    height: auto;
+}
 .cart-item:hover .msg-all {
     display: block;
 }

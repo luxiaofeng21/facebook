@@ -30,7 +30,7 @@ export default {
         },
         getactive() {
             var to = this.$route
-            var reg = /login|help/ //是否包含login
+            var reg = /login|help|advertising/ //是否包含login
             var test = reg.test(to.fullPath)
             if (test) {
                 this.path = false
@@ -124,6 +124,13 @@ a {
     width: 25px;
     height: 25px;
 }
+.book-icon.small>img{
+    width: 20px;
+    height: 20px;
+}
+.book-icon.small>i{
+    font-size: 20px;
+}
 .book-icon {
     font-size: 25px;
     margin-right: 15px;
@@ -143,7 +150,7 @@ a {
 
 .book-icon2>i {
     font-size: 20px;
-    margin: 0 5px;
+    /* margin: 0 5px; */
 }
 
 .book-icon2>img{
@@ -216,6 +223,26 @@ a {
 .el-aside{
     border-right: 1px solid #eee;
     background-color: #fff;
+    position: relative;
+}
+.aside-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    border-top: 1px solid #ddd;
+}
+.aside-icon>.lf{
+    display: flex;
+    align-items: center;
+}
+.aside-icon >*>*{
+    font-size: 24px;
+    padding: 5px 10px;
+}
+.aside-icon >*>*:hover{
+    background-color: #ddd;
+    cursor: pointer;
 }
 .tou-title{
     font-weight: bold;
@@ -344,5 +371,25 @@ a {
 
 .facebook-tou{
     display: flex;
+}
+.el-dialog{
+    border-radius: 10px;
+}
+
+.el-card{
+    border-radius: 10px;
+}
+.el-checkbox__inner{
+    width: 20px;
+    height: 20px;
+}
+.el-checkbox__inner::after{
+    border: 2px solid #fff;
+    height: 10px;
+    width: 4px;
+    left: 6px;
+    top: 2px;
+    border-top: 0;
+    border-left: 0;
 }
 </style>

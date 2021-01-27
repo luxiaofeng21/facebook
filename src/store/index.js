@@ -6,7 +6,7 @@ Vue.use(vuex)
 const store=new vuex.Store({
     state:{
         tui:true,
-        clienHeight:window.screen.availHeight - 65 -document.body.scrollHeight,
+        clienHeight:window.innerHeight - 62,
         user_info:JSON.parse(localStorage.getItem("user_info"))
     },
     //eidt方法

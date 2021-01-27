@@ -24326,6 +24326,8 @@ body{
 .popver-ul>li>i{
 	font-size: 22px;
 	margin-right: 10px;
+	color: #000;
+	margin-top: 2px;
 }
 .popver-ul>li:hover{
 	background-color: #eee;
@@ -24541,6 +24543,10 @@ body{
 	width: 600px;
 	margin: 0 auto;
 }
+.book-w12{
+	width: 1200px;
+	margin: 0 auto;
+}
 .el-null{
 	padding:30px;
 	font-size: 20px;
@@ -24561,7 +24567,7 @@ body{
 .el-button{
     font-weight: bold;
 }
-.el-button i{font-size: 18px;margin: 0 5px;}
+/* .el-button i{font-size: 18px;margin: 0 5px;} */
 .swiper-button-prev, .swiper-button-next{
     width: 40px;
     height: 40px;

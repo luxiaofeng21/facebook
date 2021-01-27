@@ -101,14 +101,6 @@
                         <feed v-if="mactive==0"></feed>
                         <discover v-else></discover>
                     </div>
-                    <div>
-                        <div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                    </div>
                 </div>
             </div>
         </div>

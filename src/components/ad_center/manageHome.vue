@@ -1,14 +1,19 @@
 <template>
 <div>
 	<el-container>
-		<el-aside class="el-padding" :style="{height:$store.state.clienHeight-100+'px'}">
+		<el-aside class="el-padding" :style="{height:$store.state.clienHeight+'px'}">
 			    <div class="tou-title">管理公共主页</div>
 				<div class="tou-text">推广主页</div>
 				<div class="el-margin"> <hr> </div>
 				<cart-list :list="menu" type="menu" :active="mactive" @getcart="getmenu"></cart-list>
 		</el-aside>
-		<el-main :style="{height:$store.state.clienHeight-100+'px'}">
-				<div v-if="mactive==0">
+		<el-main :style="{height:$store.state.clienHeight+'px'}">
+			    <news-feed v-if="state=='news-feed'"></news-feed>
+                <business-app-store v-else-if="mactive=='business-app-store'"></business-app-store>
+				<quality v-else-if="mactive=='quality'"></quality>
+				<ad-center v-else-if="mactive=='ad-center'"></ad-center>
+                <edit-list v-else-if="mactive=='/edit-list'"></edit-list>
+                <div v-else>
 					 <div class="book-firend" >
                         <div class="book-tou katn9ffz">
                                 <div class="tou-bg" :style="{backgroundImage:`url(${accout.img})`}"> 
@@ -143,12 +148,6 @@
                         </div>
                     </div>
 				</div>
-			    <news-feed v-else-if="mactive==1"></news-feed>
-                <business-app-store v-else-if="mactive==5"></business-app-store>
-				<quality v-else-if="mactive==7"></quality>
-				<ad-center v-else-if="mactive==8"></ad-center>
-                <edit-list v-else-if="mactive==9"></edit-list>
-            
 		</el-main>
 	</el-container>
     <el-dialog :visible.sync="dialogVisible" width="500px">
@@ -226,20 +225,27 @@ export default {
                 },
                 {
                     icon:"el-icon-s-finance",
-                    title:"动态消息"
+                    title:"动态消息",
+                    state:"news-feed"
                 },
                 {
                     icon:"el-icon-s-order",
-                    title:"收件箱"
+                    title:"收件箱",
+                    name:"inbox",
+                    state:"business-app-store"
                 },
                 
                 {
                     icon:"el-icon-message-solid",
-                    title:"通知"
+                    title:"通知",
+                    name:"settings",
+                    state:"quality"
                 },
                 {
                     icon:"el-icon-s-marketing",
-                    title:"成效分析"
+                    title:"成效分析",
+                    name:"insights"
+                   
                 },
                 {
                     icon:"el-icon-message-solid",
@@ -259,7 +265,8 @@ export default {
                 },
                 {
                     icon:"el-icon-s-shop",
-                    title:"广告中心"
+                    title:"广告中心",
+                     state:"ad-center"
                 },
                 {
                     icon:"el-icon-s-tools",

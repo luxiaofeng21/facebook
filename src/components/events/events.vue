@@ -12,7 +12,7 @@
             </div>
             <activity-list :list="activity"></activity-list>
         </el-aside>
-        <el-main :style="{height:$store.state.clienHeight-100+'px'}">
+        <el-main :style="{height:$store.state.clienHeight+'px'}">
             <div v-if="mactive==0" >
                <div class="el-bottom">
                    <div class="book-title2">进行中的线上活动</div>

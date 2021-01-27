@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<el-container>
-			<el-aside class="el-padding" :style="{height:$store.state.clienHeight-100 + 'px'}"> 
+			<el-aside class="el-padding" :style="{height:$store.state.clienHeight + 'px'}"> 
 					<div class="flex">
 						<div class="lf">
 							<el-breadcrumb separator="/">

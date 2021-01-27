@@ -107,7 +107,8 @@
     }
     .me-ul li {
         display: flex;
-        margin-bottom: 10px;
+        align-items: center;
+        margin-bottom: 16px;
     }
     .me-ul li:nth-child(2) img {
         height: 15px;
@@ -210,7 +211,9 @@
         color: #666;
     }
 
-
+    .interest-ul{
+        text-align: left;
+    }
     .interest-ul>li{
         display: inline-block;
         border: 1px solid #ddd;

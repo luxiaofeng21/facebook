@@ -12,10 +12,10 @@
 								<div class="rg">
 									 <span class="book-icon2 icon-primary" style="width:150px" @click="attention"> 
 										 <span v-if="me.attention">
-											 <i class="el-icon-check"></i>已关注
+											 <i class="el-icon-success"></i>已关注
 										 </span>
 										 <span v-else>
-											 <i class="el-icon-circle-plus"></i>未关注
+											 <i class="el-icon-error"></i>未关注
 										 </span>
 									 </span>
 									 <span class="book-icon2"> <i class="el-icon-message-solid"></i> </span>

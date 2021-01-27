@@ -21,7 +21,7 @@
                         </div>
                     </div>
             </div>
-            <div class="rg" :style="{height:$store.state.clienHeight-100+'px'}">
+            <div class="rg" :style="{height:$store.state.clienHeight+'px'}">
                    <post-list :list="[info]" url="/api/createComments" url2="/api/comments"></post-list>
             </div>
         </div>
@@ -75,7 +75,7 @@ export default {
     .tie-item{
         position: fixed;
         left: 0;
-        top: 60px;
+        top: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -87,7 +87,7 @@ export default {
         display: flex;
         background-color: #000;
         position: relative;
-        margin-top: -60px;
+        /* margin-top: -60px; */
         
     }
     .tie-head{
@@ -116,24 +116,24 @@ export default {
     
 </style>
 <style>
-     .swiper-slide{
+   .tie-item  .swiper-slide{
          display: flex;
          justify-content: center;
          align-items: center;
      }
-    .swiper-slide >img {
+   .tie-item .swiper-slide >img {
       width: auto;
       height: auto;
       max-width: 70%;
       max-height: 100%;
       vertical-align: bottom;
     }
-    .card-collect{
+   .tie-item .card-collect{
         position: fixed;
         bottom: 0%;
         background-color: #fff;
     }
-    .cart-ti{
+  .tie-item  .cart-ti{
         display: none;
     }
     /* .facebook-tou{

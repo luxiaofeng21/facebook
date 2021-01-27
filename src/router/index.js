@@ -47,7 +47,10 @@ import managementGroup from '@/components/groups/management_group'
 import Mailbox from '@/components/help/Mailbox'
 import mePage from '@/components/mePage/index'
 import help from '@/components/help/index'
-
+const routerPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error=> error)
+}
 
 var router= new Router({
   routes: [
@@ -198,6 +201,11 @@ var router= new Router({
       component: Friends
     },
     {
+      path: '/book_friends',
+      name: 'book_friend',
+      component: ()=>import("@/common/book-firend")
+    },
+    {
       path: '/watch',
       name: 'watch',
       component: Watch
@@ -343,6 +351,21 @@ var router= new Router({
       component:()=>import("@/common/tie-item")
     },
     {
+      path:"/classes",
+      name:"classes",
+      component:()=>import("@/components/groups/classes")
+    },
+    {
+      path:"/advertising",
+      name:"advertising",
+      component:()=>import("@/advertising/advertising_tool/main")
+    },
+    {
+      path:"/advertising/account",
+      name:"advertising_account",
+      component:()=>import("@/advertising/accounts/main")
+    },
+    {
       path:"*",
       component:()=>import("@/common/404")
     }
@@ -367,5 +390,6 @@ router.beforeEach((to, from, next) => {
   }
   
 })
+
 Vue.use(Router)
 export default router

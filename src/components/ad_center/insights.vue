@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<el-container>
-			<el-aside class="el-padding" :style="{height:$store.state.clienHeight-100+'px'}">
+			<el-aside class="el-padding" :style="{height:$store.state.clienHeight+'px'}">
 					<el-breadcrumb >
 						<el-breadcrumb-item :to="{ path: '/' }">我的第一个公共主页</el-breadcrumb-item>
 						<el-breadcrumb-item><a href="/">公共主页成效分析</a></el-breadcrumb-item>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-container>
-            <el-aside class="el-padding" :style="{height:$store.state.clienHeight-100+'px'}"> 
+            <el-aside class="el-padding" :style="{height:$store.state.clienHeight+'px'}"> 
                     <el-breadcrumb separator="/">
                         <el-breadcrumb-item :to="{ path: '/' }">第一个公共主页</el-breadcrumb-item>
                         <el-breadcrumb-item>inbox</el-breadcrumb-item>

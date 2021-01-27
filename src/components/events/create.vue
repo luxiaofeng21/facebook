@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<el-container>
-			<el-aside class="el-padding" :style="{height:$store.state.clienHeight-100+'px'}">
+			<el-aside class="el-padding" :style="{height:$store.state.clienHeight+'px'}">
 				<div class="el-flex">
 					<div class="hover-icon" v-if="setp==1" @click="setp=0"> <i class="el-icon-back"></i> </div>
 					<div class="rg">

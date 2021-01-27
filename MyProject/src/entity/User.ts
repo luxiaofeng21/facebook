@@ -1,10 +1,12 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { type } from "os";
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToOne} from "typeorm";
 //用户
 @Entity()
 export class User {
 
     @PrimaryGeneratedColumn()
     id: number;
+
     @Column()
     me_img: string;
     
@@ -44,39 +46,11 @@ export class User {
     @Column()
     age: number;
     
-    @Column("simple-array")
-    user: object[];
-
-    @Column("simple-array")
-    friend: object[];
-
-    @Column("simple-array")
-    imgAll: object[];
-
-    @Column("simple-array")
-    music: object[];
-    
-    @Column("simple-array")
-    movies: object[];
-
-    @Column("simple-array")
-    Tv: object[];
-
-    @Column("simple-array")
-    books: object[];
-
-    @Column("simple-array")
-    sports: object[];
-
-    @Column("simple-array")
-    video: object[];
-
-    @Column("simple-array")
-    lasts: object[];
-    
     @Column()
     lang: string;
 
+    @OneToMany((type)=>Recommended,(r)=>r.uid)
+    recommendeds:[];
 }
 
 //帖子
@@ -105,6 +79,9 @@ export class Recommended {
 
     @Column()
     goodsNum: number;
+
+    @ManyToOne((type)=>User,(r)=>r.recommendeds)
+    user:User;
 }
 
 //帖子评论集合

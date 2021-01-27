@@ -44,7 +44,6 @@ exports.recommended = (req,res)=>{
 }
 //获取指定帖子
 exports.getrecommended = (req,res)=>{
-console.log("🚀 ~ file: services.js ~ line 47 ~ req", req.query)
     // 查询语句
     let sql = 'select * from recommended where ?'
     db.base(sql,[req.query],(result)=>{
@@ -223,11 +222,15 @@ exports.outlogin=function(req,res){
 
 //获取用户信息
 exports.getuserInfo=function(req,res){
-    if(user_info!={}){
-        res.send({code:1,data:user_info})
-    }else{
-        res.send({code:-1,msg:"用户信息获取失败"})
-    }
+    var sql="select * from user where ?"
+    db.base(sql,[req.query],(result)=>{
+        if(result.length>0){
+            res.send({code:1,data:result[0]})
+        }else{
+            res.send({code:-1,msg:"用户信息获取失败"})
+        }
+    })
+    
     
 }
 
