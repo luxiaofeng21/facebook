@@ -1,13 +1,11 @@
 <template>
-<div class="j83agx80 taijpn5t">
-	<div class="bglkmn5o">
+<div  class="el-w10">
 		<div class="book-card ">
 				<div class="book-title2"> 视频收藏 </div>
 				
 				<video-list :list="list"  type="list"></video-list>
 				
 		</div>
-	</div>
 </div>
 
 </template>

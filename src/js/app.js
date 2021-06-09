@@ -31,7 +31,8 @@ Vue.prototype.$axios = http;
 Vue.prototype.$url=url
 
 
-Vue.prototype.showDate=function(time_str){var now = new Date();
+Vue.prototype.showDate=function(time_str){
+    var now = new Date();
 	var date = new Date(time_str);
 	//计算时间间隔，单位为分钟
 	var inter = parseInt((now.getTime() - date.getTime())/1000/60);

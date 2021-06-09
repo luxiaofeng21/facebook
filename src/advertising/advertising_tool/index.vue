@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="advertising-tool">
         <div class="flex">
                         <div class="lf">
                                 <span class="book-title2">广告</span>
@@ -594,11 +594,11 @@ export default {
     }
 </style>
 <style  >
-    .el-table thead{
+   .advertising-tool .el-table thead{
         color: #666;
         background-color: #E4E6EB;
     }
-    .el-table thead th{
+   .advertising-tool .el-table thead th{
         background-color: #E4E6EB;
     }
    

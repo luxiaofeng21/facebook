@@ -30,6 +30,7 @@
 <script>
 import  cartList from '@/common/cart-list'
 export default {
+    name:"inbox",
     components: {
         cartList  
     },

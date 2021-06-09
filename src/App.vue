@@ -224,6 +224,9 @@ a {
     border-right: 1px solid #eee;
     background-color: #fff;
     position: relative;
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 .aside-footer{
     position: fixed;
@@ -231,6 +234,8 @@ a {
     left: 0;
     width: 300px;
     border-top: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px 0;
 }
 .aside-icon>.lf{
     display: flex;
@@ -391,5 +396,46 @@ a {
     top: 2px;
     border-top: 0;
     border-left: 0;
+}
+
+.el-handle>*{
+    width: auto;
+    display: inline-block;
+}
+
+.el-w10{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.radius input{
+    border-radius: 50px;
+    color: var(--primary-text);
+    background-color: #F0F2F5;
+    border: 0;
+}
+
+.el-container>.el-aside{
+    height: calc(100vh - 62px);
+    width: 360px !important;
+}  
+.el-container>.el-main{
+    height: calc(100vh - 62px);
+    padding: 0;
+}
+
+
+.button-primary{
+        background-color: var(--primary-deemphasized-button-background);
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        color: var(--primary-deemphasized-button-text);
+        font-weight: bold;
+        cursor: pointer;
+}
+.hr{
+    margin: 8px;
+    border-bottom: 1px solid var(--divider);
 }
 </style>

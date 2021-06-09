@@ -14,7 +14,6 @@ import Groups from '@/components/groups/groups'
 import grouopHome from '@/components/groups/home'
 import GroupsItem from '@/components/groups/groups_item'
 import Create from '@/components/groups/create'
-import Gaming from '@/components/gaming/gaming'
 import Friends from '@/components/friends/friends'
 import Creation from '@/components/create/creation'
 import Account from '@/components/me/account'
@@ -29,9 +28,9 @@ import  Memories from "@/components/memories/memories"
 import  Onemi from "@/components/index/onemi"
 import messenger from '@/components/messenger/index'
 import Goal from '@/components/ad_center/goal'
-import manageHome from '@/components/ad_center/manageHome'
+import manageHome from '@/components/ad_center/main'
 import settings from '@/components/ad_center/settings'
-import insights from '@/components/ad_center/insights'
+import insights from '@/components/insights/main'
 import weather from '@/components/weather/index'
 import pages from '@/components/ad_center/index'
 import adCreate from '@/components/ad_center/create'
@@ -53,8 +52,8 @@ Router.prototype.push = function push(location) {
 }
 
 var router= new Router({
+  mode: 'history',
   routes: [
-    
     {
       path: '/',
       name: 'index',
@@ -207,18 +206,92 @@ var router= new Router({
     },
     {
       path: '/watch',
-      name: 'watch',
-      component: Watch
+      component: Watch,
+      children:[
+        {
+          path:"index",
+          name: 'watch',
+          component:()=>import("@/components/watch/index")
+        },
+        {
+          path:"latest",
+          component:()=>import("@/components/watch/latest")
+        },
+        {
+          path:"live",
+          component:()=>import("@/components/watch/live")
+        },
+        {
+          path:"loveyunung",
+          component:()=>import("@/components/watch/loveyunung")
+        },
+        {
+          path:"saved",
+          component:()=>import("@/components/watch/saved")
+        },
+        {
+          path:"shows",
+          component:()=>import("@/components/watch/shows")
+        },
+        {
+          path:"friend",
+          component:()=>import("@/common/book-firend")
+        },
+        {
+          path:"",
+          redirect:"index"
+        }
+      ]
     },
     {
       path: '/groups',
-      name: 'groups',
       component: Groups,
+      children:[
+        {
+          name: 'groups',
+          path:"index",
+          component:()=>import("@/components/groups/feed")
+        },
+        {
+          path:"discover",
+          component:()=>import("@/components/groups/discover")
+        }
+      ]
     },
     {
       path: '/gaming',
-      name: 'gaming',
-      component: Gaming
+      component: ()=>import("@/components/gaming/main"),
+      children:[
+        {
+          path:"index",
+          name: 'gaming',
+          component:()=>import("@/components/gaming/gaming/gaming"),
+        },
+        {
+          path:"following",
+          component:()=>import("@/components/gaming/gaming/following")
+        },
+        {
+          path:"recent",
+          component:()=>import("@/components/gaming/gaming/recent")
+        },
+        {
+          path:"browse",
+          component:()=>import("@/components/gaming/gaming/browse")
+        },
+        {
+          path:"youxi",
+          component:()=>import("@/components/gaming/youxi")
+        },
+        {
+          path:"web",
+          component:()=>import("@/components/gaming/youxiweb"),
+        },
+        {
+          path:"paiwei",
+          component:()=>import("@/components/gaming/paiwei")
+        }
+      ]
     },
     {
       path: '/groups/groups_item',
@@ -358,12 +431,27 @@ var router= new Router({
     {
       path:"/advertising",
       name:"advertising",
-      component:()=>import("@/advertising/advertising_tool/main")
+      component:()=>import("@/advertising/advertising_tool/main"),
+    },
+    {
+      path:"/advertising/creative",
+      name:"advertising_creative",
+      component:()=>import("@/advertising/creative/main")
     },
     {
       path:"/advertising/account",
       name:"advertising_account",
       component:()=>import("@/advertising/accounts/main")
+    },
+    {
+      path:"/advertising/incident",
+      name:"incident",
+      component:()=>import("@/advertising/incident/main")
+    },
+    {
+      path:"/advertising/audiences",
+      name:"audiences",
+      component:()=>import("@/advertising/audiences/index")
     },
     {
       path:"*",

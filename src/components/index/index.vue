@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <el-container>
-      <el-aside :style="{ height: clienHeight + 'px' }">
+      <el-aside >
         <cart-list :list="menu" @getcart="getmenu"></cart-list>
         <hr />
         <div class="flex el-padding">
@@ -10,7 +10,7 @@
         </div>
         <cart-list :list="publicPage" @getcart="publicUrl"></cart-list>
       </el-aside>
-      <el-main :style="{ height: $store.state.clienHeight + 'px' }">
+      <el-main >
         <div class="book-w6">
           <sale v-if="state == 'sale'"></sale>
           <friend v-else-if="state == 'friends'"></friend>
@@ -39,7 +39,7 @@
         </div>
       </el-main>
       <el-aside
-        :style="{ height: $store.state.clienHeight + 'px' }"
+       
         style="background-color: transparent"
       >
         <div class="el-bottom">
@@ -56,7 +56,7 @@
             <span class="el-title">加好友请求</span>
             <span class="link">查看全部</span>
           </div>
-          <cart-list :list="friends" :size="'small'"> </cart-list>
+          <cart-list :list="friends" > </cart-list>
         </div>
         <div class="el-bottom">
           <div class="flex el-bottom">
@@ -65,11 +65,11 @@
               <i class="el-icon-more"></i>
             </div>
           </div>
-          <cart-list :list="friends" :size="'small'"> </cart-list>
+          <cart-list :list="friends" > </cart-list>
         </div>
         <div class="el-bottom">
           <span class="el-title el-bottom">群聊</span>
-          <cart-list :list="chatAll" :size="'small'"></cart-list>
+          <cart-list :list="chatAll" ></cart-list>
           <cart-list
             :list="[{ icon: 'el-icon-plus', title: '新建群聊' }]"
             size="small"
@@ -176,7 +176,6 @@ export default {
   data() {
     return {
       state:"",
-      clienHeight: 0,
       recommend: {
         name: "",
         list: [],
@@ -202,28 +201,6 @@ export default {
         },
       ],
       list: [],
-      swiper: [
-        {
-          title: "陳麗映",
-          commonNum: 2,
-          img: require("@/assets/me.jpg"),
-        },
-        {
-          title: "陳麗映",
-          commonNum: 2,
-          img: require("@/assets/me.jpg"),
-        },
-        {
-          title: "陳麗映",
-          commonNum: 2,
-          img: require("@/assets/me.jpg"),
-        },
-        {
-          title: "陳麗映",
-          commonNum: 2,
-          img: require("@/assets/me.jpg"),
-        },
-      ],
       downtile: "展开",
       down: 9,
       menu: [
@@ -400,10 +377,6 @@ export default {
     });
   },
   mounted() {
-    this.clienHeight = document.body.clientHeight - 65;
-    var mySwiper = new Swiper("#swiper", {
-      slidesPerView: 3,
-    });
   },
   methods: {
     getlist() {

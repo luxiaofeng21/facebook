@@ -1,10 +1,11 @@
 <template>
     <div>
         <el-container>
-            <book-aside title="广告管理工具" :menu="menu" :mactive="mactive" :getmenu="getmenu"></book-aside>
+            <book-aside title="事件管理工具" :menu="menu" :mactive="mactive" :getmenu="getmenu"></book-aside>
             <el-main>
                     <index v-if="state=='index'"></index>
-                    <accounts v-else-if="state=='account'"></accounts>
+                    <custom v-else-if="state=='custom'"></custom>
+                    <Partner v-else-if="state=='Partner'"></Partner>
             </el-main>
             <div class="aside-rg">
                     <i></i>
@@ -16,27 +17,34 @@
 <script>
 import  bookAside from '@/common/book-aside'
 import  index from './index'
-import  accounts from './accounts'
+import  custom from './custom'
+import  Partner from './Partner'
 export default {
     components:{
-        accounts,
+        Partner,
+        custom,
         index,
         bookAside
     },
     data() {
         return {
             state:"index",
-            mactive:1,
+            mactive:0,
             menu:[
                 {
-                    title:"账户概览",
-                    icon:"el-icon-s-shop",
-                    tab:"account"
+                    title:"数据源",
+                    icon:"icon-custom icon1",
+                    tab:"index"
                 },
                 {
-                    title:"广告系列",
-                    icon:"el-icon-s-help",
-                    tab:"index"
+                    title:"自定义转化事件",
+                    icon:"icon-custom icon2",
+                    tab:"custom"
+                },
+                {
+                    title:"合作伙伴集成",
+                    icon:"icon-custom icon3",
+                    tab:"Partner"
                 }
             ],
           
@@ -45,8 +53,10 @@ export default {
     created() {
          var state=this.$route.query.state; 
          if(state){
-             if(state=='index'){
+             if(state=='custom'){
                 this.mactive=1
+            }else if(state=='Partner'){
+                this.mactive=2
             }else{
                 this.mactive=0
             }
@@ -62,7 +72,7 @@ export default {
     },
     methods: {
         getmenu(i,item){
-            this.$router.push({name:"advertising",query:{state:item.tab}})
+            this.$router.push({name:"incident",query:{state:item.tab}})
             this.mactive=i;
         }
     }

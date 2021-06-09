@@ -599,7 +599,7 @@
 																									<div class="friend-title">{{item.title}}</div>
 																									<div class="friend-text">{{item.text}}</div>
 																								</div>
-																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>

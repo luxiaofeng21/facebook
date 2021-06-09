@@ -471,7 +471,7 @@
             </div>
           </el-tooltip>
         </el-popover>
-        <router-link :to="{ path: '/book_friends',query:{id:user_info.id}}">
+        <router-link :to="{ path: '/mePage'}">
           <div class="flex facebook-tou" style="margin-right: 20px">
             <div class="me-img">
               <img :src="user_info.me_img" alt="" />
@@ -576,7 +576,6 @@
 </template>
 
 <script>
-import iconv from "iconv-lite";
 import cartList from "./cart-list";
 import tiePost from "./tie-post";
 export default {

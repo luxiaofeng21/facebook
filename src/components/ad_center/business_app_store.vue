@@ -300,7 +300,7 @@ export default {
     border-radius: 5px;
     width: 50px;
     height: 50px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .tui-img>img{
     width: 100%;

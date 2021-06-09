@@ -2,7 +2,17 @@
     <div>
             <el-aside class="el-padding" :class="down?'aside-down':'aside-up'"  :style="{height:$store.state.clienHeight + 62 +'px'}">
                 <div class="flex">
-                    <span class="tou-title" v-if="down">{{title}}</span>
+                    <el-popover width="100" placement="right-end" trigger="hover">
+                        <h5>facebook  business</h5>
+                        <div slot="reference" > 
+                                <i class="el-icon-house hover-icon2" v-if="!down"></i>
+                                <svg aria-label="Facebook 徽标" height="12" role="img" width="109" v-else>
+                                    <path d="M8.68.38V1.9a.16.16 0 01-.17.17H1.98v3.16h5.39a.16.16 0 01.17.17v1.47a.16.16 0 01-.17.17H1.98v4.6a.16.16 0 01-.17.17H.17a.16.16 0 01-.17-.17V.4A.16.16 0 01.17.23H8.5c.12 0 .18.05.18.15zM22.01 11.79h-1.84a.18.18 0 01-.19-.15c-.24-.95-.53-1.95-.86-3h-5.49c-.33 1-.62 2-.85 3a.18.18 0 01-.19.15h-1.74c-.12 0-.18-.07-.15-.18A76.9 76.9 0 0114.93.44a.31.31 0 01.32-.21h2.35a.31.31 0 01.32.21 75.76 75.76 0 014.25 11.17c0 .11 0 .18-.16.18zm-3.47-4.9c-.6-1.67-1.27-3.34-2-4.86h-.37c-.69 1.52-1.36 3.19-2 4.86zM24.96 6.1c0-3.59 2.36-6.1 5.74-6.1h.25a5.13 5.13 0 014.62 2.63.14.14 0 01-.06.23l-1.45.72a.2.2 0 01-.29-.07 3.07 3.07 0 00-2.88-1.62h-.25c-2.12 0-3.59 1.69-3.59 4.13s1.44 4.1 3.59 4.1h.25a3.39 3.39 0 002.82-1.19.21.21 0 01.27-.06l1.5.73a.12.12 0 01.08.12v.12a5.41 5.41 0 01-4.59 2.17h-.3c-3.43-.01-5.71-2.36-5.71-5.91zM48.73 10.1v1.52a.16.16 0 01-.17.17h-8.68a.16.16 0 01-.17-.17V.38a.16.16 0 01.17-.15h8.53a.16.16 0 01.17.17v1.5a.16.16 0 01-.17.17h-6.73v3h5.49a.16.16 0 01.17.17v1.5a.16.16 0 01-.17.17h-5.49v3h6.88a.15.15 0 01.17.19zM63.67 8.61c0 2-1.55 3.17-4.3 3.17h-5.69a.16.16 0 01-.17-.17V.37a.16.16 0 01.17-.14h5.18c2.67 0 4.12 1 4.12 3a2.42 2.42 0 01-2 2.5c1.9.36 2.69 1.5 2.69 2.88zm-4.84-6.59h-3.34v3.11h3.34c1.5 0 2.18-.49 2.18-1.55s-.68-1.56-2.18-1.56zm2.83 6.42c0-1.07-.71-1.56-2.27-1.56H55.5v3.11h3.89c1.58-.01 2.27-.47 2.27-1.55zM67.17 6a5.67 5.67 0 016-6h.25a5.67 5.67 0 016 6 5.67 5.67 0 01-6 6h-.25a5.67 5.67 0 01-6-6zm6.19 4.12c2.34 0 3.81-1.63 3.81-4.12s-1.5-4.12-3.87-4.12h-.25c-2.34 0-3.88 1.63-3.88 4.12s1.5 4.12 3.87 4.12zM82.64 6a5.67 5.67 0 016-6h.25a5.67 5.67 0 016 6 5.67 5.67 0 01-6 6h-.25a5.67 5.67 0 01-6-6zm6.2 4.12c2.37 0 3.87-1.63 3.87-4.12s-1.54-4.12-3.87-4.12h-.25c-2.37 0-3.87 1.63-3.87 4.12s1.5 4.12 3.87 4.12zM109.04 11.79h-2.13a.31.31 0 01-.29-.14 45.11 45.11 0 00-4.77-4.8h-1v4.78a.16.16 0 01-.17.17h-1.6a.16.16 0 01-.17-.17V.39a.16.16 0 01.17-.16h1.64a.16.16 0 01.17.17v4.55h1a34.84 34.84 0 004.28-4.6.26.26 0 01.25-.12h2c.1 0 .15.05.15.12a.22.22 0 01-.06.12 41.35 41.35 0 01-5.17 5.37 50.44 50.44 0 015.83 5.75c.06.1 0 .2-.13.2z" fill="#677B8C"></path>
+                                </svg>
+                                <!-- <img class="logo" src="../assets/logo2.png" alt="" > -->
+                        </div>
+                    </el-popover>
+                    
                     <el-popover width="400" placement="right-end">
                         <div>
                             <div class="flex">
@@ -29,12 +39,13 @@
                             </div>
                             
                         </div>
-                        <el-tooltip slot="reference" content="业务工具" placement="right"> 
-                            <i   class="el-icon-s-grid"></i> 
+                        <el-tooltip  slot="reference" content="业务工具" placement="right"> 
+                            <i   class="el-icon-s-grid hover-icon2"></i> 
                         </el-tooltip>
                          
                     </el-popover>
                 </div>
+                <div class="tou-title el-margin" v-if="down">{{title}}</div>
                 <el-popover width="250">
                     <div class="flex el-bottom">
                         <el-input style="flex:1;margin-right:10px" size="small" placeholder="搜索帐户和商务管理平台" v-model="mhandle.search">
@@ -104,7 +115,7 @@ export default {
         return {
 
             dialogVisible:false,
-            down:false,
+            down:true,
             clienHeight:0,
              state:"index",
              mhandle:{
@@ -278,20 +289,24 @@ export default {
                 },
                  {
                     title:"事件管理工具",
-                    icon:"el-icon-files"
+                    icon:"el-icon-files",
+                    path:"/advertising/incident"
                 },
                 {
                     title:"创意馆",
-                    icon:"el-icon-magic-stick"
+                    icon:"el-icon-magic-stick",
+                    path:"/advertising/creative"
+                },
+                {
+                    title:"受众",
+                    icon:"el-icon-user-solid",
+                    path:"/advertising/audiences"
                 },
                 {
                     title:"公共主页的广告数量上限",
                     icon:"el-icon-mobile-phone"
-                },
-                {
-                    title:"店铺管理工具",
-                    icon:"el-icon-map-location"
                 }
+                
             ],
           
         };
@@ -300,10 +315,13 @@ export default {
         var name=this.$route.name;
         if(name=='advertising_account'){
                 this.oactive=1;
+        }else if(name=='incident'){
+                 this.oactive=2;
+        }else if(name=='advertising_creative'){
+                 this.oactive=3;
         }else{
             this.oactive=0
         }
-        console.log()
     },
     methods:{
         getool(index,item){
@@ -418,15 +436,8 @@ export default {
         background-color: #f8f8f8;
     }
     
-     .el-icon-s-grid{
-         padding:5px 5px;
-         font-size: 25px;
-     }
-     .el-icon-s-grid:hover{
-         background-color: #eee;
-         cursor: pointer;
-         border-radius: 5px;
-     }
+     
+  
 
      .el-popover{
          max-height: 600px;
@@ -459,5 +470,9 @@ export default {
      .el-dialog__body{
          max-height: 600px;
          overflow: auto;
+     }
+
+     .logo{
+         width: 150px;
      }
 </style>

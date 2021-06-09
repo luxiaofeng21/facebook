@@ -1,14 +1,11 @@
 <template>
     <div>
         <el-container>
-            <book-aside title="广告管理工具" :menu="menu" :mactive="mactive" :getmenu="getmenu"></book-aside>
-            <el-main>
+            <book-aside title="创意馆" :menu="menu" :mactive="mactive" :getmenu="getmenu"></book-aside>
+            <el-main :style="{height:$store.state.clienHeight + 62 + 'px'}">
                     <index v-if="state=='index'"></index>
-                    <accounts v-else-if="state=='account'"></accounts>
+                    <tour v-else-if="state=='tour'"></tour>
             </el-main>
-            <div class="aside-rg">
-                    <i></i>
-            </div>
         </el-container>
     </div>
 </template>
@@ -16,27 +13,27 @@
 <script>
 import  bookAside from '@/common/book-aside'
 import  index from './index'
-import  accounts from './accounts'
+import  tour from './tour'
 export default {
     components:{
-        accounts,
+        tour,
         index,
         bookAside
     },
     data() {
         return {
             state:"index",
-            mactive:1,
+            mactive:0,
             menu:[
                 {
-                    title:"账户概览",
-                    icon:"el-icon-s-shop",
-                    tab:"account"
+                    title:"样图",
+                    icon:"icon-custom icon1",
+                    tab:"index"
                 },
                 {
-                    title:"广告系列",
-                    icon:"el-icon-s-help",
-                    tab:"index"
+                    title:"开始导览",
+                    icon:"icon-custom icon2",
+                    tab:"tour"
                 }
             ],
           
@@ -45,7 +42,7 @@ export default {
     created() {
          var state=this.$route.query.state; 
          if(state){
-             if(state=='index'){
+             if(state=='tour'){
                 this.mactive=1
             }else{
                 this.mactive=0
@@ -62,7 +59,7 @@ export default {
     },
     methods: {
         getmenu(i,item){
-            this.$router.push({name:"advertising",query:{state:item.tab}})
+            this.$router.push({name:"advertising_creative",query:{state:item.tab}})
             this.mactive=i;
         }
     }

@@ -1,108 +1,523 @@
 <template>
-<div>
-    <div v-for="(item,index) in menu" :key="index" :class="findex==index?'findex':''" v-on:click="geturl(index,item)">
-        <div style="padding-left: 8px; padding-right: 8px;" v-if="item.title!=''">
-            <a class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 a8c37x1j mg4g778l btwxx1t3 pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb lzcic4wl abiwlrkh p8dawk7l ue3kfks5 pw54ja7n uo3d90p7 l82x9zwi" role="link" tabindex="0">
-                <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 nnctdnn4 hpfvmrgz qt6c0cv9 jb3vyjys l9j0dhe7 du4w35lb bp9cbjyn btwxx1t3 dflh9lhu scb9dxdr">
-                    <div class="nqmvxvec j83agx80 cbu4d94t bi6gxh9e tvfksri0 aov4n071 l9j0dhe7">
-                        <div class="s45kfl79 emlxlaya bkmhp75w spb7xbtv bp9cbjyn rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv pq6dq46d taijpn5t l9j0dhe7 tdjehn4e tv7at329 thwo4zme"><i :class="item.icon"></i></div>
+<div :class="[type,size]">
+    <label v-for="(item,index) in list" :key="index" :class="item.active>-1?'ni-checked':''">
+        <!--一级-->
+        <router-link :to="{path:item.path}" class="cart-item" :class="active==index?'ischecked':''" @click="getcart(index,item)">
+            <div class="cart-left">
+                <div class="cart-img" :class="item.iconChecked?'iconChecked':''">
+                    <!--消息类型-->
+                    <img v-if="item.img || item.me_img" :src="item.img|| item.me_img" alt="">
+                    <span v-else-if="item.emoji">{{item.emoji}}</span>
+                    <i v-else :class="item.icon"></i>
+                    <span v-if="type=='msg'" class="imgicon" :class="item.imgicon"></span>
+                </div>
+                <div class="cart-content">
+                    <div class="cart-title">{{item.title}} </div>
+                    <div class="cart-text">{{item.text}}<strong v-if="item.name">{{item.name}}</strong></div>
+                    <div class="cart-date">{{item.date}}</div>
+                </div>
+            </div>
+            <div class="cart-arrow">
+                <slot name="right">
+                     <!--跳转-->
+                    <i v-if="item.arrow || type=='arrow'" slot="right" class="el-icon-arrow-right"></i>
+                    <!--消息-->
+                    <span v-else-if="type=='msg'" class="cart-msg"></span>
+                    <!--单选-->
+                    <span v-else-if="type=='radio'" class="el-radio__inner"></span>
+                    <!--开关-->
+                    <el-switch v-else-if="type=='switch'" @change="getswitch($event,index)" v-model="item.switch"></el-switch>
+                    <!--下拉-->
+                    <div v-else-if="item.children" @click.stop.prevent="item.down=!item.down" class="cart-img2">
+                        <i :class="item.down?'down-icon':''" class="el-icon-arrow-right"></i>
                     </div>
-                    <div class="ow4ym5g4 auili1gw rq0escxv j83agx80 buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz qt6c0cv9 rz4wbd8a a8nywdso jb3vyjys du4w35lb bp9cbjyn btwxx1t3 l9j0dhe7">
-                        <div class="gs1a9yip ow4ym5g4 auili1gw rq0escxv j83agx80 cbu4d94t buofh1pr g5gj957u i1fnvgqd oygrvhab cxmmr5t8 hcukyx3x kvgmc6g5 tgvbjcpo hpfvmrgz rz4wbd8a a8nywdso l9j0dhe7 du4w35lb rj1gh0hx f10w8fjw pybr56ya">
-                            <div class="">
-                                <div class="j83agx80 cbu4d94t ew0dbk1b irj2b8pg">
-                                    <div class="qzhwtbm6 knvmm38d"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j s89635nw ew0dbk1b a5q79mjw g1cxx5fr ekzkrbhg oo9gr5id hzawbc8m" dir="auto"><span class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql jq4qci2q a3bd9o3v lrazzd5p oo9gr5id">{{item.title}}</span></span></div>
-                                    <div class="qzhwtbm6 knvmm38d"><span dir="auto" class="oi732d6d ik7dh3pa d2edcug0 hpfvmrgz qv66sw1b c1et5uql a8c37x1j hop8lmos enqfppq2 e9vueds3 j5wam9gi knj5qynh pipptul6 hzawbc8m">{{item.text}}</span></div>
-                                </div>
-                            </div>
-                        </div>
+                </slot>
+            </div>
+        </router-link>
+        <!--二级-->
+        <div class="cart-children" v-show="item.down">
+            <router-link :to="detail.path" class="cart-item" v-for="(detail,indexs) in item.children" :key="indexs" >
+                <div class="cart-left">
+                    <div class="cart-img" v-if="detail.icon ||detail.img" :class="detail.iconChecked?'iconChecked':''">
+                        <!--消息类型-->
+                        <img v-if="detail.img" :src="detail.img" alt="">
+                        <i v-else :class="detail.icon"></i>
+                        <span v-if="type=='msg'" class="imgicon" :class="detail.imgicon"></span>
+                    </div>
+                    <div class="cart-content">
+                        <div class="cart-title">{{detail.title}} </div>
+                        <div class="cart-text">{{detail.text}}<strong v-if="detail.name">{{detail.name}}</strong></div>
+                        <div class="cart-date">{{detail.date}}</div>
                     </div>
                 </div>
-                <div class="n00je7tq arfg74bv qs9ysxi8 k77z8yql i09qtzwb n7fi1qx3 b5wmifdl hzruof5a pmk7jnqg j9ispegn kr520xx4 c5ndavph art1omkt ot9fgl3s rnr61an3" data-visualcompletion="ignore"></div>
-            </a>
+                <div class="cart-arrow">
+                    <slot name="right">
+                        <!--消息-->
+                        <span v-if="type=='msg'" class="cart-msg"></span>
+                        <!--单选-->
+                        <span v-if="type=='radio'" class="el-radio__inner"></span>
+                        <!--跳转-->
+                        <i v-if="type=='arrow' || detail.arrow" slot="right" class="el-icon-arrow-right"></i>
+                        <!--下拉-->
+                        <div v-if="detail.children" class="cart-img">
+                            <i class="el-icon-arrow-right"></i>
+                        </div>
+                    </slot>
+                </div>
+            </router-link>
         </div>
-        <div v-else class="ge"></div>
-    </div>
+    </label>
 </div>
 </template>
 
 <script>
 export default {
-    props: {
-        menu: {
-            type: Array,
-            default: function () {
-                return []
-            }
+    props: ["list", "type", "active", "size"],
+    methods: {
+        getswitch(state,index){
+           if(index==0){    
+               if(state){
+                   $("#facebook").attr("class","_9dls __fb-dark-mode")
+               }else{
+                   $("#facebook").attr("class","_9dls")
+               }
+           }else{
+               if(state){
+                     $("#facebook body").addClass("concise")
+               }else{
+                     $("#facebook body").removeClass("concise")
+               }
+            
+           }
         },
-        findex: 0
+        //切换
+        getcart(i, item, indexs) {
+            //子数组
+            if (item.children) {
+                this.list.map(x => x.active = -1)
+                if (indexs > -1) {
+                    item.active = indexs;
+                }
+            }
+
+            this.$emit("getcart", i, item)
+        },
     },
     data() {
-        return {
-            // menu: [{
-            //         title: "首页",
-            //         icon: "el-icon-s-home"
-            //     },
-            //     {
-            //         title: "支付记录",
-            //         icon: "el-icon-s-order"
-            //     },
-            //     {
-            //         title: "定期付款",
-            //         icon: "el-icon-refresh"
-            //     },
-            //     {
-            //         title: "设置",
-            //         icon: "el-icon-s-tools"
-            //     },
-            //     {
-            //         title: "帮助",
-            //         icon: "el-icon-question"
-            //     },
-            //     {
-            //         title: "条款和隐私",
-            //         icon: "el-icon-s-custom"
-            //     },
-            // ],
-        }
-    },
-    methods: {
-        geturl(i, e) {
-            this.$emit("getchild", i, e)
-        }
+        return { }
     },
 }
 </script>
 
 <style scoped>
-.findex .pw54ja7n {
-    background: #EAF3FF;
+a{
+    text-decoration: none;
+}
+.el-radio__inner{
+    width: 20px;
+    height: 20px;
+}
+.el-radio__inner::after{
+    width: 8px;
+    height: 8px;
+}
+.video-list .cart-img img {
+    height: 100%;
 }
 
-.findex [class^="el-icon-"] {
-    color: #fff;
+.cart-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.findex .tdjehn4e {
-    background: var(--base-blue);
+.cart-list>* {
+    width: 44%;
 }
 
-[class*=" el-icon-"],
-[class^="el-icon-"] {
-    font-size: 22px;
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart-item:hover {
+    background-color: #f2f2f2;
+}
+
+.cart-left {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.cart-content {
+    width: 70%;
+}
+
+.cart-img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-button-background);
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+}
+
+.cart-img.iconChecked {
+    background-color: #54C7EC !important;
+}
+
+.cart-img.iconChecked i {
+    filter: var(--filter-always-white);
+}
+
+.cart-img>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--secondary-button-background);
+}
+
+.cart-img>i {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
     color: #000;
 }
 
-.ge {
-    background: #ccc;
-    border: none;
-    display: list-item;
-    height: 1px;
-    margin: 10px 0;
+.cart-title {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.1765;
+    color: #000;
 }
 
-.ge::marker {
+.cart-text {
+    color: var(--secondary-text);
+    font-size: .9375rem;
+    line-height: 1.3333;
+    font-weight: normal;
+}
+
+.cart-arrow {
+    font-size: 24px;
+    line-height: 40px;
+    color: #999;
+    font-weight: bold;
+}
+
+.icon-login {
+    background-position: 0 -58px;
+}
+
+.icon-date {
+    background-position: 0 -38px;
+}
+
+.sp_nUTijdutLoC {
+    background-image: url(../assets/EV8jUR6lEDt.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.router-link-exact-active .el-radio__inner {
+    border-color: #1877F2;
+    background: #1877F2;
+    position: relative;
+}
+
+.router-link-exact-active .el-radio__inner::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*通知 */
+.cart-date {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cart-msg {
+    border-radius: 50%;
+    background: #1877F2;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.sp_nkVxcm_S_R8 {
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+}
+
+.imgicon {
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+}
+
+.sp_nkVxcm_S_R8.msg {
+    background-position: 0 -261px;
+}
+
+.sp_nkVxcm_S_R8.flat {
+    background-position: 0 -87px;
+}
+
+.msg .cart-img,
+.big .cart-img {
+    width: 56px;
+    height: 56px;
+}
+
+.big .cart-img>i {
+    font-size: 28px;
+    width: 28px;
+    height: 30px;
+    line-height: 30px;
+}
+.small .cart-arrow{
+    font-size: 18px;
+}
+.small .cart-img>img{
+    width: 20px;
+    height: auto;
+}
+.small .cart-title{
+    font-size: 0.95rem;
+}
+.small .cart-item:hover {
+    background-color: #E4E6E9;
+}
+
+.small .cart-img {
+    width: 30px;
+    height: 30px;
+}
+
+.medium .cart-img {
+    width: 35px;
+    height: 35px;
+}
+.medium .cart-img>img{
+    width: 30px;
+    height: auto;
+}
+.cart-item:hover .msg-all {
+    display: block;
+}
+
+.msg-all {
+    position: absolute;
+    right: 5%;
     display: none;
-    color: transparent;
+}
+
+.msg-all .book-icon {
+    background: #fff;
+}
+
+.sp_JA7fDEHcyOz {
+    background-image: url(../assets/d4D8oGNn1YF.png);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.sp_JA7fDEHcyOz.msg-down {
+    background-position: -2px -209px;
+}
+
+
+
+/*菜单 */
+
+.router-link-exact-active {
+    background-color: #EAF3FF !important;
+}
+
+.router-link-exact-active .cart-img {
+    background-color: #1877F2;
+}
+
+.router-link-exact-active .cart-img>i {
+    filter: var(--filter-always-white);
+}
+
+.ni-checked>.router-link-exact-active .cart-img {
+    background: var(--secondary-button-background);
+    ;
+}
+
+.ni-checked>.router-link-exact-active .cart-img>i {
+    filter: none;
+}
+
+.watch-home {
+    background-image: url(../assets/EV8jUR6lEDt.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.menu .cart-img>i {
+    width: 30px;
+    height: 20px;
+}
+
+.cart-img>.home-icon {
+    background-position: 5px -650px;
+}
+
+.cart-img>.program-icon {
+    background-position: 5px -125px;
+}
+
+.cart-img>.live-icon {
+    background-position: 5px -188px;
+}
+
+.cart-img>.watch-video {
+    background-image: url(../assets/8v89jhzg6ax.png);
+}
+
+.cart-img>.collect-icon {
+    background-position: 5px -50px;
+}
+
+.cart-img>.video-icon {
+    background-image: url(../assets/videoall.png);
+    background-position: 0 -301px;
+}
+
+.menu .cart-img>.dynamic {
+    width: 20px;
+    background-position: -21px -635px;
+}
+
+.menu .cart-img>.find {
+    width: 20px;
+    background-image: url(../assets/exE9Cc-p8hP.png);
+    background-position: 0 -25px;
+}
+
+.menu .cart-img>.good {
+    width: 20px;
+    background-image: url(../assets/xVr-bSpqpnp.png);
+    background-position: -21px -208px;
+}
+
+.menu .cart-img>.yao {
+    width: 20px;
+    background-image: url(../assets/exE9Cc-p8hP.png);
+    background-position: 0 -45px;
+}
+
+/*游戏 */
+.cart-img>.gaming-icon {
+    background-image: url(../assets/gaming.png);
+}
+
+.cart-img>.gaming-icon.icon1 {
+    background-position: 0 -352px;
+}
+
+.cart-img>.gaming-icon.icon2 {
+    background-image: url(../assets/gaming2.png);
+    background-position: 0 -704px;
+}
+
+/*子数组 */
+.cart-children {
+    padding: 5px 20px;
+}
+.cart-children .cart-img{
+    width: 35px;
+    height: 35px;
+}
+.cart-children .cart-title{
+    font-size: 0.9rem;
+}
+.cart-children .cart-text{
+    font-size: 0.8rem;
+}
+.cart-img2 {
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.cart-img2:hover {
+    background: #DEE7F2;
+}
+
+.cart-img2>i {
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+.down-icon {
+    transform: rotate(-90deg);
+}
+
+.__fb-dark-mode .cart-title,.__fb-dark-mode .cart-img > i{
+    color: #fff !important;
+}
+.__fb-dark-mode .cart-item:hover{
+    background-color: #252F3C !important;
+}
+.__fb-dark-mode .router-link-exact-active{
+    background-color: #252F3C  !important;
+}
+.cart-img>span{
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+}
+
+.alat{
+    background-image: url("../assets/alat.png");
+    transform: scale(0.9);
+}
+.alat.icon1{
+    background-position: -7px -44px;
+}
+.alat.icon2{
+    background-position: -7px -82px;
+}
+
+.icon-custom{
+    background-image: url("../assets/custom.png");
+    width: 24px !important;
+    height: 24px !important;
+}
+.icon-custom.icon1{
+    background-position: -75px -319px;
+}
+.icon-custom.icon2{
+    background-position: -25px -369px;
+}
+.icon-custom.icon3{
+    background-position: -43px -393px;
+    transform: scale(1.2);
+    width: 20px !important;
+    height: 20px !important;
 }
 </style>

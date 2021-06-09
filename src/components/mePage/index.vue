@@ -12,7 +12,9 @@ export default {
     },
     data() {
         return {
-            user:{}
+            user:{
+                id:null
+            }
         };
     },
     created() {

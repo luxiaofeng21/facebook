@@ -282,7 +282,6 @@ export default {
 }
 
 .sp_nkVxcm_S_R8 {
-    background-image: url(../assets/_x_q1TYBIBj.png);
     background-size: auto;
     background-repeat: no-repeat;
     display: inline-block;
@@ -527,5 +526,23 @@ export default {
 }
 .alat.icon2{
     background-position: -7px -82px;
+}
+
+.icon-custom{
+    background-image: url("../assets/custom.png");
+    width: 24px !important;
+    height: 24px !important;
+}
+.icon-custom.icon1{
+    background-position: -75px -319px;
+}
+.icon-custom.icon2{
+    background-position: -25px -369px;
+}
+.icon-custom.icon3{
+    background-position: -43px -393px;
+    transform: scale(1.2);
+    width: 20px !important;
+    height: 20px !important;
 }
 </style>

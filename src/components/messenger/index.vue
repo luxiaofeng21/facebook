@@ -32,7 +32,7 @@
                                 
                                 <div class="what" >
                                         
-                                        <div class="what-list" :style="{height:$store.state.clienHeight-230 + 'px'}">
+                                        <div class="what-list" :style="{height:clientHeight + 'px'}">
                                                 <div class="user-msg">
                                                         <img :src="mobj.me_img" alt="">
                                                         <div class="msg-name2">{{mobj.name}}</div>
@@ -157,7 +157,8 @@ export default {
             ],
             activeNames:["1"],
             menu:[],
-            what:""
+            what:"",
+            clientHeight:0
         }
     },
     created(){
@@ -166,10 +167,12 @@ export default {
         that.mobj=user_info
         this.$axios.get("/api/friends").then(res=>{
             res.map(x=>{x.me_img=x.me_img})
-            console.log("🚀 ~ file: index.vue ~ line 169 ~ this.$axios.get ~ res", res)
             that.menu=res
         })
-         
+    },
+    mounted(){
+        var height=this.$store.state.clienHeight - document.querySelector(".list-haed").clientHeight -60
+        this.clientHeight=height
     },
     methods:{
         //表情
